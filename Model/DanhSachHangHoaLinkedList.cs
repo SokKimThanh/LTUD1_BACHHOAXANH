@@ -71,7 +71,7 @@ namespace LTUD1_MF_BHX.Model
          */
         public Node<HangHoa> XoaCuoi()
         {
-            Node<HangHoa> newNode = null;
+            Node<HangHoa> newNode = null!;
             try
             {
                 newNode = Data.RemoveLast();
