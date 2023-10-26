@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="FromMain.cs">
+    <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenuDetail\FormChiTietHoaDon.cs">
@@ -51,7 +51,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="FromMain.resx">
+    <EmbeddedResource Update="FormMain.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
