@@ -117,126 +117,68 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;flpSetting.Name" xml:space="preserve">
-    <value>flpSetting</value>
-  </data>
-  <data name="&gt;&gt;flpSetting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flpSetting.Parent" xml:space="preserve">
-    <value>tlpBHX</value>
-  </data>
-  <data name="&gt;&gt;flpSetting.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelDesktop.Name" xml:space="preserve">
-    <value>panelDesktop</value>
-  </data>
-  <data name="&gt;&gt;panelDesktop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelDesktop.Parent" xml:space="preserve">
-    <value>tlpBHX</value>
-  </data>
-  <data name="&gt;&gt;panelDesktop.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelExit.Name" xml:space="preserve">
-    <value>panelExit</value>
-  </data>
-  <data name="&gt;&gt;panelExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelExit.Parent" xml:space="preserve">
-    <value>tlpBHX</value>
-  </data>
-  <data name="&gt;&gt;panelExit.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tlpNavigationBar.Name" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;tlpNavigationBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpNavigationBar.Parent" xml:space="preserve">
-    <value>tlpBHX</value>
-  </data>
-  <data name="&gt;&gt;tlpNavigationBar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-   
-  <data name="&gt;&gt;panelHeader.Name" xml:space="preserve">
-    <value>panelHeader</value>
+  <data name="btnSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="&gt;&gt;panelHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelHeader.Parent" xml:space="preserve">
-    <value>tlpBHX</value>
-  </data>
-  <data name="&gt;&gt;panelHeader.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
-    <value>tlpBHX</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tlpBHX.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="btnSetting.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tlpBHX.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 80</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnSetting.Name" xml:space="preserve">
+    <value>btnSetting</value>
+  </data>
+  <data name="&gt;&gt;btnSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSetting.Parent" xml:space="preserve">
+    <value>panelSetting</value>
+  </data>
+  <data name="&gt;&gt;btnSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelSetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tlpBHX.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelSetting.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tlpBHX.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="panelSetting.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>320, 80</value>
   </data>
-  <data name="tlpBHX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1323, 742</value>
+  <data name="panelSetting.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>320, 80</value>
   </data>
-  <data name="tlpBHX.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="panelSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 80</value>
   </data>
-  <data name="&gt;&gt;tlpBHX.Name" xml:space="preserve">
-    <value>tlpBHX</value>
+  <data name="panelSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="&gt;&gt;tlpBHX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panelSetting.Name" xml:space="preserve">
+    <value>panelSetting</value>
   </data>
-  <data name="&gt;&gt;tlpBHX.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tlpBHX.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tlpBHX.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="flpSetting" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelDesktop" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panelExit" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tlpNavigationBar" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelHeader" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panelMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,320,Percent,100" /&gt;&lt;Rows Styles="Absolute,80,Percent,100,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelSetting.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelSetting.Parent" xml:space="preserve">
     <value>flpSetting</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelSetting.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="flpSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -254,55 +196,16 @@
   <data name="flpSetting.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-   
-   
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;flpSetting.Name" xml:space="preserve">
+    <value>flpSetting</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;flpSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;flpSetting.Parent" xml:space="preserve">
+    <value>tlpBHX</value>
   </data>
-  <data name="panel1.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>320, 80</value>
-  </data>
-  <data name="panel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>320, 80</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 80</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-   
-  <data name="button2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 80</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;flpSetting.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="panelDesktop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -320,249 +223,23 @@
   <data name="panelDesktop.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  
-  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
+  <data name="&gt;&gt;panelDesktop.Name" xml:space="preserve">
+    <value>panelDesktop</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panelDesktop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
-    <value>panelExit</value>
+  <data name="&gt;&gt;panelDesktop.Parent" xml:space="preserve">
+    <value>tlpBHX</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnExit" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblExit" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,80" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="panelExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 662</value>
-  </data>
-  <data name="panelExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="panelExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1003, 80</value>
-  </data>
-  <data name="panelExit.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-   
-  <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
-    <value>btnExit</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblExit.Name" xml:space="preserve">
-    <value>lblExit</value>
-  </data>
-  <data name="&gt;&gt;lblExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblExit.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;lblExit.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelDesktop.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1003, 80</value>
-  </data>
-  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 0</value>
-  </data>
-  <data name="btnExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="btnExit.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>80, 80</value>
-  </data>
-  <data name="btnExit.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>80, 80</value>
-  </data>
-  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 80</value>
-  </data>
-  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  
-  <data name="lblExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="lblExit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semilight, 20.25pt</value>
-  </data>
-  <data name="lblExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>923, 80</value>
-  </data>
-  <data name="lblExit.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="lblExit.Text" xml:space="preserve">
-    <value>THOÁT</value>
-  </data>
-  <data name="lblExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-   
   <data name="tlpNavigationBar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="tlpNavigationBar.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnDiaDiem.Name" xml:space="preserve">
-    <value>btnDiaDiem</value>
-  </data>
-  <data name="&gt;&gt;btnDiaDiem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDiaDiem.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnDiaDiem.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnKhachHang.Name" xml:space="preserve">
-    <value>btnKhachHang</value>
-  </data>
-  <data name="&gt;&gt;btnKhachHang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnKhachHang.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnKhachHang.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnNhaCungCap.Name" xml:space="preserve">
-    <value>btnNhaCungCap</value>
-  </data>
-  <data name="&gt;&gt;btnNhaCungCap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNhaCungCap.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnNhaCungCap.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnKhuyenMai.Name" xml:space="preserve">
-    <value>btnKhuyenMai</value>
-  </data>
-  <data name="&gt;&gt;btnKhuyenMai.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnKhuyenMai.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnKhuyenMai.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnHoaDon.Name" xml:space="preserve">
-    <value>btnHoaDon</value>
-  </data>
-  <data name="&gt;&gt;btnHoaDon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnHoaDon.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnHoaDon.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnSanPham.Name" xml:space="preserve">
-    <value>btnSanPham</value>
-  </data>
-  <data name="&gt;&gt;btnSanPham.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSanPham.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnSanPham.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnNhanVien.Name" xml:space="preserve">
-    <value>btnNhanVien</value>
-  </data>
-  <data name="&gt;&gt;btnNhanVien.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNhanVien.Parent" xml:space="preserve">
-    <value>tlpNavigationBar</value>
-  </data>
-  <data name="&gt;&gt;btnNhanVien.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="tlpNavigationBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tlpNavigationBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="tlpNavigationBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tlpNavigationBar.RowCount" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="tlpNavigationBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 582</value>
-  </data>
-  <data name="tlpNavigationBar.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="tlpNavigationBar.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDiaDiem" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhachHang" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhaCungCap" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhuyenMai" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnHoaDon" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSanPham" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhanVien" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,320" /&gt;&lt;Rows Styles="Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="btnDiaDiem.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -600,7 +277,18 @@
   <data name="btnDiaDiem.Text" xml:space="preserve">
     <value>ĐỊA ĐIỂM</value>
   </data>
-   
+  <data name="&gt;&gt;btnDiaDiem.Name" xml:space="preserve">
+    <value>btnDiaDiem</value>
+  </data>
+  <data name="&gt;&gt;btnDiaDiem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDiaDiem.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnDiaDiem.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnKhachHang.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -637,7 +325,18 @@
   <data name="btnKhachHang.Text" xml:space="preserve">
     <value>KHÁCH HÀNG</value>
   </data>
-   
+  <data name="&gt;&gt;btnKhachHang.Name" xml:space="preserve">
+    <value>btnKhachHang</value>
+  </data>
+  <data name="&gt;&gt;btnKhachHang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnKhachHang.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnKhachHang.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="btnNhaCungCap.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -674,7 +373,18 @@
   <data name="btnNhaCungCap.Text" xml:space="preserve">
     <value>NHÀ CUNG CẤP</value>
   </data>
-   
+  <data name="&gt;&gt;btnNhaCungCap.Name" xml:space="preserve">
+    <value>btnNhaCungCap</value>
+  </data>
+  <data name="&gt;&gt;btnNhaCungCap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNhaCungCap.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnNhaCungCap.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnKhuyenMai.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -711,7 +421,18 @@
   <data name="btnKhuyenMai.Text" xml:space="preserve">
     <value>KHUYẾN MÃI</value>
   </data>
-   
+  <data name="&gt;&gt;btnKhuyenMai.Name" xml:space="preserve">
+    <value>btnKhuyenMai</value>
+  </data>
+  <data name="&gt;&gt;btnKhuyenMai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnKhuyenMai.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnKhuyenMai.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="btnHoaDon.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -748,7 +469,18 @@
   <data name="btnHoaDon.Text" xml:space="preserve">
     <value>HÓA ĐƠN</value>
   </data>
-   
+  <data name="&gt;&gt;btnHoaDon.Name" xml:space="preserve">
+    <value>btnHoaDon</value>
+  </data>
+  <data name="&gt;&gt;btnHoaDon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHoaDon.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnHoaDon.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="btnSanPham.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -785,7 +517,18 @@
   <data name="btnSanPham.Text" xml:space="preserve">
     <value>SẢN PHẨM</value>
   </data>
-   
+  <data name="&gt;&gt;btnSanPham.Name" xml:space="preserve">
+    <value>btnSanPham</value>
+  </data>
+  <data name="&gt;&gt;btnSanPham.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSanPham.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnSanPham.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="btnNhanVien.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -823,65 +566,66 @@
     <value>NHÂN VIÊN
 </value>
   </data>
-  
-  <data name="panelHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;btnNhanVien.Name" xml:space="preserve">
+    <value>btnNhanVien</value>
+  </data>
+  <data name="&gt;&gt;btnNhanVien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNhanVien.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnNhanVien.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tlpNavigationBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panelHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 0</value>
+  <data name="tlpNavigationBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
   </data>
-  <data name="panelHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tlpNavigationBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="panelHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1003, 80</value>
+  <data name="tlpNavigationBar.RowCount" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="panelHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="tlpNavigationBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 582</value>
   </data>
-  
-  <data name="tlpHeader.ColumnCount" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="tlpNavigationBar.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-   
-  
- 
-  <data name="tlpHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;tlpNavigationBar.Name" xml:space="preserve">
+    <value>tlpNavigationBar</value>
   </data>
-  <data name="tlpHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tlpHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tlpHeader.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tlpHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1003, 80</value>
-  </data>
-  <data name="tlpHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tlpHeader.Name" xml:space="preserve">
-    <value>tlpHeader</value>
-  </data>
-  <data name="&gt;&gt;tlpHeader.Type" xml:space="preserve">
+  <data name="&gt;&gt;tlpNavigationBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tlpHeader.Parent" xml:space="preserve">
-    <value>panelHeader</value>
+  <data name="&gt;&gt;tlpNavigationBar.Parent" xml:space="preserve">
+    <value>tlpBHX</value>
   </data>
-  <data name="&gt;&gt;tlpHeader.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;tlpNavigationBar.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="tlpHeader.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDangNhap" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblAccountName" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeTitle" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,80,Percent,50,Percent,50,Absolute,80" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="tlpNavigationBar.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDiaDiem" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhachHang" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhaCungCap" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhuyenMai" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnHoaDon" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSanPham" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhanVien" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,320" /&gt;&lt;Rows Styles="Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tlpHeader.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <metadata name="cmsLogOut.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="đăngXuấtToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 18pt, style=Bold</value>
+  </data>
+  <data name="đăngXuấtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 36</value>
+  </data>
+  <data name="đăngXuấtToolStripMenuItem.Text" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
   <data name="cmsLogOut.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 40</value>
   </data>
@@ -929,15 +673,6 @@
   </data>
   <data name="&gt;&gt;btnDangNhap.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="đăngXuấtToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 18pt, style=Bold</value>
-  </data>
-  <data name="đăngXuấtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 36</value>
-  </data>
-  <data name="đăngXuấtToolStripMenuItem.Text" xml:space="preserve">
-    <value>Đăng xuất</value>
   </data>
   <data name="currentChangeButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1062,83 +797,69 @@
   <data name="&gt;&gt;currentChangeTitle.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;tlpMenu.Name" xml:space="preserve">
-    <value>tlpMenu</value>
-  </data>
-  <data name="&gt;&gt;tlpMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpMenu.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;tlpMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tlpMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnHome" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,80,Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="tlpHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tlpHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="panelMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tlpHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 80</value>
+  <data name="tlpHeader.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="tlpHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1003, 80</value>
   </data>
-   
+  <data name="tlpHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpHeader.Name" xml:space="preserve">
+    <value>tlpHeader</value>
+  </data>
+  <data name="&gt;&gt;tlpHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpHeader.Parent" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;tlpHeader.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpHeader.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDangNhap" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblAccountName" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeTitle" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,80,Percent,50,Percent,50,Absolute,80" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="panelHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 0</value>
+  </data>
+  <data name="panelHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="panelHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1003, 80</value>
+  </data>
+  <data name="panelHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.Name" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.Parent" xml:space="preserve">
+    <value>tlpBHX</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="tlpMenu.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnHome.Name" xml:space="preserve">
-    <value>btnHome</value>
-  </data>
-  <data name="&gt;&gt;btnHome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnHome.Parent" xml:space="preserve">
-    <value>tlpMenu</value>
-  </data>
-  <data name="&gt;&gt;btnHome.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnMenu.Name" xml:space="preserve">
-    <value>btnMenu</value>
-  </data>
-  <data name="&gt;&gt;btnMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMenu.Parent" xml:space="preserve">
-    <value>tlpMenu</value>
-  </data>
-  <data name="&gt;&gt;btnMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tlpMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tlpMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tlpMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tlpMenu.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tlpMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 80</value>
-  </data>
-  <data name="tlpMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-    
   <data name="btnHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1152,7 +873,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btnHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 80</value>
+    <value>234, 74</value>
   </data>
   <data name="btnHome.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -1160,7 +881,18 @@
   <data name="btnHome.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-   
+  <data name="&gt;&gt;btnHome.Name" xml:space="preserve">
+    <value>btnHome</value>
+  </data>
+  <data name="&gt;&gt;btnHome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHome.Parent" xml:space="preserve">
+    <value>tlpMenu</value>
+  </data>
+  <data name="&gt;&gt;btnHome.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -1188,24 +920,206 @@
   <data name="btnMenu.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-    
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;btnMenu.Name" xml:space="preserve">
+    <value>btnMenu</value>
+  </data>
+  <data name="&gt;&gt;btnMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMenu.Parent" xml:space="preserve">
+    <value>tlpMenu</value>
+  </data>
+  <data name="&gt;&gt;btnMenu.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tlpMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
+  <data name="tlpMenu.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+  <data name="tlpMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 74</value>
+  </data>
+  <data name="tlpMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpMenu.Name" xml:space="preserve">
+    <value>tlpMenu</value>
+  </data>
+  <data name="&gt;&gt;tlpMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpMenu.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;tlpMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnHome" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,80,Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 74</value>
+  </data>
+  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
+    <value>tlpBHX</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
+  <data name="tlpExit.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>920, 3</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 68</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>tlpExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblExit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semilight, 20.25pt</value>
+  </data>
+  <data name="lblExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="lblExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>911, 74</value>
+  </data>
+  <data name="lblExit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblExit.Text" xml:space="preserve">
+    <value>THOÁT</value>
+  </data>
+  <data name="lblExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblExit.Name" xml:space="preserve">
+    <value>lblExit</value>
+  </data>
+  <data name="&gt;&gt;lblExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExit.Parent" xml:space="preserve">
+    <value>tlpExit</value>
+  </data>
+  <data name="&gt;&gt;lblExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 665</value>
+  </data>
+  <data name="tlpExit.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>997, 74</value>
+  </data>
+  <data name="tlpExit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tlpExit.Name" xml:space="preserve">
+    <value>tlpExit</value>
+  </data>
+  <data name="&gt;&gt;tlpExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpExit.Parent" xml:space="preserve">
+    <value>tlpBHX</value>
+  </data>
+  <data name="&gt;&gt;tlpExit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tlpExit.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnExit" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblExit" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,80,Absolute,20" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tlpBHX.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpBHX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tlpBHX.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tlpBHX.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tlpBHX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1323, 742</value>
+  </data>
+  <data name="tlpBHX.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tlpBHX.Name" xml:space="preserve">
+    <value>tlpBHX</value>
+  </data>
+  <data name="&gt;&gt;tlpBHX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpBHX.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tlpBHX.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpBHX.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="flpSetting" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelDesktop" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="tlpNavigationBar" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelHeader" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panelMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tlpExit" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,320,Percent,100" /&gt;&lt;Rows Styles="Absolute,80,Percent,100,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="iconChildForm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1237,26 +1151,22 @@
   <data name="&gt;&gt;iconChildForm.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>523, 0</value>
-  </data>
-  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 64</value>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
   </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1301,26 +1211,25 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>982, 0</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>523, 0</value>
   </data>
-  <data name="panel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 64</value>
   </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1365,6 +1274,27 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>982, 0</value>
+  </data>
+  <data name="panel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1391,7 +1321,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAGtEAAAJNU0Z0AUkBTAIBAQ4B
-        AAEgAQcBIAEHAUABAAFAAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoBAABAQMAAQECAAEBAQABIAcAAQR9
+        AAFQAQcBUAEHAUABAAFAAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoBAABAQMAAQECAAEBAQABIAcAAQR9
         AAMqAUAg/wMhATB4AAMeASoDWAG4AV8CZgHlAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAV8CZgHlAV8C
         ZgHlAV8CZgHlAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAV8C
         ZgHlAVsCYwHkAVsCYwHkAV8CZgHlAVsCYwHkAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAVsC
@@ -2293,7 +2223,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA8BMAAAJNU0Z0AUkBTAIBAQ0B
-        AAH4AQYB+AEGARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAAUADAAEBAQABIAYAAUAu
+        AAEoAQcBKAEHARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAAUADAAEBAQABIAYAAUAu
         AAMJAQsDDAEPAwYBCOwAAxMBGQMTARkDCwEOAwcBCQMPARQDEwEZAxMBGdwAAwIBAwMTARkYAAMFAQYD
         EwEZ2AADEwEZIAAEAQMTARnQAAMTARkDBQEGJAADEwEZAwIBA8wAAxMBGSwAAxMBGcwAAxMBGSwAAxMB
         GcwAAxMBGRQAAxMBGRQAAxMBGcwAAxMBGRQAAxMBGRQAAxMBGcwAAxEBFgMJAQwQAAMTARkQAAMTARnU

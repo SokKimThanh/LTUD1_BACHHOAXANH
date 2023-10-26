@@ -32,13 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             tlpBHX = new TableLayoutPanel();
             flpSetting = new FlowLayoutPanel();
-            panel1 = new Panel();
-            button2 = new Button();
+            panelSetting = new Panel();
+            btnSetting = new Button();
             panelDesktop = new Panel();
-            panel3 = new Panel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            btnExit = new Button();
-            label5 = new Label();
             tlpNavigationBar = new TableLayoutPanel();
             btnDiaDiem = new Button();
             btnKhachHang = new Button();
@@ -55,10 +51,13 @@
             currentChangeButton = new Button();
             lblAccountName = new Label();
             currentChangeTitle = new Label();
-            panel7 = new Panel();
+            panelMenu = new Panel();
             tlpMenu = new TableLayoutPanel();
             btnHome = new PictureBox();
             btnMenu = new Button();
+            tlpExit = new TableLayoutPanel();
+            btnExit = new Button();
+            lblExit = new Label();
             panel4 = new Panel();
             iconChildForm = new PictureBox();
             panel2 = new Panel();
@@ -71,16 +70,15 @@
             lisIcon_navigation_bar_transparent10 = new ImageList(components);
             tlpBHX.SuspendLayout();
             flpSetting.SuspendLayout();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
+            panelSetting.SuspendLayout();
             tlpNavigationBar.SuspendLayout();
             panelHeader.SuspendLayout();
             tlpHeader.SuspendLayout();
             cmsLogOut.SuspendLayout();
-            panel7.SuspendLayout();
+            panelMenu.SuspendLayout();
             tlpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
+            tlpExit.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconChildForm).BeginInit();
             panel2.SuspendLayout();
@@ -92,77 +90,46 @@
             tlpBHX.BackColor = Color.FromArgb(5, 42, 25);
             tlpBHX.Controls.Add(flpSetting, 0, 2);
             tlpBHX.Controls.Add(panelDesktop, 1, 1);
-            tlpBHX.Controls.Add(panel3, 1, 2);
             tlpBHX.Controls.Add(tlpNavigationBar, 0, 1);
             tlpBHX.Controls.Add(panelHeader, 1, 0);
-            tlpBHX.Controls.Add(panel7, 0, 0);
+            tlpBHX.Controls.Add(panelMenu, 0, 0);
+            tlpBHX.Controls.Add(tlpExit, 1, 2);
             resources.ApplyResources(tlpBHX, "tlpBHX");
             tlpBHX.Name = "tlpBHX";
             // 
             // flpSetting
             // 
             flpSetting.BackColor = Color.FromArgb(5, 42, 25);
-            flpSetting.Controls.Add(panel1);
+            flpSetting.Controls.Add(panelSetting);
             resources.ApplyResources(flpSetting, "flpSetting");
             flpSetting.Name = "flpSetting";
             // 
-            // panel1
+            // panelSetting
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(button2);
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Name = "panel1";
+            panelSetting.BackColor = Color.Transparent;
+            panelSetting.Controls.Add(btnSetting);
+            resources.ApplyResources(panelSetting, "panelSetting");
+            panelSetting.Name = "panelSetting";
             // 
-            // button2
+            // btnSetting
             // 
-            button2.BackColor = Color.Transparent;
-            button2.Cursor = Cursors.Hand;
-            resources.ApplyResources(button2, "button2");
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
-            button2.ForeColor = Color.Transparent;
-            button2.Image = Properties.Resources.icon_setting;
-            button2.Name = "button2";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += btnSetting_Click;
+            btnSetting.BackColor = Color.Transparent;
+            btnSetting.Cursor = Cursors.Hand;
+            resources.ApplyResources(btnSetting, "btnSetting");
+            btnSetting.FlatAppearance.BorderSize = 0;
+            btnSetting.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnSetting.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnSetting.ForeColor = Color.Transparent;
+            btnSetting.Image = Properties.Resources.icon_setting;
+            btnSetting.Name = "btnSetting";
+            btnSetting.UseVisualStyleBackColor = false;
+            btnSetting.Click += btnSetting_Click;
             // 
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(10, 88, 52);
             resources.ApplyResources(panelDesktop, "panelDesktop");
             panelDesktop.Name = "panelDesktop";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Transparent;
-            panel3.Controls.Add(tableLayoutPanel2);
-            resources.ApplyResources(panel3, "panel3");
-            panel3.Name = "panel3";
-            // 
-            // tableLayoutPanel2
-            // 
-            resources.ApplyResources(tableLayoutPanel2, "tableLayoutPanel2");
-            tableLayoutPanel2.Controls.Add(btnExit, 1, 0);
-            tableLayoutPanel2.Controls.Add(label5, 0, 0);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // btnExit
-            // 
-            resources.ApplyResources(btnExit, "btnExit");
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
-            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
-            btnExit.Image = Properties.Resources.icon_exit;
-            btnExit.Name = "btnExit";
-            btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += btnExit_Click;
-            // 
-            // label5
-            // 
-            resources.ApplyResources(label5, "label5");
-            label5.ForeColor = Color.White;
-            label5.Name = "label5";
             // 
             // tlpNavigationBar
             // 
@@ -329,12 +296,12 @@
             currentChangeTitle.Name = "currentChangeTitle";
             currentChangeTitle.MouseDown += currentChangeTitle_MouseDown;
             // 
-            // panel7
+            // panelMenu
             // 
-            panel7.BackColor = Color.Transparent;
-            panel7.Controls.Add(tlpMenu);
-            resources.ApplyResources(panel7, "panel7");
-            panel7.Name = "panel7";
+            panelMenu.BackColor = Color.Transparent;
+            panelMenu.Controls.Add(tlpMenu);
+            resources.ApplyResources(panelMenu, "panelMenu");
+            panelMenu.Name = "panelMenu";
             // 
             // tlpMenu
             // 
@@ -363,6 +330,33 @@
             btnMenu.Name = "btnMenu";
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
+            // 
+            // tlpExit
+            // 
+            resources.ApplyResources(tlpExit, "tlpExit");
+            tlpExit.Controls.Add(btnExit, 0, 0);
+            tlpExit.Controls.Add(lblExit, 0, 0);
+            tlpExit.Name = "tlpExit";
+            // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.Transparent;
+            btnExit.Cursor = Cursors.Hand;
+            resources.ApplyResources(btnExit, "btnExit");
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnExit.ForeColor = Color.Transparent;
+            btnExit.Image = Properties.Resources.icon_exit;
+            btnExit.Name = "btnExit";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
+            // lblExit
+            // 
+            resources.ApplyResources(lblExit, "lblExit");
+            lblExit.ForeColor = Color.White;
+            lblExit.Name = "lblExit";
             // 
             // panel4
             // 
@@ -466,16 +460,15 @@
             tlpBHX.ResumeLayout(false);
             tlpBHX.PerformLayout();
             flpSetting.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
+            panelSetting.ResumeLayout(false);
             tlpNavigationBar.ResumeLayout(false);
             panelHeader.ResumeLayout(false);
             tlpHeader.ResumeLayout(false);
             cmsLogOut.ResumeLayout(false);
-            panel7.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
             tlpMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
+            tlpExit.ResumeLayout(false);
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconChildForm).EndInit();
             panel2.ResumeLayout(false);
@@ -489,10 +482,9 @@
         private FlowLayoutPanel flpSetting;
         //private Panel panelSidebar;
         private System.Windows.Forms.Timer sidebarTimer;
-        private Panel panel1;
-        private Button button2;
+        private Panel panelSetting;
+        private Button btnSetting;
         private Panel panelDesktop;
-        private Panel panel3;
         public ImageList listIcon_navigation_bar;
         private ImageList lisIcon_navigation_bar_transparent10;
         private Panel panel4;
@@ -510,20 +502,20 @@
         private Button btnKhuyenMai;
         private Button btnHoaDon;
         private Button btnSanPham;
-        private TableLayoutPanel tableLayoutPanel2;
-        private Label label5;
-        private Button btnExit;
         private Panel panelHeader;
         private TableLayoutPanel tlpHeader;
         private Button btnDangNhap;
         private Button currentChangeButton;
         private Label lblAccountName;
         private Label currentChangeTitle;
-        private Panel panel7;
+        private Panel panelMenu;
         private TableLayoutPanel tlpMenu;
         private PictureBox btnHome;
         private Button btnMenu;
         private ContextMenuStrip cmsLogOut;
         private ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private TableLayoutPanel tlpExit;
+        private Button btnExit;
+        private Label lblExit;
     }
 }
