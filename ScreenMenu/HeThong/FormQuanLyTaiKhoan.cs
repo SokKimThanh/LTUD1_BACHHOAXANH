@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LTUD1_MF_BHX.Screen.HeThong
+namespace LTUD1_MF_BHX.ScreenMenu.HeThong
 {
-    public partial class FormCaiDat : Form
+    public partial class FormQuanLyTaiKhoan : Form
     {
-        public FormCaiDat()
+        public FormQuanLyTaiKhoan()
         {
             InitializeComponent();
-        }
-
-        private void tvSettingList_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
         }
     }
 }
