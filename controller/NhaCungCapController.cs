@@ -1,6 +1,6 @@
-﻿using System.Data;
+﻿using LTUD1_MF_BHX.Connection;
+using System.Data;
 using System.Data.SqlClient;
-using LTUD1_MF_BHX.Connection;
 
 namespace LTUD1_MF_BHX.controller
 {
@@ -49,7 +49,7 @@ namespace LTUD1_MF_BHX.controller
         {
             try
             {
-                NhaCungCap user = (NhaCungCap)sender;
+                NhaCungCap o = (NhaCungCap)sender;
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
@@ -58,9 +58,9 @@ namespace LTUD1_MF_BHX.controller
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", user.Ma);
-                Sql.Parameters.AddWithValue("@ten", user.Ten);
-                Sql.Parameters.AddWithValue("@ghichu", user.Ghichu);
+                Sql.Parameters.AddWithValue("@ma", o.Ma);
+                Sql.Parameters.AddWithValue("@ten", o.Ten);
+                Sql.Parameters.AddWithValue("@ghichu", o.Ghichu);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
@@ -113,12 +113,74 @@ namespace LTUD1_MF_BHX.controller
 
         public override DataTable SelectByID(object id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhacungcap_select_one", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@ma", id);
+
+                // Tạo một đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // Đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+
+                // Đóng kết nối
+                CloseConnection();
+
+                // Trả về DataTable
+                return DataSource;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public override void Update(object sender)
         {
+            try
+            {
+                NhaCungCap o = (NhaCungCap)sender;
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
 
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhacungcap_update", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@ma", o.Ma);
+                Sql.Parameters.AddWithValue("@ten", o.Ten);
+                Sql.Parameters.AddWithValue("@ghichu", o.Ghichu);
+
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }
