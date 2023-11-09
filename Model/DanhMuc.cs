@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ADOForm
+namespace LTUD1_MF_BHX
 {
     internal class DanhMuc
     {

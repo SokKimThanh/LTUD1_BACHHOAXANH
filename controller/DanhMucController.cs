@@ -1,14 +1,8 @@
-﻿using ADOForm.Connection;
-using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections.Generic;
+﻿using LTUD1_MF_BHX.Connection;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ADOForm
+namespace LTUD1_MF_BHX
 {
     internal class DanhMucController : MyController
     {

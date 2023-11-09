@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ADOForm.Connection
+namespace LTUD1_MF_BHX.Connection
 {
     public class Utils
     {

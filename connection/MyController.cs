@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LTUD1_MF_BHX.connection;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ADOForm.Connection
+namespace LTUD1_MF_BHX.Connection
 {
     /// <summary>
     /// Lớp MyController điều khiển thao tác trên cơ sở dữ liệu dữ liệu và chiến thuật đóng mở kết nối
@@ -81,7 +77,7 @@ namespace ADOForm.Connection
 
 
         public abstract object FromDataRow(DataRow row);
-        
+
     }
 
 }

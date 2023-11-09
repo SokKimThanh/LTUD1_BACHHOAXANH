@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ADOForm
+namespace LTUD1_MF_BHX
 {
     internal class SanPham
     {
@@ -18,7 +18,7 @@ namespace ADOForm
         {
         }
 
-        public SanPham(string ma, string ten, double gia = 0, int soluong = 0, DanhMuc danhmuc = null, NhaCungCap nhacungcap = null)
+        public SanPham(string ma, string ten, double gia = 0, int soluong = 0, DanhMuc? danhmuc = null, NhaCungCap? nhacungcap = null)
         {
             //if (ma.Length != 10)
             //{

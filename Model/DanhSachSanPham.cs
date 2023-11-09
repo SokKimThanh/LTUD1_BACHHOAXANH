@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ADOForm.model
+namespace LTUD1_MF_BHX.model
 {
     internal class DanhSachSanPham
     {

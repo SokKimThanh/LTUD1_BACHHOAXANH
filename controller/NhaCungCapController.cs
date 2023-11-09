@@ -1,14 +1,8 @@
-﻿using ADOForm.Connection;
-using ADOForm.model;
-using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LTUD1_MF_BHX.Connection;
 
-namespace ADOForm.controller
+namespace LTUD1_MF_BHX.controller
 {
     public class NhaCungCapController : MyController
     {
