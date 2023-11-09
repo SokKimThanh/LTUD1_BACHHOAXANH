@@ -153,6 +153,7 @@
             this.btnDiaDiem.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_diadiem;
             this.btnDiaDiem.Name = "btnDiaDiem";
             this.btnDiaDiem.UseVisualStyleBackColor = true;
+            this.btnDiaDiem.Click += new System.EventHandler(this.btnDiaDiem_Click);
             // 
             // btnKhachHang
             // 
@@ -164,6 +165,7 @@
             this.btnKhachHang.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_khachhang;
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.UseVisualStyleBackColor = true;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhaCungCap
             // 
@@ -175,6 +177,7 @@
             this.btnNhaCungCap.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_nhacungcap;
             this.btnNhaCungCap.Name = "btnNhaCungCap";
             this.btnNhaCungCap.UseVisualStyleBackColor = true;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // btnKhuyenMai
             // 
@@ -186,6 +189,7 @@
             this.btnKhuyenMai.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_khuyenmai;
             this.btnKhuyenMai.Name = "btnKhuyenMai";
             this.btnKhuyenMai.UseVisualStyleBackColor = true;
+            this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
             // 
             // btnHoaDon
             // 
@@ -197,6 +201,7 @@
             this.btnHoaDon.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_hoadon;
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnSanPham
             // 
@@ -208,6 +213,7 @@
             this.btnSanPham.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_sanpham;
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.UseVisualStyleBackColor = true;
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnNhanVien
             // 
@@ -219,6 +225,7 @@
             this.btnNhanVien.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_nhanvien;
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // panelHeader
             // 
