@@ -21,5 +21,10 @@ namespace LTUD1_MF_BHX.Screen
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
