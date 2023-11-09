@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿ 
 
-namespace LTUD1_MF_BHX
+namespace LTUD1_MF_BHX 
 {
     internal class SanPham
     {
@@ -32,8 +28,8 @@ namespace LTUD1_MF_BHX
             this.ten = ten;
             this.gia = gia;
             this.soluong = soluong;
-            this.danhmuc = danhmuc;
-            this.nhacungcap = nhacungcap;
+            this.danhmuc = danhmuc!;
+            this.nhacungcap = nhacungcap!;
         }
 
         public string Ma { get => ma; set => ma = value; }
@@ -45,7 +41,7 @@ namespace LTUD1_MF_BHX
 
         public override string ToString()
         {
-            return $"{this.ma,-10}{this.ten,-10}{this.gia,-10}{this.soluong,-10}{this.danhmuc.ToString(),-10}{this.nhacungcap.ToString(),-10}";
+            return $"{ma,-10}{ten,-10}{gia,-10}{soluong,-10}{danhmuc.ToString(),-10}{nhacungcap.ToString(),-10}";
         }
     }
 }

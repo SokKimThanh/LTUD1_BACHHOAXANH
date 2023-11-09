@@ -1,8 +1,7 @@
-﻿using LTUD1_MF_BHX.Connection;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
-namespace LTUD1_MF_BHX.controller
+namespace LTUD1_MF_BHX
 {
     public class NhaCungCapController : MyController
     {

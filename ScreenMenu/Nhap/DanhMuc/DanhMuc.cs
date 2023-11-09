@@ -1,12 +1,6 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿ 
 
-namespace LTUD1_MF_BHX
+namespace LTUD1_MF_BHX 
 {
     internal class DanhMuc
     {
@@ -51,6 +45,6 @@ namespace LTUD1_MF_BHX
         }
         public string Ghichu { get => ghichu; set => ghichu = value; }
 
-        
+
     }
 }
