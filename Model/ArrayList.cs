@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
- namespace LTUD1_MF_BHX { 
+namespace LTUD1_MF_BHX
+{
     class ArrayList<ThamSoKieu>
     {
         private ThamSoKieu[] items;
@@ -48,28 +51,14 @@ using System.Threading.Tasks;
         }
         internal ThamSoKieu[] Data { get => items; set => items = value; }
 
-        /**
-         * Đoạn mã định nghĩa một chỉ mục (indexer) cho một lớp. 
-         * Chỉ mục cho phép bạn truy cập các phần tử trong danh sách 
-         * bằng cách sử dụng cú pháp list[index], 
-         * giống như cách bạn truy cập các phần tử trong một mảng.
-         * 
-         * Chỉ mục này có hai phần: get và set. Phần get được sử dụng 
-         * khi bạn truy xuất giá trị của một phần tử trong danh sách. 
-         * Trong phần get, chúng ta kiểm tra xem chỉ số có nằm trong 
-         * khoảng cho phép hay không (tức là từ 0 đến count - 1). 
-         * Nếu chỉ số không hợp lệ, chúng ta sẽ ném ra một ngoại lệ 
-         * ArgumentOutOfRangeException. Nếu chỉ số hợp lệ, chúng ta 
-         * sẽ trả về giá trị của phần tử tại vị trí đó.
-         * 
-         * Phần set được sử dụng khi bạn gán giá trị mới cho một phần 
-         * tử trong danh sách. Trong phần set, chúng ta gán giá trị mới
-         * cho phần tử tại vị trí được chỉ định. Lưu ý rằng trong phần
-         * set, chúng ta không kiểm tra xem chỉ số có hợp lệ hay không.
-         * Điều này có nghĩa là nếu bạn cố gắng gán giá trị cho một phần
-         * tử với chỉ số không hợp lệ, chương trình sẽ bị lỗi.
-         */
-        // chi mục
+
+
+        /// <summary>
+        /// Return value at index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public ThamSoKieu this[int index]
         {
             get
