@@ -31,7 +31,7 @@ namespace LTUD1_MF_BHX
             errform = new ErrFrm(this);
             session = new Session();
         }
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Maximized;
             //// Thiết lập kích thước cho cột đầu tiên  
