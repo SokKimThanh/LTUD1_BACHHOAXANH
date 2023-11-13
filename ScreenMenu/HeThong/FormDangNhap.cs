@@ -24,7 +24,7 @@ namespace LTUD1_MF_BHX.Screen
 
         private void FormDangNhap_Load(object sender, EventArgs e)
         {
-            
+
             txtUserName.Focus();
             txtPassword.UseSystemPasswordChar = true;// bật ẩn ký tự mật khẩu
             ptbShowHidePassword.Image = loginImage.getIcon("hidepassword", "png");//set hình con mắt đóng
@@ -204,6 +204,21 @@ namespace LTUD1_MF_BHX.Screen
             txtPassword.Text = string.Empty;
             txtUserName.Focus();
             OtherEvent(sender, e);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

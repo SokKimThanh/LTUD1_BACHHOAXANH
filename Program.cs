@@ -14,14 +14,15 @@ namespace LTUD1_MF_BHX
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             try
             {
-                FormDangNhap logon = new FormDangNhap();
+                //FormDangNhap logon = new FormDangNhap();
+                FormNhaCungCap logon = new FormNhaCungCap();
+
                 Application.Run(logon);
 
                 //Trần Minh Tuấn
-                
+
                 //gi change
             }
             catch (Exception)

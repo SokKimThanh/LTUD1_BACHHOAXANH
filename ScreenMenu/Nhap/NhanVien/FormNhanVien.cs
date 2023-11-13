@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LTUD1_MF_BHX.Screen
 {
-    public partial class FormNhanVien : Form
+    public partial class FormNhanVien1 : Form
     {
-        public FormNhanVien()
+        public FormNhanVien1()
         {
             InitializeComponent();
         }
