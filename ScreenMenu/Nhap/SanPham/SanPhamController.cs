@@ -1,6 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿ 
 using System.Data;
-using LTUD1_MF_BHX.Connection;
+using System.Data.SqlClient;
 
 namespace LTUD1_MF_BHX
 {

@@ -139,3 +139,5 @@ _NCrunch*
 *.json
  
 *.2
+*.manifest
+*.testlog

@@ -79,29 +79,32 @@
             panel1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 530);
+            panel1.Size = new Size(262, 418);
             panel1.TabIndex = 0;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(106, 439);
+            label7.Location = new Point(62, 347);
             label7.Name = "label7";
             label7.Size = new Size(165, 19);
             label7.TabIndex = 8;
             label7.Text = "QTT Galaxy T E C H N O L O G Y";
+            label7.Click += label7_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(96, 420);
+            label6.Location = new Point(53, 326);
             label6.Name = "label6";
             label6.Size = new Size(175, 19);
             label6.TabIndex = 7;
             label6.Text = "Phát triển bởi NHÓM CÔNG NGHỆ";
+            label6.Click += label6_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -110,14 +113,15 @@
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label5, 0, 2);
             tableLayoutPanel1.Controls.Add(label3, 0, 1);
-            tableLayoutPanel1.Location = new Point(12, 157);
+            tableLayoutPanel1.Location = new Point(10, 124);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(259, 127);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel1.Size = new Size(227, 120);
             tableLayoutPanel1.TabIndex = 6;
             // 
             // label1
@@ -128,7 +132,7 @@
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
-            label1.Size = new Size(259, 26);
+            label1.Size = new Size(227, 52);
             label1.TabIndex = 1;
             label1.Text = "CHÀO MỪNG BẠN ĐẾN VỚI";
             label1.TextAlign = ContentAlignment.MiddleRight;
@@ -139,23 +143,24 @@
             label5.Dock = DockStyle.Fill;
             label5.FlatStyle = FlatStyle.Flat;
             label5.Font = new Font("Calibri", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(0, 52);
+            label5.Location = new Point(0, 78);
             label5.Margin = new Padding(0);
             label5.Name = "label5";
-            label5.Size = new Size(259, 75);
+            label5.Size = new Size(227, 42);
             label5.TabIndex = 5;
             label5.Text = "BÁCH HÓA XANH";
             label5.TextAlign = ContentAlignment.MiddleRight;
+            label5.Click += label5_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Dock = DockStyle.Fill;
             label3.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(0, 26);
+            label3.Location = new Point(0, 52);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
-            label3.Size = new Size(259, 26);
+            label3.Size = new Size(227, 26);
             label3.TabIndex = 3;
             label3.Text = "HỆ THỐNG Q.LÝ SIÊU THỊ";
             label3.TextAlign = ContentAlignment.MiddleRight;
@@ -163,7 +168,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(186, 279);
+            label2.Location = new Point(163, 220);
             label2.Name = "label2";
             label2.Size = new Size(0, 32);
             label2.TabIndex = 2;
@@ -171,7 +176,8 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.BXHLOGO2;
-            pictureBox1.Location = new Point(106, 52);
+            pictureBox1.Location = new Point(63, 41);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(165, 64);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -192,17 +198,18 @@
             panel2.Controls.Add(label4);
             panel2.Controls.Add(btnLoginClose);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(300, 0);
+            panel2.Location = new Point(262, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(450, 530);
+            panel2.Size = new Size(394, 418);
             panel2.TabIndex = 1;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(134, 459);
+            linkLabel1.Location = new Point(117, 362);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(175, 19);
+            linkLabel1.Size = new Size(154, 15);
             linkLabel1.TabIndex = 15;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "qttgalaxy@technology.com";
@@ -213,7 +220,7 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.Silver;
-            label11.Location = new Point(16, 458);
+            label11.Location = new Point(14, 362);
             label11.Name = "label11";
             label11.Size = new Size(112, 19);
             label11.TabIndex = 7;
@@ -225,7 +232,7 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.Silver;
-            label10.Location = new Point(16, 439);
+            label10.Location = new Point(14, 347);
             label10.Name = "label10";
             label10.Size = new Size(279, 19);
             label10.TabIndex = 7;
@@ -237,7 +244,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Silver;
-            label9.Location = new Point(16, 420);
+            label9.Location = new Point(14, 332);
             label9.Name = "label9";
             label9.Size = new Size(103, 19);
             label9.TabIndex = 7;
@@ -252,9 +259,10 @@
             btnForgotPassword.FlatStyle = FlatStyle.Flat;
             btnForgotPassword.Font = new Font("Calibri", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnForgotPassword.ForeColor = Color.FromArgb(10, 88, 52);
-            btnForgotPassword.Location = new Point(227, 324);
+            btnForgotPassword.Location = new Point(199, 256);
+            btnForgotPassword.Margin = new Padding(3, 2, 3, 2);
             btnForgotPassword.Name = "btnForgotPassword";
-            btnForgotPassword.Size = new Size(205, 42);
+            btnForgotPassword.Size = new Size(179, 33);
             btnForgotPassword.TabIndex = 13;
             btnForgotPassword.Text = "Quên mật khẩu?";
             btnForgotPassword.UseVisualStyleBackColor = false;
@@ -268,9 +276,10 @@
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(16, 324);
+            btnLogin.Location = new Point(14, 256);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(205, 42);
+            btnLogin.Size = new Size(179, 33);
             btnLogin.TabIndex = 13;
             btnLogin.Text = "ĐĂNG NHẬP";
             btnLogin.UseVisualStyleBackColor = false;
@@ -284,18 +293,19 @@
             pnPassword.Controls.Add(ptbShowHidePassword);
             pnPassword.Controls.Add(txtPassword);
             pnPassword.Controls.Add(pictureBox3);
-            pnPassword.Location = new Point(0, 209);
+            pnPassword.Location = new Point(0, 165);
             pnPassword.Margin = new Padding(0);
             pnPassword.Name = "pnPassword";
-            pnPassword.Size = new Size(450, 45);
+            pnPassword.Size = new Size(394, 36);
             pnPassword.TabIndex = 12;
             // 
             // ptbShowHidePassword
             // 
             ptbShowHidePassword.Image = Properties.Resources.showpassword;
-            ptbShowHidePassword.Location = new Point(408, 10);
+            ptbShowHidePassword.Location = new Point(357, 8);
+            ptbShowHidePassword.Margin = new Padding(3, 2, 3, 2);
             ptbShowHidePassword.Name = "ptbShowHidePassword";
-            ptbShowHidePassword.Size = new Size(24, 24);
+            ptbShowHidePassword.Size = new Size(21, 19);
             ptbShowHidePassword.SizeMode = PictureBoxSizeMode.StretchImage;
             ptbShowHidePassword.TabIndex = 15;
             ptbShowHidePassword.TabStop = false;
@@ -309,10 +319,10 @@
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtPassword.ForeColor = Color.FromArgb(10, 88, 52);
-            txtPassword.Location = new Point(67, 8);
+            txtPassword.Location = new Point(59, 6);
             txtPassword.Margin = new Padding(0);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(335, 26);
+            txtPassword.Size = new Size(293, 26);
             txtPassword.TabIndex = 15;
             txtPassword.Click += txtPassword_Click;
             txtPassword.TextChanged += txtPassword_TextChanged;
@@ -321,9 +331,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.green_password;
-            pictureBox3.Location = new Point(16, 10);
+            pictureBox3.Location = new Point(14, 8);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(24, 24);
+            pictureBox3.Size = new Size(21, 19);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 14;
             pictureBox3.TabStop = false;
@@ -333,10 +344,10 @@
             pnUsername.BackColor = Color.White;
             pnUsername.Controls.Add(txtUserName);
             pnUsername.Controls.Add(pictureBox2);
-            pnUsername.Location = new Point(0, 157);
+            pnUsername.Location = new Point(0, 124);
             pnUsername.Margin = new Padding(0);
             pnUsername.Name = "pnUsername";
-            pnUsername.Size = new Size(450, 45);
+            pnUsername.Size = new Size(394, 36);
             pnUsername.TabIndex = 11;
             // 
             // txtUserName
@@ -345,10 +356,10 @@
             txtUserName.BorderStyle = BorderStyle.None;
             txtUserName.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtUserName.ForeColor = Color.FromArgb(10, 88, 52);
-            txtUserName.Location = new Point(67, 8);
+            txtUserName.Location = new Point(59, 6);
             txtUserName.Margin = new Padding(0);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(335, 26);
+            txtUserName.Size = new Size(293, 26);
             txtUserName.TabIndex = 14;
             txtUserName.Click += txtUserName_Click;
             txtUserName.TextChanged += txtUserName_TextChanged;
@@ -357,9 +368,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.green_user;
-            pictureBox2.Location = new Point(16, 10);
+            pictureBox2.Location = new Point(14, 8);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(24, 24);
+            pictureBox2.Size = new Size(21, 19);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 13;
             pictureBox2.TabStop = false;
@@ -369,7 +381,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(10, 88, 52);
-            label4.Location = new Point(58, 104);
+            label4.Location = new Point(51, 82);
             label4.Margin = new Padding(0);
             label4.Name = "label4";
             label4.Size = new Size(323, 29);
@@ -386,10 +398,10 @@
             btnLoginClose.FlatStyle = FlatStyle.Flat;
             btnLoginClose.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnLoginClose.ForeColor = Color.FromArgb(10, 88, 52);
-            btnLoginClose.Location = new Point(410, 0);
+            btnLoginClose.Location = new Point(359, 0);
             btnLoginClose.Margin = new Padding(0);
             btnLoginClose.Name = "btnLoginClose";
-            btnLoginClose.Size = new Size(40, 40);
+            btnLoginClose.Size = new Size(35, 32);
             btnLoginClose.TabIndex = 9;
             btnLoginClose.Text = "X";
             btnLoginClose.UseVisualStyleBackColor = true;
@@ -407,14 +419,15 @@
             // 
             // FormDangNhap
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(750, 530);
+            ClientSize = new Size(656, 418);
             ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormDangNhap";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormDangNhap";
