@@ -37,7 +37,7 @@ namespace LTUD1_MF_BHX.controller
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally {
                 CloseConnection();
@@ -76,7 +76,7 @@ namespace LTUD1_MF_BHX.controller
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -109,7 +109,7 @@ namespace LTUD1_MF_BHX.controller
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+               MessageBox.Show(ex.Message);
             }
             finally
             {
