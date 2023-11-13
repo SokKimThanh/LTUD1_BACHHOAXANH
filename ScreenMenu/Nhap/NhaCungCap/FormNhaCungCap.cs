@@ -4,6 +4,7 @@ namespace LTUD1_MF_BHX.Screen
 {
     public partial class FormNhaCungCap : Form
     {
+        NhaCungCapController controller;
         public FormNhaCungCap()
         {
             InitializeComponent();
