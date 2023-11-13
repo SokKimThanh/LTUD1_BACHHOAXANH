@@ -9,11 +9,9 @@ namespace LTUD1_MF_BHX.Connection
 {
     public class Utils
     {
-<<<<<<< HEAD
+
         private static string connectionString = "Data Source=localhost;Initial Catalog=BACHHOAXANH; Integrated Security=true";
-=======
-        private static string connectionString = "Data Source=localhost;Initial Catalog=QUANLYBANHANG; Integrated Security=true";
->>>>>>> origin/master
+ 
         public static string ConnectionString
         {
             get { return connectionString; }
