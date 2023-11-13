@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace LTUD1_MF_BHX
+namespace LTUD1_MF_BHX.Connection
 {
     /// <summary>
     /// Lớp MyController điều khiển thao tác trên cơ sở dữ liệu dữ liệu và chiến thuật đóng mở kết nối

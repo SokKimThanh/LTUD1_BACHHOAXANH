@@ -1,7 +1,7 @@
-﻿using LTUD1_MF_BHX.model;
+﻿using LTUD1_MF_BHX.Connection;
+using LTUD1_MF_BHX.model;
 using System.Data;
 using System.Data.SqlClient;
-using LTUD1_MF_BHX.Connection;
 
 namespace LTUD1_MF_BHX.connection
 {
