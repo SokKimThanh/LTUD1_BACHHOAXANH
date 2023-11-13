@@ -16,8 +16,8 @@ namespace LTUD1_MF_BHX
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                //FormDangNhap logon = new FormDangNhap();
-                FormNhaCungCap logon = new FormNhaCungCap();
+                FormDangNhap logon = new FormDangNhap();
+                //FormNhaCungCap logon = new FormNhaCungCap();
 
                 Application.Run(logon);
 
