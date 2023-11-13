@@ -1,4 +1,4 @@
-﻿namespace LTUD1_MF_BHX.Screen
+﻿namespace LTUD1_MF_BHX
 {
     partial class FormNhaCungCap
     {

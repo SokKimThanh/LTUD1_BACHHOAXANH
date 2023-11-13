@@ -1,11 +1,16 @@
-﻿ 
+﻿
 
-namespace LTUD1_MF_BHX 
+namespace LTUD1_MF_BHX
 {
     internal class DanhMuc
     {
         private string ma, ten, ghichu;
-        public DanhMuc() { }
+        public DanhMuc()
+        {
+            this.ma = "";
+            this.ten = "";
+            this.ghichu = "";
+        }
         public DanhMuc(string ma, string ten, string ghichu)
         {
             if (ma.Length != 10)

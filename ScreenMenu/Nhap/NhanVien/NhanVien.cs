@@ -24,7 +24,14 @@ namespace LTUD1_MF_BHX
 
         public NhanVien()
         {
-            this.Nhap();
+            this.manv = "";
+            this.hotennv = "";
+            this.diachinv = "";
+            this.luong = 0;
+            this.sdtnv = 0;
+            this.ngaysinh = new DateTime();
+            this.mapb = "";
+            this.quanly = "";
         }
 
         public NhanVien(string manv, string hotennv, string diachinv, float luong, int sdtnv, DateTime ngaysinh, string mapb, string quanly)
@@ -59,7 +66,7 @@ namespace LTUD1_MF_BHX
             this.mapb = "pb3123";
             this.Quanly = "ql0123123";
         }
-        public void Xuat()
+        public string Xuat()
         {
             return $"{this.manv}#{this.hotennv}#{this.diachinv}#{this.luong}#{this.manv}#";
         }

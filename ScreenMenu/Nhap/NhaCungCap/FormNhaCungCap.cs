@@ -1,6 +1,4 @@
-﻿using LTUD1_MF_BHX.Connection;
-
-namespace LTUD1_MF_BHX.Screen
+﻿namespace LTUD1_MF_BHX
 {
     public partial class FormNhaCungCap : Form
     {

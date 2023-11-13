@@ -11,12 +11,15 @@
   <ItemGroup>
     <Compile Remove="ModelNhapTuScreen\**" />
     <Compile Remove="ModelXuatTuDB\**" />
+    <Compile Remove="ScreenMenu\Nhap\KhachHang\**" />
     <Compile Remove="UserControl\**" />
     <EmbeddedResource Remove="ModelNhapTuScreen\**" />
     <EmbeddedResource Remove="ModelXuatTuDB\**" />
+    <EmbeddedResource Remove="ScreenMenu\Nhap\KhachHang\**" />
     <EmbeddedResource Remove="UserControl\**" />
     <None Remove="ModelNhapTuScreen\**" />
     <None Remove="ModelXuatTuDB\**" />
+    <None Remove="ScreenMenu\Nhap\KhachHang\**" />
     <None Remove="UserControl\**" />
   </ItemGroup>
 
@@ -49,10 +52,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ScreenMenu\Nhap\KhachHang\" />
   </ItemGroup>
 
 </Project>

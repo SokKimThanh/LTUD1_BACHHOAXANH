@@ -1,6 +1,6 @@
 ﻿namespace LTUD1_MF_BHX.Screen
 {
-    partial class FormNhanVien1
+    partial class FormNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -462,7 +462,7 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
             // 
-            // FormNhanVien1
+            // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -472,7 +472,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FormNhanVien1";
+            this.Name = "FormNhanVien";
             this.Text = "Nhập thông tin nhân viên";
             this.tableLayoutPanel7.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);

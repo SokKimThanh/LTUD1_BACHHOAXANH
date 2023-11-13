@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using LTUD1_MF_BHX.Connection;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace LTUD1_MF_BHX
@@ -41,7 +42,17 @@ namespace LTUD1_MF_BHX
 
         public override object FromDataRow(DataRow row)
         {
-            throw new NotImplementedException();
+            return new NhanVien()
+            {
+                Manv = row.Field<string>("manv")!,
+                Hotennv = row.Field<string>("hotennv")!,
+                Diachinv = row.Field<string>("diachinv")!,
+                Luong = row.Field<int>("luong")!,
+                Mapb = row.Field<string>("mapb")!,
+                Ngaysinh = row.Field<DateTime>("ngaysinh")!,
+                Quanly = row.Field<string>("quanly")!,
+                Sdtnv = row.Field<int>("sdtnv")!
+            };
         }
 
         public override void Insert(object sender)
@@ -57,10 +68,14 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", o.Ma);
-                Sql.Parameters.AddWithValue("@ten", o.Ten);
-                Sql.Parameters.AddWithValue("@ghichu", o.Ghichu);
-
+                Sql.Parameters.AddWithValue("@manv", o.Manv);
+                Sql.Parameters.AddWithValue("@hotennv", o.Hotennv);
+                Sql.Parameters.AddWithValue("@sdtnv", o.Sdtnv);
+                Sql.Parameters.AddWithValue("@luong", o.Luong);
+                Sql.Parameters.AddWithValue("@diachinv", o.Diachinv);
+                Sql.Parameters.AddWithValue("@ngaysinh", o.Ngaysinh);
+                Sql.Parameters.AddWithValue("@quanly", o.Quanly);
+                Sql.Parameters.AddWithValue("@mapb", o.Mapb);
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
 
@@ -162,9 +177,14 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", o.Ma);
-                Sql.Parameters.AddWithValue("@ten", o.Ten);
-                Sql.Parameters.AddWithValue("@ghichu", o.Ghichu);
+                Sql.Parameters.AddWithValue("@manv", o.Manv);
+                Sql.Parameters.AddWithValue("@hotennv", o.Hotennv);
+                Sql.Parameters.AddWithValue("@sdtnv", o.Sdtnv);
+                Sql.Parameters.AddWithValue("@luong", o.Luong);
+                Sql.Parameters.AddWithValue("@diachinv", o.Diachinv);
+                Sql.Parameters.AddWithValue("@ngaysinh", o.Ngaysinh);
+                Sql.Parameters.AddWithValue("@quanly", o.Quanly);
+                Sql.Parameters.AddWithValue("@mapb", o.Mapb);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
