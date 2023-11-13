@@ -29,7 +29,9 @@ namespace LTUD1_MF_BHX
         private SqlCommand sql;
 
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public MyController(string connectionString)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             dbConnection = new DatabaseConnection(connectionString);
         }

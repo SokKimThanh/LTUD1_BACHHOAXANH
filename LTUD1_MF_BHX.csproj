@@ -51,4 +51,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ScreenMenu\Nhap\KhachHang\" />
+  </ItemGroup>
+
 </Project>
