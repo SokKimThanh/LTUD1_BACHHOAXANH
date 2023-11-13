@@ -134,6 +134,7 @@ _NCrunch*
 *.vsidx
 *.bin
 *.v2
+<<<<<<< HEAD
 *.1
 *.json
 <<<<<<< Updated upstream
@@ -142,3 +143,12 @@ _NCrunch*
 *.2
 *.lock
 >>>>>>> Stashed changes
+=======
+.vs/LTUD1_BACHHOAXANH/v17/.wsuo
+.vs/LTUD1_MF_BHX/FileContentIndex/read.lock
+*.json
+ 
+*.2
+*.manifest
+*.testlog
+>>>>>>> origin/master

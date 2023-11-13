@@ -63,14 +63,7 @@
             button1 = new Button();
             textBox1 = new TextBox();
             groupBox3 = new GroupBox();
-            listView1 = new ListView();
-            STT = new ColumnHeader();
-            chTenSP = new ColumnHeader();
-            chDVT = new ColumnHeader();
-            chNgayLapHD = new ColumnHeader();
-            chDonGia = new ColumnHeader();
-            chSLuongSP = new ColumnHeader();
-            chThanhTien = new ColumnHeader();
+            dataGridView1 = new DataGridView();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -90,6 +83,7 @@
             groupBox5.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -139,15 +133,15 @@
             tableLayoutPanel2.Margin = new Padding(0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 9;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(373, 685);
             tableLayoutPanel2.TabIndex = 10;
@@ -500,9 +494,9 @@
             // tableLayoutPanel6
             // 
             tableLayoutPanel6.ColumnCount = 3;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
             tableLayoutPanel6.Controls.Add(textBox4, 2, 0);
             tableLayoutPanel6.Controls.Add(button1, 1, 0);
             tableLayoutPanel6.Controls.Add(textBox1, 0, 0);
@@ -557,7 +551,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(listView1);
+            groupBox3.Controls.Add(dataGridView1);
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.ForeColor = Color.White;
             groupBox3.Location = new Point(3, 3);
@@ -567,55 +561,15 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách";
             // 
-            // listView1
+            // dataGridView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { STT, chTenSP, chDVT, chNgayLapHD, chDonGia, chSLuongSP, chThanhTien });
-            listView1.Dock = DockStyle.Fill;
-            listView1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-            listView1.Location = new Point(3, 35);
-            listView1.Margin = new Padding(5);
-            listView1.MultiSelect = false;
-            listView1.Name = "listView1";
-            listView1.Size = new Size(881, 418);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            // 
-            // STT
-            // 
-            STT.Text = "STT";
-            // 
-            // chTenSP
-            // 
-            chTenSP.Text = "Tên Sản Phẩm";
-            chTenSP.Width = 150;
-            // 
-            // chDVT
-            // 
-            chDVT.Text = "Đơn vị tính";
-            chDVT.Width = 150;
-            // 
-            // chNgayLapHD
-            // 
-            chNgayLapHD.Text = "Ngày lập HĐ";
-            chNgayLapHD.Width = 150;
-            // 
-            // chDonGia
-            // 
-            chDonGia.Text = "Đơn giá";
-            chDonGia.Width = 150;
-            // 
-            // chSLuongSP
-            // 
-            chSLuongSP.Text = "Số Lượng";
-            chSLuongSP.Width = 150;
-            // 
-            // chThanhTien
-            // 
-            chThanhTien.Text = "Thành tiền";
-            chThanhTien.Width = 150;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(6, 40);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(878, 410);
+            dataGridView1.TabIndex = 0;
             // 
             // FormChiTietHoaDon
             // 
@@ -653,6 +607,7 @@
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
             groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -673,14 +628,6 @@
         private TextBox textBox5;
         private TableLayoutPanel tableLayoutPanel5;
         private GroupBox groupBox3;
-        private ListView listView1;
-        private ColumnHeader STT;
-        private ColumnHeader chTenSP;
-        private ColumnHeader chDVT;
-        private ColumnHeader chNgayLapHD;
-        private ColumnHeader chDonGia;
-        private ColumnHeader chSLuongSP;
-        private ColumnHeader chThanhTien;
         private GroupBox groupBox4;
         private TextBox textBox3;
         private GroupBox groupBox5;
@@ -701,5 +648,6 @@
         private GroupBox groupBox12;
         private ComboBox comboBox4;
         private Button button3;
+        private DataGridView dataGridView1;
     }
 }
