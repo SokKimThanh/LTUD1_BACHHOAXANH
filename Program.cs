@@ -1,11 +1,4 @@
 ﻿using LTUD1_MF_BHX.Screen;
-using LTUD1_MF_BHX.ScreenMenu.HeThong;
-using LTUD1_MF_BHX.ScreenMenu.Nhap;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX
 {
