@@ -56,5 +56,10 @@ namespace LTUD1_MF_BHX.Screen
         {
 
         }
+
+        private void FormNhaCungCap_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

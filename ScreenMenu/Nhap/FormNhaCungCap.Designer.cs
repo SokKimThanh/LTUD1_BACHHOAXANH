@@ -335,6 +335,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormNhaCungCap";
             this.Text = "FormNhaCungCap";
+            this.Load += new System.EventHandler(this.FormNhaCungCap_Load_1);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
