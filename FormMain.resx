@@ -588,7 +588,11 @@
     <value>NoControl</value>
   </data>
   <data name="btnDangNhap.Location" type="System.Drawing.Point, System.Drawing">
+<<<<<<< Updated upstream
     <value>1089, 0</value>
+=======
+    <value>1087, 0</value>
+>>>>>>> Stashed changes
   </data>
   <data name="btnDangNhap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -666,7 +670,11 @@
     <value>NoControl</value>
   </data>
   <data name="lblAccountName.Location" type="System.Drawing.Point, System.Drawing">
+<<<<<<< Updated upstream
     <value>592, 0</value>
+=======
+    <value>591, 0</value>
+>>>>>>> Stashed changes
   </data>
   <data name="lblAccountName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -675,7 +683,11 @@
     <value>2, 0, 0, 0</value>
   </data>
   <data name="lblAccountName.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< Updated upstream
     <value>497, 102</value>
+=======
+    <value>496, 102</value>
+>>>>>>> Stashed changes
   </data>
   <data name="lblAccountName.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -717,7 +729,11 @@
     <value>2, 0, 0, 0</value>
   </data>
   <data name="currentChangeTitle.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< Updated upstream
     <value>497, 102</value>
+=======
+    <value>496, 102</value>
+>>>>>>> Stashed changes
   </data>
   <data name="currentChangeTitle.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -771,7 +787,11 @@
     <value>0</value>
   </data>
   <data name="tlpHeader.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+<<<<<<< Updated upstream
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDangNhap" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblAccountName" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeTitle" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,95,Percent,50,Percent,50,Absolute,96" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+=======
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDangNhap" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblAccountName" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="currentChangeTitle" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,95,Percent,50,Percent,50,Absolute,98" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+>>>>>>> Stashed changes
   </data>
   <data name="panelHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1276,7 +1296,11 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAGtEAAAJNU0Z0AUkBTAIBAQ4B
+<<<<<<< Updated upstream
         AAF4AQcBeAEHAUABAAFAAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoBAABAQMAAQECAAEBAQABIAcAAQR9
+=======
+        AAGoAQcBqAEHAUABAAFAAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoBAABAQMAAQECAAEBAQABIAcAAQR9
+>>>>>>> Stashed changes
         AAMqAUAg/wMhATB4AAMeASoDWAG4AV8CZgHlAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAV8CZgHlAV8C
         ZgHlAV8CZgHlAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAV8C
         ZgHlAVsCYwHkAVsCYwHkAV8CZgHlAVsCYwHkAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAVsC
@@ -2178,7 +2202,11 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA8BMAAAJNU0Z0AUkBTAIBAQ0B
+<<<<<<< Updated upstream
         AAFQAQcBUAEHARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAAUADAAEBAQABIAYAAUAu
+=======
+        AAGAAQcBgAEHARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAAUADAAEBAQABIAYAAUAu
+>>>>>>> Stashed changes
         AAMJAQsDDAEPAwYBCOwAAxMBGQMTARkDCwEOAwcBCQMPARQDEwEZAxMBGdwAAwIBAwMTARkYAAMFAQYD
         EwEZ2AADEwEZIAAEAQMTARnQAAMTARkDBQEGJAADEwEZAwIBA8wAAxMBGSwAAxMBGcwAAxMBGSwAAxMB
         GcwAAxMBGRQAAxMBGRQAAxMBGcwAAxMBGRQAAxMBGRQAAxMBGcwAAxEBFgMJAQwQAAMTARkQAAMTARnU
@@ -2287,7 +2315,11 @@
     <value>2269, 1382</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+<<<<<<< Updated upstream
     <value>1559, 805</value>
+=======
+    <value>1488, 805</value>
+>>>>>>> Stashed changes
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

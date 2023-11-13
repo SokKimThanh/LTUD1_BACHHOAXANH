@@ -136,3 +136,9 @@ _NCrunch*
 *.v2
 *.1
 *.json
+<<<<<<< Updated upstream
+=======
+ 
+*.2
+*.lock
+>>>>>>> Stashed changes
