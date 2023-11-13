@@ -1,4 +1,5 @@
-﻿using LTUD1_MF_BHX.model;
+﻿using LTUD1_MF_BHX.Connection;
+using LTUD1_MF_BHX.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
