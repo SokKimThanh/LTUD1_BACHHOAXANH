@@ -13,13 +13,17 @@ namespace LTUD1_MF_BHX.Model
 
         public KhachHang(string ma, string ten, int sdt, int diem)
         {
-            this.Ma = ma;
-            this.Ten = ten;
-            this.Sdt = sdt;
-            this.Diem = diem;
+            this.ma = ma;
+            this.ten = ten;
+            this.sdt = sdt;
+            this.diem = diem;
         }
         public KhachHang()
         {
+            ma = string.Empty;
+            ten = string.Empty;
+            diem = 0;
+            sdt = 0;
         }
 
         public string Ma { get => ma; set => ma = value; }

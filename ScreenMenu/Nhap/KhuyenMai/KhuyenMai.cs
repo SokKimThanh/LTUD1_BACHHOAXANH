@@ -15,7 +15,10 @@ namespace LTUD1_MF_BHX
 
         public KhuyenMai()
         {
-
+            makm = string.Empty;
+            ngaybd = DateTime.Now;
+            ngaykt = DateTime.Now;
+            masp = string.Empty;
         }
         public KhuyenMai(string makm, DateTime ngaybd, DateTime ngaykt, string masp)
         {
@@ -32,7 +35,7 @@ namespace LTUD1_MF_BHX
 
         public override string ToString()
         {
-            return  $"{makm,-15}{Ngaybd.ToString("dd/MM/yyyy"),-10}{Ngaykt.ToString("dd/MM/yyyy"),-10}{Masp,-15}";
+            return $"{makm,-15}{Ngaybd.ToString("dd/MM/yyyy"),-10}{Ngaykt.ToString("dd/MM/yyyy"),-10}{Masp,-15}";
         }
     }
 }

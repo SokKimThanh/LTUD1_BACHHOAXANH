@@ -13,7 +13,9 @@ namespace LTUD1_MF_BHX
         string ghichu;
         public HinhThucKhuyenMai()
         {
-
+            makm = string.Empty;
+            hinhthuc = string.Empty;
+            ghichu = string.Empty;
         }
 
         public HinhThucKhuyenMai(string makm, string hinhthuc, string ghichu)
