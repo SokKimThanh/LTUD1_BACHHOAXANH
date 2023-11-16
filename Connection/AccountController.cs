@@ -1,14 +1,13 @@
 ﻿using LTUD1_MF_BHX.Connection;
-using LTUD1_MF_BHX.model;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace LTUD1_MF_BHX.connection
 {
 
-    public class UserController : MyController
+    public class AccountController : MyController
     {
-        public UserController(string connectionString) : base(connectionString)
+        public AccountController(string connectionString) : base(connectionString)
         {
 
         }
@@ -19,7 +18,7 @@ namespace LTUD1_MF_BHX.connection
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("YourDeleteStoredProcedureName", conn);
+            Sql = new SqlCommand("sp_DeleteAccount", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
@@ -34,7 +33,7 @@ namespace LTUD1_MF_BHX.connection
 
         public override object FromDataRow(DataRow row)
         {
-            return new UserAdo()
+            return new Account()
             {
                 Username = row.Field<string>("username")!,
                 Password = row.Field<string>("password")!,
@@ -44,7 +43,7 @@ namespace LTUD1_MF_BHX.connection
 
         public override void Insert(object sender)
         {
-            UserAdo user = (UserAdo)sender;
+            Account user = (Account)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
@@ -116,7 +115,7 @@ namespace LTUD1_MF_BHX.connection
 
         public override void Update(object sender)
         {
-            UserAdo user = (UserAdo)sender;
+            Account user = (Account)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
