@@ -38,7 +38,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
                 MaTaiKhoan = row.Field<string>("matk")!,
                 TenTaiKhoan = row.Field<string>("tentk")!,
                 MatKhau = row.Field<string>("matkhau")!,
-                Createdate = row.Field<DateTime>("createdate")!,
+                CreatedDate = row.Field<DateTime>("createdate")!,
                 Phone = row.Field<string>("phone")!,
                 Cccd = row.Field<string>("cccd")!,
                 Email = row.Field<string>("email")!
@@ -61,7 +61,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
                 Sql.Parameters.AddWithValue("@matk", o.MaTaiKhoan);
                 Sql.Parameters.AddWithValue("@tentk", o.TenTaiKhoan);
                 Sql.Parameters.AddWithValue("@matkhau", o.MatKhau);
-                Sql.Parameters.AddWithValue("@createdate", o.Createdate);
+                Sql.Parameters.AddWithValue("@createdate", o.CreatedDate);
                 Sql.Parameters.AddWithValue("@phone", o.Phone);
                 Sql.Parameters.AddWithValue("@cccd", o.Cccd);
                 Sql.Parameters.AddWithValue("@email", o.Email);

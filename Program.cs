@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.Screen;
+using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 
 namespace LTUD1_MF_BHX
 {
@@ -10,8 +11,8 @@ namespace LTUD1_MF_BHX
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                FormDangNhap logon = new FormDangNhap();
-                //FormNhaCungCap logon = new FormNhaCungCap();
+                //FormDangNhap logon = new FormDangNhap();
+                FormTaiKhoan logon = new FormTaiKhoan();
 
                 Application.Run(logon);
 

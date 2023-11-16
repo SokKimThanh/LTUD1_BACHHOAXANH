@@ -10,8 +10,32 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         private string cccd;
         private string email;
 
+        public TaiKhoan()
+        {
+
+        }
+
+        // update
+        public TaiKhoan(string? tentk = null, string? matkhau = null, string? matk = null, string? phone = null, string? cccd = null, string? email = null)
+        {
+            if (matk == null || matk.Length <= 0)
+            {
+                throw new Exception("Mã tài khoản không hợp lệ");
+            }
+            this.tentk = tentk!;
+            this.matkhau = matkhau!;
+            this.matk = matk!;
+            this.phone = phone!;
+            this.cccd = cccd!;
+            this.email = email!;
+        }
+        //add
         public TaiKhoan(string? tentk = null, string? matkhau = null, string? matk = null, DateTime createdate = default, string? phone = null, string? cccd = null, string? email = null)
         {
+            if (matk == null || matk.Length <= 0)
+            {
+                throw new Exception("Mã tài khoản không hợp lệ");
+            }
             this.tentk = tentk!;
             this.matkhau = matkhau!;
             this.matk = matk!;
@@ -24,7 +48,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         public string TenTaiKhoan { get => tentk; set => tentk = value; }
         public string MatKhau { get => matkhau; set => matkhau = value; }
         public string MaTaiKhoan { get => matk; set => matk = value; }
-        public DateTime Createdate { get => createdate; set => createdate = value; }
+        public DateTime CreatedDate { get => createdate; set => createdate = value; }
         public string Phone { get => phone; set => phone = value; }
         public string Cccd { get => cccd; set => cccd = value; }
         public string Email { get => email; set => email = value; }

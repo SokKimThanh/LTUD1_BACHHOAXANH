@@ -18,7 +18,7 @@ CREATE PROCEDURE sp_taikhoan_update
 	@MATK CHAR(11), 
 	@TENTK NVARCHAR(30), 
 	@MATKHAU varchar(16),
-	@CREATEDATE datetime,
+	--@CREATEDATE datetime,
 	@PHONE varchar(11), 
 	@CCCD varchar(16), 
 	@EMAIL varchar(255)

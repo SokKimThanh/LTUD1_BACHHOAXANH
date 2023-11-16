@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvTaiKhoan = new DataGridView();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
             dtpCreatedDate = new DateTimePicker();
             txtEmail = new TextBox();
             txtSDT = new TextBox();
@@ -47,28 +45,13 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            groupBox2 = new GroupBox();
             btnSua = new Button();
             btnXoa = new Button();
             btnAdd = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvTaiKhoan).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
-            // 
-            // dgvTaiKhoan
-            // 
-            dgvTaiKhoan.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dgvTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvTaiKhoan.Dock = DockStyle.Right;
-            dgvTaiKhoan.Location = new Point(412, 0);
-            dgvTaiKhoan.Name = "dgvTaiKhoan";
-            dgvTaiKhoan.ReadOnly = true;
-            dgvTaiKhoan.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dgvTaiKhoan.RowTemplate.Height = 28;
-            dgvTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTaiKhoan.ShowEditingIcon = false;
-            dgvTaiKhoan.Size = new Size(388, 450);
-            dgvTaiKhoan.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -91,23 +74,10 @@
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(412, 450);
+            groupBox1.Size = new Size(800, 450);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Nhập thông tin";
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(btnSua);
-            groupBox2.Controls.Add(btnXoa);
-            groupBox2.Controls.Add(btnAdd);
-            groupBox2.Dock = DockStyle.Bottom;
-            groupBox2.Location = new Point(0, 365);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(412, 85);
-            groupBox2.TabIndex = 14;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Thao tác dữ liệu";
             // 
             // dtpCreatedDate
             // 
@@ -244,6 +214,19 @@
             label1.TabIndex = 12;
             label1.Text = "Mã tài khoản";
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(btnSua);
+            groupBox2.Controls.Add(btnXoa);
+            groupBox2.Controls.Add(btnAdd);
+            groupBox2.Dock = DockStyle.Bottom;
+            groupBox2.Location = new Point(0, 365);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(800, 85);
+            groupBox2.TabIndex = 14;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Thao tác dữ liệu";
+            // 
             // btnSua
             // 
             btnSua.Location = new Point(276, 37);
@@ -252,6 +235,7 @@
             btnSua.TabIndex = 33;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
@@ -261,6 +245,7 @@
             btnXoa.TabIndex = 32;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnAdd
             // 
@@ -270,6 +255,7 @@
             btnAdd.TabIndex = 31;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // FormTaiKhoan
             // 
@@ -278,10 +264,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(dgvTaiKhoan);
             Name = "FormTaiKhoan";
             Text = "Danh sách tài khoản";
-            ((System.ComponentModel.ISupportInitialize)dgvTaiKhoan).EndInit();
+            Load += FormTaiKhoan_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -289,8 +274,6 @@
         }
 
         #endregion
-
-        private DataGridView dgvTaiKhoan;
         private GroupBox groupBox1;
         private DateTimePicker dtpCreatedDate;
         private TextBox txtEmail;

@@ -29,6 +29,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from taikhoan
+	SELECT * FROM TAIKHOAN
 END
 GO

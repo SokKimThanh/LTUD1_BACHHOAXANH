@@ -15,13 +15,13 @@ DROP PROCEDURE IF EXISTS sp_taikhoan_delete
 GO
 CREATE PROCEDURE sp_taikhoan_delete
 	-- Add the parameters for the stored procedure here
-	@MATK CHAR(11), 
-	@TENTK NVARCHAR(30), 
-	@MATKHAU varchar(16),
-	@CREATEDATE datetime,
-	@PHONE varchar(11), 
-	@CCCD varchar(16), 
-	@EMAIL varchar(255)
+	@MATK CHAR(11)
+	--@TENTK NVARCHAR(30), 
+	--@MATKHAU varchar(16),
+	--@CREATEDATE datetime,
+	--@PHONE varchar(11), 
+	--@CCCD varchar(16), 
+	--@EMAIL varchar(255)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -29,6 +29,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Delete statements for procedure here
-	DELETE FROM taikhoan WHERE matk @matk
+	DELETE FROM taikhoan WHERE matk = @matk
 END
 GO
