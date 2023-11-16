@@ -1,6 +1,6 @@
 ﻿namespace LTUD1_MF_BHX.ScreenMenu.HeThong
 {
-    partial class FormQuanLyTaiKhoan
+    partial class FormAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -28,75 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ColumnHeader chPhoneNumber;
-            textBox1 = new TextBox();
-            listView1 = new ListView();
+            txtTenDangNhap = new TextBox();
             groupBox1 = new GroupBox();
+            txtEmail = new TextBox();
+            txtCCCD = new TextBox();
+            txtSDT = new TextBox();
+            txtMatKhau = new TextBox();
             groupBox7 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             button3 = new Button();
             button2 = new Button();
             groupBox2 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
-            button1 = new Button();
-            button4 = new Button();
+            btnSua = new Button();
+            btnXoa = new Button();
             btnThem = new Button();
-            chIdAccount = new ColumnHeader();
-            chUsername = new ColumnHeader();
-            chPassword = new ColumnHeader();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            chCCCD = new ColumnHeader();
-            chEmail = new ColumnHeader();
-            chPhoneNumber = new ColumnHeader();
             groupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             groupBox2.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // txtTenDangNhap
             // 
-            textBox1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(45, 39);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Tên đăng nhập";
-            textBox1.Size = new Size(260, 39);
-            textBox1.TabIndex = 0;
-            // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { chIdAccount, chPassword, chUsername, chPhoneNumber, chCCCD, chEmail });
-            listView1.Dock = DockStyle.Left;
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-            listView1.HoverSelection = true;
-            listView1.Location = new Point(0, 0);
-            listView1.MultiSelect = false;
-            listView1.Name = "listView1";
-            listView1.Size = new Size(532, 570);
-            listView1.Sorting = SortOrder.Ascending;
-            listView1.TabIndex = 2;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            txtTenDangNhap.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenDangNhap.Location = new Point(39, 31);
+            txtTenDangNhap.Margin = new Padding(3, 2, 3, 2);
+            txtTenDangNhap.Name = "txtTenDangNhap";
+            txtTenDangNhap.PlaceholderText = "Tên đăng nhập";
+            txtTenDangNhap.Size = new Size(228, 39);
+            txtTenDangNhap.TabIndex = 0;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtEmail);
+            groupBox1.Controls.Add(txtCCCD);
+            groupBox1.Controls.Add(txtSDT);
+            groupBox1.Controls.Add(txtMatKhau);
+            groupBox1.Controls.Add(txtTenDangNhap);
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(532, 0);
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(382, 570);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(800, 450);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin chi tiết";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Location = new Point(39, 279);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Email";
+            txtEmail.Size = new Size(228, 39);
+            txtEmail.TabIndex = 4;
+            // 
+            // txtCCCD
+            // 
+            txtCCCD.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCCCD.Location = new Point(39, 217);
+            txtCCCD.Margin = new Padding(3, 2, 3, 2);
+            txtCCCD.Name = "txtCCCD";
+            txtCCCD.PlaceholderText = "CCCD";
+            txtCCCD.Size = new Size(228, 39);
+            txtCCCD.TabIndex = 3;
+            // 
+            // txtSDT
+            // 
+            txtSDT.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSDT.Location = new Point(39, 151);
+            txtSDT.Margin = new Padding(3, 2, 3, 2);
+            txtSDT.Name = "txtSDT";
+            txtSDT.PlaceholderText = "Số điện thoại";
+            txtSDT.Size = new Size(228, 39);
+            txtSDT.TabIndex = 2;
+            // 
+            // txtMatKhau
+            // 
+            txtMatKhau.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMatKhau.Location = new Point(39, 88);
+            txtMatKhau.Margin = new Padding(3, 2, 3, 2);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PlaceholderText = "Mật khẩu";
+            txtMatKhau.Size = new Size(228, 39);
+            txtMatKhau.TabIndex = 1;
             // 
             // groupBox7
             // 
@@ -161,9 +180,11 @@
             groupBox2.Controls.Add(tableLayoutPanel2);
             groupBox2.Dock = DockStyle.Bottom;
             groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(532, 431);
+            groupBox2.Location = new Point(0, 340);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(382, 139);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(800, 110);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Thao tác dữ liệu";
@@ -177,54 +198,54 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel2.Controls.Add(button1, 2, 0);
-            tableLayoutPanel2.Controls.Add(button4, 1, 0);
+            tableLayoutPanel2.Controls.Add(btnSua, 2, 0);
+            tableLayoutPanel2.Controls.Add(btnXoa, 1, 0);
             tableLayoutPanel2.Controls.Add(btnThem, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            tableLayoutPanel2.Location = new Point(3, 22);
-            tableLayoutPanel2.Margin = new Padding(5);
+            tableLayoutPanel2.Location = new Point(3, 18);
+            tableLayoutPanel2.Margin = new Padding(4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(376, 114);
+            tableLayoutPanel2.Size = new Size(794, 90);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // button1
+            // btnSua
             // 
-            button1.BackColor = Color.Transparent;
-            tableLayoutPanel2.SetColumnSpan(button1, 2);
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(253, 5);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 104);
-            button1.TabIndex = 2;
-            button1.Text = "Sửa";
-            button1.UseVisualStyleBackColor = false;
+            btnSua.BackColor = Color.Transparent;
+            tableLayoutPanel2.SetColumnSpan(btnSua, 2);
+            btnSua.Dock = DockStyle.Fill;
+            btnSua.FlatAppearance.BorderSize = 3;
+            btnSua.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnSua.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnSua.FlatStyle = FlatStyle.Flat;
+            btnSua.ForeColor = Color.SeaShell;
+            btnSua.Location = new Point(532, 4);
+            btnSua.Margin = new Padding(4);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(258, 82);
+            btnSua.TabIndex = 2;
+            btnSua.Text = "Sửa";
+            btnSua.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnXoa
             // 
-            button4.BackColor = Color.Transparent;
-            tableLayoutPanel2.SetColumnSpan(button4, 2);
-            button4.Dock = DockStyle.Fill;
-            button4.FlatAppearance.BorderSize = 3;
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.SeaShell;
-            button4.Location = new Point(129, 5);
-            button4.Margin = new Padding(5);
-            button4.Name = "button4";
-            button4.Size = new Size(114, 104);
-            button4.TabIndex = 1;
-            button4.Text = "Xóa";
-            button4.UseVisualStyleBackColor = false;
+            btnXoa.BackColor = Color.Transparent;
+            tableLayoutPanel2.SetColumnSpan(btnXoa, 2);
+            btnXoa.Dock = DockStyle.Fill;
+            btnXoa.FlatAppearance.BorderSize = 3;
+            btnXoa.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnXoa.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.ForeColor = Color.SeaShell;
+            btnXoa.Location = new Point(268, 4);
+            btnXoa.Margin = new Padding(4);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(256, 82);
+            btnXoa.TabIndex = 1;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnThem
             // 
@@ -236,92 +257,25 @@
             btnThem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.ForeColor = Color.SeaShell;
-            btnThem.Location = new Point(5, 5);
-            btnThem.Margin = new Padding(5);
+            btnThem.Location = new Point(4, 4);
+            btnThem.Margin = new Padding(4);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(114, 104);
+            btnThem.Size = new Size(256, 82);
             btnThem.TabIndex = 0;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
             // 
-            // chIdAccount
+            // FormAccount
             // 
-            chIdAccount.Width = 0;
-            // 
-            // chUsername
-            // 
-            chUsername.DisplayIndex = 1;
-            chUsername.Text = "Tên đăng nhập";
-            chUsername.Width = 132;
-            // 
-            // chPassword
-            // 
-            chPassword.DisplayIndex = 2;
-            chPassword.Text = "Mật khẩu";
-            chPassword.Width = 0;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(45, 111);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Mật khẩu";
-            textBox2.Size = new Size(260, 39);
-            textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(45, 191);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Số điện thoại";
-            textBox3.Size = new Size(260, 39);
-            textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(45, 275);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "CCCD";
-            textBox4.Size = new Size(260, 39);
-            textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(45, 354);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Email";
-            textBox5.Size = new Size(260, 39);
-            textBox5.TabIndex = 4;
-            // 
-            // chPhoneNumber
-            // 
-            chPhoneNumber.Text = "Số điện thoại";
-            chPhoneNumber.Width = 132;
-            // 
-            // chCCCD
-            // 
-            chCCCD.Text = "CCCD";
-            chCCCD.Width = 132;
-            // 
-            // chEmail
-            // 
-            chEmail.Text = "Email";
-            chEmail.Width = 132;
-            // 
-            // FormQuanLyTaiKhoan
-            // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
-            ClientSize = new Size(914, 570);
+            ClientSize = new Size(800, 450);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(listView1);
             ForeColor = SystemColors.ControlText;
-            Name = "FormQuanLyTaiKhoan";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormAccount";
             Text = "FormQuanLyTaiKhoan";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -333,26 +287,20 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private ListView listView1;
+        private TextBox txtTenDangNhap;
         private GroupBox groupBox1;
-        private ColumnHeader chIdAccount;
-        private ColumnHeader chUsername;
-        private ColumnHeader chPassword;
         private GroupBox groupBox7;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button3;
         private Button button2;
         private GroupBox groupBox2;
         private TableLayoutPanel tableLayoutPanel2;
-        private Button button1;
-        private Button button4;
+        private Button btnSua;
+        private Button btnXoa;
         private Button btnThem;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private ColumnHeader chCCCD;
-        private ColumnHeader chEmail;
+        private TextBox txtMatKhau;
+        private TextBox txtEmail;
+        private TextBox txtCCCD;
+        private TextBox txtSDT;
     }
 }
