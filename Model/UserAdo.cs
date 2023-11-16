@@ -13,7 +13,10 @@ namespace LTUD1_MF_BHX.model
 
         public UserAdo()
         {
-
+            userid = "123123123123";
+            username = "admin";
+            password = "password";
+            createdDate = DateTime.Now;
         }
         public UserAdo(string username, string password, string userid, DateTime createdDate)
         {

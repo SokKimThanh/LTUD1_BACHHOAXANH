@@ -1,17 +1,22 @@
 ﻿using LTUD1_MF_BHX.Connection;
 using LTUD1_MF_BHX.model;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace LTUD1_MF_BHX.connection
+namespace LTUD1_MF_BHX
 {
-
-    public class UserController : MyController
+    internal class KhuyenMaiController : MyController
     {
-        public UserController(string connectionString) : base(connectionString)
+        public KhuyenMaiController(string connectionString) : base(connectionString)
         {
-
         }
+
+        
 
         public override void Delete(object id)
         {
@@ -19,7 +24,7 @@ namespace LTUD1_MF_BHX.connection
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("YourDeleteStoredProcedureName", conn);
+            Sql = new SqlCommand("sp_khuyenmai_delete", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
@@ -34,28 +39,30 @@ namespace LTUD1_MF_BHX.connection
 
         public override object FromDataRow(DataRow row)
         {
-            return new UserAdo()
+            return new KhuyenMai()
             {
-                Username = row.Field<string>("username")!,
-                Password = row.Field<string>("password")!,
-                CreatedDate = row.Field<DateTime>("createdDate")!
+                Makm = row.Field<string>("makm")!,
+                Ngaybd = row.Field<DateTime>("ngaybd")!,
+                Ngaykt = row.Field<DateTime>("ngaykt")!,
+                Masp = row.Field<string>("masp")!
             };
         }
 
         public override void Insert(object sender)
         {
-            UserAdo user = (UserAdo)sender;
+            KhuyenMai user = (KhuyenMai)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("YourInsertStoredProcedureName", conn);
+            Sql = new SqlCommand("sp_khuyenmai_insert", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@Username", user.Username);
-            Sql.Parameters.AddWithValue("@Password", user.Password);
-            Sql.Parameters.AddWithValue("@CreatedDate", user.CreatedDate);
+            Sql.Parameters.AddWithValue("@makm", user.Makm);
+            Sql.Parameters.AddWithValue("@ngaybd", user.Ngaybd);
+            Sql.Parameters.AddWithValue("@ngaykt", user.Ngaykt);
+            Sql.Parameters.AddWithValue("@masp", user.Masp);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
@@ -63,14 +70,35 @@ namespace LTUD1_MF_BHX.connection
             // Đóng kết nối
             CloseConnection();
         }
+        public DataTable  sp_cbo_hinhthuckm()
+        {
+            // Mở kết nối
+            SqlConnection conn = OpenConnection();
 
+            // Tạo một đối tượng SqlCommand
+            Sql = new SqlCommand("sp_cbo_hinhthuckm", conn);
+            Sql.CommandType = CommandType.StoredProcedure;
+
+            // Tạo một đối tượng SqlDataAdapter
+            Adapter = new SqlDataAdapter(Sql);
+
+            // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+            DataTable dt = new DataTable();
+
+            // Đổ dữ liệu vào DataTable
+            Adapter.Fill(dt);
+
+            // Đóng kết nối
+            CloseConnection();
+            return dt;
+        }
         public override void SelectAll()
         {
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("YourStoredProcedureName", conn);
+            Sql = new SqlCommand("sp_khuyenmai_select_all", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Tạo một đối tượng SqlDataAdapter
@@ -92,11 +120,11 @@ namespace LTUD1_MF_BHX.connection
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("YourSelectByIdStoredProcedureName", conn);
+            Sql = new SqlCommand("sp_khuyenmai_select_one", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@UserId", id);
+            Sql.Parameters.AddWithValue("@makm", id);
 
             // Tạo một đối tượng SqlDataAdapter
             Adapter = new SqlDataAdapter(Sql);
@@ -116,19 +144,19 @@ namespace LTUD1_MF_BHX.connection
 
         public override void Update(object sender)
         {
-            UserAdo user = (UserAdo)sender;
+           KhuyenMai user = (KhuyenMai)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("YourUpdateStoredProcedureName", conn);
+            Sql = new SqlCommand("sp_khuyenmai_update", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@UserId", user.Userid);
-            Sql.Parameters.AddWithValue("@Username", user.Username);
-            Sql.Parameters.AddWithValue("@Password", user.Password);
-            Sql.Parameters.AddWithValue("@CreatedDate", user.CreatedDate);
+            Sql.Parameters.AddWithValue("@makm", user.Makm);
+            Sql.Parameters.AddWithValue("@ngaybd", user.Ngaybd);
+            Sql.Parameters.AddWithValue("@ngaykt", user.Ngaykt);
+            Sql.Parameters.AddWithValue("@masp", user.Masp);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
@@ -137,5 +165,4 @@ namespace LTUD1_MF_BHX.connection
             CloseConnection();
         }
     }
-
 }

@@ -1,10 +1,4 @@
 ﻿using LTUD1_MF_BHX.Screen;
-using LTUD1_MF_BHX.ScreenMenu.HeThong;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX
 {
@@ -16,8 +10,8 @@ namespace LTUD1_MF_BHX
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                //FormDangNhap logon = new FormDangNhap();
-                FormNhaCungCap logon = new FormNhaCungCap();
+                FormDangNhap logon = new FormDangNhap();
+                //FormNhaCungCap logon = new FormNhaCungCap();
 
                 Application.Run(logon);
 

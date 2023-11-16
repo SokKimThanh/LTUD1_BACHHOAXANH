@@ -37,9 +37,6 @@
     <Compile Update="ScreenMenu\In\FormBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\FormKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\Nhap\FormKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +50,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\SanPham\FormSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\KhachHang\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\TraCuu\FormTraCuuSanPham.cs">

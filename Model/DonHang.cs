@@ -16,7 +16,9 @@ namespace LTUD1_MF_BHX.Model
         private string _DiaChiKH;
         private string _SDT;
         private DateTime _NgayDatHang;
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public DonHang()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             _SoThuTu++;
             _MaHang = new string[] { "" };
@@ -27,7 +29,9 @@ namespace LTUD1_MF_BHX.Model
             _SDT = "";
             _NgayDatHang = new DateTime();
         }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public DonHang(string[] maHang, int soLuong, double tongTien, string tenKH, string diaChiKH, string sdt, DateTime ngayDatHang)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             _MaHang = maHang;
             _SoLuong = soLuong;
