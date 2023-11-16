@@ -10,11 +10,11 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong
 
     public class Session
     {
-        private static string username = "";// chưa nhớ password username
+        private static string username = "";// chưa nhớ matkhau tentk
         public string Username { get => username; set => username = value; }
 
-        //public string Password { get; set; }
-        //private static bool rememberMe = false;// chưa nhớ password username
+        //public string MatKhau { get; set; }
+        //private static bool rememberMe = false;// chưa nhớ matkhau tentk
 
         private Dictionary<string, object> _lst = new Dictionary<string, object>();
 
@@ -70,13 +70,13 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong
         //        // Ghi thông tin vào tệp  
         //        //using (var writer = new StreamWriter("login.txt"))
         //        //{//mo file
-        //        //    writer.WriteLine($"{Username}#{Password}");
+        //        //    writer.WriteLine($"{TenTaiKhoan}#{MatKhau}");
         //        //}//dong file 
-        //        this["username"] = Username;//lưu session
+        //        this["tentk"] = TenTaiKhoan;//lưu session
         //    }
         //    else
         //    {
-        //        this["username"] = ""; ;//xóa session
+        //        this["tentk"] = ""; ;//xóa session
         //    }
         //else
         //{
@@ -85,11 +85,11 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong
         //    {//mo file
         //        var fileContents = reader.ReadToEnd();
         //        string[] arr = fileContents.ToString().Split("#");
-        //        Username = arr[0];
-        //        Password = arr[1];
+        //        TenTaiKhoan = arr[0];
+        //        MatKhau = arr[1];
         //    }//dong file
         //    // hoặc lấy key
-        //    Get(Username);
+        //    Get(TenTaiKhoan);
         //    RememberMe = false;
         //}
         //}

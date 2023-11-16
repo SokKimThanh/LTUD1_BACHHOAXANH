@@ -19,7 +19,7 @@ namespace LTUD1_MF_BHX.Model
 {
     public class DanhSachTaiKhoan
     {
-        private TaiKhoan[] items;
+        private TaiKhoanModel[] items;
         private int size;
         private int capacity;
         private string file_path = "Admin.txt";
@@ -27,18 +27,18 @@ namespace LTUD1_MF_BHX.Model
         public DanhSachTaiKhoan()
         {
             capacity = 0;
-            items = new TaiKhoan[0];
+            items = new TaiKhoanModel[0];
             size = 0;
         }
 
         public DanhSachTaiKhoan(int maxSize)
         {
             capacity = maxSize;
-            items = new TaiKhoan[maxSize];
+            items = new TaiKhoanModel[maxSize];
             size = 0;
         }
 
-        internal TaiKhoan[] Items { get => items; set => items = value; }
+        internal TaiKhoanModel[] Items { get => items; set => items = value; }
 
         public int Size
         {
@@ -53,7 +53,7 @@ namespace LTUD1_MF_BHX.Model
         }
 
         // Hàm Them thêm một phần tử vào cuối mảng Data
-        public void Add(TaiKhoan item)
+        public void Add(TaiKhoanModel item)
         {
 
             // Kiểm tra xem kích thước của mảng có đủ lớn để chứa thêm phần tử mới hay không
@@ -68,7 +68,7 @@ namespace LTUD1_MF_BHX.Model
         }
 
         // Hàm Them thêm một phần tử vào cuối mảng Data
-        public bool ThemBool(TaiKhoan data)
+        public bool ThemBool(TaiKhoanModel data)
         {
             bool isThem = false;// chua them duoc
             if (data == null)
@@ -88,9 +88,9 @@ namespace LTUD1_MF_BHX.Model
             return isThem;
         }
         // Hàm Xoa xóa phần tử đầu tiên trong mảng items
-        public TaiKhoan Xoa()
+        public TaiKhoanModel Xoa()
         {
-            TaiKhoan isXoa = null!;
+            TaiKhoanModel isXoa = null!;
             // Kiểm tra xem kích thước của mảng có lớn hơn 0 hay không
             if (size > 0)
             {
@@ -117,10 +117,10 @@ namespace LTUD1_MF_BHX.Model
                 Console.WriteLine(items[i].toString());
             }
         }
-        private static TaiKhoan parseAdmin(string line)
+        private static TaiKhoanModel parseAdmin(string line)
         {
             string[] arr = line.Split('#');
-            TaiKhoan item = new TaiKhoan();
+            TaiKhoanModel item = new TaiKhoanModel();
             item.UserName = arr[0];
             item.Password = arr[1];
             return item;
@@ -132,7 +132,7 @@ namespace LTUD1_MF_BHX.Model
                 string line;
                 while ((line = reader.ReadLine()!) != null)
                 {
-                    TaiKhoan data = parseAdmin(line);
+                    TaiKhoanModel data = parseAdmin(line);
                     Add(data);
                 }
             }

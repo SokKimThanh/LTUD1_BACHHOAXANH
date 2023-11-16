@@ -81,7 +81,10 @@ CREATE TABLE CHITIETCC (MANCC CHAR(11) NOT NULL,MASP CHAR(11) NOT NULL,SLCUNGCCA
 ----------------------Tạo bảng LOAISP-----------------------
 ------------------------------------------------------------
 CREATE TABLE LOAISP (MALOAI CHAR(11) NOT NULL, TENLOAI NVARCHAR(30) NOT NULL, GHICHU NVARCHAR(100));
-
+------------------------------------------------------------
+----------------------Tạo bảng TAIKHOAN-----------------------
+------------------------------------------------------------
+CREATE TABLE TAIKHOAN (MATK CHAR(11) NOT NULL, TENTK NVARCHAR(30) NOT NULL, MATKHAU varchar(16), CREATEDATE datetime, PHONE varchar(11), CCCD varchar(16), EMAIL varchar(255));
 /***********************************************************
 ------------------------------------------------------------
 ----Tạo khóa chính------------------------------------------
@@ -96,6 +99,7 @@ ALTER TABLE SANPHAM ADD CONSTRAINT PK_SANPHAM PRIMARY KEY (MASP);
 ALTER TABLE LOAISP ADD CONSTRAINT PK_LOAISP PRIMARY KEY (MALOAI);
 ALTER TABLE KHUYENMAI ADD CONSTRAINT PK_KHUYENMAI PRIMARY KEY (MAKM);
 ALTER TABLE HOADON ADD CONSTRAINT PK_HOADON PRIMARY KEY (MAHD);
+ALTER TABLE TAIKHOAN ADD CONSTRAINT PK_TAIKHOAN PRIMARY KEY (MATK);
 
 
 /***********************************************************
