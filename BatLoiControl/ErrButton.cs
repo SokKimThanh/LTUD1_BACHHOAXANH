@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.BatLoiControl
 {
-    internal class BatLoiButton
+    internal class ErrButton
     {
     }
 }
