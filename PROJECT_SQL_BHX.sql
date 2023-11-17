@@ -15,6 +15,7 @@ Date(dd/MM/yyyy)Author  Comments
 7/5/2023 	11:43  		Sok Kim Thanh		Viết mã nhập liệu
 7/5/2023 	05:58  		Sok Kim Thanh   	Viêt mã sql tác ra 3 phần, tạo bảng, thêm khóa chính, thêm khóa ngoại.
 3/11/2023	11:00		Lê Duy Anh Tú		Cập nhật thêm bảng loại sản phẩm
+11/17/2023  00:00 SA	Sok Kim Thanh		Thêm bảng tài khoản
 ***************************************************************************************************/
 ------------------------------------------------------------
 --Tạo database mới										   -
@@ -101,6 +102,7 @@ ALTER TABLE KHUYENMAI ADD CONSTRAINT PK_KHUYENMAI PRIMARY KEY (MAKM);
 ALTER TABLE HOADON ADD CONSTRAINT PK_HOADON PRIMARY KEY (MAHD);
 ALTER TABLE TAIKHOAN ADD CONSTRAINT PK_TAIKHOAN PRIMARY KEY (MATK);
 
+ 
 
 /***********************************************************
 ------------------------------------------------------------

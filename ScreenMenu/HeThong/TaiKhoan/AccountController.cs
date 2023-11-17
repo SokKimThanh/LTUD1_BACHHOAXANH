@@ -1,13 +1,13 @@
 ﻿using LTUD1_MF_BHX.Connection;
 using System.Data;
 using System.Data.SqlClient;
-
+using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 {
 
-    public class TaiKhoanController : MyController
+    public class AccountController : MyController
     {
-        public TaiKhoanController(string connectionString) : base(connectionString)
+        public AccountController(string connectionString) : base(connectionString)
         {
 
         }
@@ -33,7 +33,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
         public override object FromDataRow(DataRow row)
         {
-            return new TaiKhoan()
+            return new Account()
             {
                 MaTaiKhoan = row.Field<string>("matk")!,
                 TenTaiKhoan = row.Field<string>("tentk")!,
@@ -49,7 +49,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
             try
             {
-                TaiKhoan o = (TaiKhoan)sender;
+                Account o = (Account)sender;
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
@@ -160,7 +160,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
             try
             {
-                TaiKhoan o = (TaiKhoan)sender;
+                Account o = (Account)sender;
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 

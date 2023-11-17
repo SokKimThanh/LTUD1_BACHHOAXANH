@@ -29,6 +29,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * FROM TAIKHOAN
+	SELECT matk, tentk FROM TAIKHOAN
 END
 GO

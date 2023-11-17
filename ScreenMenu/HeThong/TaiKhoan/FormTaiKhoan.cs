@@ -1,18 +1,17 @@
-﻿using System.Data;
-using System.Reflection;
-using System.Windows.Forms;
+﻿using System.ComponentModel.Design.Serialization;
+using System.Data;
 
 namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 {
     public partial class FormTaiKhoan : Form
     {
-        TaiKhoanController controller;
+        AccountController controller;
         CustomDataGridView dgv;
 
         public FormTaiKhoan()
         {
             InitializeComponent();
-            controller = new TaiKhoanController(Utils.ConnectionString);
+            controller = new AccountController(Utils.ConnectionString);
             dgv = new CustomDataGridView();
             this.Controls.Add(dgv);
             dgv.CellContentClick += customDataGridView1_CellContentClick!;
@@ -27,6 +26,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
             {
                 controller.SelectAll();
                 this.dgv.DataSource = controller.DataSource;
+                txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
             }
             catch (Exception ex)
             {
@@ -38,7 +38,21 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
             try
             {
-                controller.Insert(new TaiKhoan(txtTenTK.Text, txtMK.Text, txtMaTK.Text, DateTime.Parse(dtpCreatedDate.Value.ToShortDateString()), txtSDT.Text, txtCCCD.Text, txtEmail.Text));
+                controller.Insert(new Account(txtTenTaiKhoan.Text, txtMK.Text, txtMaTaiKhoan.Text, DateTime.Parse(dtpCreatedDate.Value.ToShortDateString()), txtSDT.Text, txtCCCD.Text, txtEmail.Text));
+                Reset();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Reset()
+        {
+            try
+            {
+                controller.SelectAll();
+                this.dgv.DataSource = controller.DataSource;
             }
             catch (Exception ex)
             {
@@ -50,7 +64,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
             try
             {
-                controller.Delete(txtMaTK.Text);
+                controller.Delete(txtMaTaiKhoan.Text);
+                Reset();
             }
             catch (Exception ex)
             {
@@ -64,7 +79,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
             try
             {
-                controller.Update(new TaiKhoan(txtTenTK.Text, txtMK.Text, txtMaTK.Text, txtSDT.Text, txtCCCD.Text, txtEmail.Text));
+                controller.Update(new Account(txtTenTaiKhoan.Text, txtMK.Text, txtMaTaiKhoan.Text, txtSDT.Text, txtCCCD.Text, txtEmail.Text));
+                Reset();
             }
             catch (Exception ex)
             {
@@ -76,21 +92,34 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         private void customDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int dong = e.RowIndex;
-            if (dong > 0)
-            {
-                string s = dgv.Rows[dong].Cells[0].Value.ToString()!;
-                DataRow row = controller.SelectByID(s!).Rows[0];
 
-                TaiKhoan o = (TaiKhoan)controller.FromDataRow(row);
-                txtMaTK.Text = o.MaTaiKhoan;
-                txtTenTK.Text = o.TenTaiKhoan;
-                txtSDT.Text = o.Phone;
-                txtEmail.Text = o.Email;
-                txtCCCD.Text = o.Cccd;
-                txtMK.Text = o.MatKhau;
 
-            }
+            txtMaTaiKhoan.Text = dgv.Rows[dong].Cells[0].Value.ToString();
+            DataRow row = controller.SelectByID(txtMaTaiKhoan.Text).Rows[0];
 
+            Account o = (Account)controller.FromDataRow(row);
+            //if (o != null)
+            //{
+            txtMaTaiKhoan.Text = o.MaTaiKhoan;
+            txtTenTaiKhoan.Text = o.TenTaiKhoan;
+            txtSDT.Text = o.Phone;
+            txtEmail.Text = o.Email;
+            txtCCCD.Text = o.Cccd;
+            txtMK.Text = o.MatKhau;
+            //}
+
+
+
+        }
+
+        private void txtTenTK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaoMa_Click(object sender, EventArgs e)
+        {
+            txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
         }
     }
 }
