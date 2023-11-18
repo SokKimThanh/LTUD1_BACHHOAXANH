@@ -12,7 +12,13 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         // return object
         public Account()
         {
-
+            this.tentk = null!;
+            this.matkhau = null!;
+            this.matk = Utils.GenerateRandomAlphanumericString(11)!;
+            this.createdate = default!;
+            this.phone = null!;
+            this.cccd = null!;
+            this.email = null!;
         }
 
         // update
@@ -56,11 +62,11 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
         public string InRaFile()
         {
-            return $"{TenTaiKhoan}#{MatKhau}";
+            return $"{MaTaiKhoan}#{TenTaiKhoan}";
         }
         public string toString()
         {
-            return $"tentk: {TenTaiKhoan} matkhau: {MatKhau}";
+            return $"ma: {MaTaiKhoan} ten: {TenTaiKhoan}";
         }
     }
 }

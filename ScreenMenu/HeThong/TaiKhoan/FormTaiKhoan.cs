@@ -95,21 +95,18 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
 
             txtMaTaiKhoan.Text = dgv.Rows[dong].Cells[0].Value.ToString();
-            DataRow row = controller.SelectByID(txtMaTaiKhoan.Text).Rows[0];
+            DataRow row = controller.SelectByID(txtMaTaiKhoan.Text!).Rows[0];
 
             Account o = (Account)controller.FromDataRow(row);
-            //if (o != null)
-            //{
-            txtMaTaiKhoan.Text = o.MaTaiKhoan;
-            txtTenTaiKhoan.Text = o.TenTaiKhoan;
-            txtSDT.Text = o.Phone;
-            txtEmail.Text = o.Email;
-            txtCCCD.Text = o.Cccd;
-            txtMK.Text = o.MatKhau;
-            //}
-
-
-
+            if (o != null)
+            {
+                txtMaTaiKhoan.Text = o.MaTaiKhoan;
+                txtTenTaiKhoan.Text = o.TenTaiKhoan;
+                txtSDT.Text = o.Phone;
+                txtEmail.Text = o.Email;
+                txtCCCD.Text = o.Cccd;
+                txtMK.Text = o.MatKhau;
+            } 
         }
 
         private void txtTenTK_TextChanged(object sender, EventArgs e)
