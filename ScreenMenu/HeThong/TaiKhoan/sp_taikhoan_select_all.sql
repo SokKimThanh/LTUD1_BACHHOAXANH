@@ -1,24 +1,27 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_update.sql
--- Nhà cung cấp update
+-- Create Procedure sp_taikhoan_select_all.sql
+-- Tài khoản select all
 -- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		Vo Tu
--- Create date: <13/11/2023>
+-- Author:		Sok Kim Thanh
+-- Create date: <16/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_khachhang_update
+drop procedure if exists sp_taikhoan_select_all
 go
-CREATE PROCEDURE sp_khachhang_update
+CREATE PROCEDURE sp_taikhoan_select_all
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = '', 
-	@tenKH nvarchar(30) = N'',
-	@sdtKH int = 0,
-	@diemTL int = 0
+	--@MATK CHAR(11), 
+	--@TENTK NVARCHAR(30), 
+	--@MATKHAU varchar(16),
+	--@CREATEDATE datetime,
+	--@PHONE varchar(11), 
+	--@CCCD varchar(16), 
+	--@EMAIL varchar(255)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -26,6 +29,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update KHACHHANG set HOTENKH = @tenKH,SDTKH = @sdtKH, DIEMTL = @diemTL where MAKH = @maKH -- chuẩn sql
+	SELECT matk, tentk FROM TAIKHOAN
 END
 GO

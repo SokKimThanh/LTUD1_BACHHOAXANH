@@ -1,11 +1,5 @@
 ﻿using LTUD1_MF_BHX.Screen;
-using LTUD1_MF_BHX.ScreenMenu.HeThong;
-using LTUD1_MF_BHX.ScreenMenu.Nhap;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 
 namespace LTUD1_MF_BHX
 {
@@ -15,15 +9,15 @@ namespace LTUD1_MF_BHX
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             try
             {
-                FormHoaDon logon = new FormHoaDon();
-                //FormKhachHang logon1 = new FormKhachHang();
-                Application.Run( new FormMain());
+                //FormDangNhap logon = new FormDangNhap();
+                FormTaiKhoan logon = new FormTaiKhoan();
+
+                Application.Run(logon);
 
                 //Trần Minh Tuấn
-                
+
                 //gi change
             }
             catch (Exception)

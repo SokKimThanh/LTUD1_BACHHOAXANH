@@ -1,6 +1,6 @@
-﻿ 
+﻿
 
-namespace LTUD1_MF_BHX 
+namespace LTUD1_MF_BHX
 {
     internal class SanPham
     {
@@ -12,6 +12,12 @@ namespace LTUD1_MF_BHX
 
         public SanPham()
         {
+            this.ma = string.Empty;
+            this.ten = string.Empty;
+            gia = 0;
+            soluong = 0;
+            danhmuc = new DanhMuc();
+            nhacungcap = new NhaCungCap();
         }
 
         public SanPham(string ma, string ten, double gia = 0, int soluong = 0, DanhMuc? danhmuc = null, NhaCungCap? nhacungcap = null)

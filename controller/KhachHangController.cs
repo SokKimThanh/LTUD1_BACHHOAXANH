@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.controller
 {
-    public class KhashHangController : MyController
+    public class KhachHangController : MyController
     {
-        public KhashHangController(string connectionString) : base(connectionString)
+        public KhachHangController(string connectionString) : base(connectionString)
         {
         }
         public override void Delete(object id)

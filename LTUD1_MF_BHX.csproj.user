@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="CustomControl\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControl\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -19,10 +25,7 @@
     <Compile Update="ScreenMenu\HeThong\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\HeThong\FormQuanLyTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScreenMenu\HeThong\FormThietLapTaiKhoan.cs">
+    <Compile Update="ScreenMenu\HeThong\TaiKhoan\FormTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\FormDiaDiem.cs">
@@ -37,13 +40,13 @@
     <Compile Update="ScreenMenu\Nhap\FormKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\FormNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\In\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\NhaCungCap\FormNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\NhanVien\FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\SanPham\FormSanPham.cs">

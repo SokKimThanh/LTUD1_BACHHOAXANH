@@ -1,31 +1,30 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_delete.sql
--- Nhà cung cấp delete
+-- Create Procedure sp_khuyenmai_update.sql
+-- Danh mục update
 -- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		Vo Tu
--- Create date: <13/11/2023>
+-- Author:		Sok Kim Thanh
+-- Create date: <07/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-DROP PROCEDURE IF EXISTS sp_khachhang_delete
-GO
-CREATE PROCEDURE sp_khachhang_delete
+drop procedure if exists sp_cbo_hinhthuckm
+go
+CREATE PROCEDURE sp_cbo_hinhthuckm
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = '', 
-	@tenKH nvarchar(30) = N'',
-	@sdtKH int = 0,
-	@diemTL int = 0
+	--@makm char(11) = '', 
+	--@hinhthuc nvarchar(50) = N'',
+	--@ghichu nvarchar(100) = N''
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    -- Delete statements for procedure here
-	DELETE FROM KHACHHANG WHERE MAKH = @maKH
+    -- Insert statements for procedure here
+	SELECT MAKM from hinhthuckm-- chuẩn sql
 END
 GO

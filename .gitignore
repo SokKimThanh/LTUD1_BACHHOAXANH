@@ -141,3 +141,5 @@ _NCrunch*
 *.2
 *.manifest
 *.testlog
+/LTUD1_MF_BHX.csproj.user
+/.vs/LTUD1_MF_BHX/FileContentIndex/read.lock

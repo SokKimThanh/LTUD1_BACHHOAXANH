@@ -1,27 +1,22 @@
-﻿using LTUD1_MF_BHX.Connection;
-using LTUD1_MF_BHX.controller;
+﻿using LTUD1_MF_BHX.controller;
 using LTUD1_MF_BHX.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 {
     public partial class FormKhachHang : Form
     {
-        KhashHangController khachHangController;
+        KhachHangController khachHangController;
         public FormKhachHang()
         {
 
             InitializeComponent();
-            khachHangController = new KhashHangController(Utils.ConnectionString);
+<<<<<<< HEAD
+            khachHangController = new KhachHangController(Utils.ConnectionString);
             dgvKH.DefaultCellStyle.ForeColor= Color.Black;
+=======
+            khachHangController = new KhachHangController(Utils.ConnectionString);
+            dgvKH.DefaultCellStyle.ForeColor = Color.Black;
+>>>>>>> master
 
         }
 
@@ -57,6 +52,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             KhachHang1 kh = new KhachHang1();
             kh.Ma = txtMa.Text;
             kh.Ten = txtxHoTen.Text;
@@ -65,11 +61,34 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             khachHangController.Insert(kh);
             khachHangController.SelectAll();
             dgvKH.DataSource = khachHangController.DataSource;
+=======
+            try
+            {
+                KhachHang kh = new KhachHang();
+                kh.Ma = txtMa.Text;
+                kh.Ten = txtxHoTen.Text;
+                kh.Sdt = int.Parse(txtSDT.Text);
+                kh.Diem = int.Parse(txtDTL.Text);
+                khachHangController.Insert(kh);
+                khachHangController.SelectAll();
+                dgvKH.DataSource = khachHangController.DataSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+>>>>>>> master
         }
         private void button2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             KhachHang1 kh = new KhachHang1();
             kh.Ma = txtMa.Text;       
+=======
+            KhachHang kh = new KhachHang();
+            kh.Ma = txtMa.Text;
+>>>>>>> master
             khachHangController.Delete(kh.Ma);
             khachHangController.SelectAll();
             dgvKH.DataSource = khachHangController.DataSource;
@@ -80,8 +99,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             int dong = e.RowIndex;
             txtMa.Text = dgvKH.Rows[dong].Cells[0].Value.ToString();
             txtxHoTen.Text = dgvKH.Rows[dong].Cells[1].Value.ToString();
-            txtSDT.Text=  dgvKH.Rows[dong].Cells[2].Value.ToString();
-            txtDTL.Text = dgvKH.Rows[dong].Cells[3].Value .ToString();
+            txtSDT.Text = dgvKH.Rows[dong].Cells[2].Value.ToString();
+            txtDTL.Text = dgvKH.Rows[dong].Cells[3].Value.ToString();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,6 +117,14 @@ namespace LTUD1_MF_BHX.BatLoiControl
             return false;
         }
 
-
+        internal static ComboBox ShowData(object sender, string id, string  name, DataTable dt)
+        {
+            // chuyển sang combobox
+            ComboBox cbo  = (ComboBox)sender;
+            cbo.DataSource = dt;
+            cbo.DisplayMember = name ;// ten khoa
+            cbo.ValueMember = id; // ma khoa
+            return cbo; 
+        }
     }
 }
