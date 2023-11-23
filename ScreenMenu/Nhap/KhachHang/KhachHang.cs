@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.Model
 {
-    internal class KhachHang
+    internal class KhachHang1
     {
         private string ma, ten;
         private int sdt, diem;
 
-        public KhachHang(string ma, string ten, int sdt, int diem)
+        public KhachHang1(string ma, string ten, int sdt, int diem)
         {
-            this.Ma = ma;
+            this.ma = ma;
             this.Ten = ten;
             this.Sdt = sdt;
             this.Diem = diem;
         }
-        public KhachHang()
+        public KhachHang1()
         {
         }
 

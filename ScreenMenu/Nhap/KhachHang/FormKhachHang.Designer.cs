@@ -350,11 +350,10 @@
             this.dgvKH.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKH.Location = new System.Drawing.Point(3, 43);
-            this.dgvKH.MultiSelect = false;
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.RowHeadersWidth = 51;
             this.dgvKH.RowTemplate.Height = 29;
-            this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect;
             this.dgvKH.Size = new System.Drawing.Size(1009, 719);
             this.dgvKH.TabIndex = 0;
             this.dgvKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellContentClick_2);

@@ -15,12 +15,12 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 {
     public partial class FormKhachHang : Form
     {
-        KhachHangController khachHangController;
+        KhashHangController khachHangController;
         public FormKhachHang()
         {
 
             InitializeComponent();
-            khachHangController = new KhachHangController(Utils.ConnectionString);
+            khachHangController = new KhashHangController(Utils.ConnectionString);
             dgvKH.DefaultCellStyle.ForeColor= Color.Black;
 
         }
@@ -44,7 +44,6 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
         {
 
         }
-
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
             khachHangController.SelectAll();
@@ -58,7 +57,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang();
+            KhachHang1 kh = new KhachHang1();
             kh.Ma = txtMa.Text;
             kh.Ten = txtxHoTen.Text;
             kh.Sdt = int.Parse(txtSDT.Text);
@@ -67,10 +66,9 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             khachHangController.SelectAll();
             dgvKH.DataSource = khachHangController.DataSource;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang();
+            KhachHang1 kh = new KhachHang1();
             kh.Ma = txtMa.Text;       
             khachHangController.Delete(kh.Ma);
             khachHangController.SelectAll();

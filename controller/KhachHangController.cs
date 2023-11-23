@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.controller
 {
-    public class KhachHangController : MyController
+    public class KhashHangController : MyController
     {
-        public KhachHangController(string connectionString) : base(connectionString)
+        public KhashHangController(string connectionString) : base(connectionString)
         {
         }
         public override void Delete(object id)
@@ -54,7 +54,7 @@ namespace LTUD1_MF_BHX.controller
         {
             try
             {
-                KhachHang user = (KhachHang)sender;
+                Khachhang user = (Khachhang)sender;
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
@@ -65,7 +65,7 @@ namespace LTUD1_MF_BHX.controller
                 // Thêm tham số vào SqlCommand
                 Sql.Parameters.AddWithValue("@maKH", user.Ma);
                 Sql.Parameters.AddWithValue("@tenKH", user.Ten);
-                Sql.Parameters.AddWithValue("@sdtKH", user.Sdt);
+                Sql.Parameters.AddWithValue("@sdtKH", user.Std);
                 Sql.Parameters.AddWithValue("@diemTL", user.Diem);
 
                 // Thực thi SqlCommand
@@ -124,7 +124,36 @@ namespace LTUD1_MF_BHX.controller
 
         public override void Update(object sender)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Khachhang user = (Khachhang)sender;
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_update_insert", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@maKH", user.Ma);
+                Sql.Parameters.AddWithValue("@tenKH", user.Ten);
+                Sql.Parameters.AddWithValue("@sdtKH", user.Std);
+                Sql.Parameters.AddWithValue("@diemTL", user.Diem);
+
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

@@ -18,8 +18,9 @@ namespace LTUD1_MF_BHX
 
             try
             {
-                FormKhachHang logon = new FormKhachHang();
-                Application.Run(logon);
+                FormHoaDon logon = new FormHoaDon();
+                //FormKhachHang logon1 = new FormKhachHang();
+                Application.Run( new FormMain());
 
                 //Trần Minh Tuấn
                 
