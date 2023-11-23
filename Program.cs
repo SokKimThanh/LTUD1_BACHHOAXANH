@@ -12,7 +12,7 @@ namespace LTUD1_MF_BHX
             try
             {
                 //FormDangNhap logon = new FormDangNhap();
-                FormTaiKhoan logon = new FormTaiKhoan();
+                FormHoaDon logon = new FormHoaDon();
 
                 Application.Run(logon);
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTUD1_MF_BHX.Connection;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LTUD1_MF_BHX.controller
+namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
 {
     internal class HoaDonController : MyController
     {

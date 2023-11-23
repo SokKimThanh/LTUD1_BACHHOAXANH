@@ -1,5 +1,5 @@
 ﻿using LTUD1_MF_BHX.Connection;
-using LTUD1_MF_BHX.controller;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
