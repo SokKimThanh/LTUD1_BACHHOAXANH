@@ -17,7 +17,32 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
 
         public override void Delete(object id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_hoadon_delete", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@maHD", id);
+
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public override object FromDataRow(DataRow row)
@@ -28,7 +53,36 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
         public override void Insert(object sender)
         {
 
-            throw new NotImplementedException();
+            try
+            {
+                HoaDon user = (HoaDon)sender;
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_hoadon_insert", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@maHD", user.MaHD);
+                Sql.Parameters.AddWithValue("@ngayHD", user.NgayHD);
+                Sql.Parameters.AddWithValue("@tongTien", user.TongTien);
+                Sql.Parameters.AddWithValue("@maNV", user.MaNV);
+                Sql.Parameters.AddWithValue("@maKH", user.MaKH);
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public override void SelectAll()
@@ -71,7 +125,36 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
 
         public override void Update(object sender)
         {
-            throw new NotImplementedException();
+            try
+            {
+                HoaDon user = (HoaDon)sender;
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_hoadon_update", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@maHD", user.MaHD);
+                Sql.Parameters.AddWithValue("@ngayHD", user.NgayHD);
+                Sql.Parameters.AddWithValue("@tongTien", user.TongTien);
+                Sql.Parameters.AddWithValue("@maNV", user.MaNV);
+                Sql.Parameters.AddWithValue("@maKH", user.MaKH);
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

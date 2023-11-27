@@ -124,7 +124,36 @@ namespace LTUD1_MF_BHX.controller
 
         public override void Update(object sender)
         {
-            throw new NotImplementedException();
+            try
+            {
+                KhachHang user = (KhachHang)sender;
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_khachhang_update", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@maKH", user.Ma);
+                Sql.Parameters.AddWithValue("@tenKH", user.Ten);
+                Sql.Parameters.AddWithValue("@sdtKH", user.Sdt);
+                Sql.Parameters.AddWithValue("@diemTL", user.Diem);
+
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

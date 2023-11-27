@@ -1,5 +1,6 @@
 ﻿using LTUD1_MF_BHX.Screen;
 using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
+using LTUD1_MF_BHX.ScreenMenu.Nhap;
 
 namespace LTUD1_MF_BHX
 {
@@ -12,9 +13,11 @@ namespace LTUD1_MF_BHX
             try
             {
                 //FormDangNhap logon = new FormDangNhap();
-                FormHoaDon logon = new FormHoaDon();
+                FormMain logon = new FormMain();
+                FormHoaDon hoaDon =  new FormHoaDon();
+                FormKhachHang khachHang = new FormKhachHang(); 
 
-                Application.Run(logon);
+                Application.Run(hoaDon);
 
                 //Trần Minh Tuấn
 
@@ -24,8 +27,6 @@ namespace LTUD1_MF_BHX
             {
                 throw;
             }
-            //jdhjhhjhj
-            //sbdjsbjbs
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿-- ================================================
+﻿set dateformat dmy
+-- ================================================
 -- Create Procedure sp_hoadon_select_all.sql
 -- hoadon select all
 -- ================================================
@@ -45,14 +46,15 @@ GO
 -- Create date: <13/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_khachhang_update
+drop procedure if exists sp_hoadon_update
 go
-CREATE PROCEDURE sp_khachhang_update
+CREATE PROCEDURE sp_hoadon_update
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = '', 
-	@tenKH nvarchar(30) = N'',
-	@sdtKH int = 0,
-	@diemTL int = 0
+	@maHD char(11) = '', 
+	@ngayHD date,
+	@tongTien decimal,
+	@maNV char(11),
+	@maKH char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -60,10 +62,10 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update KHACHHANG set HOTENKH = @tenKH,SDTKH = @sdtKH, DIEMTL = @diemTL where MAKH = @maKH -- chuẩn sql
+	update HOADON set NGAYHOADON = @ngayHD, TONGTHANHTIEN = @tongTien, MANV = @maNV, MAKH =@maKH where MAHD = @maHD -- chuẩn sql
 END
 GO
-
+--exec sp_hoadon_update'HD03','15/01/2022', 90000,'NV02', 'KH02'
 
 
 -- ================================================
@@ -74,29 +76,31 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
 -- =============================================
 -- Author:		Vo Tu
 -- Create date: <13/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_nhacungcap_insert
+drop procedure if exists sp_hoadon_insert
 go
-CREATE PROCEDURE sp_khachhang_insert
+CREATE PROCEDURE sp_hoadon_insert
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = '', 
-	@tenKH nvarchar(30) = N'',
-	@sdtKH int = 0,
-	@diemTL int = 0
+	@maHD char(11) = '', 
+	@ngayHD date,
+	@tongTien decimal,
+	@maNV char(11),
+	@maKH char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
     -- Insert statements for procedure here
-	INSERT INTO KHACHHANG VALUES (@maKH, @tenKH, @sdtKH,@diemTL)
+	INSERT INTO HOADON VALUES (@maHD, @ngayHD, @tongTien,@maNV,@maKH)
 END
 GO
+--exec sp_hoadon_insert 'HD03','15/01/2022', 90000,'NV02', 'KH02'
 
 -- ================================================
 -- Create Procedure sp_nhacungcap_delete.sql
@@ -111,11 +115,11 @@ GO
 -- Create date: <13/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-DROP PROCEDURE IF EXISTS sp_khachhang_delete
+DROP PROCEDURE IF EXISTS sp_hoadon_delete
 GO
-CREATE PROCEDURE sp_khachhang_delete
+CREATE PROCEDURE sp_hoadon_delete
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = ''
+	@maHD char(11) = ''
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -123,7 +127,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Delete statements for procedure here
-	DELETE FROM KHACHHANG WHERE MAKH = @maKH
+	DELETE FROM HOADON WHERE MAHD = @maHD
 END
 GO
 
