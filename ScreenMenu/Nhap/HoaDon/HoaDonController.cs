@@ -1,5 +1,4 @@
 ﻿using LTUD1_MF_BHX.Connection;
-using LTUD1_MF_BHX.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LTUD1_MF_BHX.controller
+namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
 {
-    public class KhachHangController : MyController
+    internal class HoaDonController : MyController
     {
-        public KhachHangController(string connectionString) : base(connectionString)
+        public HoaDonController(string connectionString) : base(connectionString)
         {
         }
+
         public override void Delete(object id)
         {
             try
@@ -23,11 +23,11 @@ namespace LTUD1_MF_BHX.controller
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_khachhang_delete", conn);
+                Sql = new SqlCommand("sp_hoadon_delete", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@maKH", id);
+                Sql.Parameters.AddWithValue("@maHD", id);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
@@ -39,10 +39,10 @@ namespace LTUD1_MF_BHX.controller
             {
                 MessageBox.Show(ex.Message);
             }
-            finally {
+            finally
+            {
                 CloseConnection();
             }
-           
         }
 
         public override object FromDataRow(DataRow row)
@@ -52,22 +52,23 @@ namespace LTUD1_MF_BHX.controller
 
         public override void Insert(object sender)
         {
+
             try
             {
-                KhachHang user = (KhachHang)sender;
+                HoaDon user = (HoaDon)sender;
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_khachhang_insert", conn);
+                Sql = new SqlCommand("sp_hoadon_insert", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@maKH", user.Ma);
-                Sql.Parameters.AddWithValue("@tenKH", user.Ten);
-                Sql.Parameters.AddWithValue("@sdtKH", user.Sdt);
-                Sql.Parameters.AddWithValue("@diemTL", user.Diem);
-
+                Sql.Parameters.AddWithValue("@maHD", user.MaHD);
+                Sql.Parameters.AddWithValue("@ngayHD", user.NgayHD);
+                Sql.Parameters.AddWithValue("@tongTien", user.TongTien);
+                Sql.Parameters.AddWithValue("@maNV", user.MaNV);
+                Sql.Parameters.AddWithValue("@maKH", user.MaKH);
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
 
@@ -92,7 +93,7 @@ namespace LTUD1_MF_BHX.controller
                 SqlConnection conn = OpenConnection();
 
                 // thực hiện các thao tác trên cơ sở dữ liệu
-                Sql = new SqlCommand("sp_khachhang_select_all", conn);
+                Sql = new SqlCommand("sp_hoadon_select_all", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Tạo đối tượng SqlDataAdapter
@@ -109,7 +110,7 @@ namespace LTUD1_MF_BHX.controller
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -126,20 +127,20 @@ namespace LTUD1_MF_BHX.controller
         {
             try
             {
-                KhachHang user = (KhachHang)sender;
+                HoaDon user = (HoaDon)sender;
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_khachhang_update", conn);
+                Sql = new SqlCommand("sp_hoadon_update", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@maKH", user.Ma);
-                Sql.Parameters.AddWithValue("@tenKH", user.Ten);
-                Sql.Parameters.AddWithValue("@sdtKH", user.Sdt);
-                Sql.Parameters.AddWithValue("@diemTL", user.Diem);
-
+                Sql.Parameters.AddWithValue("@maHD", user.MaHD);
+                Sql.Parameters.AddWithValue("@ngayHD", user.NgayHD);
+                Sql.Parameters.AddWithValue("@tongTien", user.TongTien);
+                Sql.Parameters.AddWithValue("@maNV", user.MaNV);
+                Sql.Parameters.AddWithValue("@maKH", user.MaKH);
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
 

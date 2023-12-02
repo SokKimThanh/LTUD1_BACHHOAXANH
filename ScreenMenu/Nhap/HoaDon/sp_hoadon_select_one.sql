@@ -1,6 +1,6 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_delete.sql
--- Nhà cung cấp delete
+-- Create Procedure sp_nhacungcap_select_one.sql
+-- Nhà cung cấp select one
 -- ================================================
 SET ANSI_NULLS ON
 GO
@@ -11,18 +11,17 @@ GO
 -- Create date: <13/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-DROP PROCEDURE IF EXISTS sp_khachhang_delete
-GO
-CREATE PROCEDURE sp_khachhang_delete
+drop procedure if exists sp_hoadon_select_one
+go
+CREATE PROCEDURE sp_hoadon_select_one
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = ''
+	@maHD char(11) = ''
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
-    -- Delete statements for procedure here
-	DELETE FROM KHACHHANG WHERE MAKH = @maKH
+    -- Insert statements for procedure here
+	SELECT * from HOADON where MAHD  = @maHD --like chính xác mã 100%
 END
 GO
