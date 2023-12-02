@@ -1,5 +1,6 @@
 ﻿using LTUD1_MF_BHX.Screen;
 using LTUD1_MF_BHX.ScreenMenu.HeThong;
+using LTUD1_MF_BHX.ScreenMenu.Nhap;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace LTUD1_MF_BHX
 
             try
             {
-                FormDangNhap logon = new FormDangNhap();
+                FormSanPham logon = new FormSanPham();
                 Application.Run(logon);
 
                 //Trần Minh Tuấn

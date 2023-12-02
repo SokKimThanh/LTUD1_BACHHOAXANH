@@ -37,9 +37,6 @@
     <Compile Update="ScreenMenu\Nhap\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\FormKhuyenMai.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\Nhap\NhaCungCap\FormNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
