@@ -25,6 +25,14 @@ namespace LTUD1_MF_BHX.Screen
         {
             HoaDonController.SelectAll();
             dgvHD.DataSource = HoaDonController.DataSource;
+            HoaDonController.SelectAllNhanVien();
+            cbbMaNV.DataSource = HoaDonController.DataSource;
+            cbbMaNV.DisplayMember = "MANV";
+            cbbMaNV.ValueMember = "HOTENNV";
+            HoaDonController.SelectAllKhachHang();
+            cbbMaKH.DataSource = HoaDonController.DataSource;
+            cbbMaKH.DisplayMember = "MAKH";
+            cbbMaKH.ValueMember = "HOTENKH";
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,6 +58,14 @@ namespace LTUD1_MF_BHX.Screen
         {
             HoaDonController.SelectAll();
             dgvHD.DataSource = HoaDonController.DataSource;
+            HoaDonController.SelectAllNhanVien();
+            cbbMaNV.DataSource = HoaDonController.DataSource;
+            cbbMaNV.DisplayMember = "MANV";
+            cbbMaNV.ValueMember = "HOTENNV";
+            HoaDonController.SelectAllKhachHang();
+            cbbMaKH.DataSource = HoaDonController.DataSource;
+            cbbMaKH.DisplayMember = "MAKH";
+            cbbMaKH.ValueMember = "HOTENKH";
         }
 
         private void btnThem_Click(object sender, EventArgs e)

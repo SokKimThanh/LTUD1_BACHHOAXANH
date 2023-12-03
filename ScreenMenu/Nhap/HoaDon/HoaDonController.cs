@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
 {
-    internal class HoaDonController : MyController
+    public class HoaDonController : MyController
     {
         public HoaDonController(string connectionString) : base(connectionString)
         {
@@ -105,6 +105,67 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
                 // đổ dữ liệu vào DataTable
                 Adapter.Fill(DataSource);
 
+                //đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public  void SelectAllNhanVien()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // thực hiện các thao tác trên cơ sở dữ liệu
+                Sql = new SqlCommand("sp_nhanvien_select_all", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng Database để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+                //đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        } public  void SelectAllKhachHang()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // thực hiện các thao tác trên cơ sở dữ liệu
+                Sql = new SqlCommand("sp_cbb_khachhang_select_all", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng Database để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
                 //đóng kết nối
                 CloseConnection();
             }
