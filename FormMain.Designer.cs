@@ -274,7 +274,6 @@
             // 
             // lblAccountName
             // 
-<<<<<<< HEAD
             this.lblAccountName.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblAccountName, "lblAccountName");
             this.lblAccountName.ForeColor = System.Drawing.Color.White;
@@ -286,19 +285,6 @@
             resources.ApplyResources(this.currentChangeTitle, "currentChangeTitle");
             this.currentChangeTitle.ForeColor = System.Drawing.Color.White;
             this.currentChangeTitle.Name = "currentChangeTitle";
-=======
-            lblAccountName.BackColor = Color.Transparent;
-            resources.ApplyResources(lblAccountName, "lblAccountName");
-            lblAccountName.ForeColor = Color.White;
-            lblAccountName.Name = "lblAccountName";
-            // 
-            // currentChangeTitle
-            // 
-            currentChangeTitle.BackColor = Color.Transparent;
-            resources.ApplyResources(currentChangeTitle, "currentChangeTitle");
-            currentChangeTitle.ForeColor = Color.White;
-            currentChangeTitle.Name = "currentChangeTitle";
->>>>>>> origin/master
             // 
             // panelMenu
             // 
@@ -316,21 +302,12 @@
             // 
             // btnHome
             // 
-<<<<<<< HEAD
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnHome, "btnHome");
             this.btnHome.Image = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
             this.btnHome.InitialImage = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
             this.btnHome.Name = "btnHome";
             this.btnHome.TabStop = false;
-=======
-            btnHome.BackColor = Color.Transparent;
-            resources.ApplyResources(btnHome, "btnHome");
-            btnHome.Image = Properties.Resources.BXHLOGO2;
-            btnHome.InitialImage = Properties.Resources.BXHLOGO2;
-            btnHome.Name = "btnHome";
-            btnHome.TabStop = false;
->>>>>>> origin/master
             // 
             // btnMenu
             // 
@@ -457,7 +434,6 @@
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
-<<<<<<< HEAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpBHX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -483,33 +459,6 @@
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
-=======
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(tlpBHX);
-            FormBorderStyle = FormBorderStyle.None;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "FormMain";
-            WindowState = FormWindowState.Maximized;
-            Load += FormMain_Load;
-            tlpBHX.ResumeLayout(false);
-            tlpBHX.PerformLayout();
-            flpSetting.ResumeLayout(false);
-            panelSetting.ResumeLayout(false);
-            tlpNavigationBar.ResumeLayout(false);
-            panelHeader.ResumeLayout(false);
-            tlpHeader.ResumeLayout(false);
-            cmsLogOut.ResumeLayout(false);
-            panelMenu.ResumeLayout(false);
-            tlpMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
-            tlpExit.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconChildForm).EndInit();
-            panel2.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            ResumeLayout(false);
->>>>>>> origin/master
         }
 
         #endregion
