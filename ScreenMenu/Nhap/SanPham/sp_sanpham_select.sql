@@ -15,12 +15,7 @@ drop procedure if exists sp_sanpham_select_all
 go
 CREATE PROCEDURE sp_sanpham_select_all
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = N'',
-	@ten nvarchar(256) = N'',
-	@gia money = 0,
-	@soluong int = 0,
-	@nhacungcap nvarchar(11) = null,
-	@sanpham nvarchar(11) = null
+
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

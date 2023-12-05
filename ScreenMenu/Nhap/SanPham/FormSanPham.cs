@@ -12,9 +12,16 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 {
     public partial class FormSanPham : Form
     {
+        SanPhamController spConn;
         public FormSanPham()
         {
             InitializeComponent();
+            
+        }
+
+        private void FormSanPham_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
