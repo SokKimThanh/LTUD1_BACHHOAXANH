@@ -14,10 +14,10 @@ namespace LTUD1_MF_BHX
             {
                 //FormDangNhap logon = new FormDangNhap();
                 FormMain logon = new FormMain();
-                FormHoaDon hoaDon =  new FormHoaDon();
-                FormKhachHang khachHang = new FormKhachHang(); 
+                //FormHoaDon hoaDon =  new FormHoaDon();
+                //FormKhachHang khachHang = new FormKhachHang(); 
 
-                Application.Run(hoaDon);
+                Application.Run(logon);
 
                 //Trần Minh Tuấn
 
