@@ -28,252 +28,261 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.tlpBHX = new System.Windows.Forms.TableLayoutPanel();
-            this.flpSetting = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelSetting = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.tlpNavigationBar = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDiaDiem = new System.Windows.Forms.Button();
-            this.btnKhachHang = new System.Windows.Forms.Button();
-            this.btnNhaCungCap = new System.Windows.Forms.Button();
-            this.btnKhuyenMai = new System.Windows.Forms.Button();
-            this.btnHoaDon = new System.Windows.Forms.Button();
-            this.btnSanPham = new System.Windows.Forms.Button();
-            this.btnNhanVien = new System.Windows.Forms.Button();
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.cmsLogOut = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.currentChangeButton = new System.Windows.Forms.Button();
-            this.lblAccountName = new System.Windows.Forms.Label();
-            this.currentChangeTitle = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.tlpMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.btnHome = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.tlpExit = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.lblExit = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.iconChildForm = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.listIcon_navigation_bar = new System.Windows.Forms.ImageList(this.components);
-            this.lisIcon_navigation_bar_transparent10 = new System.Windows.Forms.ImageList(this.components);
-            this.tlpBHX.SuspendLayout();
-            this.flpSetting.SuspendLayout();
-            this.panelSetting.SuspendLayout();
-            this.tlpNavigationBar.SuspendLayout();
-            this.panelHeader.SuspendLayout();
-            this.tlpHeader.SuspendLayout();
-            this.cmsLogOut.SuspendLayout();
-            this.panelMenu.SuspendLayout();
-            this.tlpMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            this.tlpExit.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconChildForm)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.SuspendLayout();
+            tlpBHX = new TableLayoutPanel();
+            flpSetting = new FlowLayoutPanel();
+            panelSetting = new Panel();
+            btnSetting = new Button();
+            panelDesktop = new Panel();
+            tlpNavigationBar = new TableLayoutPanel();
+            btnDiaDiem = new Button();
+            btnKhachHang = new Button();
+            btnNhaCungCap = new Button();
+            btnKhuyenMai = new Button();
+            btnHoaDon = new Button();
+            btnSanPham = new Button();
+            btnNhanVien = new Button();
+            panelHeader = new Panel();
+            tlpHeader = new TableLayoutPanel();
+            btnDangNhap = new Button();
+            cmsLogOut = new ContextMenuStrip(components);
+            đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
+            currentChangeButton = new Button();
+            lblAccountName = new Label();
+            currentChangeTitle = new Label();
+            panelMenu = new Panel();
+            tlpMenu = new TableLayoutPanel();
+            btnHome = new PictureBox();
+            btnMenu = new Button();
+            tlpExit = new TableLayoutPanel();
+            btnExit = new Button();
+            lblExit = new Label();
+            panel4 = new Panel();
+            iconChildForm = new PictureBox();
+            panel2 = new Panel();
+            label1 = new Label();
+            panel5 = new Panel();
+            label2 = new Label();
+            panel6 = new Panel();
+            sidebarTimer = new System.Windows.Forms.Timer(components);
+            listIcon_navigation_bar = new ImageList(components);
+            lisIcon_navigation_bar_transparent10 = new ImageList(components);
+            tlpBHX.SuspendLayout();
+            flpSetting.SuspendLayout();
+            panelSetting.SuspendLayout();
+            tlpNavigationBar.SuspendLayout();
+            panelHeader.SuspendLayout();
+            tlpHeader.SuspendLayout();
+            cmsLogOut.SuspendLayout();
+            panelMenu.SuspendLayout();
+            tlpMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
+            tlpExit.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconChildForm).BeginInit();
+            panel2.SuspendLayout();
+            panel5.SuspendLayout();
+            SuspendLayout();
             // 
             // tlpBHX
             // 
-            this.tlpBHX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(42)))), ((int)(((byte)(25)))));
-            this.tlpBHX.Controls.Add(this.flpSetting, 0, 2);
-            this.tlpBHX.Controls.Add(this.panelDesktop, 1, 1);
-            this.tlpBHX.Controls.Add(this.tlpNavigationBar, 0, 1);
-            this.tlpBHX.Controls.Add(this.panelHeader, 1, 0);
-            this.tlpBHX.Controls.Add(this.panelMenu, 0, 0);
-            this.tlpBHX.Controls.Add(this.tlpExit, 1, 2);
-            resources.ApplyResources(this.tlpBHX, "tlpBHX");
-            this.tlpBHX.Name = "tlpBHX";
+            tlpBHX.BackColor = Color.FromArgb(5, 42, 25);
+            tlpBHX.Controls.Add(flpSetting, 0, 2);
+            tlpBHX.Controls.Add(panelDesktop, 1, 1);
+            tlpBHX.Controls.Add(tlpNavigationBar, 0, 1);
+            tlpBHX.Controls.Add(panelHeader, 1, 0);
+            tlpBHX.Controls.Add(panelMenu, 0, 0);
+            tlpBHX.Controls.Add(tlpExit, 1, 2);
+            resources.ApplyResources(tlpBHX, "tlpBHX");
+            tlpBHX.Name = "tlpBHX";
             // 
             // flpSetting
             // 
-            this.flpSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(42)))), ((int)(((byte)(25)))));
-            this.flpSetting.Controls.Add(this.panelSetting);
-            resources.ApplyResources(this.flpSetting, "flpSetting");
-            this.flpSetting.Name = "flpSetting";
+            flpSetting.BackColor = Color.FromArgb(5, 42, 25);
+            flpSetting.Controls.Add(panelSetting);
+            resources.ApplyResources(flpSetting, "flpSetting");
+            flpSetting.Name = "flpSetting";
             // 
             // panelSetting
             // 
-            this.panelSetting.BackColor = System.Drawing.Color.Transparent;
-            this.panelSetting.Controls.Add(this.btnSetting);
-            resources.ApplyResources(this.panelSetting, "panelSetting");
-            this.panelSetting.Name = "panelSetting";
+            panelSetting.BackColor = Color.Transparent;
+            panelSetting.Controls.Add(btnSetting);
+            resources.ApplyResources(panelSetting, "panelSetting");
+            panelSetting.Name = "panelSetting";
             // 
             // btnSetting
             // 
-            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnSetting, "btnSetting");
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSetting.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSetting.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_setting;
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.UseVisualStyleBackColor = false;
+            btnSetting.BackColor = Color.Transparent;
+            btnSetting.Cursor = Cursors.Hand;
+            resources.ApplyResources(btnSetting, "btnSetting");
+            btnSetting.FlatAppearance.BorderSize = 0;
+            btnSetting.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnSetting.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnSetting.ForeColor = Color.Transparent;
+            btnSetting.Image = Properties.Resources.icon_setting;
+            btnSetting.Name = "btnSetting";
+            btnSetting.UseVisualStyleBackColor = false;
+            btnSetting.Click += btnSetting_Click;
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(88)))), ((int)(((byte)(52)))));
-            resources.ApplyResources(this.panelDesktop, "panelDesktop");
-            this.panelDesktop.Name = "panelDesktop";
+            panelDesktop.BackColor = Color.FromArgb(10, 88, 52);
+            resources.ApplyResources(panelDesktop, "panelDesktop");
+            panelDesktop.Name = "panelDesktop";
             // 
             // tlpNavigationBar
             // 
-            resources.ApplyResources(this.tlpNavigationBar, "tlpNavigationBar");
-            this.tlpNavigationBar.BackColor = System.Drawing.Color.Transparent;
-            this.tlpNavigationBar.Controls.Add(this.btnDiaDiem, 0, 1);
-            this.tlpNavigationBar.Controls.Add(this.btnKhachHang, 0, 6);
-            this.tlpNavigationBar.Controls.Add(this.btnNhaCungCap, 0, 5);
-            this.tlpNavigationBar.Controls.Add(this.btnKhuyenMai, 0, 4);
-            this.tlpNavigationBar.Controls.Add(this.btnHoaDon, 0, 3);
-            this.tlpNavigationBar.Controls.Add(this.btnSanPham, 0, 2);
-            this.tlpNavigationBar.Controls.Add(this.btnNhanVien, 0, 0);
-            this.tlpNavigationBar.Name = "tlpNavigationBar";
+            resources.ApplyResources(tlpNavigationBar, "tlpNavigationBar");
+            tlpNavigationBar.BackColor = Color.Transparent;
+            tlpNavigationBar.Controls.Add(btnDiaDiem, 0, 1);
+            tlpNavigationBar.Controls.Add(btnKhachHang, 0, 6);
+            tlpNavigationBar.Controls.Add(btnNhaCungCap, 0, 5);
+            tlpNavigationBar.Controls.Add(btnKhuyenMai, 0, 4);
+            tlpNavigationBar.Controls.Add(btnHoaDon, 0, 3);
+            tlpNavigationBar.Controls.Add(btnSanPham, 0, 2);
+            tlpNavigationBar.Controls.Add(btnNhanVien, 0, 0);
+            tlpNavigationBar.Name = "tlpNavigationBar";
             // 
             // btnDiaDiem
             // 
-            resources.ApplyResources(this.btnDiaDiem, "btnDiaDiem");
-            this.btnDiaDiem.FlatAppearance.BorderSize = 0;
-            this.btnDiaDiem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnDiaDiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDiaDiem.ForeColor = System.Drawing.Color.White;
-            this.btnDiaDiem.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_diadiem;
-            this.btnDiaDiem.Name = "btnDiaDiem";
-            this.btnDiaDiem.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnDiaDiem, "btnDiaDiem");
+            btnDiaDiem.FlatAppearance.BorderSize = 0;
+            btnDiaDiem.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnDiaDiem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnDiaDiem.ForeColor = Color.White;
+            btnDiaDiem.Image = Properties.Resources.icon_diadiem;
+            btnDiaDiem.Name = "btnDiaDiem";
+            btnDiaDiem.UseVisualStyleBackColor = true;
+            btnDiaDiem.Click += btnDiaDiem_Click;
             // 
             // btnKhachHang
             // 
-            resources.ApplyResources(this.btnKhachHang, "btnKhachHang");
-            this.btnKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnKhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnKhachHang.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_khachhang;
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnKhachHang, "btnKhachHang");
+            btnKhachHang.FlatAppearance.BorderSize = 0;
+            btnKhachHang.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnKhachHang.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnKhachHang.ForeColor = Color.White;
+            btnKhachHang.Image = Properties.Resources.icon_khachhang;
+            btnKhachHang.Name = "btnKhachHang";
+            btnKhachHang.UseVisualStyleBackColor = true;
+            btnKhachHang.Click += btnKhachHang_Click;
             // 
             // btnNhaCungCap
             // 
-            resources.ApplyResources(this.btnNhaCungCap, "btnNhaCungCap");
-            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
-            this.btnNhaCungCap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnNhaCungCap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhaCungCap.ForeColor = System.Drawing.Color.White;
-            this.btnNhaCungCap.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_nhacungcap;
-            this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnNhaCungCap, "btnNhaCungCap");
+            btnNhaCungCap.FlatAppearance.BorderSize = 0;
+            btnNhaCungCap.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnNhaCungCap.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnNhaCungCap.ForeColor = Color.White;
+            btnNhaCungCap.Image = Properties.Resources.icon_nhacungcap;
+            btnNhaCungCap.Name = "btnNhaCungCap";
+            btnNhaCungCap.UseVisualStyleBackColor = true;
+            btnNhaCungCap.Click += btnNhaCungCap_Click;
             // 
             // btnKhuyenMai
             // 
-            resources.ApplyResources(this.btnKhuyenMai, "btnKhuyenMai");
-            this.btnKhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btnKhuyenMai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnKhuyenMai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhuyenMai.ForeColor = System.Drawing.Color.White;
-            this.btnKhuyenMai.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_khuyenmai;
-            this.btnKhuyenMai.Name = "btnKhuyenMai";
-            this.btnKhuyenMai.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnKhuyenMai, "btnKhuyenMai");
+            btnKhuyenMai.FlatAppearance.BorderSize = 0;
+            btnKhuyenMai.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnKhuyenMai.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnKhuyenMai.ForeColor = Color.White;
+            btnKhuyenMai.Image = Properties.Resources.icon_khuyenmai;
+            btnKhuyenMai.Name = "btnKhuyenMai";
+            btnKhuyenMai.UseVisualStyleBackColor = true;
+            btnKhuyenMai.Click += btnKhuyenMai_Click;
             // 
             // btnHoaDon
             // 
-            resources.ApplyResources(this.btnHoaDon, "btnHoaDon");
-            this.btnHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnHoaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnHoaDon.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_hoadon;
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnHoaDon, "btnHoaDon");
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnHoaDon.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnHoaDon.ForeColor = Color.White;
+            btnHoaDon.Image = Properties.Resources.icon_hoadon;
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.UseVisualStyleBackColor = true;
+            btnHoaDon.Click += btnHoaDon_Click;
             // 
             // btnSanPham
             // 
-            resources.ApplyResources(this.btnSanPham, "btnSanPham");
-            this.btnSanPham.FlatAppearance.BorderSize = 0;
-            this.btnSanPham.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnSanPham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSanPham.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_sanpham;
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnSanPham, "btnSanPham");
+            btnSanPham.FlatAppearance.BorderSize = 0;
+            btnSanPham.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnSanPham.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnSanPham.ForeColor = Color.White;
+            btnSanPham.Image = Properties.Resources.icon_sanpham;
+            btnSanPham.Name = "btnSanPham";
+            btnSanPham.UseVisualStyleBackColor = true;
+            btnSanPham.Click += btnSanPham_Click;
             // 
             // btnNhanVien
             // 
-            resources.ApplyResources(this.btnNhanVien, "btnNhanVien");
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_nhanvien;
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnNhanVien, "btnNhanVien");
+            btnNhanVien.FlatAppearance.BorderSize = 0;
+            btnNhanVien.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnNhanVien.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnNhanVien.ForeColor = Color.White;
+            btnNhanVien.Image = Properties.Resources.icon_nhanvien;
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.UseVisualStyleBackColor = true;
+            btnNhanVien.Click += btnNhanVien_Click;
             // 
             // panelHeader
             // 
-            this.panelHeader.Controls.Add(this.tlpHeader);
-            resources.ApplyResources(this.panelHeader, "panelHeader");
-            this.panelHeader.Name = "panelHeader";
+            panelHeader.Controls.Add(tlpHeader);
+            resources.ApplyResources(panelHeader, "panelHeader");
+            panelHeader.Name = "panelHeader";
             // 
             // tlpHeader
             // 
-            resources.ApplyResources(this.tlpHeader, "tlpHeader");
-            this.tlpHeader.Controls.Add(this.btnDangNhap, 3, 0);
-            this.tlpHeader.Controls.Add(this.currentChangeButton, 0, 0);
-            this.tlpHeader.Controls.Add(this.lblAccountName, 2, 0);
-            this.tlpHeader.Controls.Add(this.currentChangeTitle, 1, 0);
-            this.tlpHeader.Name = "tlpHeader";
+            resources.ApplyResources(tlpHeader, "tlpHeader");
+            tlpHeader.Controls.Add(btnDangNhap, 3, 0);
+            tlpHeader.Controls.Add(currentChangeButton, 0, 0);
+            tlpHeader.Controls.Add(lblAccountName, 2, 0);
+            tlpHeader.Controls.Add(currentChangeTitle, 1, 0);
+            tlpHeader.Name = "tlpHeader";
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.ContextMenuStrip = this.cmsLogOut;
-            resources.ApplyResources(this.btnDangNhap, "btnDangNhap");
-            this.btnDangNhap.FlatAppearance.BorderSize = 0;
-            this.btnDangNhap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnDangNhap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangNhap.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_user_login;
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
+            btnDangNhap.ContextMenuStrip = cmsLogOut;
+            resources.ApplyResources(btnDangNhap, "btnDangNhap");
+            btnDangNhap.FlatAppearance.BorderSize = 0;
+            btnDangNhap.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnDangNhap.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnDangNhap.Image = Properties.Resources.icon_user_login;
+            btnDangNhap.Name = "btnDangNhap";
+            btnDangNhap.UseVisualStyleBackColor = true;
             // 
             // cmsLogOut
             // 
-            this.cmsLogOut.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.cmsLogOut.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngXuấtToolStripMenuItem});
-            this.cmsLogOut.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.cmsLogOut, "cmsLogOut");
+            cmsLogOut.ImageScalingSize = new Size(24, 24);
+            cmsLogOut.Items.AddRange(new ToolStripItem[] { đăngXuấtToolStripMenuItem });
+            cmsLogOut.Name = "contextMenuStrip1";
+            resources.ApplyResources(cmsLogOut, "cmsLogOut");
             // 
             // đăngXuấtToolStripMenuItem
             // 
-            this.đăngXuấtToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.đăngXuấtToolStripMenuItem, "đăngXuấtToolStripMenuItem");
-            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.Color.Green;
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            đăngXuấtToolStripMenuItem.BackColor = Color.FromArgb(255, 192, 192);
+            resources.ApplyResources(đăngXuấtToolStripMenuItem, "đăngXuấtToolStripMenuItem");
+            đăngXuấtToolStripMenuItem.ForeColor = Color.Green;
+            đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            đăngXuấtToolStripMenuItem.Click += đăngXuấtToolStripMenuItem_Click;
             // 
             // currentChangeButton
             // 
-            this.currentChangeButton.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.currentChangeButton, "currentChangeButton");
-            this.currentChangeButton.FlatAppearance.BorderSize = 0;
-            this.currentChangeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.currentChangeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.currentChangeButton.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_home;
-            this.currentChangeButton.Name = "currentChangeButton";
-            this.currentChangeButton.UseVisualStyleBackColor = false;
+            currentChangeButton.BackColor = Color.Transparent;
+            resources.ApplyResources(currentChangeButton, "currentChangeButton");
+            currentChangeButton.FlatAppearance.BorderSize = 0;
+            currentChangeButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            currentChangeButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            currentChangeButton.Image = Properties.Resources.icon_home;
+            currentChangeButton.Name = "currentChangeButton";
+            currentChangeButton.UseVisualStyleBackColor = false;
             // 
             // lblAccountName
             // 
+<<<<<<< HEAD
             this.lblAccountName.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblAccountName, "lblAccountName");
             this.lblAccountName.ForeColor = System.Drawing.Color.White;
@@ -285,155 +294,181 @@
             resources.ApplyResources(this.currentChangeTitle, "currentChangeTitle");
             this.currentChangeTitle.ForeColor = System.Drawing.Color.White;
             this.currentChangeTitle.Name = "currentChangeTitle";
+=======
+            lblAccountName.BackColor = Color.Transparent;
+            resources.ApplyResources(lblAccountName, "lblAccountName");
+            lblAccountName.ForeColor = Color.White;
+            lblAccountName.Name = "lblAccountName";
+            // 
+            // currentChangeTitle
+            // 
+            currentChangeTitle.BackColor = Color.Transparent;
+            resources.ApplyResources(currentChangeTitle, "currentChangeTitle");
+            currentChangeTitle.ForeColor = Color.White;
+            currentChangeTitle.Name = "currentChangeTitle";
+>>>>>>> 8c08b37db7fc6ee7426b618709650e3a3137d96b
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelMenu.Controls.Add(this.tlpMenu);
-            resources.ApplyResources(this.panelMenu, "panelMenu");
-            this.panelMenu.Name = "panelMenu";
+            panelMenu.BackColor = Color.Transparent;
+            panelMenu.Controls.Add(tlpMenu);
+            resources.ApplyResources(panelMenu, "panelMenu");
+            panelMenu.Name = "panelMenu";
             // 
             // tlpMenu
             // 
-            resources.ApplyResources(this.tlpMenu, "tlpMenu");
-            this.tlpMenu.Controls.Add(this.btnHome, 0, 0);
-            this.tlpMenu.Controls.Add(this.btnMenu, 0, 0);
-            this.tlpMenu.Name = "tlpMenu";
+            resources.ApplyResources(tlpMenu, "tlpMenu");
+            tlpMenu.Controls.Add(btnHome, 0, 0);
+            tlpMenu.Controls.Add(btnMenu, 0, 0);
+            tlpMenu.Name = "tlpMenu";
             // 
             // btnHome
             // 
+<<<<<<< HEAD
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnHome, "btnHome");
             this.btnHome.Image = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
             this.btnHome.InitialImage = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
             this.btnHome.Name = "btnHome";
             this.btnHome.TabStop = false;
+=======
+            btnHome.BackColor = Color.Transparent;
+            resources.ApplyResources(btnHome, "btnHome");
+            btnHome.Image = Properties.Resources.BXHLOGO2;
+            btnHome.InitialImage = Properties.Resources.BXHLOGO2;
+            btnHome.Name = "btnHome";
+            btnHome.TabStop = false;
+>>>>>>> 8c08b37db7fc6ee7426b618709650e3a3137d96b
             // 
             // btnMenu
             // 
-            resources.ApplyResources(this.btnMenu, "btnMenu");
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_menu;
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.UseVisualStyleBackColor = true;
+            resources.ApplyResources(btnMenu, "btnMenu");
+            btnMenu.FlatAppearance.BorderSize = 0;
+            btnMenu.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnMenu.Image = Properties.Resources.icon_menu;
+            btnMenu.Name = "btnMenu";
+            btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.Click += btnMenu_Click;
             // 
             // tlpExit
             // 
-            resources.ApplyResources(this.tlpExit, "tlpExit");
-            this.tlpExit.Controls.Add(this.btnExit, 0, 0);
-            this.tlpExit.Controls.Add(this.lblExit, 0, 0);
-            this.tlpExit.Name = "tlpExit";
+            resources.ApplyResources(tlpExit, "tlpExit");
+            tlpExit.Controls.Add(btnExit, 0, 0);
+            tlpExit.Controls.Add(lblExit, 0, 0);
+            tlpExit.Name = "tlpExit";
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnExit, "btnExit");
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExit.Image = global::LTUD1_MF_BHX.Properties.Resources.icon_exit;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.UseVisualStyleBackColor = false;
+            btnExit.BackColor = Color.Transparent;
+            btnExit.Cursor = Cursors.Hand;
+            resources.ApplyResources(btnExit, "btnExit");
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnExit.ForeColor = Color.Transparent;
+            btnExit.Image = Properties.Resources.icon_exit;
+            btnExit.Name = "btnExit";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // lblExit
             // 
-            resources.ApplyResources(this.lblExit, "lblExit");
-            this.lblExit.ForeColor = System.Drawing.Color.White;
-            this.lblExit.Name = "lblExit";
+            resources.ApplyResources(lblExit, "lblExit");
+            lblExit.ForeColor = Color.White;
+            lblExit.Name = "lblExit";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.iconChildForm);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
+            panel4.Controls.Add(iconChildForm);
+            resources.ApplyResources(panel4, "panel4");
+            panel4.Name = "panel4";
             // 
             // iconChildForm
             // 
-            this.iconChildForm.BackgroundImage = global::LTUD1_MF_BHX.Properties.Resources.icon_home;
-            resources.ApplyResources(this.iconChildForm, "iconChildForm");
-            this.iconChildForm.Name = "iconChildForm";
-            this.iconChildForm.TabStop = false;
+            iconChildForm.BackgroundImage = Properties.Resources.icon_home;
+            resources.ApplyResources(iconChildForm, "iconChildForm");
+            iconChildForm.Name = "iconChildForm";
+            iconChildForm.TabStop = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            panel2.Controls.Add(label1);
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Name = "panel2";
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
+            resources.ApplyResources(label1, "label1");
+            label1.ForeColor = Color.White;
+            label1.Name = "label1";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label2);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
+            panel5.Controls.Add(label2);
+            resources.ApplyResources(panel5, "panel5");
+            panel5.Name = "panel5";
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
+            label2.BackColor = Color.Transparent;
+            resources.ApplyResources(label2, "label2");
+            label2.ForeColor = Color.White;
+            label2.Name = "label2";
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
+            resources.ApplyResources(panel6, "panel6");
+            panel6.Name = "panel6";
             // 
             // sidebarTimer
             // 
-            this.sidebarTimer.Interval = 10;
+            sidebarTimer.Interval = 10;
+            sidebarTimer.Tick += sidebarTimer_Tick;
             // 
             // listIcon_navigation_bar
             // 
-            this.listIcon_navigation_bar.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.listIcon_navigation_bar.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listIcon_navigation_bar.ImageStream")));
-            this.listIcon_navigation_bar.TransparentColor = System.Drawing.Color.Transparent;
-            this.listIcon_navigation_bar.Images.SetKeyName(0, "icon_home.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(1, "icon_menu.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(2, "icon_exit.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(3, "icon_user_login.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(4, "icon_diadiem.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(5, "icon_hoadon.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(6, "icon_khachhang.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(7, "icon_khuyenmai.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(8, "icon_nhacungcap.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(9, "icon_nhanvien.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(10, "icon_sanpham.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(11, "icon_search.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(12, "icon_setting.png");
-            this.listIcon_navigation_bar.Images.SetKeyName(13, "BXHLOGO.png");
+            listIcon_navigation_bar.ColorDepth = ColorDepth.Depth32Bit;
+            listIcon_navigation_bar.ImageStream = (ImageListStreamer)resources.GetObject("listIcon_navigation_bar.ImageStream");
+            listIcon_navigation_bar.TransparentColor = Color.Transparent;
+            listIcon_navigation_bar.Images.SetKeyName(0, "icon_home.png");
+            listIcon_navigation_bar.Images.SetKeyName(1, "icon_menu.png");
+            listIcon_navigation_bar.Images.SetKeyName(2, "icon_exit.png");
+            listIcon_navigation_bar.Images.SetKeyName(3, "icon_user_login.png");
+            listIcon_navigation_bar.Images.SetKeyName(4, "icon_diadiem.png");
+            listIcon_navigation_bar.Images.SetKeyName(5, "icon_hoadon.png");
+            listIcon_navigation_bar.Images.SetKeyName(6, "icon_khachhang.png");
+            listIcon_navigation_bar.Images.SetKeyName(7, "icon_khuyenmai.png");
+            listIcon_navigation_bar.Images.SetKeyName(8, "icon_nhacungcap.png");
+            listIcon_navigation_bar.Images.SetKeyName(9, "icon_nhanvien.png");
+            listIcon_navigation_bar.Images.SetKeyName(10, "icon_sanpham.png");
+            listIcon_navigation_bar.Images.SetKeyName(11, "icon_search.png");
+            listIcon_navigation_bar.Images.SetKeyName(12, "icon_setting.png");
+            listIcon_navigation_bar.Images.SetKeyName(13, "BXHLOGO.png");
             // 
             // lisIcon_navigation_bar_transparent10
             // 
-            this.lisIcon_navigation_bar_transparent10.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.lisIcon_navigation_bar_transparent10.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("lisIcon_navigation_bar_transparent10.ImageStream")));
-            this.lisIcon_navigation_bar_transparent10.TransparentColor = System.Drawing.Color.Transparent;
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(0, "user.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(1, "aChangeIcon.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(2, "diadiem.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(3, "hoadon.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(4, "khachhang.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(5, "khuyenmai.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(6, "menu.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(7, "nhacungcap.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(8, "nhanvien.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(9, "sanpham.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(10, "search.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(11, "navigationBar.png");
-            this.lisIcon_navigation_bar_transparent10.Images.SetKeyName(12, "thoat.png");
+            lisIcon_navigation_bar_transparent10.ColorDepth = ColorDepth.Depth32Bit;
+            lisIcon_navigation_bar_transparent10.ImageStream = (ImageListStreamer)resources.GetObject("lisIcon_navigation_bar_transparent10.ImageStream");
+            lisIcon_navigation_bar_transparent10.TransparentColor = Color.Transparent;
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(0, "user.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(1, "aChangeIcon.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(2, "diadiem.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(3, "hoadon.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(4, "khachhang.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(5, "khuyenmai.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(6, "menu.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(7, "nhacungcap.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(8, "nhanvien.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(9, "sanpham.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(10, "search.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(11, "navigationBar.png");
+            lisIcon_navigation_bar_transparent10.Images.SetKeyName(12, "thoat.png");
             // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
+<<<<<<< HEAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpBHX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -459,6 +494,33 @@
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
+=======
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(tlpBHX);
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormMain";
+            WindowState = FormWindowState.Maximized;
+            Load += FormMain_Load;
+            tlpBHX.ResumeLayout(false);
+            tlpBHX.PerformLayout();
+            flpSetting.ResumeLayout(false);
+            panelSetting.ResumeLayout(false);
+            tlpNavigationBar.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
+            tlpHeader.ResumeLayout(false);
+            cmsLogOut.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
+            tlpMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
+            tlpExit.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconChildForm).EndInit();
+            panel2.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            ResumeLayout(false);
+>>>>>>> 8c08b37db7fc6ee7426b618709650e3a3137d96b
         }
 
         #endregion

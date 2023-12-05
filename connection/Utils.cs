@@ -1,37 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 
-namespace LTUD1_MF_BHX.Connection
+
+public class Utils
 {
-    public class Utils
+    private static string connectionString = "Data Source=localhost;Initial Catalog=BACHHOAXANH; Integrated Security=true";
+    public static string ConnectionString
     {
-
-        private static string connectionString = "Data Source=localhost;Initial Catalog=BACHHOAXANH; Integrated Security=true";
- 
-        public static string ConnectionString
+        get { return connectionString; }
+        set { connectionString = value; }
+    }
+    private static bool IsServerConnected(string connectionString)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
         {
-            get { return connectionString; }
-            set { connectionString = value; }
-        }
-        private static bool IsServerConnected(string connectionString)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                try
-                {
-                    connection.Open();
-                    return true;
-                }
-                catch (SqlException)
-                {
-                    return false;
-                }
+                connection.Open();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
             }
         }
+    }
+    public static string GenerateRandomAlphanumericString(int length)
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        var random = new Random();
+        return new string(Enumerable.Repeat(chars, length)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
     }
 
 }

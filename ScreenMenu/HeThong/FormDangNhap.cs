@@ -107,7 +107,7 @@ namespace LTUD1_MF_BHX.Screen
                 }
                 else
                 {
-                    // nhấn lần nữa để ẩn đi password
+                    // nhấn lần nữa để ẩn đi matkhau
                     txtPassword.UseSystemPasswordChar = true;
                     ptb.Image = loginImage.getIcon("hidepassword", "png");
                     setSystemCharPassword = true;//hide

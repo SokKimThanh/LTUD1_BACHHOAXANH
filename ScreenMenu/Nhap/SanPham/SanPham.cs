@@ -1,6 +1,6 @@
-﻿ 
+﻿
 
-namespace LTUD1_MF_BHX 
+namespace LTUD1_MF_BHX
 {
     internal class SanPham
     {
@@ -11,6 +11,7 @@ namespace LTUD1_MF_BHX
 
         public SanPham()
         {
+            
         }
 
         public SanPham(string ma, string ten, string donVi, string nCC, string loaiSP, string khuyenMai, double gia, int soluong, DateTime ngaySX, DateTime hanSD)

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace LTUD1_MF_BHX
+namespace LTUD1_MF_BHX.Connection
 {
     /// <summary>
     /// Lớp MyController điều khiển thao tác trên cơ sở dữ liệu dữ liệu và chiến thuật đóng mở kết nối
@@ -29,7 +29,9 @@ namespace LTUD1_MF_BHX
         private SqlCommand sql;
 
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public MyController(string connectionString)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             dbConnection = new DatabaseConnection(connectionString);
         }

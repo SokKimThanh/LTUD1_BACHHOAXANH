@@ -1,11 +1,6 @@
-﻿using LTUD1_MF_BHX.model;
-using System;
-using System.Collections.Generic;
+﻿using LTUD1_MF_BHX.Connection;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX
 {
@@ -15,7 +10,7 @@ namespace LTUD1_MF_BHX
         {
         }
 
-        
+
 
         public override void Delete(object id)
         {
@@ -27,7 +22,7 @@ namespace LTUD1_MF_BHX
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@UserId", id);
+            Sql.Parameters.AddWithValue("@makh", id);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
@@ -69,7 +64,7 @@ namespace LTUD1_MF_BHX
             // Đóng kết nối
             CloseConnection();
         }
-        public DataTable  sp_cbo_hinhthuckm()
+        public DataTable sp_cbo_hinhthuckm()
         {
             // Mở kết nối
             SqlConnection conn = OpenConnection();
@@ -143,7 +138,7 @@ namespace LTUD1_MF_BHX
 
         public override void Update(object sender)
         {
-           KhuyenMai user = (KhuyenMai)sender;
+            KhuyenMai user = (KhuyenMai)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 

@@ -15,6 +15,9 @@ Date(dd/MM/yyyy)Author  Comments
 7/5/2023 	11:43  		Sok Kim Thanh		Viết mã nhập liệu
 7/5/2023 	05:58  		Sok Kim Thanh   	Viêt mã sql tác ra 3 phần, tạo bảng, thêm khóa chính, thêm khóa ngoại.
 3/11/2023	11:00		Lê Duy Anh Tú		Cập nhật thêm bảng loại sản phẩm
+22/11/2023	07:23SA		Sok Kim Thanh		Vẽ lại quan hệ fk_sanpham_khuyenmai, fk_sanpham_loaisp, Thêm khóa chính pk_hinhthuckm
+22/11/2023	09:37SA		Sok Kim Thanh		Thêm BẢNG TAIKHOAN, QUYENTRUYCAP
+
 ***************************************************************************************************/
 ------------------------------------------------------------
 --Tạo database mới										   -
@@ -57,22 +60,22 @@ CREATE TABLE NHACUNGCAP (MANCC CHAR(11)NOT NULL  ,TENNCC NVARCHAR(30) NOT NULL,D
 ------------------------------------------------------------
 ---------------------Tạo bảng SANPHAM-----------------------
 ------------------------------------------------------------
-CREATE TABLE SANPHAM (MASP CHAR(11) NOT NULL ,TENSP NVARCHAR(30) NOT NULL,DONVI NVARCHAR(30),NSX DATE NOT NULL,HSD DATE NOT NULL,DONGIA INT NOT NULL,SLTONKHO INT, MALOAI CHAR(11), MANCC CHAR(11));
+CREATE TABLE SANPHAM (MASP CHAR(11) NOT NULL ,TENSP NVARCHAR(30) NOT NULL,DONVI NVARCHAR(30),NSX DATE NOT NULL,HSD DATE NOT NULL,DONGIA INT NOT NULL,SLTONKHO INT, MALOAI CHAR(11), MANCC CHAR(11), MAKM char(11));
 ------------------------------------------------------------
 ---------------------Tạo bảng KHUYENMAI---------------------
 ------------------------------------------------------------
-CREATE TABLE KHUYENMAI (MAKM CHAR(11) NOT NULL,NGAYBD DATE NOT NULL,NGAYKT DATE NOT NULL,MASP CHAR(11));
+CREATE TABLE KHUYENMAI (MAKM CHAR(11) NOT NULL,NGAYBD DATE NOT NULL,NGAYKT DATE NOT NULL, MAHT char(11));
 ------------------------------------------------------------
 ---------------------Tạo bảng HINHTHUCKM--------------------
 ------------------------------------------------------------
-CREATE TABLE HINHTHUCKM (MAKM CHAR(11)NOT NULL,HINHTHUC NVARCHAR(50) NOT NULL,GHICHU NVARCHAR(100));
+CREATE TABLE HINHTHUCKM (MAHT CHAR(11)NOT NULL, TENHINHTHUC NVARCHAR(50) NOT NULL, GHICHU NVARCHAR(100));
 ------------------------------------------------------------
 ---------------------Tạo bảng HOADON------------------------
 ------------------------------------------------------------
-CREATE TABLE HOADON (MAHD CHAR(11) NOT NULL,NGAYHOADON DATE NOT NULL,TTMH DECIMAL(18,2) NOT NULL,TTHD DECIMAL(18,2) NOT NULL,DIEM INT NOT NULL,MANV CHAR(11),MAKH CHAR(11),MASP CHAR(11),MAKM CHAR(11));------------------------------------------------------------
+CREATE TABLE HOADON (MAHD CHAR(11) NOT NULL, NGAYHOADON DATE NOT NULL,TONGTHANHTIEN DECIMAL(18,2) NOT NULL,MANV CHAR(11),MAKH CHAR(11));------------------------------------------------------------
 ---------------------Tạo bảng CHITIETHD---------------------
 ------------------------------------------------------------
-CREATE TABLE CHITIETHD (MAHD CHAR(11) NOT NULL,MASP CHAR(11) NOT NULL,SLMUA INT NOT NULL);
+CREATE TABLE CHITIETHD (MAHD CHAR(11) NOT NULL,MASP CHAR(11) NOT NULL, SLMUA INT NOT NULL);
 ------------------------------------------------------------
 ---------------------Tạo bảng CHITIETCC---------------------
 ------------------------------------------------------------
@@ -81,6 +84,14 @@ CREATE TABLE CHITIETCC (MANCC CHAR(11) NOT NULL,MASP CHAR(11) NOT NULL,SLCUNGCCA
 ----------------------Tạo bảng LOAISP-----------------------
 ------------------------------------------------------------
 CREATE TABLE LOAISP (MALOAI CHAR(11) NOT NULL, TENLOAI NVARCHAR(30) NOT NULL, GHICHU NVARCHAR(100));
+------------------------------------------------------------
+----------------------Tạo bảng TAIKHOAN-----------------------
+------------------------------------------------------------
+create table TAIKHOAN(TENTK char(30) not null, MATKHAU char(30) not null, MANV char(11), MAQTC char(11))
+------------------------------------------------------------
+----------------------Tạo bảng QUYENTRUYCAP-----------------------
+------------------------------------------------------------
+create table QUYENTRUYCAP(MAQTC char(11) not null,TENQTC nvarchar(30) not null)
 
 /***********************************************************
 ------------------------------------------------------------
@@ -95,9 +106,10 @@ ALTER TABLE NHACUNGCAP ADD CONSTRAINT PK_NHACUNGCAP PRIMARY KEY (MANCC);
 ALTER TABLE SANPHAM ADD CONSTRAINT PK_SANPHAM PRIMARY KEY (MASP);
 ALTER TABLE LOAISP ADD CONSTRAINT PK_LOAISP PRIMARY KEY (MALOAI);
 ALTER TABLE KHUYENMAI ADD CONSTRAINT PK_KHUYENMAI PRIMARY KEY (MAKM);
+ALTER TABLE HINHTHUCKM ADD CONSTRAINT PK_HINHTHUCKM PRIMARY KEY (MAHT);
 ALTER TABLE HOADON ADD CONSTRAINT PK_HOADON PRIMARY KEY (MAHD);
-
-
+ALTER TABLE TAIKHOAN add constraint PK_TAIKHOAN primary key (TENTK)
+ALTER TABLE QUYENTRUYCAP add constraint PK_QUYENTRUYCAP primary key (MAQTC)
 /***********************************************************
 ------------------------------------------------------------
 ----Tạo khóa ngoại----------------------------------------
@@ -106,20 +118,17 @@ ALTER TABLE HOADON ADD CONSTRAINT PK_HOADON PRIMARY KEY (MAHD);
 ALTER TABLE PHONGBAN ADD CONSTRAINT FK_PHONGBAN_CHINHANH FOREIGN KEY (MACN) REFERENCES CHINHANH (MACN);
 ALTER TABLE NHANVIEN ADD CONSTRAINT FK_NHANVIEN_PHONGBAN FOREIGN KEY (MAPB) REFERENCES PHONGBAN (MAPB);
 ALTER TABLE NHANVIEN ADD CONSTRAINT FK_NHANVIEN_NGUOIQUANLY FOREIGN KEY (QUANLY) REFERENCES NHANVIEN (MANV);
-ALTER TABLE SANPHAM ADD CONSTRAINT FK_SANPHAM_NHACUNGCAP FOREIGN KEY (MANCC) REFERENCES NHACUNGCAP (MANCC);
-ALTER TABLE SANPHAM ADD CONSTRAINT FK_SANPHAM_LOAISP FOREIGN KEY (MALOAI) REFERENCES LOAISP (MALOAI);
-ALTER TABLE KHUYENMAI ADD CONSTRAINT FK_KHUYENMAI_SANPHAM FOREIGN KEY (MASP) REFERENCES SANPHAM (MASP);
-ALTER TABLE HINHTHUCKM ADD CONSTRAINT FK_HINHTHUCKM_KHUYENMAI FOREIGN KEY (MAKM) REFERENCES KHUYENMAI (MAKM);
+ALTER TABLE SANPHAM ADD CONSTRAINT FK_SANPHAM_LOAISP FOREIGN KEY (MALOAI) REFERENCES LOAISP (MALOAI);--ok
+ALTER TABLE SANPHAM ADD CONSTRAINT FK_SANPHAM_KHUYENMAI FOREIGN KEY (MAKM) REFERENCES KHUYENMAI (MAKM);--ok
+ALTER TABLE KHUYENMAI ADD CONSTRAINT FK_KHUYENMAI_HINHTHUCKM FOREIGN KEY (MAHT) REFERENCES HINHTHUCKM (MAHT);--ok
 ALTER TABLE HOADON ADD CONSTRAINT FK_HOADON_NHANVIEN FOREIGN KEY (MANV) REFERENCES NHANVIEN (MANV);
 ALTER TABLE HOADON ADD CONSTRAINT FK_HOADON_KHACHHANG FOREIGN KEY (MAKH) REFERENCES KHACHHANG (MAKH);
-ALTER TABLE HOADON ADD CONSTRAINT FK_HOADON_SANPHAM FOREIGN KEY (MASP) REFERENCES SANPHAM (MASP);
-ALTER TABLE HOADON ADD CONSTRAINT FK_HOADON_KHUYENMAI FOREIGN KEY (MAKM) REFERENCES KHUYENMAI (MAKM);
 ALTER TABLE CHITIETHD ADD CONSTRAINT FK_CHITIETHD_HOADON FOREIGN KEY (MAHD) REFERENCES HOADON (MAHD);
-ALTER TABLE CHITIETHD ADD CONSTRAINT FK_CHITIETHD_SANPHAM FOREIGN KEY (MASP) REFERENCES SANPHAM (MASP);
+ALTER TABLE CHITIETHD ADD CONSTRAINT FK_CHITIETHD_SANPHAM FOREIGN KEY (MASP) REFERENCES SANPHAM (MASP);--ok
 ALTER TABLE CHITIETCC ADD CONSTRAINT FK_CHITIETCC_NHACUNGCAP FOREIGN KEY (MANCC) REFERENCES NHACUNGCAP (MANCC);
 ALTER TABLE CHITIETCC ADD CONSTRAINT FK_CHITIETCC_SANPHAM FOREIGN KEY (MASP) REFERENCES SANPHAM (MASP);
- 
-
+alter table TAIKHOAN add constraint FK_TAIKHOAN_NHANVIEN foreign key (MANV) references NHANVIEN(MANV)
+alter table TAIKHOAN add constraint FK_TAIKHOAN_QUYENTRUYCAP foreign key (MAQTC) references QUYENTRUYCAP(MAQTC)
 /***********************************************************
 ------------------------------------------------------------
 ---------------------Tạo default value----------------------
@@ -165,7 +174,7 @@ go
 set dateformat dmy
 -- Thêm dữ liệu vào bảng LOAISP
 INSERT INTO LOAISP
-VALUES 	   ('L01', N'Thịt 1', 'Thịt heo'),
+VALUES ('L01', N'Thịt 1', 'Thịt heo'),
 	   ('L02', N'Thịt 2', 'Thịt bò'),
 	   ('L03', N'Thịt 3', 'Thịt nai'),
 	   ('L04', N'Cá 1'  , 'Cá hồi')
@@ -273,21 +282,21 @@ VALUES ('NCC01', 'SP01', 10),
 ('NCC03' ,'SP15' ,150);;
 
 -- Thêm dữ liệu vào bảng KHUYENMAI
-INSERT INTO KHUYENMAI (MAKM, NGAYBD, NGAYKT, MASP)
-VALUES ('KM01', '2022-01-01', '2022-02-01', 'SP01'),
-('KM02', '02/02/2022', '02/03/2022', 'SP02'),
-('KM03', '03/03/2022', '03/04/2022', 'SP03'),
-('KM04', '04/04/2022', '04/05/2022' , 'SP04'),
-('KM05' ,'05/05/2022' ,'05/06/2022' , 'SP05'),
-('KM06' ,'06/06/2022' ,'06/07/2022' , 'SP06'),
-('KM07' ,'07/07/2022' ,'07/08/2022' , 'SP07'),
-('KM08' ,'08/08/2022' ,'08/09/2022' , 'SP08'),
-('KM09' ,'09/09/2022' ,'09/10/2022' , 'SP09'),
-('KM10' ,'10/10/2022' ,'10/11/2022' , 'SP10'),
-('KM11' ,'11/11/2022' ,'11/12/2022' , 'SP11');;
+INSERT INTO KHUYENMAI (MAKM, NGAYBD, NGAYKT)
+VALUES ('KM01', '2022-01-01', '2022-02-01'),
+('KM02', '02/02/2022', '02/03/2022'),
+('KM03', '03/03/2022', '03/04/2022'),
+('KM04', '04/04/2022', '04/05/2022'),
+('KM05' ,'05/05/2022' ,'05/06/2022'),
+('KM06' ,'06/06/2022' ,'06/07/2022'),
+('KM07' ,'07/07/2022' ,'07/08/2022'),
+('KM08' ,'08/08/2022' ,'08/09/2022'),
+('KM09' ,'09/09/2022' ,'09/10/2022'),
+('KM10' ,'10/10/2022' ,'10/11/2022'),
+('KM11' ,'11/11/2022' ,'11/12/2022')
 
 -- Thêm dữ liệu vào bảng HINHTHUCKM
-INSERT INTO HINHTHUCKM (MAKM, HINHTHUC, GHICHU)
+INSERT INTO HINHTHUCKM (MAHT,TENHINHTHUC, GHICHU)
 VALUES ('KM01',N'Giảm giá 10%', NULL),
 ('KM02',N'Giảm giá 20%', NULL),
 ('KM03',N'Giảm giá 30%', NULL),
@@ -301,65 +310,38 @@ VALUES ('KM01',N'Giảm giá 10%', NULL),
 ('KM11' , N'Bảo hành vàng' ,NULL);
 
 -- Thêm dữ liệu vào bảng HOADON
-INSERT INTO HOADON (MAHD, NGAYHOADON, TTMH, TTHD, DIEM, MANV, MAKH, MASP, MAKM)
-VALUES ('HD01', '15/01/2022', 90000, 90000, 0, 'NV01', 'KH01', 'SP01', 'KM01'),
-('HD02', '15/02/2022', 80000, 80000, 0, 'NV02', 'KH02', 'SP02', 'KM02'),
-('HD03', '15/03/2022', 70000, 70000, 0, 'NV03', 'KH03', 'SP03', 'KM03'),
-('HD04', '15/04/2022', 60000, 60000, 0 , 'NV04' , 'KH04' , 'SP04' , 'KM04'),
-('HD05' ,'15/05/2022' ,50000 ,50000 ,0 , 'NV05' , 'KH05' , 'SP05' , 'KM05'),
-('HD06' ,'15/06/2022' ,40000 ,40000 ,0 , 'NV06' , 'KH06' , 'SP06' , 'KM06'),
-('HD07' ,'15/07/2022' ,30000 ,30000 ,0 , 'NV07' , 'KH07' , 'SP07' , 'KM07'),
-('HD08' ,'15/08/2022' ,20000 ,20000 ,0 , 'NV08' , 'KH08' , 'SP08' , 'KM08'),
-('HD09' ,'15/09/2022' ,10000 ,10000 ,0 , 'NV09' , 'KH09' , 'SP09' , 'KM09'),
-('HD10' ,'15/10/2022' ,-10000 ,-10000 ,-10 ,'NV10','KH10','SP10','KM10'),
-('HD11','15/11/2022',-20000,-20000,-20,'NV01','KH01','SP01','KM01'),
-('HD12', '15/12/2022', 100000, 90000, 10, 'NV02', 'KH02', 'SP02', 'KM02'),
-('HD13', '15/01/2023', 200000, 180000, 20, 'NV03', 'KH03', 'SP03', 'KM03'),
-('HD14', '15/02/2023', 300000, 270000, 30 , 'NV04' , 'KH04' , 'SP04' , 'KM04'),
-('HD15' ,'15/03/2023' ,400000 ,360000 ,40 , 'NV05' , 'KH05' , 'SP05' , 'KM05'),
-('HD16' ,'15/04/2023' ,500000 ,450000 ,50 , 'NV06' , 'KH06' , 'SP06' , 'KM06'),
-('HD17' ,'15/05/2023' ,600000 ,540000 ,60 , 'NV07' , 'KH07' , 'SP07' , 'KM07'),
-('HD18' ,'15/06/2023' ,700000 ,630000 ,70 , 'NV08' , 'KH08' , 'SP08' , 'KM08'),
-('HD19' ,'15/07/2023' ,800000 ,720000 ,80 , 'NV09' , 'KH09' , 'SP09' , 'KM09'),
-('HD20' ,'15/07/2023' ,800000 ,720000 ,80 , 'NV09' , 'KH09' , 'SP09' , 'KM09'),
-('HD21','15/08/2023',900000,810000,90,'NV10','KH10','SP10','KM10'),
-('HD22','16/09/2023',2000000,1800000,50,'NV02','KH02','SP02','KM02'),
-('HD23','17/09/2023',3000000,2700000,75,'NV03','KH03','SP03','KM03'),
-('HD24','18/09/2023',4000000,3600000,100,'NV04','KH04','SP04','KM04'),
-('HD25','19/09/2023',5000000,4500000,25,'NV05','KH05','SP05','KM05'),
-('HD26','20/09/2023',6000000,5400000,50,'NV06','KH06','SP06','KM06'),
-('HD27','21/09/2023',7000000,6300000,75,'NV07','KH07','SP07','KM07'),
-('HD28','22/09/2023',8000000,7200000,100,'NV08','KH08','SP08','KM08'),
-('HD29','23/09/2023',9000000,8100000,25,'NV09','KH09','SP09','KM09');
+INSERT INTO HOADON (MAHD, NGAYHOADON, TONGTHANHTIEN, MANV, MAKH)
+VALUES ('HD01', '15/01/2022', 90000,'NV01', 'KH01')
+ 
 
 -- Thêm dữ liệu vào bảng CHITIETHD
-INSERT INTO CHITIETHD (MAHD, MASP, SLMUA)
-VALUES ('HD01', 'SP01', 1),
-('HD02', 'SP02', 2),
-('HD03', 'SP03', 3),
-('HD04', 'SP04', 4),
-('HD05', 'SP05', 5),
-('HD06', 'SP06', 6),
-('HD07', 'SP07', 7),
-('HD08', 'SP08', 8),
-('HD09', 'SP09', 9),
-('HD10', 'SP10', 10),
-('HD11', 'SP11', 11),
-('HD12', 'SP12', 12),
-('HD13', 'SP13', 13),
-('HD14', 'SP14', 14),
-('HD15', 'SP15', 15),
-('HD16', 'SP16', 16),
-('HD17', 'SP17', 17),
-('HD18', 'SP18', 18),
-('HD19', 'SP19', 19),
-('HD20', 'SP20', 20),
-('HD21', 'SP21', 21),
-('HD22', 'SP22', 22),
-('HD23', 'SP23', 23),
-('HD24', 'SP24', 24),
-('HD25', 'SP25', 25),
-('HD26', 'SP26', 26),
-('HD27', 'SP27', 27),
-('HD28', 'SP28', 28),
-('HD29', 'SP29', 29)										   
+INSERT INTO CHITIETHD (MAHD, MASP, SLMUA) VALUES
+('HD01', 'SP01', 1),
+('HD01', 'SP02', 2),
+('HD01', 'SP03', 3),
+('HD01', 'SP04', 4),
+('HD01', 'SP05', 5),
+('HD01', 'SP06', 6),
+('HD01', 'SP07', 7),
+('HD01', 'SP08', 8),
+('HD01', 'SP09', 9),
+('HD01', 'SP10', 10),
+('HD01', 'SP11', 11),
+('HD01', 'SP12', 12),
+('HD01', 'SP13', 13),
+('HD01', 'SP14', 14),
+('HD01', 'SP15', 15),
+('HD01', 'SP16', 16),
+('HD01', 'SP17', 17),
+('HD01', 'SP18', 18),
+('HD01', 'SP19', 19),
+('HD01', 'SP20', 20),
+('HD01', 'SP21', 21),
+('HD01', 'SP22', 22),
+('HD01', 'SP23', 23),
+('HD01', 'SP24', 24),
+('HD01', 'SP25', 25),
+('HD01', 'SP26', 26),
+('HD01', 'SP27', 27),
+('HD01', 'SP28', 28),
+('HD01', 'SP29', 29)										   

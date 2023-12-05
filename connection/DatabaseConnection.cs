@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.connection
 {
     public class DatabaseConnection
     {
+#pragma warning disable IDE0044 // Add readonly modifier
         private SqlConnection conn;
+#pragma warning restore IDE0044 // Add readonly modifier
 
         public DatabaseConnection(string connectionString)
         {
@@ -23,7 +20,7 @@ namespace LTUD1_MF_BHX.connection
             {
                 conn.Open();
             }
-            return conn;
+            return conn!;
         }
 
         public void CloseConnection()

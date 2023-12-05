@@ -15,9 +15,9 @@ drop procedure if exists sp_danhmuc_insert
 go
 CREATE PROCEDURE sp_danhmuc_insert
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = '', 
-	@ten nvarchar(256) = N'',
-	@ghichu nvarchar(256) = N''
+	@MALOAI CHAR(11) ,
+	@TENLOAI NVARCHAR(30),
+	@GHICHU NVARCHAR(100)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -25,6 +25,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO danhmuc VALUES (@ma, @ten, @ghichu)
+	INSERT INTO LOAISP VALUES (@MALOAI, @TENLOAI, @GHICHU)
 END
 GO
