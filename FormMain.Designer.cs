@@ -304,8 +304,8 @@
             // tlpMenu
             // 
             resources.ApplyResources(tlpMenu, "tlpMenu");
-            tlpMenu.Controls.Add(btnMenu, 0, 0);
             tlpMenu.Controls.Add(btnHome, 0, 0);
+            tlpMenu.Controls.Add(btnMenu, 0, 0);
             tlpMenu.Name = "tlpMenu";
             // 
             // btnHome
