@@ -77,7 +77,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -193,7 +193,6 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
                 Sql.Parameters.AddWithValue("@MASP", id);
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", id);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();

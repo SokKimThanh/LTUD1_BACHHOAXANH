@@ -282,7 +282,6 @@
             // 
             // lblAccountName
             // 
-<<<<<<< HEAD
             this.lblAccountName.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lblAccountName, "lblAccountName");
             this.lblAccountName.ForeColor = System.Drawing.Color.White;
@@ -294,7 +293,6 @@
             resources.ApplyResources(this.currentChangeTitle, "currentChangeTitle");
             this.currentChangeTitle.ForeColor = System.Drawing.Color.White;
             this.currentChangeTitle.Name = "currentChangeTitle";
-=======
             lblAccountName.BackColor = Color.Transparent;
             resources.ApplyResources(lblAccountName, "lblAccountName");
             lblAccountName.ForeColor = Color.White;
@@ -306,7 +304,6 @@
             resources.ApplyResources(currentChangeTitle, "currentChangeTitle");
             currentChangeTitle.ForeColor = Color.White;
             currentChangeTitle.Name = "currentChangeTitle";
->>>>>>> 8c08b37db7fc6ee7426b618709650e3a3137d96b
             // 
             // panelMenu
             // 
@@ -324,21 +321,18 @@
             // 
             // btnHome
             // 
-<<<<<<< HEAD
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnHome, "btnHome");
             this.btnHome.Image = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
             this.btnHome.InitialImage = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
             this.btnHome.Name = "btnHome";
             this.btnHome.TabStop = false;
-=======
             btnHome.BackColor = Color.Transparent;
             resources.ApplyResources(btnHome, "btnHome");
             btnHome.Image = Properties.Resources.BXHLOGO2;
             btnHome.InitialImage = Properties.Resources.BXHLOGO2;
             btnHome.Name = "btnHome";
             btnHome.TabStop = false;
->>>>>>> 8c08b37db7fc6ee7426b618709650e3a3137d96b
             // 
             // btnMenu
             // 
@@ -468,7 +462,6 @@
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
-<<<<<<< HEAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpBHX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -494,7 +487,6 @@
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
-=======
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tlpBHX);
             FormBorderStyle = FormBorderStyle.None;
@@ -520,7 +512,6 @@
             panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ResumeLayout(false);
->>>>>>> 8c08b37db7fc6ee7426b618709650e3a3137d96b
         }
 
         #endregion

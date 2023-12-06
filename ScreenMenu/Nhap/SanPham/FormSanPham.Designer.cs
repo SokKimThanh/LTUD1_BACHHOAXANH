@@ -32,25 +32,27 @@
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             groupBox2 = new GroupBox();
-            richTextBox2 = new RichTextBox();
+            rtbDonVi = new RichTextBox();
             groupBox9 = new GroupBox();
+            dtpNSX = new DateTimePicker();
             groupBox8 = new GroupBox();
-            textBox2 = new TextBox();
+            txtDonGia = new TextBox();
             groupBox7 = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtpHSD = new DateTimePicker();
             groupBox6 = new GroupBox();
-            richTextBox1 = new RichTextBox();
+            rtbSL = new RichTextBox();
             groupBox5 = new GroupBox();
-            textBox3 = new TextBox();
+            txtTenSP = new TextBox();
             groupBox4 = new GroupBox();
+            txtMaSP = new TextBox();
             tableLayoutPanel5 = new TableLayoutPanel();
             groupBox15 = new GroupBox();
             dgvDanhSachSP = new DataGridView();
             groupBox14 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
-            button1 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            btnSua = new Button();
+            btnXoa = new Button();
+            btnThem = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             groupBox11 = new GroupBox();
             cboKM = new ComboBox();
@@ -58,8 +60,6 @@
             cboLoaiSP = new ComboBox();
             groupBox3 = new GroupBox();
             cboNCC = new ComboBox();
-            textBox4 = new TextBox();
-            dateTimePicker2 = new DateTimePicker();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -135,7 +135,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(richTextBox2);
+            groupBox2.Controls.Add(rtbDonVi);
             groupBox2.Dock = DockStyle.Fill;
             groupBox2.ForeColor = Color.White;
             groupBox2.Location = new Point(3, 597);
@@ -145,18 +145,18 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Đơn vị tính";
             // 
-            // richTextBox2
+            // rtbDonVi
             // 
-            richTextBox2.Dock = DockStyle.Fill;
-            richTextBox2.Location = new Point(3, 43);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(387, 51);
-            richTextBox2.TabIndex = 10;
-            richTextBox2.Text = "";
+            rtbDonVi.Dock = DockStyle.Fill;
+            rtbDonVi.Location = new Point(3, 43);
+            rtbDonVi.Name = "rtbDonVi";
+            rtbDonVi.Size = new Size(387, 51);
+            rtbDonVi.TabIndex = 10;
+            rtbDonVi.Text = "";
             // 
             // groupBox9
             // 
-            groupBox9.Controls.Add(dateTimePicker2);
+            groupBox9.Controls.Add(dtpNSX);
             groupBox9.Dock = DockStyle.Fill;
             groupBox9.ForeColor = Color.White;
             groupBox9.Location = new Point(3, 201);
@@ -166,9 +166,19 @@
             groupBox9.TabStop = false;
             groupBox9.Text = "Ngày sản xuất:";
             // 
+            // dtpNSX
+            // 
+            dtpNSX.Dock = DockStyle.Fill;
+            dtpNSX.Format = DateTimePickerFormat.Short;
+            dtpNSX.Location = new Point(3, 43);
+            dtpNSX.Margin = new Padding(6, 4, 6, 4);
+            dtpNSX.Name = "dtpNSX";
+            dtpNSX.Size = new Size(387, 47);
+            dtpNSX.TabIndex = 20;
+            // 
             // groupBox8
             // 
-            groupBox8.Controls.Add(textBox2);
+            groupBox8.Controls.Add(txtDonGia);
             groupBox8.Dock = DockStyle.Fill;
             groupBox8.ForeColor = Color.White;
             groupBox8.Location = new Point(3, 399);
@@ -178,20 +188,19 @@
             groupBox8.TabStop = false;
             groupBox8.Text = "Đơn giá:";
             // 
-            // textBox2
+            // txtDonGia
             // 
-            textBox2.Dock = DockStyle.Fill;
-            textBox2.Location = new Point(3, 43);
-            textBox2.Margin = new Padding(5);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Đơn giá mặt hàng";
-            textBox2.Size = new Size(387, 47);
-            textBox2.TabIndex = 9;
-            textBox2.TextAlign = HorizontalAlignment.Right;
+            txtDonGia.Dock = DockStyle.Fill;
+            txtDonGia.Location = new Point(3, 43);
+            txtDonGia.Margin = new Padding(5);
+            txtDonGia.Name = "txtDonGia";
+            txtDonGia.PlaceholderText = "Đơn giá mặt hàng";
+            txtDonGia.Size = new Size(387, 47);
+            txtDonGia.TabIndex = 9;
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(dateTimePicker1);
+            groupBox7.Controls.Add(dtpHSD);
             groupBox7.Dock = DockStyle.Fill;
             groupBox7.ForeColor = Color.White;
             groupBox7.Location = new Point(3, 300);
@@ -201,19 +210,19 @@
             groupBox7.TabStop = false;
             groupBox7.Text = "Hạn sử dụng:";
             // 
-            // dateTimePicker1
+            // dtpHSD
             // 
-            dateTimePicker1.Dock = DockStyle.Fill;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(3, 43);
-            dateTimePicker1.Margin = new Padding(6, 4, 6, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(387, 47);
-            dateTimePicker1.TabIndex = 19;
+            dtpHSD.Dock = DockStyle.Fill;
+            dtpHSD.Format = DateTimePickerFormat.Short;
+            dtpHSD.Location = new Point(3, 43);
+            dtpHSD.Margin = new Padding(6, 4, 6, 4);
+            dtpHSD.Name = "dtpHSD";
+            dtpHSD.Size = new Size(387, 47);
+            dtpHSD.TabIndex = 19;
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(richTextBox1);
+            groupBox6.Controls.Add(rtbSL);
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.ForeColor = Color.White;
             groupBox6.Location = new Point(3, 498);
@@ -223,18 +232,18 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "Tồn kho";
             // 
-            // richTextBox1
+            // rtbSL
             // 
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Location = new Point(3, 43);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(387, 47);
-            richTextBox1.TabIndex = 10;
-            richTextBox1.Text = "";
+            rtbSL.Dock = DockStyle.Fill;
+            rtbSL.Location = new Point(3, 43);
+            rtbSL.Name = "rtbSL";
+            rtbSL.Size = new Size(387, 47);
+            rtbSL.TabIndex = 10;
+            rtbSL.Text = "";
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(textBox3);
+            groupBox5.Controls.Add(txtTenSP);
             groupBox5.Dock = DockStyle.Fill;
             groupBox5.ForeColor = Color.Snow;
             groupBox5.Location = new Point(3, 102);
@@ -244,19 +253,19 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Tên sản phẩm";
             // 
-            // textBox3
+            // txtTenSP
             // 
-            textBox3.Dock = DockStyle.Fill;
-            textBox3.Location = new Point(3, 43);
-            textBox3.Margin = new Padding(5);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Tên mặt hàng";
-            textBox3.Size = new Size(387, 47);
-            textBox3.TabIndex = 10;
+            txtTenSP.Dock = DockStyle.Fill;
+            txtTenSP.Location = new Point(3, 43);
+            txtTenSP.Margin = new Padding(5);
+            txtTenSP.Name = "txtTenSP";
+            txtTenSP.PlaceholderText = "Tên mặt hàng";
+            txtTenSP.Size = new Size(387, 47);
+            txtTenSP.TabIndex = 10;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(textBox4);
+            groupBox4.Controls.Add(txtMaSP);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.ForeColor = Color.Snow;
             groupBox4.Location = new Point(3, 3);
@@ -265,6 +274,16 @@
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Mã sản phẩm";
+            // 
+            // txtMaSP
+            // 
+            txtMaSP.Dock = DockStyle.Fill;
+            txtMaSP.Location = new Point(3, 43);
+            txtMaSP.Margin = new Padding(5);
+            txtMaSP.Name = "txtMaSP";
+            txtMaSP.PlaceholderText = "Mã mặt hàng";
+            txtMaSP.Size = new Size(387, 47);
+            txtMaSP.TabIndex = 11;
             // 
             // tableLayoutPanel5
             // 
@@ -297,13 +316,15 @@
             // 
             // dgvDanhSachSP
             // 
+            dgvDanhSachSP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDanhSachSP.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDanhSachSP.Location = new Point(8, 40);
+            dgvDanhSachSP.Location = new Point(3, 46);
             dgvDanhSachSP.Name = "dgvDanhSachSP";
             dgvDanhSachSP.RowHeadersWidth = 51;
             dgvDanhSachSP.RowTemplate.Height = 29;
-            dgvDanhSachSP.Size = new Size(933, 542);
+            dgvDanhSachSP.Size = new Size(933, 389);
             dgvDanhSachSP.TabIndex = 0;
+            dgvDanhSachSP.CellContentClick += dgvDanhSachSP_CellContentClick;
             // 
             // groupBox14
             // 
@@ -326,9 +347,9 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel6.Controls.Add(button1, 0, 0);
-            tableLayoutPanel6.Controls.Add(button4, 0, 0);
-            tableLayoutPanel6.Controls.Add(button5, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnSua, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnXoa, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnThem, 0, 0);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tableLayoutPanel6.Location = new Point(3, 43);
@@ -340,56 +361,59 @@
             tableLayoutPanel6.Size = new Size(941, 97);
             tableLayoutPanel6.TabIndex = 0;
             // 
-            // button1
+            // btnSua
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(317, 5);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Size = new Size(146, 87);
-            button1.TabIndex = 2;
-            button1.Text = "Sửa";
-            button1.UseVisualStyleBackColor = false;
+            btnSua.BackColor = Color.Transparent;
+            btnSua.Dock = DockStyle.Fill;
+            btnSua.FlatAppearance.BorderSize = 3;
+            btnSua.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnSua.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnSua.FlatStyle = FlatStyle.Flat;
+            btnSua.ForeColor = Color.SeaShell;
+            btnSua.Location = new Point(317, 5);
+            btnSua.Margin = new Padding(5);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(146, 87);
+            btnSua.TabIndex = 2;
+            btnSua.Text = "Sửa";
+            btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
-            // button4
+            // btnXoa
             // 
-            button4.BackColor = Color.Transparent;
-            button4.Dock = DockStyle.Fill;
-            button4.FlatAppearance.BorderSize = 3;
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.SeaShell;
-            button4.Location = new Point(161, 5);
-            button4.Margin = new Padding(5);
-            button4.Name = "button4";
-            button4.Size = new Size(146, 87);
-            button4.TabIndex = 1;
-            button4.Text = "Xóa";
-            button4.UseVisualStyleBackColor = false;
+            btnXoa.BackColor = Color.Transparent;
+            btnXoa.Dock = DockStyle.Fill;
+            btnXoa.FlatAppearance.BorderSize = 3;
+            btnXoa.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnXoa.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.ForeColor = Color.SeaShell;
+            btnXoa.Location = new Point(161, 5);
+            btnXoa.Margin = new Padding(5);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(146, 87);
+            btnXoa.TabIndex = 1;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
-            // button5
+            // btnThem
             // 
-            button5.BackColor = Color.Transparent;
-            button5.Dock = DockStyle.Fill;
-            button5.FlatAppearance.BorderSize = 3;
-            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.SeaShell;
-            button5.Location = new Point(5, 5);
-            button5.Margin = new Padding(5);
-            button5.Name = "button5";
-            button5.Size = new Size(146, 87);
-            button5.TabIndex = 0;
-            button5.Text = "Thêm";
-            button5.UseVisualStyleBackColor = false;
+            btnThem.BackColor = Color.Transparent;
+            btnThem.Dock = DockStyle.Fill;
+            btnThem.FlatAppearance.BorderSize = 3;
+            btnThem.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnThem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnThem.FlatStyle = FlatStyle.Flat;
+            btnThem.ForeColor = Color.SeaShell;
+            btnThem.Location = new Point(5, 5);
+            btnThem.Margin = new Padding(5);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(146, 87);
+            btnThem.TabIndex = 0;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -422,6 +446,7 @@
             // 
             // cboKM
             // 
+            cboKM.DisplayMember = "None";
             cboKM.Dock = DockStyle.Fill;
             cboKM.FormattingEnabled = true;
             cboKM.Location = new Point(3, 43);
@@ -429,6 +454,8 @@
             cboKM.Name = "cboKM";
             cboKM.Size = new Size(305, 49);
             cboKM.TabIndex = 0;
+            cboKM.Text = "None";
+            cboKM.ValueMember = "None";
             // 
             // groupBox10
             // 
@@ -474,26 +501,6 @@
             cboNCC.Size = new Size(303, 49);
             cboNCC.TabIndex = 0;
             // 
-            // textBox4
-            // 
-            textBox4.Dock = DockStyle.Fill;
-            textBox4.Location = new Point(3, 43);
-            textBox4.Margin = new Padding(5);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Tên mặt hàng";
-            textBox4.Size = new Size(387, 47);
-            textBox4.TabIndex = 11;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Dock = DockStyle.Fill;
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(3, 43);
-            dateTimePicker2.Margin = new Padding(6, 4, 6, 4);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(387, 47);
-            dateTimePicker2.TabIndex = 20;
-            // 
             // FormSanPham
             // 
             AutoScaleDimensions = new SizeF(16F, 41F);
@@ -506,6 +513,7 @@
             Margin = new Padding(6);
             Name = "FormSanPham";
             Text = "Danh mục sản phẩm";
+            Load += FormSanPham_Load;
             tableLayoutPanel3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
@@ -539,11 +547,11 @@
         private GroupBox groupBox9;
         private TextBox textBox1;
         private GroupBox groupBox8;
-        private TextBox textBox2;
+        private TextBox txtDonGia;
         private GroupBox groupBox7;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpHSD;
         private GroupBox groupBox6;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbSL;
         private GroupBox groupBox5;
         private GroupBox groupBox4;
         private ComboBox comboBox1;
@@ -551,12 +559,12 @@
         private GroupBox groupBox15;
         private GroupBox groupBox14;
         private TableLayoutPanel tableLayoutPanel6;
-        private Button button1;
-        private Button button4;
-        private Button button5;
+        private Button btnSua;
+        private Button btnXoa;
+        private Button btnThem;
         private GroupBox groupBox2;
-        private RichTextBox richTextBox2;
-        private TextBox textBox3;
+        private RichTextBox rtbDonVi;
+        private TextBox txtTenSP;
         private DataGridView dgvDanhSachSP;
         private TableLayoutPanel tableLayoutPanel1;
         private GroupBox groupBox11;
@@ -565,7 +573,7 @@
         private ComboBox cboLoaiSP;
         private GroupBox groupBox3;
         private ComboBox cboNCC;
-        private DateTimePicker dateTimePicker2;
-        private TextBox textBox4;
+        private DateTimePicker dtpNSX;
+        private TextBox txtMaSP;
     }
 }

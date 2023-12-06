@@ -31,6 +31,7 @@ namespace LTUD1_MF_BHX
                 //FormKhachHang khachHang = new FormKhachHang(); 
 
                 Application.Run(new FormSanPham());
+
                 //Trần Minh Tuấn
 
                 //gi change

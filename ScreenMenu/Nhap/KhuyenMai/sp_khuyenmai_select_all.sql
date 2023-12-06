@@ -23,6 +23,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from khuyenmai
+	SELECT * from KHUYENMAI
 END
 GO
