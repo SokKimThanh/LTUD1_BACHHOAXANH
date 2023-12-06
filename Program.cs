@@ -1,6 +1,7 @@
 ﻿using LTUD1_MF_BHX.Screen;
 using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan;
 
 namespace LTUD1_MF_BHX
 {
@@ -12,13 +13,14 @@ namespace LTUD1_MF_BHX
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
+                FormDiaDiem ph = new FormDiaDiem();
+                FormDangNhap dn = new FormDangNhap();
                 //FormDangNhap logon = new FormDangNhap();
                 FormMain logon = new FormMain();
                 FormHoaDon hoaDon =  new FormHoaDon();
                 FormKhachHang khachHang = new FormKhachHang(); 
-
-                Application.Run(hoaDon);
-
+                FormPhongBan formPhongBan = new FormPhongBan();
+                Application.Run(formPhongBan);
                 //Trần Minh Tuấn
 
                 //gi change
