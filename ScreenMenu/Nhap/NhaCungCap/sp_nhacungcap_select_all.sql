@@ -15,9 +15,7 @@ drop procedure if exists sp_nhacungcap_select_all
 go
 CREATE PROCEDURE sp_nhacungcap_select_all
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = '', 
-	@ten nvarchar(256) = N'',
-	@ghichu nvarchar(256) = N''
+	
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

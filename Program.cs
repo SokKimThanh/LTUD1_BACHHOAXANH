@@ -17,7 +17,7 @@ namespace LTUD1_MF_BHX
                 //FormHoaDon hoaDon =  new FormHoaDon();
                 //FormKhachHang khachHang = new FormKhachHang(); 
 
-                Application.Run(logon);
+                Application.Run(new FormNhanVien());
 
                 //Trần Minh Tuấn
 

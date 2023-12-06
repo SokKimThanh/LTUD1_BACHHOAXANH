@@ -1,16 +1,10 @@
 ﻿-- ================================================
--- Create Procedure sp_nhanvien_insert.sql
--- Nhân viên insert
--- ================================================
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
 -- Author:		Sok Kim Thanh
--- Create date: <10/11/2023>
+-- Create date: <06/12/2023 9:39 CH>
 -- Description:	<Mô tả>
--- =============================================
+-- Create Procedure sp_nhanvien_insert.sql
+-- Nhân viên sp_nhanvien_insert
+-- ================================================
 drop procedure if exists sp_nhanvien_insert
 go
 CREATE PROCEDURE sp_nhanvien_insert
@@ -30,6 +24,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO nhanvien VALUES (@ma, @ten, @ghichu)
+	INSERT INTO nhanvien VALUES (@manv, @hotennv, @diachinv, @luong, @sdtnv, @ngaysinh,@mapb,@quanly)
 END
 GO

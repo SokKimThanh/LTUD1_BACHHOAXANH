@@ -91,7 +91,105 @@ namespace LTUD1_MF_BHX
                 CloseConnection();
             }
         }
+        public DataTable ThongKeNhanVien()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
 
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhanvien_thongke", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo một đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // Đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return DataSource;
+        }
+        public DataTable DanhSachNhanVienTheoChiNhanhPhongBan()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhanvien_danhsach_theophongban_chinhanh", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo một đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // Đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return DataSource;
+        }
+        public DataTable SelectAll2()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhanvien_select_all", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo một đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // Đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return DataSource;
+        }
         public override void SelectAll()
         {
             try
