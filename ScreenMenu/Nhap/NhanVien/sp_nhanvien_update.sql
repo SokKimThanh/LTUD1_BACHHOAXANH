@@ -1,10 +1,10 @@
-﻿-- ================================================
--- Author:		Sok Kim Thanh
+﻿-- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 9:39 CH>
 -- Description:	<Mô tả>
 -- Create Procedure sp_nhanvien_update.sql
 -- Nhân viên sp_nhanvien_update
 -- ================================================
+go
 drop procedure if exists sp_nhanvien_update
 go
 CREATE PROCEDURE sp_nhanvien_update

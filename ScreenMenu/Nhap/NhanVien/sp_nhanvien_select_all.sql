@@ -1,10 +1,4 @@
-﻿-- ================================================
--- Author:		Sok Kim Thanh
--- Create date: <06/12/2023 9:39 CH>
--- Description:	<Mô tả>
--- Create Procedure sp_nhanvien_select_all.sql
--- Nhân viên sp_nhanvien_select_all
--- ================================================
+﻿go
 drop procedure if exists sp_nhanvien_select_all
 go
 CREATE PROCEDURE sp_nhanvien_select_all
@@ -17,17 +11,17 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT cn.TENCN as 'Tên Chi Nhánh', pb.TENPHG as 'Phòng ban', nv.HOTENNV as 'Họ tên nhân viên'
+	SELECT nv.MANV, nv.HOTENNV as 'Họ tên nhân viên'
 	from nhanvien nv, PHONGBAN pb, CHINHANH cn where pb.MAPB = nv.MAPB and cn.MACN = pb.MACN
 END
-GO
--- ================================================
+
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
 -- Description:	<Mô tả>
 -- Create Procedure sp_nhanvien_thongke.sql
 -- Nhân viên sp_nhanvien_thongke
 -- ================================================
+go
 drop procedure if exists sp_nhanvien_thongke
 go
 CREATE PROCEDURE sp_nhanvien_thongke
@@ -46,14 +40,14 @@ BEGIN
 	GROUP BY pb.TENPHG, cn.TENCN;
 
 END
-GO
--- ================================================
+
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
 -- Description:	<Mô tả>
 -- Create Procedure sp_nhanvien_danhsach_theophongban_chinhanh.sql
 -- Nhân viên sp_nhanvien_danhsach_theophongban_chinhanh
 -- ================================================
+GO
 drop procedure if exists sp_nhanvien_danhsach_theophongban_chinhanh
 go
 CREATE PROCEDURE sp_nhanvien_danhsach_theophongban_chinhanh

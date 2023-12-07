@@ -1,15 +1,10 @@
-﻿-- ================================================
--- Author:		Sok Kim Thanh
+﻿ -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023>
 -- Description:	<Mô tả>
 -- Create Procedure sp_cbo_phongban.sql
 -- Nhân viên sp_cbo_phongban
 -- ================================================
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
+ 
 DROP PROCEDURE IF EXISTS sp_cbo_phongban
 GO
 CREATE PROCEDURE sp_cbo_phongban
@@ -24,4 +19,4 @@ BEGIN
     -- Delete statements for procedure here
 	Select MAPB, TENPHG FROM PHONGBAN
 END
-GO
+ 

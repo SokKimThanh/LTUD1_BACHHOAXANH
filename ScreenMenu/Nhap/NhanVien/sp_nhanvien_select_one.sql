@@ -1,10 +1,11 @@
-﻿-- ================================================
+﻿
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 9:39 CH>
 -- Description:	<Mô tả>
 -- Create Procedure sp_nhanvien_select_one.sql
 -- Nhân viên sp_nhanvien_select_one
 -- ================================================
+go
 drop procedure if exists sp_nhanvien_select_one
 go
 CREATE PROCEDURE sp_nhanvien_select_one

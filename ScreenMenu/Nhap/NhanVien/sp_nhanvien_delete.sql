@@ -1,10 +1,10 @@
-﻿-- ================================================
--- Author:		Sok Kim Thanh
+﻿ -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 9:39 CH>
 -- Description:	<Mô tả>
 -- Create Procedure sp_nhanvien_delete.sql
 -- Nhân viên sp_nhanvien_delete
 -- ================================================
+go
 DROP PROCEDURE IF EXISTS sp_nhanvien_delete
 GO
 CREATE PROCEDURE sp_nhanvien_delete

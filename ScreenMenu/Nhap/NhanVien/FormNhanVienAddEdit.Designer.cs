@@ -1,6 +1,6 @@
 ﻿namespace LTUD1_MF_BHX.Screen
 {
-    partial class FormNhanVien
+    partial class FormNhanVienAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,6 @@
             tblNhanVien = new TableLayoutPanel();
             groupBox3 = new GroupBox();
             dgvDSVNTheoCNPB = new DataGridView();
-            groupBox2 = new GroupBox();
-            dgvThongKeSLNV = new DataGridView();
             groupBox14 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             button2 = new Button();
@@ -48,18 +46,18 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
+            groupBox2 = new GroupBox();
+            txtLuong = new TextBox();
             groupBox9 = new GroupBox();
-            textBox1 = new TextBox();
+            txtHoTenNV = new TextBox();
             groupBox8 = new GroupBox();
-            textBox2 = new TextBox();
+            txtSDT = new TextBox();
             groupBox7 = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtpNgaySinh = new DateTimePicker();
             groupBox6 = new GroupBox();
-            richTextBox1 = new RichTextBox();
-            groupBox5 = new GroupBox();
-            comboBox2 = new ComboBox();
+            rtbDiaChi = new RichTextBox();
             groupBox4 = new GroupBox();
-            comboBox1 = new ComboBox();
+            cboPB = new ComboBox();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             tableLayoutPanel7.SuspendLayout();
@@ -68,18 +66,16 @@
             tblNhanVien.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDSVNTheoCNPB).BeginInit();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvThongKeSLNV).BeginInit();
             groupBox14.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            groupBox2.SuspendLayout();
             groupBox9.SuspendLayout();
             groupBox8.SuspendLayout();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
-            groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
             SuspendLayout();
             // 
@@ -117,11 +113,11 @@
             // textBox5
             // 
             textBox5.Dock = DockStyle.Fill;
-            textBox5.Location = new Point(3, 22);
+            textBox5.Location = new Point(3, 19);
             textBox5.Margin = new Padding(5);
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Họ và tên";
-            textBox5.Size = new Size(188, 26);
+            textBox5.Size = new Size(188, 23);
             textBox5.TabIndex = 5;
             // 
             // groupBox20
@@ -139,27 +135,25 @@
             // textBox6
             // 
             textBox6.Dock = DockStyle.Fill;
-            textBox6.Location = new Point(3, 22);
+            textBox6.Location = new Point(3, 19);
             textBox6.Margin = new Padding(5);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "số điện thoại";
-            textBox6.Size = new Size(188, 26);
+            textBox6.Size = new Size(188, 23);
             textBox6.TabIndex = 9;
             // 
             // tblNhanVien
             // 
             tblNhanVien.ColumnCount = 1;
             tblNhanVien.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tblNhanVien.Controls.Add(groupBox3, 0, 1);
-            tblNhanVien.Controls.Add(groupBox2, 0, 0);
-            tblNhanVien.Controls.Add(groupBox14, 0, 2);
+            tblNhanVien.Controls.Add(groupBox3, 0, 0);
+            tblNhanVien.Controls.Add(groupBox14, 0, 1);
             tblNhanVien.Dock = DockStyle.Fill;
             tblNhanVien.Location = new Point(388, 3);
             tblNhanVien.Name = "tblNhanVien";
-            tblNhanVien.RowCount = 3;
-            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 22.6832638F));
-            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 54.2185326F));
-            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 23.0769234F));
+            tblNhanVien.RowCount = 2;
+            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 83.5408F));
+            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 16.459198F));
             tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tblNhanVien.Size = new Size(893, 723);
             tblNhanVien.TabIndex = 6;
@@ -169,9 +163,9 @@
             groupBox3.Controls.Add(dgvDSVNTheoCNPB);
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.ForeColor = Color.White;
-            groupBox3.Location = new Point(3, 167);
+            groupBox3.Location = new Point(3, 3);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(887, 386);
+            groupBox3.Size = new Size(887, 598);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách";
@@ -182,38 +176,17 @@
             dgvDSVNTheoCNPB.Dock = DockStyle.Fill;
             dgvDSVNTheoCNPB.Location = new Point(3, 35);
             dgvDSVNTheoCNPB.Name = "dgvDSVNTheoCNPB";
-            dgvDSVNTheoCNPB.Size = new Size(881, 348);
+            dgvDSVNTheoCNPB.Size = new Size(881, 560);
             dgvDSVNTheoCNPB.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(dgvThongKeSLNV);
-            groupBox2.Dock = DockStyle.Fill;
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(3, 3);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(887, 158);
-            groupBox2.TabIndex = 9;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Thống kê";
-            // 
-            // dgvThongKeSLNV
-            // 
-            dgvThongKeSLNV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvThongKeSLNV.Dock = DockStyle.Fill;
-            dgvThongKeSLNV.Location = new Point(3, 35);
-            dgvThongKeSLNV.Name = "dgvThongKeSLNV";
-            dgvThongKeSLNV.Size = new Size(881, 120);
-            dgvThongKeSLNV.TabIndex = 0;
             // 
             // groupBox14
             // 
             groupBox14.Controls.Add(tableLayoutPanel6);
             groupBox14.Dock = DockStyle.Fill;
             groupBox14.ForeColor = Color.White;
-            groupBox14.Location = new Point(3, 559);
+            groupBox14.Location = new Point(3, 607);
             groupBox14.Name = "groupBox14";
-            groupBox14.Size = new Size(887, 161);
+            groupBox14.Size = new Size(887, 113);
             groupBox14.TabIndex = 8;
             groupBox14.TabStop = false;
             groupBox14.Text = "Thao tác dữ liệu";
@@ -239,7 +212,7 @@
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
-            tableLayoutPanel6.Size = new Size(881, 123);
+            tableLayoutPanel6.Size = new Size(881, 75);
             tableLayoutPanel6.TabIndex = 0;
             // 
             // button2
@@ -254,7 +227,7 @@
             button2.Location = new Point(297, 5);
             button2.Margin = new Padding(5);
             button2.Name = "button2";
-            button2.Size = new Size(136, 113);
+            button2.Size = new Size(136, 65);
             button2.TabIndex = 3;
             button2.Text = "Sửa";
             button2.UseVisualStyleBackColor = false;
@@ -271,7 +244,7 @@
             button1.Location = new Point(443, 5);
             button1.Margin = new Padding(5);
             button1.Name = "button1";
-            button1.Size = new Size(136, 113);
+            button1.Size = new Size(136, 65);
             button1.TabIndex = 2;
             button1.Text = "Thống kê";
             button1.UseVisualStyleBackColor = false;
@@ -289,7 +262,7 @@
             button4.Location = new Point(5, 5);
             button4.Margin = new Padding(5);
             button4.Name = "button4";
-            button4.Size = new Size(136, 113);
+            button4.Size = new Size(136, 65);
             button4.TabIndex = 1;
             button4.Text = "Xóa";
             button4.UseVisualStyleBackColor = false;
@@ -306,10 +279,11 @@
             button5.Location = new Point(151, 5);
             button5.Margin = new Padding(5);
             button5.Name = "button5";
-            button5.Size = new Size(136, 113);
+            button5.Size = new Size(136, 65);
             button5.TabIndex = 0;
             button5.Text = "Thêm";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += btnAdd_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -340,158 +314,162 @@
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.AutoScroll = true;
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Controls.Add(groupBox9, 0, 2);
-            tableLayoutPanel2.Controls.Add(groupBox8, 0, 4);
-            tableLayoutPanel2.Controls.Add(groupBox7, 0, 3);
-            tableLayoutPanel2.Controls.Add(groupBox6, 0, 5);
-            tableLayoutPanel2.Controls.Add(groupBox5, 0, 1);
+            tableLayoutPanel2.Controls.Add(groupBox2, 0, 5);
+            tableLayoutPanel2.Controls.Add(groupBox9, 0, 1);
+            tableLayoutPanel2.Controls.Add(groupBox8, 0, 3);
+            tableLayoutPanel2.Controls.Add(groupBox7, 0, 2);
+            tableLayoutPanel2.Controls.Add(groupBox6, 0, 4);
             tableLayoutPanel2.Controls.Add(groupBox4, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(3, 35);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 6;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowCount = 9;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
             tableLayoutPanel2.Size = new Size(373, 685);
             tableLayoutPanel2.TabIndex = 12;
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(txtLuong);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(3, 383);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(367, 70);
+            groupBox2.TabIndex = 13;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Lương";
+            // 
+            // txtLuong
+            // 
+            txtLuong.Dock = DockStyle.Fill;
+            txtLuong.Location = new Point(3, 35);
+            txtLuong.Margin = new Padding(5);
+            txtLuong.Name = "txtLuong";
+            txtLuong.PlaceholderText = "Lương";
+            txtLuong.Size = new Size(361, 39);
+            txtLuong.TabIndex = 5;
+            // 
             // groupBox9
             // 
-            groupBox9.Controls.Add(textBox1);
+            groupBox9.Controls.Add(txtHoTenNV);
             groupBox9.Dock = DockStyle.Fill;
             groupBox9.ForeColor = Color.White;
-            groupBox9.Location = new Point(3, 231);
+            groupBox9.Location = new Point(3, 79);
             groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(367, 108);
+            groupBox9.Size = new Size(367, 70);
             groupBox9.TabIndex = 12;
             groupBox9.TabStop = false;
             groupBox9.Text = "Họ tên";
             // 
-            // textBox1
+            // txtHoTenNV
             // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Location = new Point(3, 35);
-            textBox1.Margin = new Padding(5);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Họ và tên";
-            textBox1.Size = new Size(361, 39);
-            textBox1.TabIndex = 5;
+            txtHoTenNV.Dock = DockStyle.Fill;
+            txtHoTenNV.Location = new Point(3, 35);
+            txtHoTenNV.Margin = new Padding(5);
+            txtHoTenNV.Name = "txtHoTenNV";
+            txtHoTenNV.PlaceholderText = "Họ và tên";
+            txtHoTenNV.Size = new Size(361, 39);
+            txtHoTenNV.TabIndex = 5;
             // 
             // groupBox8
             // 
-            groupBox8.Controls.Add(textBox2);
+            groupBox8.Controls.Add(txtSDT);
             groupBox8.Dock = DockStyle.Fill;
             groupBox8.ForeColor = Color.White;
-            groupBox8.Location = new Point(3, 459);
+            groupBox8.Location = new Point(3, 231);
             groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(367, 108);
+            groupBox8.Size = new Size(367, 70);
             groupBox8.TabIndex = 11;
             groupBox8.TabStop = false;
             groupBox8.Text = "Số điện thoại";
             // 
-            // textBox2
+            // txtSDT
             // 
-            textBox2.Dock = DockStyle.Fill;
-            textBox2.Location = new Point(3, 35);
-            textBox2.Margin = new Padding(5);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "số điện thoại";
-            textBox2.Size = new Size(361, 39);
-            textBox2.TabIndex = 9;
+            txtSDT.Dock = DockStyle.Fill;
+            txtSDT.Location = new Point(3, 35);
+            txtSDT.Margin = new Padding(5);
+            txtSDT.Name = "txtSDT";
+            txtSDT.PlaceholderText = "số điện thoại";
+            txtSDT.Size = new Size(361, 39);
+            txtSDT.TabIndex = 9;
+            txtSDT.TextChanged += txtSDT_TextChanged;
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(dateTimePicker1);
+            groupBox7.Controls.Add(dtpNgaySinh);
             groupBox7.Dock = DockStyle.Fill;
             groupBox7.ForeColor = Color.White;
-            groupBox7.Location = new Point(3, 345);
+            groupBox7.Location = new Point(3, 155);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(367, 108);
+            groupBox7.Size = new Size(367, 70);
             groupBox7.TabIndex = 10;
             groupBox7.TabStop = false;
             groupBox7.Text = "Ngày sinh";
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
-            dateTimePicker1.Dock = DockStyle.Fill;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(3, 35);
-            dateTimePicker1.Margin = new Padding(6, 4, 6, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(361, 39);
-            dateTimePicker1.TabIndex = 19;
+            dtpNgaySinh.Dock = DockStyle.Fill;
+            dtpNgaySinh.Format = DateTimePickerFormat.Short;
+            dtpNgaySinh.Location = new Point(3, 35);
+            dtpNgaySinh.Margin = new Padding(6, 4, 6, 4);
+            dtpNgaySinh.Name = "dtpNgaySinh";
+            dtpNgaySinh.Size = new Size(361, 39);
+            dtpNgaySinh.TabIndex = 19;
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(richTextBox1);
+            groupBox6.Controls.Add(rtbDiaChi);
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(3, 573);
+            groupBox6.Location = new Point(3, 307);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(367, 109);
+            groupBox6.Size = new Size(367, 70);
             groupBox6.TabIndex = 9;
             groupBox6.TabStop = false;
             groupBox6.Text = "Địa chỉ";
             // 
-            // richTextBox1
+            // rtbDiaChi
             // 
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Location = new Point(3, 35);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(361, 71);
-            richTextBox1.TabIndex = 10;
-            richTextBox1.Text = "";
-            // 
-            // groupBox5
-            // 
-            groupBox5.Controls.Add(comboBox2);
-            groupBox5.Dock = DockStyle.Fill;
-            groupBox5.ForeColor = Color.Snow;
-            groupBox5.Location = new Point(3, 117);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(367, 108);
-            groupBox5.TabIndex = 1;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Trưởng phòng ";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Dock = DockStyle.Fill;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(3, 35);
-            comboBox2.Margin = new Padding(5);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(361, 40);
-            comboBox2.TabIndex = 3;
+            rtbDiaChi.Dock = DockStyle.Fill;
+            rtbDiaChi.Location = new Point(3, 35);
+            rtbDiaChi.Name = "rtbDiaChi";
+            rtbDiaChi.Size = new Size(361, 32);
+            rtbDiaChi.TabIndex = 10;
+            rtbDiaChi.Text = "";
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(comboBox1);
+            groupBox4.Controls.Add(cboPB);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.ForeColor = Color.Snow;
             groupBox4.Location = new Point(3, 3);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(367, 108);
+            groupBox4.Size = new Size(367, 70);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Phòng ban";
             // 
-            // comboBox1
+            // cboPB
             // 
-            comboBox1.Dock = DockStyle.Fill;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(3, 35);
-            comboBox1.Margin = new Padding(5);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(361, 40);
-            comboBox1.TabIndex = 0;
+            cboPB.Dock = DockStyle.Fill;
+            cboPB.FormattingEnabled = true;
+            cboPB.Location = new Point(3, 35);
+            cboPB.Margin = new Padding(5);
+            cboPB.Name = "cboPB";
+            cboPB.Size = new Size(361, 40);
+            cboPB.TabIndex = 0;
             // 
             // Column1
             // 
@@ -507,7 +485,7 @@
             Column2.Name = "Column2";
             Column2.Width = 125;
             // 
-            // FormNhanVien
+            // FormNhanVienAddEdit
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -517,7 +495,7 @@
             Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.White;
             Margin = new Padding(5);
-            Name = "FormNhanVien";
+            Name = "FormNhanVienAddEdit";
             Text = "Nhập thông tin nhân viên";
             Load += FormNhanVien_Load;
             tableLayoutPanel7.ResumeLayout(false);
@@ -528,20 +506,19 @@
             tblNhanVien.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvDSVNTheoCNPB).EndInit();
-            groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvThongKeSLNV).EndInit();
             groupBox14.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
             groupBox7.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
-            groupBox5.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -564,23 +541,21 @@
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel2;
         private GroupBox groupBox9;
-        private TextBox textBox1;
+        private TextBox txtHoTenNV;
         private GroupBox groupBox8;
-        private TextBox textBox2;
+        private TextBox txtSDT;
         private GroupBox groupBox7;
         private GroupBox groupBox6;
-        private RichTextBox richTextBox1;
-        private GroupBox groupBox5;
-        private ComboBox comboBox2;
+        private RichTextBox rtbDiaChi;
         private GroupBox groupBox4;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker1;
+        private ComboBox cboPB;
+        private DateTimePicker dtpNgaySinh;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private GroupBox groupBox2;
-        private DataGridView dgvThongKeSLNV;
         private GroupBox groupBox3;
         private DataGridView dgvDSVNTheoCNPB;
         private Button button2;
+        private GroupBox groupBox2;
+        private TextBox txtLuong;
     }
 }
