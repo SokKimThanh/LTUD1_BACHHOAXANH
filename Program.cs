@@ -20,7 +20,7 @@ namespace LTUD1_MF_BHX
                 FormHoaDon hoaDon =  new FormHoaDon();
                 FormKhachHang khachHang = new FormKhachHang(); 
                 FormPhongBan formPhongBan = new FormPhongBan();
-                Application.Run(formPhongBan);
+                Application.Run(khachHang);
                 //Trần Minh Tuấn
 
                 //gi change

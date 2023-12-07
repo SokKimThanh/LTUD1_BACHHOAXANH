@@ -60,12 +60,12 @@ namespace LTUD1_MF_BHX.Screen
             dgvHD.DataSource = HoaDonController.DataSource;
             HoaDonController.SelectAllNhanVien();
             cbbMaNV.DataSource = HoaDonController.DataSource;
-            cbbMaNV.DisplayMember = "MANV";
-            cbbMaNV.ValueMember = "HOTENNV";
+            cbbMaNV.DisplayMember = "HOTENNV";
+            cbbMaNV.ValueMember = "MANV";
             HoaDonController.SelectAllKhachHang();
             cbbMaKH.DataSource = HoaDonController.DataSource;
-            cbbMaKH.DisplayMember = "MAKH";
-            cbbMaKH.ValueMember = "HOTENKH";
+            cbbMaKH.DisplayMember = "HOTENKH";
+            cbbMaKH.ValueMember = "MAKH";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -74,8 +74,8 @@ namespace LTUD1_MF_BHX.Screen
             hoaDon.MaHD = txtMaHD.Text;
             hoaDon.NgayHD = DateTime.Parse(dtpkNgayLap.Text);
             hoaDon.TongTien = float.Parse(txtTongTien.Text);
-            hoaDon.MaNV = cbbMaNV.Text;
-            hoaDon.MaKH = cbbMaKH.Text;
+            hoaDon.MaNV = cbbMaNV.SelectedValue.ToString(); 
+            hoaDon.MaKH = cbbMaKH.SelectedValue.ToString();
             HoaDonController.Insert(hoaDon);
             HoaDonController.SelectAll();
             dgvHD.DataSource = HoaDonController.DataSource;

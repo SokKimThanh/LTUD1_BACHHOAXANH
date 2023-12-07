@@ -1,19 +1,23 @@
 ﻿-- ================================================
--- Create Procedure sp_PhongBan_select_all.sql
--- Nhân viên phongban all
+-- Create Procedure sp_nhanvien_update.sql
+-- Nhân viên update
 -- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		vo tu
+-- Author:		Sok Kim Thanh
 -- Create date: <10/11/2023>
--- Description:	<vo tu select all>
+-- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_cbb_chinhanh_select
+drop procedure if exists sp_phongban_update
 go
-CREATE PROCEDURE sp_cbb_chinhanh_select
+CREATE PROCEDURE sp_phongban_update
+	-- Add the parameters for the stored procedure here
+		@maPB char(11),
+	@tenPB nvarchar(30),
+	@maCN nvarchar(100)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -21,7 +25,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from CHINHANH
+	update PHONGBAN set TENPHG = @tenPB, MACN = @maCN where MACN = @maCN -- chuẩn sql
 END
 GO
-exec sp_cbb_chinhanh_select
+exec sp_phongban_update 'PB00', N'Phòng Kế toánn', 'CN01'

@@ -30,8 +30,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             dgvPB.DataSource = controller.DataSource;
             controller.SelectMaCN();
             cbbMaCN.DataSource = controller.DataSource;
-            cbbMaCN.DisplayMember = "MACN";
-            cbbMaCN.ValueMember = "TENCN";
+            cbbMaCN.DisplayMember = "TENCN";
+            cbbMaCN.ValueMember = "MACN";
         }
 
         private void dgvPB_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             PhongBan phongBan = new PhongBan();
             phongBan.MaPB = txtMaPB.Text;
             phongBan.TenPB = txtTenPB.Text;
-            phongBan.MaCN = cbbMaCN.Text;
+            phongBan.MaCN = cbbMaCN.SelectedValue.ToString();
             controller.Insert(phongBan);
             controller.SelectAll();
             dgvPB.DataSource = controller.DataSource;

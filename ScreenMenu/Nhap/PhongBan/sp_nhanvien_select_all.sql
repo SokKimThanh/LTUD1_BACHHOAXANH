@@ -11,9 +11,9 @@ GO
 -- Create date: <10/11/2023>
 -- Description:	<vo tu select all>
 -- =============================================
-drop procedure if exists sp_cbb_chinhanh_select
+drop procedure if exists sp_phongban_select_all
 go
-CREATE PROCEDURE sp_cbb_chinhanh_select
+CREATE PROCEDURE sp_phongban_select_all
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -21,7 +21,8 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from CHINHANH
+	SELECT pb.MAPB , pb.TENPHG, cn.TENCN from PHONGBAN pb, CHINHANH cn
+	where pb.MACN = cn.MACN
 END
 GO
-exec sp_cbb_chinhanh_select
+exec sp_phongban_select_all
