@@ -1,6 +1,6 @@
 ﻿-- ================================================
--- Create Procedure sp_hinhthuckm_select_all.sql
--- Danh mục select all
+-- Create Procedure sp_chitiethoadon_update.sql
+-- Danh mục update
 -- ================================================
 SET ANSI_NULLS ON
 GO
@@ -11,18 +11,20 @@ GO
 -- Create date: <07/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_hinhthuckm_select_all
+drop procedure if exists sp_chitiethoadon_update
 go
-CREATE PROCEDURE sp_hinhthuckm_select_all
+CREATE PROCEDURE sp_chitiethoadon_update
 	-- Add the parameters for the stored procedure here
-	
-AS
+	@mahd char(11) = '', 
+	@masp char(11) = '', 
+	@SLmua int
+	as
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from hinhthuckm
+	update CHITIETHD set SLMUA = @SLmua where MAHD = @mahd and MASP = @masp -- chuẩn sql
 END
 GO

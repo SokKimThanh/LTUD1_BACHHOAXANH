@@ -1,6 +1,6 @@
 ﻿-- ================================================
--- Create Procedure sp_hinhthuckm_select_all.sql
--- Danh mục select all
+-- Create Procedure sp_chitiethoadon_insert.sql
+-- Danh mục insert
 -- ================================================
 SET ANSI_NULLS ON
 GO
@@ -11,11 +11,13 @@ GO
 -- Create date: <07/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_hinhthuckm_select_all
+drop procedure if exists sp_chitiethoadon_insert
 go
-CREATE PROCEDURE sp_hinhthuckm_select_all
+CREATE PROCEDURE sp_chitiethoadon_insert
 	-- Add the parameters for the stored procedure here
-	
+	@mahd char(11) = '', 
+    @masp char(11) = '',
+	@sl int
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -23,6 +25,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from hinhthuckm
+	INSERT INTO CHITIETHD VALUES (@mahd, @masp, @sl)
 END
 GO

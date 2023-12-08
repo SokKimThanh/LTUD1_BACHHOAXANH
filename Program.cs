@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
+using LTUD1_MF_BHX.ScreenDetail;
 
 namespace LTUD1_MF_BHX
 {
@@ -30,7 +31,7 @@ namespace LTUD1_MF_BHX
                 //FormHoaDon hoaDon =  new FormHoaDon();
                 //FormKhachHang khachHang = new FormKhachHang(); 
 
-                Application.Run(new FormKhuyenMai());
+                Application.Run(new FormChiTietHoaDon());
 
                 //Trần Minh Tuấn
 

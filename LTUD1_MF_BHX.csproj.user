@@ -11,10 +11,10 @@
     <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenuDetail\FormChiTietHoaDon.cs">
+    <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\FormChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenuDetail\FormChiTietKhuyenMai.cs">
+    <Compile Update="ScreenMenu\Nhap\HinhThucKhuyenMai\FormHinhThucKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenuDetail\FormChiTietNhaCungCap.cs">

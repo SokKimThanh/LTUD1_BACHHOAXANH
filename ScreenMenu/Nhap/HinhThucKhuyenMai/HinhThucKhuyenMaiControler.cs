@@ -19,7 +19,7 @@ namespace LTUD1_MF_BHX
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("sp_htkhuyenmai_delete", conn);
+            Sql = new SqlCommand("sp_hinhthuckm_delete", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
