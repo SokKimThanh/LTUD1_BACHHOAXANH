@@ -38,7 +38,7 @@
     <Compile Update="ScreenMenu\Nhap\FormDiaDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\FormKhuyenMai.cs">
+    <Compile Update="ScreenMenu\Nhap\KhuyenMai\FormKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDon.cs">

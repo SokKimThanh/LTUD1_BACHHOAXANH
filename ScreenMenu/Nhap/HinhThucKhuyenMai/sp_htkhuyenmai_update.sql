@@ -25,6 +25,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update hinhthuckm set hinhthuc = @hinhthuc, ghichu = @ghichu  where makm = @makm -- chuẩn sql
+	update hinhthuckm set TENHINHTHUC = @hinhthuc, ghichu = @ghichu  where MAHT = @makm -- chuẩn sql
 END
 GO

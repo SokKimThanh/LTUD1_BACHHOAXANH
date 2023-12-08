@@ -316,7 +316,8 @@
             // 
             // dgvDanhSachSP
             // 
-            dgvDanhSachSP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDanhSachSP.AllowUserToOrderColumns = true;
+            dgvDanhSachSP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvDanhSachSP.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDanhSachSP.Location = new Point(3, 46);
             dgvDanhSachSP.Name = "dgvDanhSachSP";

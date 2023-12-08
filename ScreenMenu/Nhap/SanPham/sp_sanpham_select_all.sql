@@ -23,8 +23,10 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	select  * from sanpham
+	select * from SanPham
 
+	
 	
 END
 GO
+exec sp_sanpham_select_all

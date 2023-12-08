@@ -22,7 +22,7 @@ namespace LTUD1_MF_BHX
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@makh", id);
+            Sql.Parameters.AddWithValue("@makm", id);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
@@ -38,7 +38,7 @@ namespace LTUD1_MF_BHX
                 Makm = row.Field<string>("makm")!,
                 Ngaybd = row.Field<DateTime>("ngaybd")!,
                 Ngaykt = row.Field<DateTime>("ngaykt")!,
-                Masp = row.Field<string>("masp")!
+                Maht = row.Field<string>("masp")!
             };
         }
 
@@ -56,7 +56,7 @@ namespace LTUD1_MF_BHX
             Sql.Parameters.AddWithValue("@makm", user.Makm);
             Sql.Parameters.AddWithValue("@ngaybd", user.Ngaybd);
             Sql.Parameters.AddWithValue("@ngaykt", user.Ngaykt);
-            Sql.Parameters.AddWithValue("@masp", user.Masp);
+            Sql.Parameters.AddWithValue("@masp", user.Maht);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
@@ -150,7 +150,7 @@ namespace LTUD1_MF_BHX
             Sql.Parameters.AddWithValue("@makm", user.Makm);
             Sql.Parameters.AddWithValue("@ngaybd", user.Ngaybd);
             Sql.Parameters.AddWithValue("@ngaykt", user.Ngaykt);
-            Sql.Parameters.AddWithValue("@masp", user.Masp);
+            Sql.Parameters.AddWithValue("@masp", user.Maht);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();

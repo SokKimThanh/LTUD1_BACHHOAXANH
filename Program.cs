@@ -22,15 +22,15 @@ namespace LTUD1_MF_BHX
             try
             {
 
-                FormSanPham logon = new FormSanPham();
+                /*FormSanPham logon = new FormSanPham();
                 Application.Run(logon);
-
+*/
                 //FormDangNhap logon = new FormDangNhap();
                 //FormMain logon = new FormMain();
                 //FormHoaDon hoaDon =  new FormHoaDon();
                 //FormKhachHang khachHang = new FormKhachHang(); 
 
-                Application.Run(new FormSanPham());
+                Application.Run(new FormKhuyenMai());
 
                 //Trần Minh Tuấn
 

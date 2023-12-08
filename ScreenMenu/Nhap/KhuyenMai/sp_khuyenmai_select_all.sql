@@ -23,6 +23,9 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from KHUYENMAI
+	SELECT * from KHUYENMAI , HINHTHUCKM
+	where KHUYENMAI.MAHT = HINHTHUCKM.MAHT
 END
 GO
+exec sp_khuyenmai_select_all
+exec sp_sanpham_select_all
