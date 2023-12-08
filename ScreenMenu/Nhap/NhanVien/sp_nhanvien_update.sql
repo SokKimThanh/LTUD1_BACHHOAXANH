@@ -1,10 +1,16 @@
-﻿-- Author:		Sok Kim Thanh
--- Create date: <06/12/2023 9:39 CH>
--- Description:	<Mô tả>
+﻿-- ================================================
 -- Create Procedure sp_nhanvien_update.sql
--- Nhân viên sp_nhanvien_update
+-- Nhân viên update
 -- ================================================
-go
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Sok Kim Thanh
+-- Create date: <10/11/2023>
+-- Description:	<Mô tả>
+-- =============================================
 drop procedure if exists sp_nhanvien_update
 go
 CREATE PROCEDURE sp_nhanvien_update
@@ -24,6 +30,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update nhanvien set hotennv = @hotennv, diachinv = @diachinv,luong=@luong,sdtnv=@sdtnv ,ngaysinh=@ngaysinh, mapb = @mapb, quanly = @quanly where manv = @manv-- chuẩn sql
+	update nhanvien set ten = @ten, ghichu = @ghichu where ma = @ma -- chuẩn sql
 END
 GO

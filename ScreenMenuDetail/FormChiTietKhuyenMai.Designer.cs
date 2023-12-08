@@ -454,11 +454,11 @@
             this.treeView1.Size = new System.Drawing.Size(254, 528);
             this.treeView1.TabIndex = 0;
             // 
-            // dgvThongKeNV
+            // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(3, 37);
-            this.dataGridView2.Name = "dgvThongKeNV";
+            this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
             this.dataGridView2.Size = new System.Drawing.Size(254, 522);

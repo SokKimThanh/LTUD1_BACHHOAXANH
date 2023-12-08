@@ -1,6 +1,7 @@
-﻿-- ================================================
--- Create Procedure sp_nhacungcap_select_all.sql
--- Nhà cung cấp select all
+﻿set dateformat dmy
+-- ================================================
+-- Create Procedure sp_diadiem_select_all.sql
+-- hoadon select all
 -- ================================================
 SET ANSI_NULLS ON
 GO
@@ -9,23 +10,20 @@ GO
 -- =============================================
 -- Author:		Vo Tu
 -- Create date: <13/11/2023>
--- Description:	<Nhà cung cấp select all>
+-- Description:	<dia diem select all>
 -- =============================================
-drop procedure if exists sp_khachhang_select_all
+drop procedure if exists sp_diadiem_select_all
 go
-CREATE PROCEDURE sp_khachhang_select_all
+CREATE PROCEDURE sp_diadiem_select_all
 	-- Add the parameters for the stored procedure here
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
+	SET NOCOUNT ON; 
 
     -- Insert statements for procedure here
-	SELECT * from KHACHHANG
+	SELECT * from CHINHANH
 END
 GO
-exec sp_khachhang_select_all
-
-
-
+exec sp_diadiem_select_all

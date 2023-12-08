@@ -139,7 +139,7 @@ namespace LTUD1_MF_BHX
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
-            OpenChildForm(new FormNhanVienAddEdit());
+            OpenChildForm(new FormNhanVien());
         }
         //2
         private void btnDiaDiem_Click(object sender, EventArgs e)

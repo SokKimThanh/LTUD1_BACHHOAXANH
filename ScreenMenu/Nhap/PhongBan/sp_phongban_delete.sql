@@ -1,30 +1,28 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_select_all.sql
--- Nhà cung cấp select all
+-- Create Procedure sp_phongban_delete.sql
+-- Nhân viên delete
 -- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		Sok Kim Thanh
--- Create date: <07/11/2023>
--- Description:	<Nhà cung cấp select all>
+-- Author:		vo tu
+-- Create date: <10/11/2023>
+-- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_nhacungcap_select_all
-go
-CREATE PROCEDURE sp_nhacungcap_select_all
+DROP PROCEDURE IF EXISTS sp_phongban_delete
+GO
+CREATE PROCEDURE sp_phongban_delete
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = '', 
-	@ten nvarchar(256) = N'',
-	@ghichu nvarchar(256) = N''
+	@maPB char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    -- Insert statements for procedure here
-	SELECT * from nhacungcap
+    -- Delete statements for procedure here
+	DELETE FROM PHONGBAN WHERE MAPB = @maPB
 END
 GO

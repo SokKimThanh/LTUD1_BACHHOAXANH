@@ -150,14 +150,14 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("DanhSachNhanVienTheoChiNhanhPhongBan" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
                 CloseConnection();
             }
             return DataSource;
-        }
+        } 
         public override void SelectAll()
         {
             try
@@ -295,19 +295,16 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("DanhSachQuanLy" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
                 CloseConnection();
             }
             return DataSource;
-        }
-        public DataTable GetDanhSachPhongBan()
+        } 
+        public DataTable DanhSachPhongBan()
         {
-
-            DataTable dt;
-
             try
             {
                 // Mở kết nối
@@ -315,40 +312,6 @@ namespace LTUD1_MF_BHX
 
                 // Tạo một đối tượng SqlCommand
                 Sql = new SqlCommand("sp_cbo_phongban", conn);
-                Sql.CommandType = CommandType.StoredProcedure;
-
-                // Tạo một đối tượng SqlDataAdapter
-                Adapter = new SqlDataAdapter(Sql);
-
-                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
-                dt = new DataTable();
-
-                // Đổ dữ liệu vào DataTable
-                Adapter.Fill(dt);
-
-                // Đóng kết nối
-                CloseConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("GetDanhSachPhongBan" + ex.Message);
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return dt;
-        }
-
-        public DataTable GetDanhSachNhanVien()
-        {
-            try
-            {
-                // Mở kết nối
-                SqlConnection conn = OpenConnection();
-
-                // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_nhanvien_select_all", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Tạo một đối tượng SqlDataAdapter
@@ -365,7 +328,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("GetDanhSachNhanVien" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
