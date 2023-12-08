@@ -36,7 +36,7 @@
             textBox6 = new TextBox();
             tblNhanVien = new TableLayoutPanel();
             groupBox3 = new GroupBox();
-            dgvNhanVien = new DataGridView();
+            dgvDSVNTheoCNPB = new DataGridView();
             groupBox14 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             button2 = new Button();
@@ -53,11 +53,11 @@
             groupBox8 = new GroupBox();
             txtSDT = new TextBox();
             groupBox7 = new GroupBox();
-            rptNgaySinh = new DateTimePicker();
+            dtpNgaySinh = new DateTimePicker();
             groupBox6 = new GroupBox();
             rtbDiaChi = new RichTextBox();
             groupBox4 = new GroupBox();
-            cboPhongBan = new ComboBox();
+            cboPB = new ComboBox();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             tableLayoutPanel7.SuspendLayout();
@@ -65,7 +65,7 @@
             groupBox20.SuspendLayout();
             tblNhanVien.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDSVNTheoCNPB).BeginInit();
             groupBox14.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -160,7 +160,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dgvNhanVien);
+            groupBox3.Controls.Add(dgvDSVNTheoCNPB);
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.ForeColor = Color.White;
             groupBox3.Location = new Point(3, 3);
@@ -170,16 +170,14 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách";
             // 
-            // dgvNhanVien
+            // dgvDSVNTheoCNPB
             // 
-            dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNhanVien.Dock = DockStyle.Fill;
-            dgvNhanVien.Location = new Point(3, 35);
-            dgvNhanVien.Name = "dgvNhanVien";
-            dgvNhanVien.Size = new Size(881, 560);
-            dgvNhanVien.TabIndex = 0;
-            dgvNhanVien.CellContentClick += dgvDSVNTheoCNPB_CellContentClick;
-            dgvNhanVien.Click += dgvNhanVien_Click;
+            dgvDSVNTheoCNPB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDSVNTheoCNPB.Dock = DockStyle.Fill;
+            dgvDSVNTheoCNPB.Location = new Point(3, 35);
+            dgvDSVNTheoCNPB.Name = "dgvDSVNTheoCNPB";
+            dgvDSVNTheoCNPB.Size = new Size(881, 560);
+            dgvDSVNTheoCNPB.TabIndex = 0;
             // 
             // groupBox14
             // 
@@ -410,7 +408,7 @@
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(rptNgaySinh);
+            groupBox7.Controls.Add(dtpNgaySinh);
             groupBox7.Dock = DockStyle.Fill;
             groupBox7.ForeColor = Color.White;
             groupBox7.Location = new Point(3, 155);
@@ -420,15 +418,15 @@
             groupBox7.TabStop = false;
             groupBox7.Text = "Ngày sinh";
             // 
-            // rptNgaySinh
+            // dtpNgaySinh
             // 
-            rptNgaySinh.Dock = DockStyle.Fill;
-            rptNgaySinh.Format = DateTimePickerFormat.Short;
-            rptNgaySinh.Location = new Point(3, 35);
-            rptNgaySinh.Margin = new Padding(6, 4, 6, 4);
-            rptNgaySinh.Name = "rptNgaySinh";
-            rptNgaySinh.Size = new Size(361, 39);
-            rptNgaySinh.TabIndex = 19;
+            dtpNgaySinh.Dock = DockStyle.Fill;
+            dtpNgaySinh.Format = DateTimePickerFormat.Short;
+            dtpNgaySinh.Location = new Point(3, 35);
+            dtpNgaySinh.Margin = new Padding(6, 4, 6, 4);
+            dtpNgaySinh.Name = "dtpNgaySinh";
+            dtpNgaySinh.Size = new Size(361, 39);
+            dtpNgaySinh.TabIndex = 19;
             // 
             // groupBox6
             // 
@@ -453,7 +451,7 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(cboPhongBan);
+            groupBox4.Controls.Add(cboPB);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.ForeColor = Color.Snow;
             groupBox4.Location = new Point(3, 3);
@@ -463,15 +461,15 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Phòng ban";
             // 
-            // cboPhongBan
+            // cboPB
             // 
-            cboPhongBan.Dock = DockStyle.Fill;
-            cboPhongBan.FormattingEnabled = true;
-            cboPhongBan.Location = new Point(3, 35);
-            cboPhongBan.Margin = new Padding(5);
-            cboPhongBan.Name = "cboPhongBan";
-            cboPhongBan.Size = new Size(361, 40);
-            cboPhongBan.TabIndex = 0;
+            cboPB.Dock = DockStyle.Fill;
+            cboPB.FormattingEnabled = true;
+            cboPB.Location = new Point(3, 35);
+            cboPB.Margin = new Padding(5);
+            cboPB.Name = "cboPB";
+            cboPB.Size = new Size(361, 40);
+            cboPB.TabIndex = 0;
             // 
             // Column1
             // 
@@ -507,7 +505,7 @@
             groupBox20.PerformLayout();
             tblNhanVien.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDSVNTheoCNPB).EndInit();
             groupBox14.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
@@ -555,11 +553,9 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private GroupBox groupBox3;
-        private DataGridView dgvNhanVien;
+        private DataGridView dgvDSVNTheoCNPB;
         private Button button2;
         private GroupBox groupBox2;
         private TextBox txtLuong;
-        private DateTimePicker rptNgaySinh;
-        private ComboBox cboPhongBan;
     }
 }

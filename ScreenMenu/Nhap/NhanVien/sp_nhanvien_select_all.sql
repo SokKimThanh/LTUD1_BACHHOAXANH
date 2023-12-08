@@ -11,7 +11,8 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT nv.MANV as 'ID' , nv.HOTENNV as 'Họ và tên' from nhanvien nv 
+	SELECT nv.MANV, nv.HOTENNV as 'Họ tên nhân viên'
+	from nhanvien nv, PHONGBAN pb, CHINHANH cn where pb.MAPB = nv.MAPB and cn.MACN = pb.MACN
 END
 
 -- Author:		Sok Kim Thanh

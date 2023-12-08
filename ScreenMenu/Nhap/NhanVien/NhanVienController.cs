@@ -42,18 +42,17 @@ namespace LTUD1_MF_BHX
 
         public override object FromDataRow(DataRow row)
         {
-            NhanVien nhanvien = new NhanVien();
-            nhanvien.Manv = row.Field<string>("manv")!;
-            nhanvien.Hotennv = row.Field<string>("hotennv")!;
-            nhanvien.Diachinv = row.Field<string>("diachinv")!;
-            int luong = row.Field<int>("luong")!;
-            nhanvien.Luong = luong;
-            nhanvien.Mapb = row.Field<string>("mapb")!;
-            nhanvien.Ngaysinh = row.Field<DateTime>("ngaysinh")!;
-            nhanvien.Quanly = row.Field<string>("quanly")!;
-            nhanvien.Sdtnv = row.Field<int>("sdtnv")!;
-
-            return nhanvien;
+            return new NhanVien()
+            {
+                Manv = row.Field<string>("manv")!,
+                Hotennv = row.Field<string>("hotennv")!,
+                Diachinv = row.Field<string>("diachinv")!,
+                Luong = row.Field<int>("luong")!,
+                Mapb = row.Field<string>("mapb")!,
+                Ngaysinh = row.Field<DateTime>("ngaysinh")!,
+                Quanly = row.Field<string>("quanly")!,
+                Sdtnv = row.Field<int>("sdtnv")!
+            };
         }
 
         public override void Insert(object sender)
@@ -85,7 +84,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("Insert" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -117,7 +116,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("ThongKeNhanVien" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -183,7 +182,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("SelectAll" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -203,9 +202,7 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                string idnv = (string)id;
-                idnv = idnv.ToString().Trim();
-                Sql.Parameters.AddWithValue("@manv", idnv);
+                Sql.Parameters.AddWithValue("@ma", id);
 
                 // Tạo một đối tượng SqlDataAdapter
                 Adapter = new SqlDataAdapter(Sql);
@@ -224,7 +221,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("SelectByID" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -262,7 +259,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("Update" + ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {

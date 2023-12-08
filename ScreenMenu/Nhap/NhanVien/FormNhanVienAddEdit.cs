@@ -19,22 +19,21 @@ namespace LTUD1_MF_BHX.Screen
             InitializeComponent();
 
 
-            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvNhanVien.ForeColor = Color.Black;
-            dgvNhanVien.ReadOnly = true;
-            dgvNhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDSVNTheoCNPB.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDSVNTheoCNPB.ForeColor = Color.Black;
+            dgvDSVNTheoCNPB.ReadOnly = true;
+            dgvDSVNTheoCNPB.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
             try
             {
-                nvController.SelectAll();
-                dgvNhanVien.DataSource = nvController.DataSource;
-                DataTable dt = nvController.GetDanhSachPhongBan();
-                cboPhongBan.DataSource = dt;
-                cboPhongBan.ValueMember = "MAPB";
-                cboPhongBan.DisplayMember = "TENPHG";
+                dgvDSVNTheoCNPB.DataSource = nvController.DanhSachNhanVienTheoChiNhanhPhongBan();
+
+                cboPB.DataSource = nvController.DanhSachPhongBan();
+                cboPB.ValueMember = "MAPB";
+                cboPB.DisplayMember = "TENPHG";
             }
             catch (Exception ex)
             {
@@ -88,31 +87,6 @@ namespace LTUD1_MF_BHX.Screen
         private void txtSDT_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void dgvDSVNTheoCNPB_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvNhanVien_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int dong = dgvNhanVien.CurrentCell.RowIndex;
-                string manv = dgvNhanVien.Rows[dong].Cells[0].Value.ToString();
-                DataTable dt = nvController.SelectByID(manv);
-                DataRow dr = dt.Rows[0];
-                NhanVien nv = (NhanVien)nvController.FromDataRow(dr);
-                txtHoTenNV.Text = nv.Hotennv;
-                txtLuong.Text = nv.Luong.ToString();
-                txtSDT.Text = nv.Sdtnv.ToString();
-                rtbDiaChi.Text = nv.Diachinv;
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-             
         }
     }
 }
