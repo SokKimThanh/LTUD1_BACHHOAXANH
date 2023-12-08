@@ -23,6 +23,7 @@ namespace LTUD1_MF_BHX.Screen
         HoaDonController HoaDonController;
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
+ /*          
             HoaDonController.SelectAll();
             dgvHD.DataSource = HoaDonController.DataSource;
             HoaDonController.SelectAllNhanVien();
@@ -32,21 +33,7 @@ namespace LTUD1_MF_BHX.Screen
             HoaDonController.SelectAllKhachHang();
             cbbMaKH.DataSource = HoaDonController.DataSource;
             cbbMaKH.DisplayMember = "MAKH";
-            cbbMaKH.ValueMember = "HOTENKH";
-        }
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
+            cbbMaKH.ValueMember = "HOTENKH";*/
         }
 
         private void dgvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,6 +43,7 @@ namespace LTUD1_MF_BHX.Screen
 
         private void FormHoaDon_Load_1(object sender, EventArgs e)
         {
+            txtTongTien.Text = "0";
             HoaDonController.SelectAll();
             dgvHD.DataSource = HoaDonController.DataSource;
             HoaDonController.SelectAllNhanVien();

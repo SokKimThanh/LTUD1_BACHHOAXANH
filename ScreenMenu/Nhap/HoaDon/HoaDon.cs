@@ -10,7 +10,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
     {
         private string maHD, maNV, maKH;
         private DateTime ngayHD;
-        private float tongTien;
+        private float tongTien = 0;
         public HoaDon()
         { }
         public HoaDon(string maHD, string maNV, string maKH, DateTime ngayHD, float tongTien)
