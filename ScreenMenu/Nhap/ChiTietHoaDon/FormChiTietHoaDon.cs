@@ -49,9 +49,75 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnKTTonKho_Click(object sender, EventArgs e)
         {
-            ctConn.KTTonKho(cboSanPham.SelectedValue.ToString(),int.Parse(txtSoLuong.Text));
+            ctConn.KTTonKho(cboSanPham.SelectedValue.ToString(), int.Parse(txtSoLuong.Text));
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.MaHD = cboHoaDon.SelectedValue.ToString();
+            cthd.MaSP = cboSanPham.SelectedValue.ToString();
+            cthd.SoLuong = int.Parse(txtSoLuong.Text);
+
+            try
+            {
+                ctConn.Insert(cthd);
+                FormChiTietHoaDon_Load(sender, e);
+                if (ctConn.KTMASP(cthd.MaSP) == false)
+                {
+                    MessageBox.Show("Thêm sản phẩm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sản phẩm không thành công!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void txtCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ChiTietHoaDon cthd = new ChiTietHoaDon();
+                cthd.MaHD = cboHoaDon.SelectedValue.ToString();
+                cthd.MaSP = cboSanPham.SelectedValue.ToString();
+                cthd.SoLuong = int.Parse(txtSoLuong.Text);
+                ctConn.Update(cthd);
+                FormChiTietHoaDon_Load(sender, e);
+
+                MessageBox.Show("Sửa sản phẩm thành công!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ChiTietHoaDon cthd = new ChiTietHoaDon();
+                cthd.MaHD = cboHoaDon.SelectedValue.ToString();
+                cthd.MaSP = cboSanPham.SelectedValue.ToString();
+                ctConn.Delete(cthd);
+                FormChiTietHoaDon_Load(sender, e);
+
+                MessageBox.Show("Xoa sản phẩm thành công!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

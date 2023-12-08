@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.Screen;
+using LTUD1_MF_BHX.ScreenDetail;
 using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
 
@@ -17,7 +18,8 @@ namespace LTUD1_MF_BHX
                 //FormHoaDon hoaDon =  new FormHoaDon();
                 //FormKhachHang khachHang = new FormKhachHang(); 
                 FormNhanVienAddEdit d = new FormNhanVienAddEdit();
-                Application.Run(d);
+                Application.Run(new FormSanPham());
+                Application.Run(new FormChiTietHoaDon());
 
                 //Trần Minh Tuấn
 

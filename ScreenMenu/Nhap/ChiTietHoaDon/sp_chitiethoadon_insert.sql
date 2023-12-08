@@ -26,5 +26,7 @@ BEGIN
 
     -- Insert statements for procedure here
 	INSERT INTO CHITIETHD VALUES (@mahd, @masp, @sl)
+
+	Update SANPHAM set SLTONKHO = SLTONKHO - @sl where MASP = @masp;
 END
 GO

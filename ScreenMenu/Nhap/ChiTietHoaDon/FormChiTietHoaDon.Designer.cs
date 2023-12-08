@@ -46,7 +46,7 @@
             groupBox5 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             txtThanhTien = new TextBox();
-            button1 = new Button();
+            btnKTTonKho = new Button();
             txtSoLuong = new TextBox();
             groupBox3 = new GroupBox();
             dgvCTHoaDon = new DataGridView();
@@ -232,6 +232,7 @@
             txtCapNhat.TabIndex = 2;
             txtCapNhat.Text = "Cập nhật đơn hàng";
             txtCapNhat.UseVisualStyleBackColor = false;
+            txtCapNhat.Click += txtCapNhat_Click;
             // 
             // btnXoa
             // 
@@ -250,6 +251,7 @@
             btnXoa.TabIndex = 1;
             btnXoa.Text = "Xóa sản phẩm";
             btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnThem
             // 
@@ -268,6 +270,7 @@
             btnThem.TabIndex = 0;
             btnThem.Text = "Thêm sản phẩm ";
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // tableLayoutPanel5
             // 
@@ -304,7 +307,7 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
             tableLayoutPanel6.Controls.Add(txtThanhTien, 2, 0);
-            tableLayoutPanel6.Controls.Add(button1, 1, 0);
+            tableLayoutPanel6.Controls.Add(btnKTTonKho, 1, 0);
             tableLayoutPanel6.Controls.Add(txtSoLuong, 0, 0);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
@@ -328,23 +331,23 @@
             txtThanhTien.TabIndex = 5;
             txtThanhTien.TextAlign = HorizontalAlignment.Right;
             // 
-            // button1
+            // btnKTTonKho
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(298, 5);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Size = new Size(283, 54);
-            button1.TabIndex = 4;
-            button1.Text = "Kiểm tra tồn kho";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnKTTonKho.BackColor = Color.Transparent;
+            btnKTTonKho.Dock = DockStyle.Fill;
+            btnKTTonKho.FlatAppearance.BorderSize = 3;
+            btnKTTonKho.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnKTTonKho.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnKTTonKho.FlatStyle = FlatStyle.Flat;
+            btnKTTonKho.ForeColor = Color.SeaShell;
+            btnKTTonKho.Location = new Point(298, 5);
+            btnKTTonKho.Margin = new Padding(5);
+            btnKTTonKho.Name = "btnKTTonKho";
+            btnKTTonKho.Size = new Size(283, 54);
+            btnKTTonKho.TabIndex = 4;
+            btnKTTonKho.Text = "Kiểm tra tồn kho";
+            btnKTTonKho.UseVisualStyleBackColor = false;
+            btnKTTonKho.Click += btnKTTonKho_Click;
             // 
             // txtSoLuong
             // 
@@ -425,7 +428,7 @@
         private GroupBox groupBox3;
         private GroupBox groupBox5;
         private TableLayoutPanel tableLayoutPanel6;
-        private Button button1;
+        private Button btnKTTonKho;
         private TextBox txtSoLuong;
         private GroupBox groupBox9;
         private TextBox txtThanhTien;

@@ -23,8 +23,12 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
+	Update sp set sp.SLTONKHO = sp.SLTONKHO + ct.SLMUA 
+	 from SANPHAM sp,CHITIETHD ct
+	 where sp.MASP = @masp and ct.MASP = sp.MASP
     -- Insert statements for procedure here
 	update CHITIETHD set SLMUA = @sl where MAHD = @mahd and  MASP = @masp -- chuẩn sql
+
+	Update SANPHAM set SLTONKHO = SLTONKHO - @sl where MASP = @masp;
 END
 GO
