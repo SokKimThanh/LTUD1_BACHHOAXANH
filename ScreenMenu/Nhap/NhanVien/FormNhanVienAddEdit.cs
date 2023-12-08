@@ -31,7 +31,7 @@ namespace LTUD1_MF_BHX.Screen
             {
                 nvController.SelectAll();
                 dgvNhanVien.DataSource = nvController.DataSource;
-                DataTable dt = nvController.GetDanhSachPhongBan();
+                DataTable dt = nvController.DanhSachPhongBan();
                 cboPhongBan.DataSource = dt;
                 cboPhongBan.ValueMember = "MAPB";
                 cboPhongBan.DisplayMember = "TENPHG";
@@ -45,8 +45,7 @@ namespace LTUD1_MF_BHX.Screen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormNhanVienThongKe formNhanVienThongKe = new FormNhanVienThongKe();
-            formNhanVienThongKe.Show();
+             
         }
         private string generateID(string id_cuoi)
         {
