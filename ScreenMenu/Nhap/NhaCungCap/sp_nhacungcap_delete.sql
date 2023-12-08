@@ -15,9 +15,7 @@ DROP PROCEDURE IF EXISTS sp_nhacungcap_delete
 GO
 CREATE PROCEDURE sp_nhacungcap_delete
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = '', 
-	@ten nvarchar(256) = N'',
-	@ghichu nvarchar(256) = N''
+	@MANCC CHAR(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -25,6 +23,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Delete statements for procedure here
-	DELETE FROM nhacungcap WHERE ma = @ma
+	DELETE FROM nhacungcap WHERE MANCC = @MANCC
 END
 GO

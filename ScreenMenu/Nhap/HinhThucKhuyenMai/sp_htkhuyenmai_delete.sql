@@ -15,9 +15,7 @@ DROP PROCEDURE IF EXISTS sp_hinhthuckm_delete
 GO
 CREATE PROCEDURE sp_hinhthuckm_delete
 	-- Add the parameters for the stored procedure here
-	@makm char(11) = '', 
-	@hinhthuc nvarchar(50) = N'',
-	@ghichu nvarchar(100) = N''
+	@makm char(11) 
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -25,6 +23,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Delete statements for procedure here
-	DELETE FROM hinhthuckm WHERE makm = @makm
+	DELETE FROM hinhthuckm WHERE MAHT = @makm
 END
 GO

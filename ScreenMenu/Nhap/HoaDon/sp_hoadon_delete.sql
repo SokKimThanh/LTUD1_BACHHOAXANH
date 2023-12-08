@@ -13,8 +13,7 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
     -- Delete statements for procedure here
 	DELETE FROM HOADON WHERE MAHD = @maHD
-END
-GO
+	DELETE FROM CHITIETHD WHERE MAHD = @maHD
+end

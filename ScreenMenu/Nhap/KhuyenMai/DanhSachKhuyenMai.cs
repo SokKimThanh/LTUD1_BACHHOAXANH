@@ -109,7 +109,7 @@ namespace LTUD1_MF_BHX
             string[] arr = line.Split('#');
             KhuyenMai item = new KhuyenMai();
             item.Makm = arr[0];
-            item.Masp = arr[1];
+            item.Maht = arr[1];
             item.Ngaybd = DateTime.Parse(arr[2]);
             item.Ngaykt = DateTime.Parse(arr[2]);
             

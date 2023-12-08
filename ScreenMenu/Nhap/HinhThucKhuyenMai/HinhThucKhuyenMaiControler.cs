@@ -1,28 +1,25 @@
-﻿
-using LTUD1_MF_BHX.Connection;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LTUD1_MF_BHX.Connection;
 
 namespace LTUD1_MF_BHX
 {
-    internal class HinhThucKhuyenMaiController : MyController
+    internal class HinhThucKhuyenMaiControler : MyController
     {
-        public HinhThucKhuyenMaiController(string connectionString) : base(connectionString)
-        {
-        }
-
-        public override void Delete(object id)
-        {
+        public HinhThucKhuyenMaiControler(string connectionString) : base(connectionString)
+        { }
+            public override void Delete(object id)
+        { 
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
             // Tạo một đối tượng SqlCommand
-            Sql = new SqlCommand("sp_htkhuyenmai_delete", conn);
+            Sql = new SqlCommand("sp_hinhthuckm_delete", conn);
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
@@ -39,9 +36,9 @@ namespace LTUD1_MF_BHX
         {
             return new HinhThucKhuyenMai()
             {
-                Makm = row.Field<string>("makm")!,
+                /*Makm = row.Field<string>("makm")!,
                 Hinhthuc = row.Field<string>("hinhthuc")!,
-                Ghichu = row.Field<string>("ghichu")!
+                Ghichu = row.Field<string>("ghichu")!*/
             };
         }
 
@@ -130,7 +127,7 @@ namespace LTUD1_MF_BHX
             // Thêm tham số vào SqlCommand
             Sql.Parameters.AddWithValue("@makm", user.Makm);
             Sql.Parameters.AddWithValue("@hinhthuc", user.Hinhthuc);
-            Sql.Parameters.AddWithValue("@ghichu", user.Ghichu); 
+            Sql.Parameters.AddWithValue("@ghichu", user.Ghichu);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
@@ -138,5 +135,6 @@ namespace LTUD1_MF_BHX
             // Đóng kết nối
             CloseConnection();
         }
+    
     }
 }

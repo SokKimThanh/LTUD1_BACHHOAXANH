@@ -1,4 +1,5 @@
-﻿using LTUD1_MF_BHX.controller;
+﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.controller;
 using LTUD1_MF_BHX.Model;
 
 namespace LTUD1_MF_BHX.ScreenMenu.Nhap

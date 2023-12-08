@@ -288,6 +288,7 @@
             // txtTongTien
             // 
             txtTongTien.Dock = DockStyle.Fill;
+            txtTongTien.Enabled = false;
             txtTongTien.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
             txtTongTien.Location = new Point(3, 35);
             txtTongTien.Name = "txtTongTien";

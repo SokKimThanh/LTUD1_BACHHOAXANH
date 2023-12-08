@@ -15,9 +15,7 @@ drop procedure if exists sp_hinhthuckm_select_all
 go
 CREATE PROCEDURE sp_hinhthuckm_select_all
 	-- Add the parameters for the stored procedure here
-	@makm char(11) = '', 
-	@hinhthuc nvarchar(50) = N'',
-	@ghichu nvarchar(100) = N''
+	
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

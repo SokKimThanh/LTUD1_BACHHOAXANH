@@ -15,10 +15,7 @@ drop procedure if exists sp_khuyenmai_select_all
 go
 CREATE PROCEDURE sp_khuyenmai_select_all
 	-- Add the parameters for the stored procedure here
-	@makm char(11) = '', 
-	@ngaybd date,
-	@ngaykt date,
-	@masp char(11) = N''
+	
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -26,6 +23,9 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from khuyenmai
+	SELECT * from KHUYENMAI , HINHTHUCKM
+	where KHUYENMAI.MAHT = HINHTHUCKM.MAHT
 END
 GO
+exec sp_khuyenmai_select_all
+exec sp_sanpham_select_all
