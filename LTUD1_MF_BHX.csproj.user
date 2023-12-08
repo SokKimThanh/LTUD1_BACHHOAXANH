@@ -22,13 +22,25 @@
     <Compile Update="ScreenMenu\HeThong\TaiKhoan\FormTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\In\FormBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\In\FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\FormChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\DiaDiem\FormDiaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\HinhThucKhuyenMai\FormHinhThucKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\KhuyenMai\FormKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\NhaCungCap\FormNhaCungCap.cs">
@@ -41,6 +53,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\NhanVien\reportnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\PhongBan\FormPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\SanPham\FormSanPham.cs">
