@@ -1,6 +1,6 @@
 ﻿-- ================================================
--- Create Procedure sp_hinhthuckm_delete.sql
--- Danh mục delete
+-- Create Procedure sp_chitiethoadon_select_all.sql
+-- Danh mục select all
 -- ================================================
 SET ANSI_NULLS ON
 GO
@@ -11,18 +11,22 @@ GO
 -- Create date: <07/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-DROP PROCEDURE IF EXISTS sp_hinhthuckm_delete
-GO
-CREATE PROCEDURE sp_hinhthuckm_delete
+drop procedure if exists sp_chitiethoadon_select_all
+go
+CREATE PROCEDURE sp_chitiethoadon_select_all
 	-- Add the parameters for the stored procedure here
-	@makm char(11) 
+	 @MAHD CHAR(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    -- Delete statements for procedure here
-	DELETE FROM hinhthuckm WHERE MAHT = @makm
+    -- Insert statements for procedure here
+	SELECT sp.TENSP,ct.SLMUA, ct.SLMUA * sp.DONGIA as "Thành tiền"
+	from CHITIETHD ct,HOADON hd,SANPHAM sp 
+	where ct.MAHD = hd.MAHD and ct.MASP=sp.MASP and ct.MAHD = @MAHD
+
 END
 GO
+exec sp_chitiethoadon_select_all 'HD01'

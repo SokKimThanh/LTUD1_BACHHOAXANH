@@ -282,6 +282,17 @@
             // 
             // lblAccountName
             // 
+            this.lblAccountName.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblAccountName, "lblAccountName");
+            this.lblAccountName.ForeColor = System.Drawing.Color.White;
+            this.lblAccountName.Name = "lblAccountName";
+            // 
+            // currentChangeTitle
+            // 
+            this.currentChangeTitle.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.currentChangeTitle, "currentChangeTitle");
+            this.currentChangeTitle.ForeColor = System.Drawing.Color.White;
+            this.currentChangeTitle.Name = "currentChangeTitle";
             lblAccountName.BackColor = Color.Transparent;
             resources.ApplyResources(lblAccountName, "lblAccountName");
             lblAccountName.ForeColor = Color.White;
@@ -310,6 +321,12 @@
             // 
             // btnHome
             // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnHome, "btnHome");
+            this.btnHome.Image = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
+            this.btnHome.InitialImage = global::LTUD1_MF_BHX.Properties.Resources.BXHLOGO2;
+            this.btnHome.Name = "btnHome";
+            this.btnHome.TabStop = false;
             btnHome.BackColor = Color.Transparent;
             resources.ApplyResources(btnHome, "btnHome");
             btnHome.Image = Properties.Resources.BXHLOGO2;
@@ -445,6 +462,31 @@
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tlpBHX);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tlpBHX.ResumeLayout(false);
+            this.tlpBHX.PerformLayout();
+            this.flpSetting.ResumeLayout(false);
+            this.panelSetting.ResumeLayout(false);
+            this.tlpNavigationBar.ResumeLayout(false);
+            this.panelHeader.ResumeLayout(false);
+            this.tlpHeader.ResumeLayout(false);
+            this.cmsLogOut.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.tlpMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.tlpExit.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconChildForm)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.ResumeLayout(false);
+
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tlpBHX);
             FormBorderStyle = FormBorderStyle.None;

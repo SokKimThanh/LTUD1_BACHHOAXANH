@@ -2,6 +2,8 @@
 using LTUD1_MF_BHX.Connection;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace LTUD1_MF_BHX
 {
@@ -54,14 +56,18 @@ namespace LTUD1_MF_BHX
                 // Tạo một đối tượng SqlCommand
                 Sql = new SqlCommand("sp_sanpham_insert", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
-
+              
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", sanpham.Ma);
-                Sql.Parameters.AddWithValue("@ten", sanpham.Ten);
-                Sql.Parameters.AddWithValue("@gia", sanpham.Gia);
-                Sql.Parameters.AddWithValue("@soluong", sanpham.Soluong);
-                Sql.Parameters.AddWithValue("@nhacungcap", sanpham.Nhacungcap.Ma);
-                Sql.Parameters.AddWithValue("@danhmuc", sanpham.Danhmuc.Ma);
+                Sql.Parameters.AddWithValue("@MASP", sanpham.Ma);
+                Sql.Parameters.AddWithValue("@TENSP", sanpham.Ten);
+                Sql.Parameters.AddWithValue("@DONVI", sanpham.DonVi);
+                Sql.Parameters.AddWithValue("@NSX", sanpham.NgaySX);
+                Sql.Parameters.AddWithValue("@HSD", sanpham.HanSD);
+                Sql.Parameters.AddWithValue("@SLTONKHO", sanpham.Soluong);
+                Sql.Parameters.AddWithValue("@MANCC", sanpham.NCC);
+                Sql.Parameters.AddWithValue("@MALOAI", sanpham.LoaiSP);
+                Sql.Parameters.AddWithValue("@DONGIA", sanpham.Gia);
+                Sql.Parameters.AddWithValue("@MAKM", sanpham.KhuyenMai);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
@@ -71,7 +77,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -121,8 +127,9 @@ namespace LTUD1_MF_BHX
                 SqlConnection conn = OpenConnection();
                 Sql = new SqlCommand();
                 Sql.Connection = conn;
-                Sql.CommandText = "sp_sanpham_selectone";
+                Sql.CommandText = "sp_sanpham_select_one";
                 Sql.CommandType = CommandType.StoredProcedure;
+                Sql.Parameters.AddWithValue("@MASP", id);
                 Adapter = new SqlDataAdapter(Sql);
                 Adapter.Fill(DataSource);
             }
@@ -152,13 +159,16 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", sanpham.Ma);
-                Sql.Parameters.AddWithValue("@ten", sanpham.Ten);
-                Sql.Parameters.AddWithValue("@gia", sanpham.Gia);
-                Sql.Parameters.AddWithValue("@soluong", sanpham.Soluong);
-                Sql.Parameters.AddWithValue("@danhmuc", sanpham.Danhmuc);
-                Sql.Parameters.AddWithValue("@nhacungcap", sanpham.Nhacungcap);
-
+                Sql.Parameters.AddWithValue("@MASP", sanpham.Ma);
+                Sql.Parameters.AddWithValue("@TENSP", sanpham.Ten);
+                Sql.Parameters.AddWithValue("@DONVI", sanpham.DonVi);
+                Sql.Parameters.AddWithValue("@NSX", sanpham.NgaySX);
+                Sql.Parameters.AddWithValue("@HSD", sanpham.HanSD);
+                Sql.Parameters.AddWithValue("@SLTONKHO", sanpham.Soluong);
+                Sql.Parameters.AddWithValue("@MANCC", sanpham.NCC);
+                Sql.Parameters.AddWithValue("@MALOAI", sanpham.LoaiSP);
+                Sql.Parameters.AddWithValue("@DONGIA", sanpham.Gia);
+                Sql.Parameters.AddWithValue("@MAKM", sanpham.KhuyenMai);
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
             }
@@ -181,9 +191,8 @@ namespace LTUD1_MF_BHX
                 // Tạo một đối tượng SqlCommand
                 Sql = new SqlCommand("sp_sanpham_delete", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
-
+                Sql.Parameters.AddWithValue("@MASP", id);
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", id);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
@@ -202,12 +211,12 @@ namespace LTUD1_MF_BHX
         {
             return new SanPham()
             {
-                Ma = row.Field<string>("ma")!,
+              /*  Ma = row.Field<string>("ma")!,
                 Ten = row.Field<string>("ten")!,
                 Gia = row.Field<double>("gia")!,
                 Soluong = row.Field<int>("soluong")!,
                 Danhmuc = row.Field<DanhMuc>("danhmuc")!,
-                Nhacungcap = row.Field<NhaCungCap>("nhacungcap")!
+                Nhacungcap = row.Field<NhaCungCap>("nhacungcap")!*/
             };
         }
     }

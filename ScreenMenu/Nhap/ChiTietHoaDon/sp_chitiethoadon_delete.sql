@@ -1,5 +1,5 @@
 ﻿-- ================================================
--- Create Procedure sp_hinhthuckm_delete.sql
+-- Create Procedure sp_chitiethoadon_delete.sql
 -- Danh mục delete
 -- ================================================
 SET ANSI_NULLS ON
@@ -11,9 +11,9 @@ GO
 -- Create date: <07/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-DROP PROCEDURE IF EXISTS sp_hinhthuckm_delete
+DROP PROCEDURE IF EXISTS sp_chitiethoadon_delete
 GO
-CREATE PROCEDURE sp_hinhthuckm_delete
+CREATE PROCEDURE sp_chitiethoadon_delete
 	-- Add the parameters for the stored procedure here
 	@makm char(11) 
 AS
@@ -23,6 +23,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Delete statements for procedure here
-	DELETE FROM hinhthuckm WHERE MAHT = @makm
+	DELETE FROM chitiethoadon WHERE MASP = @makm
 END
 GO

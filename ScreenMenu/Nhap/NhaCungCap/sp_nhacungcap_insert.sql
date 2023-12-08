@@ -15,9 +15,10 @@ drop procedure if exists sp_nhacungcap_insert
 go
 CREATE PROCEDURE sp_nhacungcap_insert
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = '', 
-	@ten nvarchar(256) = N'',
-	@ghichu nvarchar(256) = N''
+	@MANCC CHAR(11),
+	@TENNCC NVARCHAR(30) ,
+	@DIACHINCC NVARCHAR(100),
+	@SDTNCC INT   
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -25,6 +26,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO nhacungcap VALUES (@ma, @ten, @ghichu)
+	INSERT INTO nhacungcap VALUES (@@MANCC, @TENNCC, @DIACHINCC,@SDTNCC)
 END
 GO

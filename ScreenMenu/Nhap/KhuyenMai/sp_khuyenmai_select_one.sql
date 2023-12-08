@@ -15,10 +15,10 @@ drop procedure if exists sp_khuyenmai_select_one
 go
 CREATE PROCEDURE sp_khuyenmai_select_one
 	-- Add the parameters for the stored procedure here
-	@makm char(11) = '', 
-	@ngaybd date,
-	@ngaykt date,
-	@masp char(11) = N''
+	@MAKM CHAR(11) ,
+	@NGAYBD DATE ,
+	@NGAYKT DATE,
+	@MAHT char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -26,6 +26,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from khuyenmai where makm = @makm --like chính xác mã 100%
+	SELECT * from khuyenmai where MAKM = @MAKM --like chính xác mã 100%
 END
 GO

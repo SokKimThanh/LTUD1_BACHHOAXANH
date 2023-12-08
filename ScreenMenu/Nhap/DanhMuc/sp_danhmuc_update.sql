@@ -15,9 +15,9 @@ drop procedure if exists sp_danhmuc_update
 go
 CREATE PROCEDURE sp_danhmuc_update
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = '', 
-	@ten nvarchar(256) = N'',
-	@ghichu nvarchar(256) = N''
+	@MALOAI CHAR(11),
+	@TENLOAI NVARCHAR(30),
+	@GHICHU NVARCHAR(100)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -25,6 +25,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update danhmuc set ten = @ten, ghichu = @ghichu where ma = @ma -- chuẩn sql
+	update LOAISP set TENLOAI = @TENLOAI, GHICHU = @GHICHU where MALOAI = @MALOAI -- chuẩn sql
 END
 GO

@@ -15,19 +15,25 @@ drop procedure if exists sp_sanpham_insert
 go
 CREATE PROCEDURE sp_sanpham_insert
 	-- Add the parameters for the stored procedure here
-	@ma nvarchar(11) = N'',
-	@ten nvarchar(256) = N'',
-	@gia money = 0,
-	@soluong int = 0,
-	@nhacungcap nvarchar(11) = null,
-	@danhmuc nvarchar(11) = null
+	@MASP CHAR(11),
+	@TENSP NVARCHAR(30) ,
+	@DONVI NVARCHAR(30),
+	@NSX DATE ,
+	@HSD DATE ,
+	@DONGIA INT ,
+	@SLTONKHO INT, 
+	@MALOAI CHAR(11), 
+	@MANCC CHAR(11), 
+	@MAKM char(11)
 AS
+
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO sanpham (ma,ten,gia,soluong,nhacungcap,danhmuc) VALUES (@ma, @ten, @gia, @soluong, @nhacungcap, @danhmuc)
+	INSERT INTO sanpham (MASP,TENSP,DONVI ,NSX  ,HSD  ,DONGIA  ,SLTONKHO , MALOAI , MANCC, MAKM ) 
+	VALUES (@MASP,@TENSP,@DONVI ,@NSX  ,@HSD  ,@DONGIA  ,@SLTONKHO , @MALOAI , @MANCC, @MAKM )
 END
 GO
