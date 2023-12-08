@@ -32,10 +32,6 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox7 = new GroupBox();
             cbbMaCN = new ComboBox();
-            groupBox6 = new GroupBox();
-            txtTenPB = new TextBox();
-            groupBox2 = new GroupBox();
-            txtMaPB = new TextBox();
             dgvPB = new DataGridView();
             btnSua = new Button();
             button2 = new Button();
@@ -45,17 +41,21 @@
             tableLayoutPanel4 = new TableLayoutPanel();
             groupBox4 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
+            txtTenPB = new TextBox();
+            groupBox6 = new GroupBox();
+            txtMaPB = new TextBox();
+            groupBox2 = new GroupBox();
             groupBox1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             groupBox7.SuspendLayout();
-            groupBox6.SuspendLayout();
-            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPB).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             groupBox3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             groupBox4.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -121,50 +121,6 @@
             cbbMaCN.Name = "cbbMaCN";
             cbbMaCN.Size = new Size(366, 40);
             cbbMaCN.TabIndex = 10;
-            // 
-            // groupBox6
-            // 
-            groupBox6.Controls.Add(txtTenPB);
-            groupBox6.Dock = DockStyle.Fill;
-            groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(0, 112);
-            groupBox6.Margin = new Padding(0);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(372, 119);
-            groupBox6.TabIndex = 5;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Tên phòng ban";
-            // 
-            // txtTenPB
-            // 
-            txtTenPB.Dock = DockStyle.Fill;
-            txtTenPB.Location = new Point(3, 35);
-            txtTenPB.Name = "txtTenPB";
-            txtTenPB.Size = new Size(366, 39);
-            txtTenPB.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.ForestGreen;
-            groupBox2.Controls.Add(txtMaPB);
-            groupBox2.Dock = DockStyle.Fill;
-            groupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(3, 3);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(366, 106);
-            groupBox2.TabIndex = 3;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Mã Phòng Ban";
-            // 
-            // txtMaPB
-            // 
-            txtMaPB.Dock = DockStyle.Fill;
-            txtMaPB.Location = new Point(3, 35);
-            txtMaPB.Name = "txtMaPB";
-            txtMaPB.Size = new Size(360, 39);
-            txtMaPB.TabIndex = 0;
             // 
             // dgvPB
             // 
@@ -318,6 +274,50 @@
             tableLayoutPanel2.Size = new Size(1281, 578);
             tableLayoutPanel2.TabIndex = 7;
             // 
+            // txtTenPB
+            // 
+            txtTenPB.Dock = DockStyle.Fill;
+            txtTenPB.Location = new Point(3, 35);
+            txtTenPB.Name = "txtTenPB";
+            txtTenPB.Size = new Size(366, 39);
+            txtTenPB.TabIndex = 1;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(txtTenPB);
+            groupBox6.Dock = DockStyle.Fill;
+            groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox6.ForeColor = Color.White;
+            groupBox6.Location = new Point(0, 112);
+            groupBox6.Margin = new Padding(0);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(372, 119);
+            groupBox6.TabIndex = 5;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Tên phòng ban";
+            // 
+            // txtMaPB
+            // 
+            txtMaPB.Dock = DockStyle.Fill;
+            txtMaPB.Location = new Point(3, 35);
+            txtMaPB.Name = "txtMaPB";
+            txtMaPB.Size = new Size(360, 39);
+            txtMaPB.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.ForestGreen;
+            groupBox2.Controls.Add(txtMaPB);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(3, 3);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(366, 106);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Mã Phòng Ban";
+            // 
             // FormPhongBan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -331,16 +331,16 @@
             groupBox1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             groupBox7.ResumeLayout(false);
-            groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPB).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -357,10 +357,10 @@
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private GroupBox groupBox7;
-        private GroupBox groupBox6;
-        private GroupBox groupBox2;
         private ComboBox cbbMaCN;
+        private GroupBox groupBox6;
         private TextBox txtTenPB;
+        private GroupBox groupBox2;
         private TextBox txtMaPB;
     }
 }

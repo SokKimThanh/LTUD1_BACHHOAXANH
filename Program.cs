@@ -13,14 +13,13 @@ namespace LTUD1_MF_BHX
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                FormDiaDiem ph = new FormDiaDiem();
-                FormDangNhap dn = new FormDangNhap();
+                FormDiaDiem formDiaDiem = new FormDiaDiem();
                 //FormDangNhap logon = new FormDangNhap();
                 FormMain logon = new FormMain();
                 FormHoaDon hoaDon =  new FormHoaDon();
                 FormKhachHang khachHang = new FormKhachHang(); 
                 FormPhongBan formPhongBan = new FormPhongBan();
-                Application.Run(khachHang);
+                Application.Run(formPhongBan);
                 //Trần Minh Tuấn
 
                 //gi change

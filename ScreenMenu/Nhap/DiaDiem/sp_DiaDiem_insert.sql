@@ -1,31 +1,34 @@
 ﻿-- ================================================
--- Create Procedure sp_nhanvien_update.sql
--- Nhân viên update
+-- Create Procedure sp_diadiem_insert.sql
+-- Nhà cung cấp insert
 -- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+set dateformat dmy
 -- =============================================
--- Author:		Sok Kim Thanh
--- Create date: <10/11/2023>
+-- Author:		Vo Tu
+-- Create date: <13/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_phongban_update
+drop procedure if exists sp_diadiem_insert
 go
-CREATE PROCEDURE sp_phongban_update
+CREATE PROCEDURE sp_diadiem_insert
 	-- Add the parameters for the stored procedure here
-		@maPB char(11),
-	@tenPB nvarchar(30),
-	@maCN nvarchar(100)
+	@maCN char(4) = '',
+	@tenCN nvarchar(30),
+	@diaChi nvarchar(100)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
     -- Insert statements for procedure here
-	update PHONGBAN set TENPHG = @tenPB, MACN = @maCN where MACN = @maCN -- chuẩn sql
+	INSERT INTO CHINHANH VALUES (@maCN,@tenCN,@diaChi)
 END
 GO
-exec sp_phongban_update 'PB00', N'Phòng Kế toánn', 'CN01'
+exec sp_diadiem_insert 'CN05', N'Chi nhánh Đà Nẵng', N'Số 3 Nguyễn Văn Linh, Hải Châu, Đà Nẵng';
+
+select * from CHINHANH
+

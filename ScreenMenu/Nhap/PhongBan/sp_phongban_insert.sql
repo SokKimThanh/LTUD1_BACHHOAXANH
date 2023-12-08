@@ -27,4 +27,3 @@ BEGIN
 	INSERT INTO PHONGBAN VALUES (@maPB, @tenPB, @maCN)
 END
 GO
-exec sp_phongban_insert 'PB00', N'Phòng Kế toán', 'CN01'
