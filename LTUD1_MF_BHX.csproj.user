@@ -28,16 +28,22 @@
     <Compile Update="ScreenMenu\In\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\FormChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ScreenMenu\Nhap\DiaDiem\FormDiaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\HinhThucKhuyenMai\FormHinhThucKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\NhaCungCap\FormNhaCungCap.cs">
+    <Compile Update="ScreenMenu\Nhap\KhuyenMai\FormKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\NhanVien\FormNhanVien.cs">
+    <Compile Update="ScreenMenu\Nhap\NhaCungCap\FormNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\NhanVien\FormNhanVienAddEdit.cs">

@@ -156,7 +156,7 @@ namespace LTUD1_MF_BHX
                 CloseConnection();
             }
             return DataSource;
-        } 
+        }
         public override void SelectAll()
         {
             try
@@ -299,7 +299,7 @@ namespace LTUD1_MF_BHX
                 CloseConnection();
             }
             return DataSource;
-        } 
+        }
         public DataTable DanhSachPhongBan()
         {
             try
