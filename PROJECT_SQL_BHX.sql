@@ -48,7 +48,7 @@ CREATE TABLE PHONGBAN (MAPB CHAR(4) NOT NULL ,TENPHG NVARCHAR(30) NOT NULL,	MACN
 ------------------------------------------------------------
 ---------------------Tạo bảng NHANVIEN----------------------
 ------------------------------------------------------------
-CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL  ,HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG FLOAT NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4),	QUANLY CHAR(11));
+CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL  ,HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4),	QUANLY CHAR(11));
 ------------------------------------------------------------
 ---------------------Tạo bảng KHACHHANG---------------------
 ------------------------------------------------------------
