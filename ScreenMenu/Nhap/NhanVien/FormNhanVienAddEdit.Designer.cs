@@ -237,6 +237,7 @@
             btnEdit.TabIndex = 3;
             btnEdit.Text = "Sửa";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnRefresh
             // 
@@ -272,6 +273,7 @@
             btnDelete.TabIndex = 1;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnAdd
             // 

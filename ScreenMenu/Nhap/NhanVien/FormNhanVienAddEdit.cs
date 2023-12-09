@@ -170,7 +170,8 @@ namespace LTUD1_MF_BHX.Screen
                 if (nv.Gioitinh.Equals("nam"))
                 {
                     rbNam.Checked = true;
-                }else if (nv.Gioitinh.Equals("nu"))
+                }
+                else if (nv.Gioitinh.Equals("nu"))
                 {
                     rbNu.Checked = true;
                 }
@@ -197,6 +198,7 @@ namespace LTUD1_MF_BHX.Screen
                     btnEdit.Enabled = false;
                     btnDelete.Enabled = false;
                     btnRefresh.Enabled = true;
+                    refresh();
                     break;
                 case "form_loaded":
                     btnAdd.Enabled = true;
@@ -218,8 +220,7 @@ namespace LTUD1_MF_BHX.Screen
                     break;
             }
         }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
+        public void refresh()
         {
             txtHoTenNV.Text = string.Empty;
             rptNgaySinh.Text = string.Empty;
@@ -227,7 +228,11 @@ namespace LTUD1_MF_BHX.Screen
             txtLuong.Text = string.Empty;
             txtSDT.Text = string.Empty;
             cboPhongBan.SelectedIndex = 0;
-
+            nvController.SelectAll();
+            dgvNhanVien.DataSource = nvController.DataSource;
+        }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
             UpdateButtonStates("refresh_clicked");
         }
 
@@ -237,15 +242,89 @@ namespace LTUD1_MF_BHX.Screen
         }
         private void radioButtons_CheckedChanged(object sender, EventArgs e)
         {
-            System.Windows.Forms.RadioButton radioButton = (System.Windows.Forms.RadioButton)sender;
+            //System.Windows.Forms.RadioButton radioButton = (System.Windows.Forms.RadioButton)sender;
 
-            if (rbNam.Checked)
+            //if (rbNam.Checked)
+            //{
+            //    rtbDiaChi.Text = "nam";
+            //}
+            //else if (rbNu.Checked)
+            //{
+            //    rtbDiaChi.Text = "nu";
+            //}
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
             {
-                rtbDiaChi.Text = "nam";
+                int dong = dgvNhanVien.CurrentCell.RowIndex;
+                string manv = dgvNhanVien.Rows[dong].Cells[0].Value.ToString()!;
+                nvController.Delete(manv!);
+                UpdateButtonStates("refresh_clicked");
             }
-            else if (rbNu.Checked)
+            catch (Exception ex)
             {
-                rtbDiaChi.Text = "nu";
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Kiem tra nhap thong tin
+                if (ErrTxt.CheckControlValue(txtHoTenNV))
+                {
+                    MessageBox.Show("txtHoTenNV", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(txtLuong))
+                {
+                    MessageBox.Show("txtLuong", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(txtSDT))
+                {
+                    MessageBox.Show("txtSDT", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(rtbDiaChi))
+                {
+                    MessageBox.Show("rtbDiaChi", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(rptNgaySinh))
+                {
+                    MessageBox.Show("rptNgaySinh", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+
+                Random d = new Random();
+
+                int dong = dgvNhanVien.CurrentCell.RowIndex;
+                string maNV = dgvNhanVien.Rows[dong].Cells[0].Value.ToString()!;
+
+                string hotennv = txtHoTenNV.Text;
+                float luong = float.Parse(txtLuong.Text);
+                int sdtnv = int.Parse(txtSDT.Text);
+                string diachinv = rtbDiaChi.Text;
+                DateTime ngaysinh = rptNgaySinh.Value;
+                string mapb = cboPhongBan.SelectedValue.ToString()!;
+                string gioitinh = rbNam.Checked ? "nam" : rbNu.Checked ? "nu" : string.Empty;
+                NhanVien o = new NhanVien(maNV, hotennv, diachinv, luong, sdtnv, ngaysinh, mapb, gioitinh);
+                nvController.Update(o);
+               
+                UpdateButtonStates("refresh_clicked");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                rtbDiaChi.Text = ex.Message;
             }
         }
     }

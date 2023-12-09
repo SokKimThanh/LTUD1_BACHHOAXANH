@@ -1,8 +1,6 @@
 ﻿-- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
-
-drop procedure if exists sp_nhanvien_select_all
-GO
+ 
 CREATE PROCEDURE sp_nhanvien_select_all
 AS
 BEGIN
@@ -19,14 +17,13 @@ BEGIN
     where NV.MAPB = PB.MAPB
 	order by nv.created_date desc;
 END;
-
+go
 
 
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
 
-drop procedure if exists sp_nhanvien_thongke
-GO
+ 
 CREATE PROCEDURE sp_nhanvien_thongke
 	-- Add the parameters for the stored procedure here
 	 
@@ -38,14 +35,13 @@ BEGIN
 	WHERE pb.MAPB = nv.MAPB AND cn.MACN = pb.MACN
 	GROUP BY pb.TENPHG, cn.TENCN;
 
-END
-
+END;
+go
 
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
 
-drop procedure if exists sp_nhanvien_danhsach_theophongban_chinhanh
-GO
+ 
 CREATE PROCEDURE sp_nhanvien_danhsach_theophongban_chinhanh
 	-- Add the parameters for the stored procedure here
 	 
@@ -56,5 +52,6 @@ BEGIN
 	STUFF((SELECT ', ' + nv.HOTENNV FROM nhanvien nv WHERE pb.MAPB = nv.MAPB AND cn.MACN = pb.MACN FOR XML PATH('')), 1, 2, '') as 'Danh sách nhân viên'
 	FROM PHONGBAN pb, CHINHANH cn 
 	GROUP BY pb.TENPHG, cn.TENCN, pb.MAPB, cn.MACN, pb.MACN;
-END
+END;
+go
 
