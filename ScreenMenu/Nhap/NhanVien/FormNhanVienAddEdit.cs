@@ -42,23 +42,26 @@ namespace LTUD1_MF_BHX.Screen
 
             rbNam.Checked = true;
 
-            // crud button setting state
-            UpdateButtonStates("form_loaded");
+           
         }
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
             try
-            {
+            {   
+
                 nvController.SelectAll();
                 dgvNhanVien.DataSource = nvController.DataSource;
-                dgvNhanVien.Columns["NhanVienID"].Width = 0;
-                dgvNhanVien.Columns["PhongBanID"].Width = 0;
+                //dgvNhanVien.Columns["NhanVienID"].Width = 0;
+                //dgvNhanVien.Columns["PhongBanID"].Width = 0;
 
                 DataTable dt = nvController.GetDanhSachPhongBan();
                 cboPhongBan.DataSource = dt;
                 cboPhongBan.ValueMember = "MAPB";
                 cboPhongBan.DisplayMember = "TENPHG";
+
+                // crud button setting state
+                UpdateButtonStates("form_loaded");
             }
             catch (Exception ex)
             {
