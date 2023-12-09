@@ -28,7 +28,13 @@
     <Compile Update="ScreenMenu\In\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\ChiTietHoaDonThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\FormChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\DanhMuc\FormLoaiSP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\DiaDiem\FormDiaDiem.cs">
@@ -38,6 +44,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDonThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\KhuyenMai\FormKhuyenMai.cs">

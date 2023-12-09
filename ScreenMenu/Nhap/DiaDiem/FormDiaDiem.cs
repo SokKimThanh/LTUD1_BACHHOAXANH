@@ -1,5 +1,4 @@
 ﻿using LTUD1_MF_BHX.ScreenMenu.Nhap.DiaDiem;
-using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +16,6 @@ namespace LTUD1_MF_BHX.Screen
         DiaDiemController DiaDiemController;
         public FormDiaDiem()
         {
-
-
             InitializeComponent();
             DiaDiemController = new DiaDiemController(Utils.ConnectionString);
             dgvDD.DefaultCellStyle.ForeColor = Color.Black;

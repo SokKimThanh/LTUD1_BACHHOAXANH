@@ -16,5 +16,6 @@ namespace LTUD1_MF_BHX.ScreenDetail
         {
             InitializeComponent();
         }
+
     }
 }

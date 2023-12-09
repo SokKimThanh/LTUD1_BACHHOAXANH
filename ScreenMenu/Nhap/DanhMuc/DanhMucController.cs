@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.Connection;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -24,7 +25,7 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", id);
+                Sql.Parameters.AddWithValue("@MALOAI", id);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
@@ -67,8 +68,8 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", o.Ma);
-                Sql.Parameters.AddWithValue("@ten", o.Ten);
+                Sql.Parameters.AddWithValue("@MALOAI", o.Ma);
+                Sql.Parameters.AddWithValue("@TENLOAI", o.Ten);
                 Sql.Parameters.AddWithValue("@ghichu", o.Ghichu);
 
                 // Thực thi SqlCommand
@@ -132,7 +133,7 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", id);
+                Sql.Parameters.AddWithValue("@MALOAI", id);
 
                 // Tạo một đối tượng SqlDataAdapter
                 Adapter = new SqlDataAdapter(Sql);
@@ -173,8 +174,8 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", o.Ma);
-                Sql.Parameters.AddWithValue("@ten", o.Ten);
+                Sql.Parameters.AddWithValue("@MALOAI", o.Ma);
+                Sql.Parameters.AddWithValue("@TENLOAI", o.Ten);
                 Sql.Parameters.AddWithValue("@ghichu", o.Ghichu);
 
                 // Thực thi SqlCommand
