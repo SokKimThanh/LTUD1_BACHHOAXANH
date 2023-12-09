@@ -1,6 +1,7 @@
 ﻿-- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
- 
+drop procedure if exists sp_nhanvien_select_all
+go
 CREATE PROCEDURE sp_nhanvien_select_all
 AS
 BEGIN
@@ -23,7 +24,8 @@ go
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
 
- 
+drop procedure if exists sp_nhanvien_thongke
+go
 CREATE PROCEDURE sp_nhanvien_thongke
 	-- Add the parameters for the stored procedure here
 	 
@@ -41,7 +43,8 @@ go
 -- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 10:57 CH>
 
- 
+drop procedure if exists sp_nhanvien_danhsach_theophongban_chinhanh
+go
 CREATE PROCEDURE sp_nhanvien_danhsach_theophongban_chinhanh
 	-- Add the parameters for the stored procedure here
 	 

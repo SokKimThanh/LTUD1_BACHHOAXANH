@@ -1,6 +1,7 @@
 ﻿-- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 9:39 CH>
-
+drop procedure if exists sp_nhanvien_insert
+go
 CREATE PROCEDURE sp_nhanvien_insert
 	 
 	-- Add the parameters for the stored procedure here

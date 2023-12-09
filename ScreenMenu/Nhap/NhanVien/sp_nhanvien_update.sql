@@ -1,7 +1,8 @@
 ﻿-- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 9:39 CH>
 
- 
+drop procedure if exists sp_nhanvien_update
+go
 CREATE PROCEDURE sp_nhanvien_update
 	-- Add the parameters for the stored procedure here
 	@manv char(11),
