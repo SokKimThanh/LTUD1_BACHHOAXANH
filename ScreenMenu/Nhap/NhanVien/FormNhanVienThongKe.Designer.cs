@@ -32,9 +32,10 @@
             groupBox2 = new GroupBox();
             dgvThongKeNV = new DataGridView();
             panel1 = new Panel();
+            textBox1 = new TextBox();
             button2 = new Button();
             btnThongKeSLNV = new Button();
-            textBox1 = new TextBox();
+            button1 = new Button();
             tableLayoutPanel1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvThongKeNV).BeginInit();
@@ -84,6 +85,7 @@
             // panel1
             // 
             panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(btnThongKeSLNV);
             panel1.Dock = DockStyle.Fill;
@@ -92,6 +94,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1021, 97);
             panel1.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(8, 36);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(433, 29);
+            textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button2
             // 
@@ -115,13 +125,16 @@
             btnThongKeSLNV.UseVisualStyleBackColor = true;
             btnThongKeSLNV.Click += btnTimKiem;
             // 
-            // textBox1
+            // button1
             // 
-            textBox1.Location = new Point(8, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(433, 29);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            button1.Location = new Point(760, 36);
+            button1.Margin = new Padding(4);
+            button1.Name = "button1";
+            button1.Size = new Size(137, 32);
+            button1.TabIndex = 1;
+            button1.Text = "in ra giấy";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnThoat_Click;
             // 
             // FormNhanVienThongKe
             // 
@@ -151,5 +164,6 @@
         private Button button2;
         private Button btnThongKeSLNV;
         private TextBox textBox1;
+        private Button button1;
     }
 }
