@@ -1,7 +1,7 @@
 ﻿/**
-* PROJECT BACH HOA XANH
-* THÀNH VIÊN: LÊ DUY ANH TÚ, SOK KIM THANH
-* DATE: 7/5/2023
+* -- PROJECT BACH HOA XANH
+* -- DATE: 7/5/2023			THÀNH VIÊN: LÊ DUY ANH TÚ, SOK KIM THANH
+* -- DATE: 1/10/2023		THÀNH VIÊN: QUÝ NGÔ, VÕ TÚ, SOK KIM THANH
 */
 /***************************************************************************************************
 Create Date:7/5/2023
@@ -9,7 +9,7 @@ Author: SOK KIM THANH
 Description:lược đồ csdl quan hệ từ mô hình thực thế kết hợp
 ****************************************************************************************************
 Tổng kết thay đổi
-Date(dd/MM/yyyy)Author  Comments
+Date(dd/MM/yyyy)		Author				Comments
 ------------------- ------------------- ------------------------------------------------------------
 7/5/2023 	05:00		Sok Kim Thanh		Viết mã sql dựng lược đồ quan hệ
 7/5/2023 	11:43  		Sok Kim Thanh		Viết mã nhập liệu
@@ -17,7 +17,9 @@ Date(dd/MM/yyyy)Author  Comments
 3/11/2023	11:00		Lê Duy Anh Tú		Cập nhật thêm bảng loại sản phẩm
 22/11/2023	07:23SA		Sok Kim Thanh		Vẽ lại quan hệ fk_sanpham_khuyenmai, fk_sanpham_loaisp, Thêm khóa chính pk_hinhthuckm
 22/11/2023	09:37SA		Sok Kim Thanh		Thêm BẢNG TAIKHOAN, QUYENTRUYCAP
-
+09/12/2023	00:27SA		Sok Kim Thanh		Xóa quan hệ đệ quy quản lý nhân viên, xóa trường quản lý khỏi bảng nhân viên
+09/12/2023	10:03SA		Sok Kim Thanh		Thêm trường giới tính nvarchar(10) vào bảng nhân viên
+09/12/2023	10:03SA		Sok Kim Thanh		Thêm trường created_date datetime vào bảng nhân viên, giá trị mặc định là ngày hiện tại
 ***************************************************************************************************/
 ------------------------------------------------------------
 --Tạo database mới										   -
@@ -48,7 +50,7 @@ CREATE TABLE PHONGBAN (MAPB CHAR(4) NOT NULL ,TENPHG NVARCHAR(30) NOT NULL,	MACN
 ------------------------------------------------------------
 ---------------------Tạo bảng NHANVIEN----------------------
 ------------------------------------------------------------
-CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL  ,HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4),	QUANLY CHAR(11));
+CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL, HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4), GIOITINH nvarchar(10) NOT NULL, CREATED_DATE datetime);
 ------------------------------------------------------------
 ---------------------Tạo bảng KHACHHANG---------------------
 ------------------------------------------------------------
@@ -117,7 +119,6 @@ ALTER TABLE QUYENTRUYCAP add constraint PK_QUYENTRUYCAP primary key (MAQTC)
 ************************************************************/
 ALTER TABLE PHONGBAN ADD CONSTRAINT FK_PHONGBAN_CHINHANH FOREIGN KEY (MACN) REFERENCES CHINHANH (MACN);
 ALTER TABLE NHANVIEN ADD CONSTRAINT FK_NHANVIEN_PHONGBAN FOREIGN KEY (MAPB) REFERENCES PHONGBAN (MAPB);
-ALTER TABLE NHANVIEN ADD CONSTRAINT FK_NHANVIEN_NGUOIQUANLY FOREIGN KEY (QUANLY) REFERENCES NHANVIEN (MANV);
 ALTER TABLE SANPHAM ADD CONSTRAINT FK_SANPHAM_LOAISP FOREIGN KEY (MALOAI) REFERENCES LOAISP (MALOAI);--ok
 ALTER TABLE SANPHAM ADD CONSTRAINT FK_SANPHAM_KHUYENMAI FOREIGN KEY (MAKM) REFERENCES KHUYENMAI (MAKM);--ok
 ALTER TABLE KHUYENMAI ADD CONSTRAINT FK_KHUYENMAI_HINHTHUCKM FOREIGN KEY (MAHT) REFERENCES HINHTHUCKM (MAHT);--ok
@@ -143,6 +144,10 @@ alter table TAIKHOAN add constraint FK_TAIKHOAN_QUYENTRUYCAP foreign key (MAQTC)
 go
 alter table NHANVIEN
 add constraint d_luong default 0 for LUONG
+-- default ngày tạo nhân viên
+go
+alter table NHANVIEN
+add constraint d_created_date default getdate() for created_date
 -- default  số lượng tồn kho sản phẩm
 go
 alter table SANPHAM
@@ -192,17 +197,17 @@ VALUES ('PB01', N'Phòng Kế toán', 'CN01'),
        ('PB02', N'Phòng Nhân sự', 'CN01'),
        ('PB03', N'Phòng Kinh doanh', 'CN02');
 --Thêm dữ liệu vào bảng NHANVIEN
-INSERT INTO NHANVIEN (MANV, HOTENNV, DIACHINV, LUONG, SDTNV, NGAYSINH, MAPB, QUANLY)
-VALUES	('NV01', N'Nguyễn Văn A', N'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', 10000000, '0123456789', '1990-01-01', 'PB01', NULL),
-		('NV02', N'Trần Thị B', N'Số 2 Lê Duẩn, Quận 1, TP. Hồ Chí Minh', 12000000, '0987654321', '1991-02-02', 'PB02', 'NV01'),
-		('NV03', N'Lê Văn C', N'Số 3 Nguyễn Văn Linh, Hải Châu, Đà Nẵng', 8000000, '0969696969', '1992-03-03', 'PB03', NULL),
-		('NV04', N'Phạm Thị D', N'Số 4 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội', 9000000, '0123456789', '04/04/1993', 'PB01', NULL),
-		('NV05', N'Nguyễn Văn E', N'Số 5 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh', 11000000, '0987654321', '05/05/1994', 'PB02', 'NV02'),
-		('NV06', N'Trần Thị F', N'Số 6 Bạch Đằng, Hải Châu, Đà Nẵng', 7000000, '0969696969', '06/06/1995', 'PB03', NULL),
-		('NV07', N'Lê Văn G', N'Số 7 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội', 9500000, '0123456789', '07/07/1996', 'PB01', NULL),
-		('NV08',N'Phạm Thị H', N'Số 8 Lê Lợi, Quận 1, TP. Hồ Chí Minh', 10500000, '0987654321', '08/08/1997', 'PB02', 'NV02'),
-		('NV09', N'Nguyễn Văn I', N'Số 9 Ngô Quyền, Hải Châu, Đà Nẵng', 7500000, '0969696969', '09/09/1998', 'PB03', NULL),
-		('NV10', N'Trần Thị J', N'Số 10 Phan Chu Trinh, Hoàn Kiếm, Hà Nội', 8500000, '0123456789', '10/10/1999', 'PB01', NULL);
+INSERT INTO NHANVIEN (MANV, HOTENNV, DIACHINV, LUONG, SDTNV, NGAYSINH, MAPB, GIOITINH /*created_date auto import*/)
+VALUES	('NV01', N'Nguyễn Văn A', N'Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội', 10000000, '0123456789', '1990-01-01', 'PB01', 'nam'),
+		('NV02', N'Trần Thị B', N'Số 2 Lê Duẩn, Quận 1, TP. Hồ Chí Minh', 12000000, '0987654321', '1991-02-02', 'PB02', 'nu'),
+		('NV03', N'Lê Văn C', N'Số 3 Nguyễn Văn Linh, Hải Châu, Đà Nẵng', 8000000, '0969696969', '1992-03-03', 'PB03', 'nam'),
+		('NV04', N'Phạm Thị D', N'Số 4 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội', 9000000, '0123456789', '04/04/1993', 'PB01','nu'),
+		('NV05', N'Nguyễn Văn E', N'Số 5 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh', 11000000, '0987654321', '05/05/1994', 'PB02', 'nam'),
+		('NV06', N'Trần Thị F', N'Số 6 Bạch Đằng, Hải Châu, Đà Nẵng', 7000000, '0969696969', '06/06/1995', 'PB03','nu'),
+		('NV07', N'Lê Văn G', N'Số 7 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội', 9500000, '0123456789', '07/07/1996', 'PB01','nam'),
+		('NV08',N'Phạm Thị H', N'Số 8 Lê Lợi, Quận 1, TP. Hồ Chí Minh', 10500000, '0987654321', '08/08/1997', 'PB02','nu'),
+		('NV09', N'Nguyễn Văn I', N'Số 9 Ngô Quyền, Hải Châu, Đà Nẵng', 7500000, '0969696969', '09/09/1998', 'PB03', 'nam'),
+		('NV10', N'Trần Thị J', N'Số 10 Phan Chu Trinh, Hoàn Kiếm, Hà Nội', 8500000, '0123456789', '10/10/1999', 'PB01','nu');
 -- Thêm dữ liệu vào bảng KHACHHANG
 INSERT INTO KHACHHANG (MAKH, HOTENKH, SDTKH, DIEMTL)
 VALUES	('KH01', N'Nguyễn Văn A', '0123456789', 0), 

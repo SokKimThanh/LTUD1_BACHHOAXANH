@@ -39,5 +39,6 @@ namespace LTUD1_MF_BHX.BatLoiControl
 
         public Color err_lv_listview_back_color = ColorTranslator.FromHtml("#aa0906");// "red brown"
         public Color Transparent = Color.Transparent;
+        public Color primaryGreen = ColorTranslator.FromHtml("#9159E2");
     }
 }
