@@ -4,15 +4,6 @@ namespace LTUD1_MF_BHX
 {
     public class NhanVien
     {
-        // private string manv char (11),
-        //private string hotennv nvarchar(30),
-        //private string diachinv nvarchar(100),
-        //private float luong float,
-        //private int sdtnv int,
-        //private DateTime ngaysinh date,
-        //   private char mapb char (4),
-        //private char quanly char (11)
-
         private string manv;
         private string hotennv;
         private string diachinv;
@@ -20,22 +11,31 @@ namespace LTUD1_MF_BHX
         private int sdtnv;
         private DateTime ngaysinh;
         private string mapb;
-        private string quanly;
+        private string gioitinh; 
 
         public NhanVien()
         {
-            this.manv = "";
-            this.hotennv = "";
-            this.diachinv = "";
+            this.manv = string.Empty;
+            this.hotennv = string.Empty;
+            this.diachinv = string.Empty;
             this.luong = 0;
             this.sdtnv = 0;
             this.ngaysinh = new DateTime();
-            this.mapb = "";
-            this.quanly = "";
+            this.mapb = string.Empty;
+            this.gioitinh = string.Empty;
         }
 
-        public NhanVien(string manv, string hotennv, string diachinv, float luong, int sdtnv, DateTime ngaysinh, string mapb, string quanly)
+        public NhanVien(string manv, string hotennv, string diachinv, float luong, int sdtnv, DateTime ngaysinh, string mapb, string gioitinh)
         {
+            if (string.IsNullOrEmpty(manv))
+            {
+                throw new Exception("Mã nhân viên không được để trống!");
+            }
+            if (string.IsNullOrEmpty(hotennv))
+            {
+                throw new Exception("Tên nhân viên không được để trống!");
+            }
+
             this.manv = manv;
             this.hotennv = hotennv;
             this.diachinv = diachinv;
@@ -43,7 +43,7 @@ namespace LTUD1_MF_BHX
             this.sdtnv = sdtnv;
             this.ngaysinh = ngaysinh;
             this.mapb = mapb;
-            this.quanly = quanly;
+            this.gioitinh = gioitinh;
         }
 
         public string Manv { get => manv; set => manv = value; }
@@ -53,7 +53,7 @@ namespace LTUD1_MF_BHX
         public int Sdtnv { get => sdtnv; set => sdtnv = value; }
         public DateTime Ngaysinh { get => ngaysinh; set => ngaysinh = value; }
         public string Mapb { get => mapb; set => mapb = value; }
-        public string Quanly { get => quanly; set => quanly = value; }
+        public string Gioitinh { get => gioitinh; set => gioitinh = value; }
 
         public void Nhap()
         {
@@ -64,11 +64,11 @@ namespace LTUD1_MF_BHX
             this.Sdtnv = 123123123;
             this.ngaysinh = DateTime.Parse("2023/2/2");
             this.mapb = "pb3123";
-            this.Quanly = "ql0123123";
+            this.gioitinh = "nam";
         }
         public string Xuat()
         {
-            return $"{this.manv}#{this.hotennv}#{this.diachinv}#{this.luong}#{this.manv}#";
+            return $"{this.manv}#{this.hotennv}#{this.diachinv}#{this.luong}#{this.mapb}#{this.gioitinh}";
         }
     }
 }

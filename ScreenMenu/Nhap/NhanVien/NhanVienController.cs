@@ -22,10 +22,13 @@ namespace LTUD1_MF_BHX
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@ma", id);
+                Sql.Parameters.AddWithValue("@manv", id);
 
                 // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
+                if (Sql.ExecuteNonQuery()>0)
+                {
+                    MessageBox.Show("Xóa thành công");
+                }
 
                 // Đóng kết nối
                 CloseConnection();
@@ -50,9 +53,8 @@ namespace LTUD1_MF_BHX
             nhanvien.Luong = luong;
             nhanvien.Mapb = row.Field<string>("mapb")!;
             nhanvien.Ngaysinh = row.Field<DateTime>("ngaysinh")!;
-            nhanvien.Quanly = row.Field<string>("quanly")!;
             nhanvien.Sdtnv = row.Field<int>("sdtnv")!;
-
+            nhanvien.Gioitinh = row.Field<string>("gioitinh")!;
             return nhanvien;
         }
 
@@ -75,10 +77,13 @@ namespace LTUD1_MF_BHX
                 Sql.Parameters.AddWithValue("@luong", o.Luong);
                 Sql.Parameters.AddWithValue("@diachinv", o.Diachinv);
                 Sql.Parameters.AddWithValue("@ngaysinh", o.Ngaysinh);
-                Sql.Parameters.AddWithValue("@quanly", o.Quanly);
                 Sql.Parameters.AddWithValue("@mapb", o.Mapb);
+                Sql.Parameters.AddWithValue("@gioitinh", o.Gioitinh);
                 // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
+                if (Sql.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
 
                 // Đóng kết nối
                 CloseConnection();
@@ -251,11 +256,13 @@ namespace LTUD1_MF_BHX
                 Sql.Parameters.AddWithValue("@luong", o.Luong);
                 Sql.Parameters.AddWithValue("@diachinv", o.Diachinv);
                 Sql.Parameters.AddWithValue("@ngaysinh", o.Ngaysinh);
-                Sql.Parameters.AddWithValue("@quanly", o.Quanly);
                 Sql.Parameters.AddWithValue("@mapb", o.Mapb);
-
+                Sql.Parameters.AddWithValue("@gioitinh", o.Gioitinh);
                 // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
+                if (Sql.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                }
 
                 // Đóng kết nối
                 CloseConnection();

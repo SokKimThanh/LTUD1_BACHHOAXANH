@@ -1,4 +1,5 @@
-﻿using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
+﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             cbbMaCN.DataSource = controller.DataSource;
             cbbMaCN.DisplayMember = "TENCN";
             cbbMaCN.ValueMember = "MACN";
+            ErrColors color = new ErrColors();
+            this.BackColor = color.primaryGreen;
         }
 
         private void dgvPB_Click(object sender, EventArgs e)

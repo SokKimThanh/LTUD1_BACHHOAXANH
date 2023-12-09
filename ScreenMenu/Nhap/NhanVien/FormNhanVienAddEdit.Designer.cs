@@ -39,13 +39,17 @@
             dgvNhanVien = new DataGridView();
             groupBox14 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
-            button2 = new Button();
-            button1 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            btnEdit = new Button();
+            btnRefresh = new Button();
+            btnDelete = new Button();
+            btnAdd = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
+            groupBox5 = new GroupBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            rbNam = new RadioButton();
+            rbNu = new RadioButton();
             groupBox2 = new GroupBox();
             txtLuong = new TextBox();
             groupBox9 = new GroupBox();
@@ -71,6 +75,8 @@
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            groupBox5.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox9.SuspendLayout();
             groupBox8.SuspendLayout();
@@ -113,11 +119,11 @@
             // textBox5
             // 
             textBox5.Dock = DockStyle.Fill;
-            textBox5.Location = new Point(3, 19);
+            textBox5.Location = new Point(3, 22);
             textBox5.Margin = new Padding(5);
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Họ và tên";
-            textBox5.Size = new Size(188, 23);
+            textBox5.Size = new Size(188, 26);
             textBox5.TabIndex = 5;
             // 
             // groupBox20
@@ -135,11 +141,11 @@
             // textBox6
             // 
             textBox6.Dock = DockStyle.Fill;
-            textBox6.Location = new Point(3, 19);
+            textBox6.Location = new Point(3, 22);
             textBox6.Margin = new Padding(5);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "số điện thoại";
-            textBox6.Size = new Size(188, 23);
+            textBox6.Size = new Size(188, 26);
             textBox6.TabIndex = 9;
             // 
             // tblNhanVien
@@ -178,8 +184,6 @@
             dgvNhanVien.Name = "dgvNhanVien";
             dgvNhanVien.Size = new Size(881, 560);
             dgvNhanVien.TabIndex = 0;
-            dgvNhanVien.CellContentClick += dgvDSVNTheoCNPB_CellContentClick;
-            dgvNhanVien.Click += dgvNhanVien_Click;
             // 
             // groupBox14
             // 
@@ -202,10 +206,10 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel6.Controls.Add(button2, 0, 0);
-            tableLayoutPanel6.Controls.Add(button1, 0, 0);
-            tableLayoutPanel6.Controls.Add(button4, 0, 0);
-            tableLayoutPanel6.Controls.Add(button5, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnEdit, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnRefresh, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnDelete, 0, 0);
+            tableLayoutPanel6.Controls.Add(btnAdd, 0, 0);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tableLayoutPanel6.Location = new Point(3, 35);
@@ -217,75 +221,77 @@
             tableLayoutPanel6.Size = new Size(881, 75);
             tableLayoutPanel6.TabIndex = 0;
             // 
-            // button2
+            // btnEdit
             // 
-            button2.BackColor = Color.Transparent;
-            button2.Dock = DockStyle.Fill;
-            button2.FlatAppearance.BorderSize = 3;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.SeaShell;
-            button2.Location = new Point(297, 5);
-            button2.Margin = new Padding(5);
-            button2.Name = "button2";
-            button2.Size = new Size(136, 65);
-            button2.TabIndex = 3;
-            button2.Text = "Sửa";
-            button2.UseVisualStyleBackColor = false;
+            btnEdit.BackColor = Color.Transparent;
+            btnEdit.Dock = DockStyle.Fill;
+            btnEdit.FlatAppearance.BorderSize = 3;
+            btnEdit.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnEdit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.ForeColor = Color.SeaShell;
+            btnEdit.Location = new Point(297, 5);
+            btnEdit.Margin = new Padding(5);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(136, 65);
+            btnEdit.TabIndex = 3;
+            btnEdit.Text = "Sửa";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
-            // button1
+            // btnRefresh
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(443, 5);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Size = new Size(136, 65);
-            button1.TabIndex = 2;
-            button1.Text = "Thống kê";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnRefresh.BackColor = Color.Transparent;
+            btnRefresh.Dock = DockStyle.Fill;
+            btnRefresh.FlatAppearance.BorderSize = 3;
+            btnRefresh.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnRefresh.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.ForeColor = Color.SeaShell;
+            btnRefresh.Location = new Point(443, 5);
+            btnRefresh.Margin = new Padding(5);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(136, 65);
+            btnRefresh.TabIndex = 2;
+            btnRefresh.Text = "làm mới";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // button4
+            // btnDelete
             // 
-            button4.BackColor = Color.Transparent;
-            button4.Dock = DockStyle.Fill;
-            button4.FlatAppearance.BorderSize = 3;
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.SeaShell;
-            button4.Location = new Point(5, 5);
-            button4.Margin = new Padding(5);
-            button4.Name = "button4";
-            button4.Size = new Size(136, 65);
-            button4.TabIndex = 1;
-            button4.Text = "Xóa";
-            button4.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = Color.Transparent;
+            btnDelete.Dock = DockStyle.Fill;
+            btnDelete.FlatAppearance.BorderSize = 3;
+            btnDelete.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.ForeColor = Color.SeaShell;
+            btnDelete.Location = new Point(5, 5);
+            btnDelete.Margin = new Padding(5);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(136, 65);
+            btnDelete.TabIndex = 1;
+            btnDelete.Text = "Xóa";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // button5
+            // btnAdd
             // 
-            button5.BackColor = Color.Transparent;
-            button5.Dock = DockStyle.Fill;
-            button5.FlatAppearance.BorderSize = 3;
-            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.SeaShell;
-            button5.Location = new Point(151, 5);
-            button5.Margin = new Padding(5);
-            button5.Name = "button5";
-            button5.Size = new Size(136, 65);
-            button5.TabIndex = 0;
-            button5.Text = "Thêm";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += btnAdd_Click;
+            btnAdd.BackColor = Color.Transparent;
+            btnAdd.Dock = DockStyle.Fill;
+            btnAdd.FlatAppearance.BorderSize = 3;
+            btnAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.ForeColor = Color.SeaShell;
+            btnAdd.Location = new Point(151, 5);
+            btnAdd.Margin = new Padding(5);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(136, 65);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "Thêm";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -319,6 +325,7 @@
             tableLayoutPanel2.AutoScroll = true;
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.Controls.Add(groupBox5, 0, 6);
             tableLayoutPanel2.Controls.Add(groupBox2, 0, 5);
             tableLayoutPanel2.Controls.Add(groupBox9, 0, 1);
             tableLayoutPanel2.Controls.Add(groupBox8, 0, 3);
@@ -328,28 +335,76 @@
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(3, 35);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 9;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowCount = 8;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(373, 685);
             tableLayoutPanel2.TabIndex = 12;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(flowLayoutPanel1);
+            groupBox5.Dock = DockStyle.Fill;
+            groupBox5.ForeColor = Color.White;
+            groupBox5.Location = new Point(3, 513);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(367, 79);
+            groupBox5.TabIndex = 0;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Giới tính";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(rbNam);
+            flowLayoutPanel1.Controls.Add(rbNu);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(3, 35);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(16, 0, 16, 0);
+            flowLayoutPanel1.Size = new Size(361, 41);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
+            // rbNam
+            // 
+            rbNam.AutoSize = true;
+            rbNam.Location = new Point(19, 3);
+            rbNam.Name = "rbNam";
+            rbNam.Padding = new Padding(4);
+            rbNam.Size = new Size(89, 44);
+            rbNam.TabIndex = 0;
+            rbNam.TabStop = true;
+            rbNam.Text = "Nam";
+            rbNam.UseVisualStyleBackColor = true;
+            // 
+            // rbNu
+            // 
+            rbNu.AutoSize = true;
+            rbNu.Location = new Point(114, 3);
+            rbNu.Name = "rbNu";
+            rbNu.Padding = new Padding(4);
+            rbNu.Size = new Size(70, 44);
+            rbNu.TabIndex = 1;
+            rbNu.TabStop = true;
+            rbNu.Text = "Nữ";
+            rbNu.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(txtLuong);
             groupBox2.Dock = DockStyle.Fill;
             groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(3, 383);
+            groupBox2.Location = new Point(3, 428);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(367, 70);
-            groupBox2.TabIndex = 13;
+            groupBox2.Size = new Size(367, 79);
+            groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Lương";
             // 
@@ -361,16 +416,16 @@
             txtLuong.Name = "txtLuong";
             txtLuong.PlaceholderText = "Lương";
             txtLuong.Size = new Size(361, 39);
-            txtLuong.TabIndex = 5;
+            txtLuong.TabIndex = 0;
             // 
             // groupBox9
             // 
             groupBox9.Controls.Add(txtHoTenNV);
             groupBox9.Dock = DockStyle.Fill;
             groupBox9.ForeColor = Color.White;
-            groupBox9.Location = new Point(3, 79);
+            groupBox9.Location = new Point(3, 88);
             groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(367, 70);
+            groupBox9.Size = new Size(367, 79);
             groupBox9.TabIndex = 12;
             groupBox9.TabStop = false;
             groupBox9.Text = "Họ tên";
@@ -383,16 +438,17 @@
             txtHoTenNV.Name = "txtHoTenNV";
             txtHoTenNV.PlaceholderText = "Họ và tên";
             txtHoTenNV.Size = new Size(361, 39);
-            txtHoTenNV.TabIndex = 5;
+            txtHoTenNV.TabIndex = 0;
+            txtHoTenNV.TextChanged += txtHoTenNV_TextChanged;
             // 
             // groupBox8
             // 
             groupBox8.Controls.Add(txtSDT);
             groupBox8.Dock = DockStyle.Fill;
             groupBox8.ForeColor = Color.White;
-            groupBox8.Location = new Point(3, 231);
+            groupBox8.Location = new Point(3, 258);
             groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(367, 70);
+            groupBox8.Size = new Size(367, 79);
             groupBox8.TabIndex = 11;
             groupBox8.TabStop = false;
             groupBox8.Text = "Số điện thoại";
@@ -405,17 +461,16 @@
             txtSDT.Name = "txtSDT";
             txtSDT.PlaceholderText = "số điện thoại";
             txtSDT.Size = new Size(361, 39);
-            txtSDT.TabIndex = 9;
-            txtSDT.TextChanged += txtSDT_TextChanged;
+            txtSDT.TabIndex = 0;
             // 
             // groupBox7
             // 
             groupBox7.Controls.Add(rptNgaySinh);
             groupBox7.Dock = DockStyle.Fill;
             groupBox7.ForeColor = Color.White;
-            groupBox7.Location = new Point(3, 155);
+            groupBox7.Location = new Point(3, 173);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(367, 70);
+            groupBox7.Size = new Size(367, 79);
             groupBox7.TabIndex = 10;
             groupBox7.TabStop = false;
             groupBox7.Text = "Ngày sinh";
@@ -432,12 +487,13 @@
             // 
             // groupBox6
             // 
+            groupBox6.AutoSize = true;
             groupBox6.Controls.Add(rtbDiaChi);
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(3, 307);
+            groupBox6.Location = new Point(3, 343);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(367, 70);
+            groupBox6.Size = new Size(367, 79);
             groupBox6.TabIndex = 9;
             groupBox6.TabStop = false;
             groupBox6.Text = "Địa chỉ";
@@ -447,8 +503,8 @@
             rtbDiaChi.Dock = DockStyle.Fill;
             rtbDiaChi.Location = new Point(3, 35);
             rtbDiaChi.Name = "rtbDiaChi";
-            rtbDiaChi.Size = new Size(361, 32);
-            rtbDiaChi.TabIndex = 10;
+            rtbDiaChi.Size = new Size(361, 41);
+            rtbDiaChi.TabIndex = 0;
             rtbDiaChi.Text = "";
             // 
             // groupBox4
@@ -458,7 +514,7 @@
             groupBox4.ForeColor = Color.Snow;
             groupBox4.Location = new Point(3, 3);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(367, 70);
+            groupBox4.Size = new Size(367, 79);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Phòng ban";
@@ -513,6 +569,10 @@
             tableLayoutPanel3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox9.ResumeLayout(false);
@@ -536,9 +596,9 @@
         private TableLayoutPanel tblNhanVien;
         private GroupBox groupBox14;
         private TableLayoutPanel tableLayoutPanel6;
-        private Button button1;
-        private Button button4;
-        private Button button5;
+        private Button btnRefresh;
+        private Button btnDelete;
+        private Button btnAdd;
         private TableLayoutPanel tableLayoutPanel3;
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel2;
@@ -556,10 +616,14 @@
         private DataGridViewTextBoxColumn Column2;
         private GroupBox groupBox3;
         private DataGridView dgvNhanVien;
-        private Button button2;
+        private Button btnEdit;
         private GroupBox groupBox2;
         private TextBox txtLuong;
         private DateTimePicker rptNgaySinh;
         private ComboBox cboPhongBan;
+        private GroupBox groupBox5;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private RadioButton rbNam;
+        private RadioButton rbNu;
     }
 }

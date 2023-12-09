@@ -1,13 +1,8 @@
-﻿ -- Author:		Sok Kim Thanh
+﻿-- Author:		Sok Kim Thanh
 -- Create date: <06/12/2023 9:39 CH>
--- Description:	<Mô tả>
--- Create Procedure sp_nhanvien_insert.sql
--- Nhân viên sp_nhanvien_insert
--- ================================================
-go
-drop procedure if exists sp_nhanvien_insert
-go
+
 CREATE PROCEDURE sp_nhanvien_insert
+	 
 	-- Add the parameters for the stored procedure here
 	@manv char(11),
 	@hotennv nvarchar(30),
@@ -16,14 +11,18 @@ CREATE PROCEDURE sp_nhanvien_insert
 	@sdtnv int,
 	@ngaysinh date,
 	@mapb char(4),
-	@quanly char(11)
+	@gioitinh char(4)
 AS
-BEGIN
-	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
-
+BEGIN 
     -- Insert statements for procedure here
-	INSERT INTO nhanvien VALUES (@manv, @hotennv, @diachinv, @luong, @sdtnv, @ngaysinh,@mapb,@quanly)
-END
-GO
+	-- Đợi 50 milliseconds
+	WAITFOR DELAY '00:00:00.050';
+	INSERT INTO nhanvien(manv, hotennv, diachinv, luong, sdtnv, ngaysinh,mapb, gioitinh) 
+	VALUES (@manv, @hotennv, @diachinv, @luong, @sdtnv, @ngaysinh,@mapb, @gioitinh);
+END;
+go
+ 
+
+--exec sp_nhanvien_insert 'nv', 'hoang van dung', '222 dia chi ma', 3214232, 123123,'09-09-2000','pb01', 'nam'
+--Select * from nhanvien order by created_date asc where gioitinh = 'nam';
+ 

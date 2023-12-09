@@ -252,11 +252,35 @@ namespace LTUD1_MF_BHX.BatLoiControl
             }
         }
 
-
-        internal static void Empty_Control(object sender)
+        public static bool CheckControlValue(object sender)
         {
-            Control c = (Control)sender;
-            c.Text = string.Empty;
+            if (sender == null)
+            {
+                return false;
+            }
+
+
+            string value = string.Empty;
+            Control control = (Control)sender;
+            if (control is TextBox)
+            {
+                value = ((TextBox)control).Text;
+            }
+            else if (control is ComboBox)
+            {
+                value = ((ComboBox)control).Text;
+            }
+            else if (control is DateTimePicker)
+            {
+                value = ((DateTimePicker)control).Value.ToString();
+            }
+            else if (control is RichTextBox)
+            {
+                value = ((RichTextBox)control).Text;
+            }
+
+
+            return string.IsNullOrEmpty(value);
         }
 
 
