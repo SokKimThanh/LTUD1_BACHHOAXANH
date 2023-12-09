@@ -15,7 +15,7 @@ DROP PROCEDURE IF EXISTS sp_khachhang_delete
 GO
 CREATE PROCEDURE sp_khachhang_delete
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = ''
+	@maKH char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

@@ -11,12 +11,12 @@ GO
 -- Create date: <13/11/2023>
 -- Description:	<Mô tả>
 -- =============================================
-drop procedure if exists sp_nhacungcap_insert
+drop procedure if exists sp_khachhang_insert
 go
 CREATE PROCEDURE sp_khachhang_insert
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = '', 
-	@tenKH nvarchar(30) = N'',
+	@maKH char(11),
+	@tenKH nvarchar(30),
 	@sdtKH int = 0,
 	@diemTL int = 0
 AS
