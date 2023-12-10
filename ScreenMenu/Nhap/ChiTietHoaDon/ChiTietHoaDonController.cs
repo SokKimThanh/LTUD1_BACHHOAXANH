@@ -16,19 +16,21 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
         {
         }
 
-        public override void Delete(object id)
+        public override void Delete(object sender)
         {
+            ChiTietHoaDon user = (ChiTietHoaDon)sender;
             try
             {
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_hoadon_delete", conn);
+                Sql = new SqlCommand("sp_chitiethoadon_delete", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@maHD", id);
+                Sql.Parameters.AddWithValue("@maHD", user.MaHD);
+                Sql.Parameters.AddWithValue("@masp", user.MaSP);
 
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
@@ -115,7 +117,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                         MessageBox.Show(value.ToString());
                         if(value > 0)
                         {
-                            MessageBox.Show("Tồn kho: " + value.ToString());
+                            MessageBox.Show("Sản phẩm tồn kho còn lại: " + value.ToString());
                         }
                         else
                         {
@@ -148,35 +150,40 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
 
         public override void Insert(object sender)
         {
-
-            try
+            ChiTietHoaDon user = (ChiTietHoaDon)sender;
+            if (KTMASP(user.MaSP) == true)
             {
-                ChiTietHoaDon user = (ChiTietHoaDon)sender;
-                // Mở kết nối
-                SqlConnection conn = OpenConnection();
 
-                // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_hoadon_insert", conn);
-                Sql.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    
+                    // Mở kết nối
+                    SqlConnection conn = OpenConnection();
 
-                // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@maHD", user.MaHD);
-                Sql.Parameters.AddWithValue("masp", user.MaSP);
-                Sql.Parameters.AddWithValue("@SL", user.SoLuong);
-                // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
+                    // Tạo một đối tượng SqlCommand
+                    Sql = new SqlCommand("sp_chitiethoadon_insert", conn);
+                    Sql.CommandType = CommandType.StoredProcedure;
 
-                // Đóng kết nối
-                CloseConnection();
+                    // Thêm tham số vào SqlCommand
+                    Sql.Parameters.AddWithValue("@mahd", user.MaHD);
+                    Sql.Parameters.AddWithValue("masp", user.MaSP);
+                    Sql.Parameters.AddWithValue("@sl", user.SoLuong);
+                    // Thực thi SqlCommand
+                    Sql.ExecuteNonQuery();
+
+                    // Đóng kết nối
+                    CloseConnection();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    CloseConnection();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                CloseConnection();
-            }
+            
         }
 
         public override void SelectAll()
@@ -246,6 +253,50 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
             }
             return DataSource;
         }
+        public bool KTMASP(object id)
+        {
+           
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // thực hiện các thao tác trên cơ sở dữ liệu
+                Sql = new SqlCommand("sp_chitiethoadon_SPDangCo", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+                Sql.Parameters.AddWithValue("@makm", id);
+                using (SqlDataReader reader = Sql.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Assuming YourColumnName is a string column; adjust accordingly
+                        string  value = reader.GetString(0);
+                        MessageBox.Show(value.ToString());
+                        if (value.ToString() == id.ToString())
+                        {
+                            return false;
+                        }
+                        
+                    }
+                    else
+                    {
+                        return true;
+                        
+                    }
+                }
+
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return false;
+        }
 
         public override void Update(object sender)
         {
@@ -256,13 +307,13 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_hoadon_update", conn);
+                Sql = new SqlCommand("sp_chitiethoadon_update", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
                 Sql.Parameters.AddWithValue("@maHD", user.MaHD);
                 Sql.Parameters.AddWithValue("masp", user.MaSP);
-                Sql.Parameters.AddWithValue("@SL", user.SoLuong);
+                Sql.Parameters.AddWithValue("@SLmua", user.SoLuong);
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
 

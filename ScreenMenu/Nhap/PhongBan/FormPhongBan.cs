@@ -32,7 +32,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             controller.SelectMaCN();
             cbbMaCN.DataSource = controller.DataSource;
             cbbMaCN.DisplayMember = "TENCN";
-            cbbMaCN.ValueMember = "MACN";
+            //cbbMaCN.ValueMember = "MACN";
             ErrColors color = new ErrColors();
             this.BackColor = color.primaryGreen;
         }

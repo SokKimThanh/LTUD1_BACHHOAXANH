@@ -105,7 +105,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.DiaDiem
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {

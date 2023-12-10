@@ -106,7 +106,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -138,7 +138,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {

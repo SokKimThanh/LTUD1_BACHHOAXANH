@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.Connection;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -146,7 +147,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
             {
                 CloseConnection();
             }
-        } public  void SelectAllKhachHang()
+        }
+        public  void SelectAllKhachHang()
         {
             try
             {
@@ -180,9 +182,38 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon
 
         public override DataTable SelectByID(object id)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
 
+                // thực hiện các thao tác trên cơ sở dữ liệu
+                Sql = new SqlCommand("sp_hoadon_TimKiem", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@ma", id);
+                // Tạo đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng Database để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+                //đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return DataSource;
+        }
+        
         public override void Update(object sender)
         {
             try

@@ -1,6 +1,10 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace LTUD1_MF_BHX
+namespace LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc
 {
     internal class DanhMuc
     {
@@ -49,7 +53,6 @@ namespace LTUD1_MF_BHX
             }
         }
         public string Ghichu { get => ghichu; set => ghichu = value; }
-
 
     }
 }

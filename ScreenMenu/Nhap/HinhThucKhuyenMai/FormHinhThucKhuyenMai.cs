@@ -69,6 +69,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
             {
                 htkmConn.Update(htkm);
                 FormChiTietKhuyenMai_Load(sender, e);
+                dgvHTKM_DoubleClick(sender, e);
                 MessageBox.Show("Sửa hình thúc khuyến mãi thành công");
                 clean();
             }
@@ -87,6 +88,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
                 {
                     htkmConn.Delete(txtMaHTKM.Text);
                     FormChiTietKhuyenMai_Load(sender, e);
+                    dgvHTKM_DoubleClick(sender, e);
                     MessageBox.Show("Xóa hình thúc khuyến mãi thành công");
                     clean();
                 }
