@@ -31,21 +31,27 @@ namespace LTUD1_MF_BHX.ScreenDetail
         {
 
 
-            hdConn.SelectAll();
-            cboHoaDon.DataSource = hdConn.DataSource;
-            cboHoaDon.DisplayMember = "MAHD";
-            cboHoaDon.ValueMember = "MAHD";
+            try
+            {
+                hdConn.SelectAll();
+                cboHoaDon.DataSource = hdConn.DataSource;
+                cboHoaDon.DisplayMember = "MAHD";
+                cboHoaDon.ValueMember = "MAHD";
 
-            spConn.SelectAll();
-            cboSanPham.DataSource = spConn.DataSource;
-            cboSanPham.DisplayMember = "TENSP";
-            cboSanPham.ValueMember = "MASP";
+                spConn.SelectAll();
+                cboSanPham.DataSource = spConn.DataSource;
+                cboSanPham.DisplayMember = "TENSP";
+                cboSanPham.ValueMember = "MASP";
 
-            ctConn.SelectByID(cboHoaDon.SelectedValue.ToString());
-            dgvCTHoaDon.DataSource = ctConn.DataSource;
+                ctConn.SelectByID(cboHoaDon.SelectedValue.ToString()!);
+                dgvCTHoaDon.DataSource = ctConn.DataSource;
 
-            /* txtThanhTien =  ctConn.TongTien(cboHoaDon.SelectedValue.ToString());*/
-            txtThanhTien.Text = ctConn.TongTien(cboHoaDon.SelectedValue.ToString());
+                /* txtThanhTien =  ctConn.TongTien(cboHoaDon.SelectedValue.ToString());*/
+                txtThanhTien.Text = ctConn.TongTien(cboHoaDon.SelectedValue.ToString()!);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

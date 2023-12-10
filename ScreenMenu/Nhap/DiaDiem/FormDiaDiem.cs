@@ -26,8 +26,14 @@ namespace LTUD1_MF_BHX.Screen
 
         private void FormDiaDiem_Load(object sender, EventArgs e)
         {
-            DiaDiemController.SelectAll();
-            dgvDD.DataSource = DiaDiemController.DataSource;
+            try
+            {
+                DiaDiemController.SelectAll();
+                dgvDD.DataSource = DiaDiemController.DataSource;
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgvDD_CellClick(object sender, DataGridViewCellEventArgs e)

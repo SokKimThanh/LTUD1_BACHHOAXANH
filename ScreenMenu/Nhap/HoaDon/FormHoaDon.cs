@@ -23,17 +23,24 @@ namespace LTUD1_MF_BHX.Screen
         HoaDonController HoaDonController;
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
- /*          
-            HoaDonController.SelectAll();
-            dgvHD.DataSource = HoaDonController.DataSource;
-            HoaDonController.SelectAllNhanVien();
-            cbbMaNV.DataSource = HoaDonController.DataSource;
-            cbbMaNV.DisplayMember = "MANV";
-            cbbMaNV.ValueMember = "HOTENNV";
-            HoaDonController.SelectAllKhachHang();
-            cbbMaKH.DataSource = HoaDonController.DataSource;
-            cbbMaKH.DisplayMember = "MAKH";
-            cbbMaKH.ValueMember = "HOTENKH";*/
+            try
+            {
+                txtTongTien.Text = "0";
+                HoaDonController.SelectAll();
+                dgvHD.DataSource = HoaDonController.DataSource;
+                HoaDonController.SelectAllNhanVien();
+                cbbMaNV.DataSource = HoaDonController.DataSource;
+                cbbMaNV.DisplayMember = "HOTENNV";
+                cbbMaNV.ValueMember = "MANV";
+                HoaDonController.SelectAllKhachHang();
+                cbbMaKH.DataSource = HoaDonController.DataSource;
+                cbbMaKH.DisplayMember = "HOTENKH";
+                cbbMaKH.ValueMember = "MAKH";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -41,20 +48,6 @@ namespace LTUD1_MF_BHX.Screen
 
         }
 
-        private void FormHoaDon_Load_1(object sender, EventArgs e)
-        {
-            txtTongTien.Text = "0";
-            HoaDonController.SelectAll();
-            dgvHD.DataSource = HoaDonController.DataSource;
-            HoaDonController.SelectAllNhanVien();
-            cbbMaNV.DataSource = HoaDonController.DataSource;
-            cbbMaNV.DisplayMember = "HOTENNV";
-            cbbMaNV.ValueMember = "MANV";
-            HoaDonController.SelectAllKhachHang();
-            cbbMaKH.DataSource = HoaDonController.DataSource;
-            cbbMaKH.DisplayMember = "HOTENKH";
-            cbbMaKH.ValueMember = "MAKH";
-        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -62,7 +55,7 @@ namespace LTUD1_MF_BHX.Screen
             hoaDon.MaHD = txtMaHD.Text;
             hoaDon.NgayHD = DateTime.Parse(dtpkNgayLap.Text);
             hoaDon.TongTien = float.Parse(txtTongTien.Text);
-            hoaDon.MaNV = cbbMaNV.SelectedValue.ToString(); 
+            hoaDon.MaNV = cbbMaNV.SelectedValue.ToString();
             hoaDon.MaKH = cbbMaKH.SelectedValue.ToString();
             HoaDonController.Insert(hoaDon);
             HoaDonController.SelectAll();

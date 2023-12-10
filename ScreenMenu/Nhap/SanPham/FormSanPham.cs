@@ -30,27 +30,34 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 
         private void FormSanPham_Load(object sender, EventArgs e)
         {
-            spConn.SelectAll();
-            dgvDanhSachSP.DataSource = spConn.DataSource;
+            try
+            {
+                spConn.SelectAll();
+                dgvDanhSachSP.DataSource = spConn.DataSource;
 
-            kmConn.SelectAll();
-            cboKM.DataSource = kmConn.DataSource;
+                kmConn.SelectAll();
+                cboKM.DataSource = kmConn.DataSource;
 
-            cboKM.DisplayMember = "TENHINHTHUC";
-            cboKM.ValueMember = "MAKM";
+                cboKM.DisplayMember = "TENHINHTHUC";
+                cboKM.ValueMember = "MAKM";
 
 
-            loaiConn.SelectAll();
-            cboLoaiSP.DataSource = loaiConn.DataSource;
-            cboLoaiSP.DisplayMember = "TENLOAI";
-            cboLoaiSP.ValueMember = "MALOAI";
+                loaiConn.SelectAll();
+                cboLoaiSP.DataSource = loaiConn.DataSource;
+                cboLoaiSP.DisplayMember = "TENLOAI";
+                cboLoaiSP.ValueMember = "MALOAI";
 
-            nCCConn.SelectAll();
-            cboNCC.DataSource = nCCConn.DataSource;
-            cboNCC.DisplayMember = "TENNCC";
-            cboNCC.ValueMember = "MANCC";
+                nCCConn.SelectAll();
+                cboNCC.DataSource = nCCConn.DataSource;
+                cboNCC.DisplayMember = "TENNCC";
+                cboNCC.ValueMember = "MANCC";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-           
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -107,7 +114,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             cboLoaiSP.Text = dgvDanhSachSP.Rows[dong].Cells[8].Value.ToString();
             cboNCC.Text = dgvDanhSachSP.Rows[dong].Cells[7].Value.ToString();
 
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
