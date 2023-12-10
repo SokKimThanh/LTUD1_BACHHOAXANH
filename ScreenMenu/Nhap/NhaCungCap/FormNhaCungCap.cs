@@ -24,11 +24,8 @@ namespace LTUD1_MF_BHX
         {
             try
             {
-                dgvNhaCungCap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvNhaCungCap.ForeColor = Color.Black;
-                dgvNhaCungCap.ReadOnly = true;
-                dgvNhaCungCap.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvNhaCungCap.MultiSelect = false;
+                // Help config datagridview setting
+                DataGridViewHelper.ConfigureDataGridView(dgvNhaCungCap);
 
                 nccController.SelectAll();
                 dgvNhaCungCap.DataSource = nccController.DataSource;

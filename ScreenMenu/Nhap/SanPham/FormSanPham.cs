@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.Connection;
+using LTUD1_MF_BHX.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,8 +25,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             kmConn = new KhuyenMaiController(Utils.ConnectionString);
             loaiConn = new DanhMucController(Utils.ConnectionString);
             nCCConn = new NhaCungCapController(Utils.ConnectionString);
-            dgvDanhSachSP.DefaultCellStyle.ForeColor = Color.Black;
-
+            // data grid view setting
+            DataGridViewHelper.ConfigureDataGridView(dgvDanhSachSP);
         }
 
         private void FormSanPham_Load(object sender, EventArgs e)

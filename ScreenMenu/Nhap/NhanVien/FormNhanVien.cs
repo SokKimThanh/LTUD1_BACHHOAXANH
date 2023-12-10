@@ -18,11 +18,7 @@ namespace LTUD1_MF_BHX.Screen
             cboPhongBan.DropDownStyle = ComboBoxStyle.DropDownList;
 
             // data grid view setting
-            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvNhanVien.ForeColor = Color.Black;
-            dgvNhanVien.ReadOnly = true;
-            dgvNhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvNhanVien.MultiSelect = false;
+            DataGridViewHelper.ConfigureDataGridView(dgvNhanVien);
 
             // data grid view event
             dgvNhanVien.Click += dgvNhanVien_Click!;
