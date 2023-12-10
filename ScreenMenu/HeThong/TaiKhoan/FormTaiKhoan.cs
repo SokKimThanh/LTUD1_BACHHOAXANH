@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Design.Serialization;
+﻿using LTUD1_MF_BHX.Model;
+using System.ComponentModel.Design.Serialization;
 using System.Data;
 
 namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
@@ -6,18 +7,14 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
     public partial class FormTaiKhoan : Form
     {
         AccountController controller;
-        DataGridView dgv;
+        
 
         public FormTaiKhoan()
         {
             InitializeComponent();
             controller = new AccountController(Utils.ConnectionString);
             // data grid view setting
-            dgvTaiKhoan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTaiKhoan.ForeColor = Color.Black;
-            dgvTaiKhoan.ReadOnly = true;
-            dgvTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTaiKhoan.MultiSelect = false;
+            DataGridViewHelper.ConfigureDataGridView(dgvTaiKhoan);
             dgvTaiKhoan.Click += new EventHandler(dgvTaiKhoan_Click!);
         }
 
@@ -28,7 +25,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
             try
             {
                 controller.SelectAll();
-                this.dgv.DataSource = controller.DataSource;
+                dgvTaiKhoan.DataSource = controller.DataSource;
                 txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
             }
             catch (Exception ex)
@@ -55,7 +52,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
             try
             {
                 controller.SelectAll();
-                this.dgv.DataSource = controller.DataSource;
+                dgvTaiKhoan.DataSource = controller.DataSource;
             }
             catch (Exception ex)
             {
@@ -107,7 +104,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         private void dgvTaiKhoan_Click(object sender, EventArgs e)
         {
             int dong = dgvTaiKhoan.CurrentCell.RowIndex;
-            txtMaTaiKhoan.Text = dgv.Rows[dong].Cells[0].Value.ToString();
+            txtMaTaiKhoan.Text = dgvTaiKhoan.Rows[dong].Cells[0].Value.ToString();
             DataRow row = controller.SelectByID(txtMaTaiKhoan.Text!).Rows[0];
 
             Account o = (Account)controller.FromDataRow(row);

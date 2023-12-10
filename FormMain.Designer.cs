@@ -36,6 +36,10 @@
             btnSetting = new Button();
             panelDesktop = new Panel();
             tlpNavigationBar = new TableLayoutPanel();
+            btnNhaCCCT = new Button();
+            btnPhongBan = new Button();
+            btnHinhThucKM = new Button();
+            btnDanhMucSP = new Button();
             btnChiTietHD = new Button();
             btnDiaDiem = new Button();
             btnKhachHang = new Button();
@@ -69,10 +73,6 @@
             sidebarTimer = new System.Windows.Forms.Timer(components);
             listIcon_navigation_bar = new ImageList(components);
             lisIcon_navigation_bar_transparent10 = new ImageList(components);
-            btnDanhMucSP = new Button();
-            btnHinhThucKM = new Button();
-            btnPhongBan = new Button();
-            btnNhaCCCT = new Button();
             tlpBHX.SuspendLayout();
             flpSetting.SuspendLayout();
             panelSetting.SuspendLayout();
@@ -153,6 +153,54 @@
             tlpNavigationBar.Controls.Add(btnSanPham, 0, 2);
             tlpNavigationBar.Controls.Add(btnNhanVien, 0, 0);
             tlpNavigationBar.Name = "tlpNavigationBar";
+            // 
+            // btnNhaCCCT
+            // 
+            resources.ApplyResources(btnNhaCCCT, "btnNhaCCCT");
+            btnNhaCCCT.FlatAppearance.BorderSize = 0;
+            btnNhaCCCT.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnNhaCCCT.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnNhaCCCT.ForeColor = Color.White;
+            btnNhaCCCT.Image = Properties.Resources.nhacungcapct;
+            btnNhaCCCT.Name = "btnNhaCCCT";
+            btnNhaCCCT.UseVisualStyleBackColor = true;
+            btnNhaCCCT.Click += btnNhaCCCT_Click;
+            // 
+            // btnPhongBan
+            // 
+            resources.ApplyResources(btnPhongBan, "btnPhongBan");
+            btnPhongBan.FlatAppearance.BorderSize = 0;
+            btnPhongBan.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnPhongBan.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnPhongBan.ForeColor = Color.White;
+            btnPhongBan.Image = Properties.Resources.phongban;
+            btnPhongBan.Name = "btnPhongBan";
+            btnPhongBan.UseVisualStyleBackColor = true;
+            btnPhongBan.Click += btnPhongBan_Click;
+            // 
+            // btnHinhThucKM
+            // 
+            resources.ApplyResources(btnHinhThucKM, "btnHinhThucKM");
+            btnHinhThucKM.FlatAppearance.BorderSize = 0;
+            btnHinhThucKM.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnHinhThucKM.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnHinhThucKM.ForeColor = Color.White;
+            btnHinhThucKM.Image = Properties.Resources.hinhthuckhuyenmai;
+            btnHinhThucKM.Name = "btnHinhThucKM";
+            btnHinhThucKM.UseVisualStyleBackColor = true;
+            btnHinhThucKM.Click += btnHinhThucKM_Click;
+            // 
+            // btnDanhMucSP
+            // 
+            resources.ApplyResources(btnDanhMucSP, "btnDanhMucSP");
+            btnDanhMucSP.FlatAppearance.BorderSize = 0;
+            btnDanhMucSP.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnDanhMucSP.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnDanhMucSP.ForeColor = Color.White;
+            btnDanhMucSP.Image = Properties.Resources.danhmucsanpham;
+            btnDanhMucSP.Name = "btnDanhMucSP";
+            btnDanhMucSP.UseVisualStyleBackColor = true;
+            btnDanhMucSP.Click += btnDanhMucSP_Click;
             // 
             // btnChiTietHD
             // 
@@ -463,54 +511,6 @@
             lisIcon_navigation_bar_transparent10.Images.SetKeyName(10, "search.png");
             lisIcon_navigation_bar_transparent10.Images.SetKeyName(11, "navigationBar.png");
             lisIcon_navigation_bar_transparent10.Images.SetKeyName(12, "thoat.png");
-            // 
-            // btnDanhMucSP
-            // 
-            resources.ApplyResources(btnDanhMucSP, "btnDanhMucSP");
-            btnDanhMucSP.FlatAppearance.BorderSize = 0;
-            btnDanhMucSP.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
-            btnDanhMucSP.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
-            btnDanhMucSP.ForeColor = Color.White;
-            btnDanhMucSP.Image = Properties.Resources.danhmucsanpham;
-            btnDanhMucSP.Name = "btnDanhMucSP";
-            btnDanhMucSP.UseVisualStyleBackColor = true;
-            btnDanhMucSP.Click += btnDanhMucSP_Click;
-            // 
-            // btnHinhThucKM
-            // 
-            resources.ApplyResources(btnHinhThucKM, "btnHinhThucKM");
-            btnHinhThucKM.FlatAppearance.BorderSize = 0;
-            btnHinhThucKM.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
-            btnHinhThucKM.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
-            btnHinhThucKM.ForeColor = Color.White;
-            btnHinhThucKM.Image = Properties.Resources.hinhthuckhuyenmai;
-            btnHinhThucKM.Name = "btnHinhThucKM";
-            btnHinhThucKM.UseVisualStyleBackColor = true;
-            btnHinhThucKM.Click += btnHinhThucKM_Click;
-            // 
-            // btnPhongBan
-            // 
-            resources.ApplyResources(btnPhongBan, "btnPhongBan");
-            btnPhongBan.FlatAppearance.BorderSize = 0;
-            btnPhongBan.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
-            btnPhongBan.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
-            btnPhongBan.ForeColor = Color.White;
-            btnPhongBan.Image = Properties.Resources.phongban;
-            btnPhongBan.Name = "btnPhongBan";
-            btnPhongBan.UseVisualStyleBackColor = true;
-            btnPhongBan.Click += btnPhongBan_Click;
-            // 
-            // btnNhaCCCT
-            // 
-            resources.ApplyResources(btnNhaCCCT, "btnNhaCCCT");
-            btnNhaCCCT.FlatAppearance.BorderSize = 0;
-            btnNhaCCCT.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
-            btnNhaCCCT.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
-            btnNhaCCCT.ForeColor = Color.White;
-            btnNhaCCCT.Image = Properties.Resources.nhacungcapct;
-            btnNhaCCCT.Name = "btnNhaCCCT";
-            btnNhaCCCT.UseVisualStyleBackColor = true;
-            btnNhaCCCT.Click += btnNhaCCCT_Click;
             // 
             // FormMain
             // 

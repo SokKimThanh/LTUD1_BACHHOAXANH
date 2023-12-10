@@ -7,9 +7,6 @@
     <Compile Update="ScreenMenu\Nhap\NhaCungCapCT\FormChiTietNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\HeThong\FormCaiDat.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\HeThong\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
