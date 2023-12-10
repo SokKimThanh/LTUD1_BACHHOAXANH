@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.Model;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
 
 using System;
@@ -20,12 +21,22 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc
         {
             InitializeComponent();
             dmConn = new DanhMucController(Utils.ConnectionString);
-            dgvDS.DefaultCellStyle.ForeColor = Color.Black;
+            // setting datagridview
+            DataGridViewHelper.ConfigureDataGridView(dgvDS);
         }
         private void FormLoaisp_Load(object sender, EventArgs e)
         {
-            dmConn.SelectAll();
-            dgvDS.DataSource = dmConn.DataSource;
+            try
+            {
+                dmConn.SelectAll();
+                dgvDS.DataSource = dmConn.DataSource;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void dgvDS_Click(object sender, EventArgs e)
         {
@@ -64,7 +75,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc
                     MessageBox.Show(ex.Message);
                 }
             }
-           
+
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -99,7 +110,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc
                     MessageBox.Show(ex.Message);
                 }
             }
-            
+
         }
         private void dgvHTKM_DoubleClick(object sender, EventArgs e)
         {

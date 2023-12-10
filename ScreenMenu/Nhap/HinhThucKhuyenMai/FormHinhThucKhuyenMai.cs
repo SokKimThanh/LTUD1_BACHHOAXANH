@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTUD1_MF_BHX.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
         {
             InitializeComponent();
             htkmConn = new HinhThucKhuyenMaiControler(Utils.ConnectionString);
-            dgvHTKM.DefaultCellStyle.ForeColor = Color.Black;
+            DataGridViewHelper.ConfigureDataGridView(dgvHTKM);
         }
 
         private void FormChiTietKhuyenMai_Load(object sender, EventArgs e)
@@ -106,8 +107,8 @@ namespace LTUD1_MF_BHX.ScreenDetail
             txtTenHTKM.Text = dgvHTKM.Rows[dong].Cells[1].Value.ToString();
             txtGhiChu.Text = dgvHTKM.Rows[dong].Cells[2].Value.ToString();
 
-            btnSua.Enabled= true;
-            btnXoa.Enabled= true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
             btnThem.Enabled = false;
             txtMaHTKM.Enabled = false;
         }

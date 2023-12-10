@@ -169,7 +169,7 @@
             // dgvPB
             // 
             dgvPB.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPB.BackgroundColor = SystemColors.ButtonHighlight;
+            dgvPB.BackgroundColor = SystemColors.ActiveBorder;
             dgvPB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPB.Dock = DockStyle.Fill;
             dgvPB.Location = new Point(3, 22);

@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.Model;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,9 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
         public FormPhongBan()
         {
             InitializeComponent();
-            controller = new PhongBanController(Utils.ConnectionString);
-            dgvPB.DefaultCellStyle.ForeColor = Color.Black;
+            controller = new PhongBanController(Utils.ConnectionString);             
+            DataGridViewHelper.ConfigureDataGridView(dgvPB);
+
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

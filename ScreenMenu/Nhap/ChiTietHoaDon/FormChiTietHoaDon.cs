@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.Model;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
@@ -25,7 +26,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
             hdConn = new HoaDonController(Utils.ConnectionString);
             spConn = new SanPhamController(Utils.ConnectionString);
             ctConn = new ChiTietHoaDonController(Utils.ConnectionString);
-            dgvCTHoaDon.DefaultCellStyle.ForeColor = Color.Black;
+            DataGridViewHelper.ConfigureDataGridView(dgvCTHoaDon);
         }
         private void FormChiTietHoaDon_Load(object sender, EventArgs e)
         {
@@ -48,7 +49,8 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
                 /* txtThanhTien =  ctConn.TongTien(cboHoaDon.SelectedValue.ToString());*/
                 txtThanhTien.Text = ctConn.TongTien(cboHoaDon.SelectedValue.ToString()!);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
