@@ -7,9 +7,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		Sok Kim Thanh
--- Create date: <07/11/2023>
--- Description:	<Mô tả>
+-- Author:		Quy Ngo
+-- Create date: <10/12/2023>
+
 -- =============================================
 drop procedure if exists sp_chitiethoadon_insert
 go

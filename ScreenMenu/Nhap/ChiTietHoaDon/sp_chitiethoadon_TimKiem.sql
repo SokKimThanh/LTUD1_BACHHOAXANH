@@ -2,7 +2,7 @@
 -- =============================================
 -- Author:		Vo Tu
 -- Create date: <13/11/2023>
--- Description:	<Mô tả>
+
 -- =============================================
 DROP PROCEDURE IF EXISTS sp_chitiethoadon_TimKiem
 GO
