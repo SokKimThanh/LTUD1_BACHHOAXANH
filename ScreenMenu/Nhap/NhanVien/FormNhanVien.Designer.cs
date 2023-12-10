@@ -50,8 +50,6 @@
             btnAdd = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnTimKiem = new Button();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            txtHoTen = new TextBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -74,6 +72,7 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             saveFileDialog1 = new SaveFileDialog();
+            txtHoTen = new TextBox();
             tableLayoutPanel7.SuspendLayout();
             groupBox19.SuspendLayout();
             groupBox20.SuspendLayout();
@@ -84,7 +83,6 @@
             groupBox14.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            flowLayoutPanel3.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -346,8 +344,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 67.60124F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.3987579F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(txtHoTen, 0, 0);
             tableLayoutPanel1.Controls.Add(btnTimKiem, 1, 0);
-            tableLayoutPanel1.Controls.Add(flowLayoutPanel3, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -373,28 +371,6 @@
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = false;
             btnTimKiem.Click += btnTimKiem_Click;
-            // 
-            // flowLayoutPanel3
-            // 
-            flowLayoutPanel3.Controls.Add(txtHoTen);
-            flowLayoutPanel3.Dock = DockStyle.Fill;
-            flowLayoutPanel3.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel3.Location = new Point(3, 3);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(593, 76);
-            flowLayoutPanel3.TabIndex = 4;
-            // 
-            // txtHoTen
-            // 
-            txtHoTen.AutoCompleteMode = AutoCompleteMode.Suggest;
-            txtHoTen.Dock = DockStyle.Fill;
-            txtHoTen.Location = new Point(14, 3);
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.PlaceholderText = "Tìm theo họ tên";
-            txtHoTen.ScrollBars = ScrollBars.Both;
-            txtHoTen.Size = new Size(576, 39);
-            txtHoTen.TabIndex = 0;
-            txtHoTen.TextAlign = HorizontalAlignment.Center;
             // 
             // tableLayoutPanel3
             // 
@@ -646,6 +622,19 @@
             Column2.Name = "Column2";
             Column2.Width = 125;
             // 
+            // txtHoTen
+            // 
+            txtHoTen.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtHoTen.Dock = DockStyle.Fill;
+            txtHoTen.Location = new Point(3, 3);
+            txtHoTen.Multiline = true;
+            txtHoTen.Name = "txtHoTen";
+            txtHoTen.PlaceholderText = "Tìm theo họ tên";
+            txtHoTen.ScrollBars = ScrollBars.Both;
+            txtHoTen.Size = new Size(593, 76);
+            txtHoTen.TabIndex = 5;
+            txtHoTen.TextAlign = HorizontalAlignment.Center;
+            // 
             // FormNhanVien
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -671,8 +660,7 @@
             groupBox14.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel3.ResumeLayout(false);
-            flowLayoutPanel3.PerformLayout();
+            tableLayoutPanel1.PerformLayout();
             tableLayoutPanel3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
@@ -736,10 +724,9 @@
         private ToolStripMenuItem tsmThongKe;
         private ToolStripMenuItem tsmInFilePDF;
         private TableLayoutPanel tableLayoutPanel1;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private TextBox txtHoTen;
         private Button btnTimKiem;
         private SaveFileDialog saveFileDialog1;
         private ToolStripMenuItem tsmXuatFileExcel;
+        private TextBox txtHoTen;
     }
 }

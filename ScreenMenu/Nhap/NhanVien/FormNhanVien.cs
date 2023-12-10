@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.Model;
 using LTUD1_MF_BHX.ScreenMenu.In;
 using Microsoft.VisualBasic.Devices;
 using System;
@@ -19,6 +20,7 @@ namespace LTUD1_MF_BHX.Screen
     {
         NhanVienController nvController = new NhanVienController(Utils.ConnectionString);
         InFilePDF infile;
+        ButtonStateManager buttonStateManager = new ButtonStateManager();
         public FormNhanVien()
         {
             InitializeComponent();
@@ -37,6 +39,10 @@ namespace LTUD1_MF_BHX.Screen
             dgvNhanVien.Click += dgvNhanVien_Click!;
 
             rbNam.Checked = true;
+            buttonStateManager.btnAdd = this.btnAdd;
+            buttonStateManager.btnEdit = this.btnEdit;
+            buttonStateManager.btnDelete = this.btnDelete;
+            buttonStateManager.btnRefresh = this.btnRefresh;
         }
 
         private void FormNhanVien_Load(object sender, EventArgs e)
@@ -57,7 +63,7 @@ namespace LTUD1_MF_BHX.Screen
                 infile = new InFilePDF(dgvNhanVien, saveFileDialog1);
 
                 // crud button setting state
-                UpdateButtonStates("form_loaded");
+                buttonStateManager.UpdateButtonStates("form_loaded");
             }
             catch (Exception ex)
             {
@@ -66,21 +72,7 @@ namespace LTUD1_MF_BHX.Screen
         }
 
 
-        /// <summary>
-        /// Tìm newid cuối của danh sách
-        /// </summary>
-        /// <param name="prefix">ví dụ: nv0312312</param>
-        /// <param name="id_cuoi">ví dụ: 01232123</param>
-        /// <returns></returns>
-        private string generateID(string prefix, string id_cuoi)
-        {
-            // idIncrease: bỏ 2 kí tự đầu và chuyển sang số, rồi cộng lên 1
-            int idIncrease = Convert.ToInt32(id_cuoi.Trim().Substring(2)) + 1;
-            // newid: định dạng số kết quả thành 9 số dạng chuỗi
-            string newid = prefix + string.Format("{0:000000000}", idIncrease);
-            // newid: trả về kết quả
-            return newid;//ví dụ nv0123456789
-        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -116,14 +108,13 @@ namespace LTUD1_MF_BHX.Screen
                     return;
                 }
 
-                Random d = new Random();
                 nvController.SelectAll();
-                //DataRow dongcuoicung = nvController.DataSource.Rows[nvController.DataSource.Rows.Count - 1];
+                //DataRow dongcuoicung = nccController.DataSource.Rows[nccController.DataSource.Rows.Count - 1];
                 DataRow dongdautien = nvController.DataSource.Rows[0];
                 // id tự động tăng
                 //string id_cuoi = (string)dongcuoicung["NhanVienID"];
                 string id_dau = (string)dongdautien["NhanVienID"];
-                string maNV = generateID("nv", id_dau);
+                string maNV = GenerateID.generateID("nv", id_dau);
 
                 string hotennv = txtHoTenNV.Text;
                 float luong = float.Parse(txtLuong.Text);
@@ -136,7 +127,8 @@ namespace LTUD1_MF_BHX.Screen
                 nvController.Insert(o);
                 nvController.SelectAll();
                 dgvNhanVien.DataSource = nvController.DataSource;
-                UpdateButtonStates("refresh_clicked");
+                buttonStateManager.UpdateButtonStates("refresh_clicked");
+                refresh();
             }
             catch (Exception ex)
             {
@@ -151,21 +143,22 @@ namespace LTUD1_MF_BHX.Screen
         {
             try
             {
+                // Khởi tạo số dòng đang chọn
                 int dong = dgvNhanVien.CurrentCell.RowIndex;
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-                string manv = dgvNhanVien.Rows[dong]
-                                         .Cells[0].Value
-                                         .ToString();
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+                // lấy ra mã
+                string manv = dgvNhanVien.Rows[dong].Cells[0].Value.ToString()!;
+                // khởi tạo đối tượng bằng mã
                 DataTable dt = nvController.SelectByID(manv!);
                 DataRow dr = dt.Rows[0];
                 NhanVien nv = (NhanVien)nvController.FromDataRow(dr);
+                // thiết lập dữ liệu ngược lại mỗi lần click
                 txtHoTenNV.Text = nv.Hotennv;
                 txtLuong.Text = nv.Luong.ToString();
                 txtSDT.Text = nv.Sdtnv.ToString();
                 rtbDiaChi.Text = nv.Diachinv;
                 cboPhongBan.SelectedValue = nv.Mapb;// chay duoc
                 rptNgaySinh.Value = nv.Ngaysinh;//  chay duoc
+                // kiêm tra giới tính để chọn đúng control
                 if (nv.Gioitinh.Equals("nam"))
                 {
                     rbNam.Checked = true;
@@ -174,7 +167,8 @@ namespace LTUD1_MF_BHX.Screen
                 {
                     rbNu.Checked = true;
                 }
-                UpdateButtonStates("datagridview_selected");
+                // cập nhật lại trang thái các nút
+                buttonStateManager.UpdateButtonStates("datagridview_selected");
             }
             catch (Exception ex)
             {
@@ -182,43 +176,7 @@ namespace LTUD1_MF_BHX.Screen
             }
 
         }
-        public void UpdateButtonStates(string state)
-        {
-            switch (state)
-            {
-                case "datagridview_selected":
-                    btnAdd.Enabled = false;
-                    btnEdit.Enabled = true;
-                    btnDelete.Enabled = true;
-                    btnRefresh.Enabled = true;
-                    break;
-                case "refresh_clicked":
-                    btnAdd.Enabled = true;
-                    btnEdit.Enabled = false;
-                    btnDelete.Enabled = false;
-                    btnRefresh.Enabled = true;
-                    refresh();
-                    break;
-                case "form_loaded":
-                    btnAdd.Enabled = true;
-                    btnEdit.Enabled = false;
-                    btnDelete.Enabled = false;
-                    btnRefresh.Enabled = true;
-                    break;
-                case "adding_textChanged":
-                    btnAdd.Enabled = true;
-                    btnEdit.Enabled = false;
-                    btnDelete.Enabled = false;
-                    btnRefresh.Enabled = true;
-                    break;
-                default:
-                    btnAdd.Enabled = false;
-                    btnEdit.Enabled = false;
-                    btnDelete.Enabled = false;
-                    btnRefresh.Enabled = false;
-                    break;
-            }
-        }
+
         public void refresh()
         {
             txtHoTenNV.Text = string.Empty;
@@ -232,12 +190,13 @@ namespace LTUD1_MF_BHX.Screen
         }
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            UpdateButtonStates("refresh_clicked");
+            buttonStateManager.UpdateButtonStates("refresh_clicked");
+            refresh();
         }
 
         private void txtHoTenNV_TextChanged(object sender, EventArgs e)
         {
-            UpdateButtonStates("adding_textChanged");
+            buttonStateManager.UpdateButtonStates("adding_textChanged");
         }
 
 
@@ -248,7 +207,8 @@ namespace LTUD1_MF_BHX.Screen
                 int dong = dgvNhanVien.CurrentCell.RowIndex;
                 string manv = dgvNhanVien.Rows[dong].Cells[0].Value.ToString()!;
                 nvController.Delete(manv!);
-                UpdateButtonStates("refresh_clicked");
+                buttonStateManager.UpdateButtonStates("refresh_clicked");
+                refresh();
             }
             catch (Exception ex)
             {
@@ -306,7 +266,8 @@ namespace LTUD1_MF_BHX.Screen
                 NhanVien o = new NhanVien(maNV, hotennv, diachinv, luong, sdtnv, ngaysinh, mapb, gioitinh);
                 nvController.Update(o);
 
-                UpdateButtonStates("refresh_clicked");
+                buttonStateManager.UpdateButtonStates("refresh_clicked");
+                refresh();
             }
             catch (Exception ex)
             {
