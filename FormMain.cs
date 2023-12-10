@@ -2,8 +2,10 @@
 using LTUD1_MF_BHX.BatLoiControl;
 using LTUD1_MF_BHX.Screen;
 using LTUD1_MF_BHX.Screen.HeThong;
+using LTUD1_MF_BHX.ScreenDetail;
 using LTUD1_MF_BHX.ScreenMenu.HeThong;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon;
 using System.Runtime.InteropServices;
 
 
@@ -114,10 +116,10 @@ namespace LTUD1_MF_BHX
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
- 
+
+
         public void OpenChildForm(Form childForm)
-        { 
+        {
             if (currentChildForm != null)
             {
                 //open only form
@@ -179,6 +181,12 @@ namespace LTUD1_MF_BHX
         {
             ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
             OpenChildForm(new FormKhachHang());
+        }
+        //8
+        private void btnChiTietHD_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
+            OpenChildForm(new FormChiTietHoaDon());
         }
         /**
        * reset click 7 button
@@ -323,5 +331,7 @@ namespace LTUD1_MF_BHX
         {
 
         }
+
+        
     }
 }
