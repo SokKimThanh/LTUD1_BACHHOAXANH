@@ -1,4 +1,5 @@
 ﻿using LTUD1_MF_BHX.Connection;
+using LTUD1_MF_BHX.Model;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,9 @@ namespace LTUD1_MF_BHX.Screen
                 cbbMaKH.DataSource = HoaDonController.DataSource;
                 cbbMaKH.DisplayMember = "HOTENKH";
                 cbbMaKH.ValueMember = "MAKH";
+
+                // setting datagridview
+                DataGridViewHelper.ConfigureDataGridView(dgvHD);
             }
             catch (Exception ex)
             {

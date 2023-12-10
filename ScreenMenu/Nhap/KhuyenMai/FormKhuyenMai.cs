@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTUD1_MF_BHX.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,8 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
                 cboMaHT.DataSource = htkmConn.DataSource;
                 cboMaHT.DisplayMember = "TENHINHTHUC";
                 cboMaHT.ValueMember = "MAHT";
+                // setting datagridview
+                DataGridViewHelper.ConfigureDataGridView(dgvDSKM);
             }
             catch (Exception ex)
             {
