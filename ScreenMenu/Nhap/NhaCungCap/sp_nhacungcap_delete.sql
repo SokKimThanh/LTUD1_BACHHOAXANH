@@ -9,7 +9,7 @@ GO
 -- =============================================
 -- Author:		Sok Kim Thanh
 -- Create date: <07/11/2023>
--- Description:	<Mô tả>
+-- update date: 10-12-2023
 -- =============================================
 DROP PROCEDURE IF EXISTS sp_nhacungcap_delete
 GO
@@ -26,3 +26,5 @@ BEGIN
 	DELETE FROM nhacungcap WHERE MANCC = @MANCC
 END
 GO
+--exec sp_nhacungcap_delete 'ncc04'-- khoa nay dang duoc su dung khong the delete
+--select * from chitietcc

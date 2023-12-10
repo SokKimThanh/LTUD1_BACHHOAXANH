@@ -28,24 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             groupBox6 = new GroupBox();
-            textBox2 = new TextBox();
+            txtDiaChi = new TextBox();
             groupBox5 = new GroupBox();
-            textBox1 = new TextBox();
+            txtSDTNCC = new TextBox();
             groupBox4 = new GroupBox();
-            textBox3 = new TextBox();
+            txtTenNhaCC = new TextBox();
             tableLayoutPanel4 = new TableLayoutPanel();
             groupBox2 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            button1 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btnDelete = new Button();
+            btnRefresh = new Button();
+            btnEdit = new Button();
             btnThem = new Button();
             groupBox3 = new GroupBox();
             dgvNhaCungCap = new DataGridView();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            tsmNhaCCOld = new ToolStripMenuItem();
+            tsmNCCNew = new ToolStripMenuItem();
+            tsmNCCALL = new ToolStripMenuItem();
+            tsmExportPDF = new ToolStripMenuItem();
+            tsmExportExcel = new ToolStripMenuItem();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -57,6 +64,7 @@
             tableLayoutPanel1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -113,7 +121,7 @@
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(textBox2);
+            groupBox6.Controls.Add(txtDiaChi);
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.ForeColor = Color.White;
@@ -125,18 +133,18 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "Địa chỉ";
             // 
-            // textBox2
+            // txtDiaChi
             // 
-            textBox2.Dock = DockStyle.Fill;
-            textBox2.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(3, 29);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(367, 39);
-            textBox2.TabIndex = 2;
+            txtDiaChi.Dock = DockStyle.Fill;
+            txtDiaChi.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDiaChi.Location = new Point(3, 29);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(367, 39);
+            txtDiaChi.TabIndex = 2;
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(textBox1);
+            groupBox5.Controls.Add(txtSDTNCC);
             groupBox5.Dock = DockStyle.Fill;
             groupBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.ForeColor = Color.White;
@@ -148,18 +156,18 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Số điện thoại";
             // 
-            // textBox1
+            // txtSDTNCC
             // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(3, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(367, 39);
-            textBox1.TabIndex = 2;
+            txtSDTNCC.Dock = DockStyle.Fill;
+            txtSDTNCC.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSDTNCC.Location = new Point(3, 29);
+            txtSDTNCC.Name = "txtSDTNCC";
+            txtSDTNCC.Size = new Size(367, 39);
+            txtSDTNCC.TabIndex = 2;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(textBox3);
+            groupBox4.Controls.Add(txtTenNhaCC);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox4.ForeColor = Color.White;
@@ -170,14 +178,14 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Tên nhà cung cấp";
             // 
-            // textBox3
+            // txtTenNhaCC
             // 
-            textBox3.Dock = DockStyle.Fill;
-            textBox3.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(3, 29);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(361, 39);
-            textBox3.TabIndex = 2;
+            txtTenNhaCC.Dock = DockStyle.Fill;
+            txtTenNhaCC.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenNhaCC.Location = new Point(3, 29);
+            txtTenNhaCC.Name = "txtTenNhaCC";
+            txtTenNhaCC.Size = new Size(361, 39);
+            txtTenNhaCC.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
@@ -215,9 +223,9 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel1.Controls.Add(button1, 0, 0);
-            tableLayoutPanel1.Controls.Add(button3, 0, 0);
-            tableLayoutPanel1.Controls.Add(button2, 3, 0);
+            tableLayoutPanel1.Controls.Add(btnDelete, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnRefresh, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnEdit, 0, 0);
             tableLayoutPanel1.Controls.Add(btnThem, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
@@ -232,56 +240,59 @@
             tableLayoutPanel1.Size = new Size(881, 101);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // btnDelete
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderSize = 3;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(297, 5);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Size = new Size(136, 91);
-            button1.TabIndex = 3;
-            button1.Text = "Xóa";
-            button1.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = Color.Transparent;
+            btnDelete.Dock = DockStyle.Fill;
+            btnDelete.FlatAppearance.BorderSize = 3;
+            btnDelete.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.ForeColor = Color.SeaShell;
+            btnDelete.Location = new Point(297, 5);
+            btnDelete.Margin = new Padding(5);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(136, 91);
+            btnDelete.TabIndex = 4;
+            btnDelete.Text = "Xóa";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // button3
+            // btnRefresh
             // 
-            button3.BackColor = Color.Transparent;
-            button3.Dock = DockStyle.Fill;
-            button3.FlatAppearance.BorderSize = 3;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.SeaShell;
-            button3.Location = new Point(151, 5);
-            button3.Margin = new Padding(5);
-            button3.Name = "button3";
-            button3.Size = new Size(136, 91);
-            button3.TabIndex = 2;
-            button3.Text = "Sửa";
-            button3.UseVisualStyleBackColor = false;
+            btnRefresh.BackColor = Color.Transparent;
+            btnRefresh.Dock = DockStyle.Fill;
+            btnRefresh.FlatAppearance.BorderSize = 3;
+            btnRefresh.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnRefresh.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.ForeColor = Color.SeaShell;
+            btnRefresh.Location = new Point(443, 5);
+            btnRefresh.Margin = new Padding(5);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(136, 91);
+            btnRefresh.TabIndex = 3;
+            btnRefresh.Text = "Làm mới";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // button2
+            // btnEdit
             // 
-            button2.BackColor = Color.Transparent;
-            button2.Dock = DockStyle.Fill;
-            button2.FlatAppearance.BorderSize = 3;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.SeaShell;
-            button2.Location = new Point(443, 5);
-            button2.Margin = new Padding(5);
-            button2.Name = "button2";
-            button2.Size = new Size(136, 91);
-            button2.TabIndex = 1;
-            button2.Text = "xem chi tiết";
-            button2.UseVisualStyleBackColor = false;
+            btnEdit.BackColor = Color.Transparent;
+            btnEdit.Dock = DockStyle.Fill;
+            btnEdit.FlatAppearance.BorderSize = 3;
+            btnEdit.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnEdit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.ForeColor = Color.SeaShell;
+            btnEdit.Location = new Point(5, 5);
+            btnEdit.Margin = new Padding(5);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(136, 91);
+            btnEdit.TabIndex = 2;
+            btnEdit.Text = "Sửa";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnThem
             // 
@@ -292,7 +303,7 @@
             btnThem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.ForeColor = Color.SeaShell;
-            btnThem.Location = new Point(5, 5);
+            btnThem.Location = new Point(151, 5);
             btnThem.Margin = new Padding(5);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(136, 91);
@@ -324,12 +335,55 @@
             dgvNhaCungCap.TabIndex = 0;
             dgvNhaCungCap.Click += dgvNhaCungCap_Click;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.BackColor = Color.FromArgb(255, 192, 192);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { tsmNhaCCOld, tsmNCCNew, tsmNCCALL, tsmExportPDF, tsmExportExcel });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(201, 124);
+            // 
+            // tsmNhaCCOld
+            // 
+            tsmNhaCCOld.Name = "tsmNhaCCOld";
+            tsmNhaCCOld.Size = new Size(200, 24);
+            tsmNhaCCOld.Text = "Nhà cung cấp cũ";
+            tsmNhaCCOld.Click += tsmNhaCCOld_Click;
+            // 
+            // tsmNCCNew
+            // 
+            tsmNCCNew.Name = "tsmNCCNew";
+            tsmNCCNew.Size = new Size(200, 24);
+            tsmNCCNew.Text = "Nhà cung cấp mới";
+            tsmNCCNew.Click += tsmNCCNew_Click;
+            // 
+            // tsmNCCALL
+            // 
+            tsmNCCALL.Name = "tsmNCCALL";
+            tsmNCCALL.Size = new Size(200, 24);
+            tsmNCCALL.Text = "Tất cả nhà cung cấp";
+            tsmNCCALL.Click += tsmNCCALL_Click;
+            // 
+            // tsmExportPDF
+            // 
+            tsmExportPDF.Name = "tsmExportPDF";
+            tsmExportPDF.Size = new Size(200, 24);
+            tsmExportPDF.Text = "Xuất file pdf";
+            tsmExportPDF.Click += tsmExportPDF_Click;
+            // 
+            // tsmExportExcel
+            // 
+            tsmExportExcel.Name = "tsmExportExcel";
+            tsmExportExcel.Size = new Size(200, 24);
+            tsmExportExcel.Text = "Xuất file exel";
+            tsmExportExcel.Click += tsmExportExcel_Click;
+            // 
             // FormNhaCungCap
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
             ClientSize = new Size(1284, 729);
+            ContextMenuStrip = contextMenuStrip1;
             Controls.Add(tableLayoutPanel3);
             Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(5);
@@ -350,6 +404,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -358,19 +413,25 @@
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel2;
         private GroupBox groupBox6;
-        private TextBox textBox2;
+        private TextBox txtDiaChi;
         private GroupBox groupBox5;
-        private TextBox textBox1;
+        private TextBox txtSDTNCC;
         private GroupBox groupBox4;
-        private TextBox textBox3;
+        private TextBox txtTenNhaCC;
         private TableLayoutPanel tableLayoutPanel4;
         private GroupBox groupBox3;
         private GroupBox groupBox2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button button3;
-        private Button button2;
+        private Button btnEdit;
         private Button btnThem;
-        private Button button1;
+        private Button btnRefresh;
         private DataGridView dgvNhaCungCap;
+        private Button btnDelete;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem tsmNhaCCOld;
+        private ToolStripMenuItem tsmNCCNew;
+        private ToolStripMenuItem tsmNCCALL;
+        private ToolStripMenuItem tsmExportPDF;
+        private ToolStripMenuItem tsmExportExcel;
     }
 }
