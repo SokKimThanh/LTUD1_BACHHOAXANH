@@ -1,11 +1,10 @@
 ﻿
 using LTUD1_MF_BHX.BatLoiControl;
 using LTUD1_MF_BHX.Screen;
-using LTUD1_MF_BHX.Screen.HeThong;
 using LTUD1_MF_BHX.ScreenDetail;
 using LTUD1_MF_BHX.ScreenMenu.HeThong;
+using LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
-using LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan;
 using System.Runtime.InteropServices;
@@ -313,7 +312,7 @@ namespace LTUD1_MF_BHX
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
-            OpenChildForm(new FormCaiDat());
+            OpenChildForm(new FormTaiKhoan());
         }
 
         private void tlpHeader_Paint(object sender, PaintEventArgs e)
