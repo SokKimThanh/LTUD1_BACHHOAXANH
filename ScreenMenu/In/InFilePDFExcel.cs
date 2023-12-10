@@ -25,19 +25,17 @@ namespace LTUD1_MF_BHX.ScreenMenu.In
             tabFot.WriteSelectedRows(0, -1, 150, document.Bottom, writer.DirectContent);
         }
     }
-    public class InFilePDF
+    public class InFilePDFExcel
     {
         DataGridView dgv;
-        SaveFileDialog sfd;
-        public InFilePDF(DataGridView dgv, SaveFileDialog sfd)
+        
+        public InFilePDFExcel(DataGridView dgv)
         {
-            this.dgv = dgv;
-            this.sfd = sfd;
+            this.dgv = dgv;        
         }
 
         public DataGridView Dgv { get => dgv; set => dgv = value; }
-        public SaveFileDialog Sfd { get => sfd; set => sfd = value; }
-
+ 
         public void ExportToPDF()
         {
             Thread thread = new Thread(() => Clipboard.SetText("Test!"));
@@ -46,7 +44,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.In
             thread.Join(); // Chờ luồng kết thúc
             if (dgv.Rows.Count > 0)
             {
-                //SaveFileDialog sfd = new SaveFileDialog();
+                SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
                 sfd.FileName = "Output.pdf";
                 bool fileError = false;
