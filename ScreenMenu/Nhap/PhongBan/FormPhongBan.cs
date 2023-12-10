@@ -19,7 +19,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
         public FormPhongBan()
         {
             InitializeComponent();
-            controller = new PhongBanController(Utils.ConnectionString);             
+            controller = new PhongBanController(Utils.ConnectionString);
             DataGridViewHelper.ConfigureDataGridView(dgvPB);
 
         }
@@ -34,9 +34,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             controller.SelectMaCN();
             cbbMaCN.DataSource = controller.DataSource;
             cbbMaCN.DisplayMember = "TENCN";
-            //cbbMaCN.ValueMember = "MACN";
-            ErrColors color = new ErrColors();
-            this.BackColor = color.primaryGreen;
+            cbbMaCN.ValueMember = "MACN";
         }
 
         private void dgvPB_Click(object sender, EventArgs e)
