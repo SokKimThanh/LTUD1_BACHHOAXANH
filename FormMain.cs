@@ -114,9 +114,10 @@ namespace LTUD1_MF_BHX
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
+        
+ 
         public void OpenChildForm(Form childForm)
-        {
+        { 
             if (currentChildForm != null)
             {
                 //open only form
@@ -139,7 +140,7 @@ namespace LTUD1_MF_BHX
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
-            OpenChildForm(new FormNhanVienAddEdit());
+            OpenChildForm(new FormNhanVien());
         }
         //2
         private void btnDiaDiem_Click(object sender, EventArgs e)

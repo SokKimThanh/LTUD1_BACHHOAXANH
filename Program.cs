@@ -6,6 +6,7 @@ namespace LTUD1_MF_BHX
 {
     internal class Program
     {
+        [STAThread]
         public static void Main(string[] args)
         {
             Application.EnableVisualStyles();
@@ -13,11 +14,11 @@ namespace LTUD1_MF_BHX
             try
             {
                 //FormDangNhap logon = new FormDangNhap();
-                //FormMain logon = new FormMain();
-                //FormHoaDon hoaDon =  new FormHoaDon();
-                //FormKhachHang khachHang = new FormKhachHang(); 
-                FormNhanVienAddEdit d = new FormNhanVienAddEdit();
-                Application.Run(d);
+                FormMain logon = new FormMain();
+                //FormHoaDon logon =  new FormHoaDon();
+                //FormKhachHang logon = new FormKhachHang(); 
+                //FormNhanVienAddEdit logon = new FormNhanVienAddEdit();
+                Application.Run(logon);
 
                 //Trần Minh Tuấn
 
