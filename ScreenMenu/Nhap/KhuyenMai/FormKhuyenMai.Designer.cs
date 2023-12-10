@@ -120,13 +120,13 @@
             tableLayoutPanel1.Controls.Add(btnThem, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            tableLayoutPanel1.Location = new Point(3, 43);
+            tableLayoutPanel1.Location = new Point(3, 35);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
-            tableLayoutPanel1.Size = new Size(887, 94);
+            tableLayoutPanel1.Size = new Size(887, 102);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // btnSua
@@ -141,7 +141,7 @@
             btnSua.Location = new Point(299, 5);
             btnSua.Margin = new Padding(5);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(137, 84);
+            btnSua.Size = new Size(137, 92);
             btnSua.TabIndex = 2;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
@@ -159,7 +159,7 @@
             btnXoa.Location = new Point(152, 5);
             btnXoa.Margin = new Padding(5);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(137, 84);
+            btnXoa.Size = new Size(137, 92);
             btnXoa.TabIndex = 1;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             btnThem.Location = new Point(5, 5);
             btnThem.Margin = new Padding(5);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(137, 84);
+            btnThem.Size = new Size(137, 92);
             btnThem.TabIndex = 0;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
@@ -199,7 +199,7 @@
             // 
             dgvDSKM.AllowUserToOrderColumns = true;
             dgvDSKM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvDSKM.BackgroundColor = SystemColors.ButtonHighlight;
+            dgvDSKM.BackgroundColor = SystemColors.ActiveBorder;
             dgvDSKM.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDSKM.Location = new Point(8, 43);
             dgvDSKM.Name = "dgvDSKM";
@@ -230,7 +230,7 @@
             tableLayoutPanel3.Controls.Add(groupBox2, 0, 0);
             tableLayoutPanel3.Controls.Add(groupBox5, 0, 3);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 43);
+            tableLayoutPanel3.Location = new Point(3, 35);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 10;
@@ -245,7 +245,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(373, 677);
+            tableLayoutPanel3.Size = new Size(373, 685);
             tableLayoutPanel3.TabIndex = 19;
             // 
             // txtNBD
@@ -254,10 +254,10 @@
             txtNBD.Dock = DockStyle.Fill;
             txtNBD.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtNBD.ForeColor = Color.White;
-            txtNBD.Location = new Point(0, 134);
+            txtNBD.Location = new Point(0, 136);
             txtNBD.Margin = new Padding(0);
             txtNBD.Name = "txtNBD";
-            txtNBD.Size = new Size(373, 67);
+            txtNBD.Size = new Size(373, 68);
             txtNBD.TabIndex = 6;
             txtNBD.TabStop = false;
             txtNBD.Text = "Ngày kết thúc";
@@ -266,10 +266,10 @@
             // 
             dtpNKT.Dock = DockStyle.Fill;
             dtpNKT.Format = DateTimePickerFormat.Short;
-            dtpNKT.Location = new Point(3, 35);
+            dtpNKT.Location = new Point(3, 29);
             dtpNKT.Margin = new Padding(6, 4, 6, 4);
             dtpNKT.Name = "dtpNKT";
-            dtpNKT.Size = new Size(367, 39);
+            dtpNKT.Size = new Size(367, 33);
             dtpNKT.TabIndex = 15;
             // 
             // groupBox6
@@ -278,10 +278,10 @@
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(0, 67);
+            groupBox6.Location = new Point(0, 68);
             groupBox6.Margin = new Padding(0);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(373, 67);
+            groupBox6.Size = new Size(373, 68);
             groupBox6.TabIndex = 5;
             groupBox6.TabStop = false;
             groupBox6.Text = "Ngày bắt đầu";
@@ -290,10 +290,10 @@
             // 
             dtpNBD.Dock = DockStyle.Fill;
             dtpNBD.Format = DateTimePickerFormat.Short;
-            dtpNBD.Location = new Point(3, 35);
+            dtpNBD.Location = new Point(3, 29);
             dtpNBD.Margin = new Padding(6, 4, 6, 4);
             dtpNBD.Name = "dtpNBD";
-            dtpNBD.Size = new Size(367, 39);
+            dtpNBD.Size = new Size(367, 33);
             dtpNBD.TabIndex = 14;
             // 
             // groupBox2
@@ -304,7 +304,7 @@
             groupBox2.ForeColor = Color.White;
             groupBox2.Location = new Point(3, 3);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(367, 61);
+            groupBox2.Size = new Size(367, 62);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Mã khuyến mãi";
@@ -313,7 +313,7 @@
             // 
             txtMaKM.Location = new Point(-6, 30);
             txtMaKM.Name = "txtMaKM";
-            txtMaKM.Size = new Size(373, 39);
+            txtMaKM.Size = new Size(373, 33);
             txtMaKM.TabIndex = 0;
             // 
             // groupBox5
@@ -321,7 +321,7 @@
             groupBox5.Controls.Add(cboMaHT);
             groupBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.ForeColor = Color.Snow;
-            groupBox5.Location = new Point(3, 204);
+            groupBox5.Location = new Point(3, 207);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(367, 61);
             groupBox5.TabIndex = 7;
@@ -332,15 +332,15 @@
             // 
             cboMaHT.Dock = DockStyle.Fill;
             cboMaHT.FormattingEnabled = true;
-            cboMaHT.Location = new Point(3, 35);
+            cboMaHT.Location = new Point(3, 29);
             cboMaHT.Margin = new Padding(6, 4, 6, 4);
             cboMaHT.Name = "cboMaHT";
-            cboMaHT.Size = new Size(361, 40);
+            cboMaHT.Size = new Size(361, 33);
             cboMaHT.TabIndex = 10;
             // 
             // FormKhuyenMai
             // 
-            AutoScaleDimensions = new SizeF(16F, 41F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
             ClientSize = new Size(1284, 729);

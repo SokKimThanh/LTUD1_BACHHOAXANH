@@ -25,7 +25,7 @@ namespace LTUD1_MF_BHX
                 Sql.Parameters.AddWithValue("@manv", id);
 
                 // Thực thi SqlCommand
-                if (Sql.ExecuteNonQuery()>0)
+                if (Sql.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Xóa thành công");
                 }
@@ -45,17 +45,17 @@ namespace LTUD1_MF_BHX
 
         public override object FromDataRow(DataRow row)
         {
-            NhanVien nhanvien = new NhanVien();
-            nhanvien.Manv = row.Field<string>("manv")!;
-            nhanvien.Hotennv = row.Field<string>("hotennv")!;
-            nhanvien.Diachinv = row.Field<string>("diachinv")!;
+            NhanVien o = new NhanVien();
+            o.Manv = row.Field<string>("manv")!;
+            o.Hotennv = row.Field<string>("hotennv")!;
+            o.Diachinv = row.Field<string>("diachinv")!;
             int luong = row.Field<int>("luong")!;
-            nhanvien.Luong = luong;
-            nhanvien.Mapb = row.Field<string>("mapb")!;
-            nhanvien.Ngaysinh = row.Field<DateTime>("ngaysinh")!;
-            nhanvien.Sdtnv = row.Field<int>("sdtnv")!;
-            nhanvien.Gioitinh = row.Field<string>("gioitinh")!;
-            return nhanvien;
+            o.Luong = luong;
+            o.Mapb = row.Field<string>("mapb")!;
+            o.Ngaysinh = row.Field<DateTime>("ngaysinh")!;
+            o.Sdtnv = row.Field<int>("sdtnv")!;
+            o.Gioitinh = row.Field<string>("gioitinh")!;
+            return o;
         }
 
         public override void Insert(object sender)
@@ -130,39 +130,7 @@ namespace LTUD1_MF_BHX
             }
             return DataSource;
         }
-        public DataTable DanhSachNhanVienTheoChiNhanhPhongBan()
-        {
-            try
-            {
-                // Mở kết nối
-                SqlConnection conn = OpenConnection();
 
-                // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_nhanvien_danhsach_theophongban_chinhanh", conn);
-                Sql.CommandType = CommandType.StoredProcedure;
-
-                // Tạo một đối tượng SqlDataAdapter
-                Adapter = new SqlDataAdapter(Sql);
-
-                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
-                DataSource = new DataTable();
-
-                // Đổ dữ liệu vào DataTable
-                Adapter.Fill(DataSource);
-
-                // Đóng kết nố
-                CloseConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("DanhSachNhanVienTheoChiNhanhPhongBan" + ex.Message);
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return DataSource;
-        }
         public override void SelectAll()
         {
             try
@@ -171,7 +139,7 @@ namespace LTUD1_MF_BHX
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_nhanvien_select_all", conn);
+                Sql = new SqlCommand("sp_nhanvien_select_all_all", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Tạo một đối tượng SqlDataAdapter
@@ -188,7 +156,7 @@ namespace LTUD1_MF_BHX
             }
             catch (Exception ex)
             {
-                throw new Exception("SelectAll" + ex.Message);
+                throw new Exception("SelectAllALl" + ex.Message);
             }
             finally
             {
@@ -276,40 +244,6 @@ namespace LTUD1_MF_BHX
                 CloseConnection();
             }
         }
-
-        public DataTable DanhSachQuanLy()
-        {
-            try
-            {
-                // Mở kết nối
-                SqlConnection conn = OpenConnection();
-
-                // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_cbo_quanly_theo_phongban", conn);
-                Sql.CommandType = CommandType.StoredProcedure;
-
-                // Tạo một đối tượng SqlDataAdapter
-                Adapter = new SqlDataAdapter(Sql);
-
-                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
-                DataSource = new DataTable();
-
-                // Đổ dữ liệu vào DataTable
-                Adapter.Fill(DataSource);
-
-                // Đóng kết nối
-                CloseConnection();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("DanhSachQuanLy" + ex.Message);
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return DataSource;
-        }
         public DataTable GetDanhSachPhongBan()
         {
 
@@ -347,38 +281,40 @@ namespace LTUD1_MF_BHX
             return dt;
         }
 
-        public DataTable GetDanhSachNhanVien()
+        public DataTable Search(string keyword)
         {
+            DataTable dt;
+
             try
             {
                 // Mở kết nối
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_nhanvien_select_all", conn);
+                Sql = new SqlCommand("sp_nhanvien_search", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
-
+                Sql.Parameters.AddWithValue("@keyword", keyword);
                 // Tạo một đối tượng SqlDataAdapter
                 Adapter = new SqlDataAdapter(Sql);
 
                 // Tạo một đối tượng DataTable để lưu trữ dữ liệu
-                DataSource = new DataTable();
+                dt = new DataTable();
 
                 // Đổ dữ liệu vào DataTable
-                Adapter.Fill(DataSource);
+                Adapter.Fill(dt);
 
                 // Đóng kết nối
                 CloseConnection();
             }
             catch (Exception ex)
             {
-                throw new Exception("GetDanhSachNhanVien" + ex.Message);
+                throw new Exception("GetDanhSachPhongBan" + ex.Message);
             }
             finally
             {
                 CloseConnection();
             }
-            return DataSource;
+            return dt;
         }
     }
 }

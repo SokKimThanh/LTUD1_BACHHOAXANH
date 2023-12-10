@@ -1,6 +1,6 @@
 ﻿namespace LTUD1_MF_BHX.Screen
 {
-    partial class FormNhanVienAddEdit
+    partial class FormNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox18 = new GroupBox();
             tableLayoutPanel7 = new TableLayoutPanel();
             groupBox19 = new GroupBox();
@@ -37,12 +38,18 @@
             tblNhanVien = new TableLayoutPanel();
             groupBox3 = new GroupBox();
             dgvNhanVien = new DataGridView();
+            cmsNhanVien = new ContextMenuStrip(components);
+            tsmThongKe = new ToolStripMenuItem();
+            tsmInFilePDF = new ToolStripMenuItem();
+            tsmXuatFileExcel = new ToolStripMenuItem();
             groupBox14 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             btnEdit = new Button();
             btnRefresh = new Button();
             btnDelete = new Button();
             btnAdd = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            btnTimKiem = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -64,14 +71,18 @@
             cboPhongBan = new ComboBox();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            saveFileDialog1 = new SaveFileDialog();
+            txtHoTen = new TextBox();
             tableLayoutPanel7.SuspendLayout();
             groupBox19.SuspendLayout();
             groupBox20.SuspendLayout();
             tblNhanVien.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
+            cmsNhanVien.SuspendLayout();
             groupBox14.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -152,15 +163,16 @@
             // 
             tblNhanVien.ColumnCount = 1;
             tblNhanVien.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tblNhanVien.Controls.Add(groupBox3, 0, 0);
-            tblNhanVien.Controls.Add(groupBox14, 0, 1);
+            tblNhanVien.Controls.Add(groupBox3, 0, 1);
+            tblNhanVien.Controls.Add(groupBox14, 0, 2);
+            tblNhanVien.Controls.Add(tableLayoutPanel1, 0, 0);
             tblNhanVien.Dock = DockStyle.Fill;
             tblNhanVien.Location = new Point(388, 3);
             tblNhanVien.Name = "tblNhanVien";
-            tblNhanVien.RowCount = 2;
-            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 83.5408F));
-            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 16.459198F));
-            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblNhanVien.RowCount = 3;
+            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 12.1715078F));
+            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 68.7413559F));
+            tblNhanVien.RowStyles.Add(new RowStyle(SizeType.Percent, 18.9463253F));
             tblNhanVien.Size = new Size(893, 723);
             tblNhanVien.TabIndex = 6;
             // 
@@ -169,30 +181,63 @@
             groupBox3.Controls.Add(dgvNhanVien);
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.ForeColor = Color.White;
-            groupBox3.Location = new Point(3, 3);
+            groupBox3.Location = new Point(3, 91);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(887, 598);
+            groupBox3.Size = new Size(887, 491);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách";
             // 
             // dgvNhanVien
             // 
+            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNhanVien.ContextMenuStrip = cmsNhanVien;
             dgvNhanVien.Dock = DockStyle.Fill;
             dgvNhanVien.Location = new Point(3, 35);
             dgvNhanVien.Name = "dgvNhanVien";
-            dgvNhanVien.Size = new Size(881, 560);
+            dgvNhanVien.Size = new Size(881, 453);
             dgvNhanVien.TabIndex = 0;
+            // 
+            // cmsNhanVien
+            // 
+            cmsNhanVien.BackColor = SystemColors.ActiveBorder;
+            cmsNhanVien.Items.AddRange(new ToolStripItem[] { tsmThongKe, tsmInFilePDF, tsmXuatFileExcel });
+            cmsNhanVien.Name = "contextMenuStrip1";
+            cmsNhanVien.Size = new Size(164, 76);
+            // 
+            // tsmThongKe
+            // 
+            tsmThongKe.BackColor = Color.FromArgb(255, 192, 192);
+            tsmThongKe.Name = "tsmThongKe";
+            tsmThongKe.Size = new Size(163, 24);
+            tsmThongKe.Text = "Thống kê";
+            tsmThongKe.Click += tsmThongKe_Click;
+            // 
+            // tsmInFilePDF
+            // 
+            tsmInFilePDF.BackColor = Color.FromArgb(255, 192, 192);
+            tsmInFilePDF.Name = "tsmInFilePDF";
+            tsmInFilePDF.Size = new Size(163, 24);
+            tsmInFilePDF.Text = "Xuất File PDF";
+            tsmInFilePDF.Click += tsmInFilePDF_Click;
+            // 
+            // tsmXuatFileExcel
+            // 
+            tsmXuatFileExcel.BackColor = Color.FromArgb(255, 192, 192);
+            tsmXuatFileExcel.Name = "tsmXuatFileExcel";
+            tsmXuatFileExcel.Size = new Size(163, 24);
+            tsmXuatFileExcel.Text = "Xuất File Excel";
+            tsmXuatFileExcel.Click += tsmInFileExcel_Click;
             // 
             // groupBox14
             // 
             groupBox14.Controls.Add(tableLayoutPanel6);
             groupBox14.Dock = DockStyle.Fill;
             groupBox14.ForeColor = Color.White;
-            groupBox14.Location = new Point(3, 607);
+            groupBox14.Location = new Point(3, 588);
             groupBox14.Name = "groupBox14";
-            groupBox14.Size = new Size(887, 113);
+            groupBox14.Size = new Size(887, 132);
             groupBox14.TabIndex = 8;
             groupBox14.TabStop = false;
             groupBox14.Text = "Thao tác dữ liệu";
@@ -218,7 +263,7 @@
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
-            tableLayoutPanel6.Size = new Size(881, 75);
+            tableLayoutPanel6.Size = new Size(881, 94);
             tableLayoutPanel6.TabIndex = 0;
             // 
             // btnEdit
@@ -233,7 +278,7 @@
             btnEdit.Location = new Point(297, 5);
             btnEdit.Margin = new Padding(5);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(136, 65);
+            btnEdit.Size = new Size(136, 84);
             btnEdit.TabIndex = 3;
             btnEdit.Text = "Sửa";
             btnEdit.UseVisualStyleBackColor = false;
@@ -251,7 +296,7 @@
             btnRefresh.Location = new Point(443, 5);
             btnRefresh.Margin = new Padding(5);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(136, 65);
+            btnRefresh.Size = new Size(136, 84);
             btnRefresh.TabIndex = 2;
             btnRefresh.Text = "làm mới";
             btnRefresh.UseVisualStyleBackColor = false;
@@ -269,7 +314,7 @@
             btnDelete.Location = new Point(5, 5);
             btnDelete.Margin = new Padding(5);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(136, 65);
+            btnDelete.Size = new Size(136, 84);
             btnDelete.TabIndex = 1;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = false;
@@ -287,11 +332,45 @@
             btnAdd.Location = new Point(151, 5);
             btnAdd.Margin = new Padding(5);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(136, 65);
+            btnAdd.Size = new Size(136, 84);
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 67.60124F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32.3987579F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(txtHoTen, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnTimKiem, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(3, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(887, 82);
+            tableLayoutPanel1.TabIndex = 11;
+            // 
+            // btnTimKiem
+            // 
+            btnTimKiem.BackColor = Color.Transparent;
+            btnTimKiem.Dock = DockStyle.Fill;
+            btnTimKiem.FlatAppearance.BorderSize = 3;
+            btnTimKiem.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnTimKiem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnTimKiem.FlatStyle = FlatStyle.Flat;
+            btnTimKiem.ForeColor = Color.SeaShell;
+            btnTimKiem.Location = new Point(604, 5);
+            btnTimKiem.Margin = new Padding(5);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(278, 72);
+            btnTimKiem.TabIndex = 4;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.UseVisualStyleBackColor = false;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -543,7 +622,20 @@
             Column2.Name = "Column2";
             Column2.Width = 125;
             // 
-            // FormNhanVienAddEdit
+            // txtHoTen
+            // 
+            txtHoTen.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtHoTen.Dock = DockStyle.Fill;
+            txtHoTen.Location = new Point(3, 3);
+            txtHoTen.Multiline = true;
+            txtHoTen.Name = "txtHoTen";
+            txtHoTen.PlaceholderText = "Tìm theo họ tên";
+            txtHoTen.ScrollBars = ScrollBars.Both;
+            txtHoTen.Size = new Size(593, 76);
+            txtHoTen.TabIndex = 5;
+            txtHoTen.TextAlign = HorizontalAlignment.Center;
+            // 
+            // FormNhanVien
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -553,7 +645,7 @@
             Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.White;
             Margin = new Padding(5);
-            Name = "FormNhanVienAddEdit";
+            Name = "FormNhanVien";
             Text = "Nhập thông tin nhân viên";
             Load += FormNhanVien_Load;
             tableLayoutPanel7.ResumeLayout(false);
@@ -564,8 +656,11 @@
             tblNhanVien.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
+            cmsNhanVien.ResumeLayout(false);
             groupBox14.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             tableLayoutPanel3.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
@@ -625,5 +720,13 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private RadioButton rbNam;
         private RadioButton rbNu;
+        private ContextMenuStrip cmsNhanVien;
+        private ToolStripMenuItem tsmThongKe;
+        private ToolStripMenuItem tsmInFilePDF;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button btnTimKiem;
+        private SaveFileDialog saveFileDialog1;
+        private ToolStripMenuItem tsmXuatFileExcel;
+        private TextBox txtHoTen;
     }
 }

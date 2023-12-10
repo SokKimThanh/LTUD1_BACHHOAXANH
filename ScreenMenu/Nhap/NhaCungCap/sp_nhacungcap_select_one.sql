@@ -9,7 +9,7 @@ GO
 -- =============================================
 -- Author:		Sok Kim Thanh
 -- Create date: <07/11/2023>
--- Description:	<Mô tả>
+-- update date: 10-12-2023
 -- =============================================
 drop procedure if exists sp_nhacungcap_select_one
 go

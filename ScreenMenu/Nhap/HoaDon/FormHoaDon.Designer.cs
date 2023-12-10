@@ -105,13 +105,13 @@
             tableLayoutPanel1.Controls.Add(btnThem, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            tableLayoutPanel1.Location = new Point(3, 43);
+            tableLayoutPanel1.Location = new Point(3, 35);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
-            tableLayoutPanel1.Size = new Size(881, 93);
+            tableLayoutPanel1.Size = new Size(881, 101);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // btnSua
@@ -126,7 +126,7 @@
             btnSua.Location = new Point(297, 5);
             btnSua.Margin = new Padding(5);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(136, 83);
+            btnSua.Size = new Size(136, 91);
             btnSua.TabIndex = 2;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             btnXoa.Location = new Point(151, 5);
             btnXoa.Margin = new Padding(5);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(136, 83);
+            btnXoa.Size = new Size(136, 91);
             btnXoa.TabIndex = 1;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = false;
@@ -162,7 +162,7 @@
             btnThem.Location = new Point(5, 5);
             btnThem.Margin = new Padding(5);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(136, 83);
+            btnThem.Size = new Size(136, 91);
             btnThem.TabIndex = 0;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
@@ -235,7 +235,7 @@
             tableLayoutPanel3.Controls.Add(groupBox5, 0, 1);
             tableLayoutPanel3.Controls.Add(groupBox2, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 43);
+            tableLayoutPanel3.Location = new Point(3, 35);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 6;
@@ -245,7 +245,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel3.Size = new Size(373, 677);
+            tableLayoutPanel3.Size = new Size(373, 685);
             tableLayoutPanel3.TabIndex = 19;
             // 
             // groupBox7
@@ -257,7 +257,7 @@
             groupBox7.Location = new Point(0, 0);
             groupBox7.Margin = new Padding(0);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(373, 112);
+            groupBox7.Size = new Size(373, 114);
             groupBox7.TabIndex = 9;
             groupBox7.TabStop = false;
             groupBox7.Text = "Mã Hóa Đơn";
@@ -266,9 +266,9 @@
             // 
             txtMaHD.Dock = DockStyle.Fill;
             txtMaHD.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMaHD.Location = new Point(3, 35);
+            txtMaHD.Location = new Point(3, 29);
             txtMaHD.Name = "txtMaHD";
-            txtMaHD.Size = new Size(367, 47);
+            txtMaHD.Size = new Size(367, 39);
             txtMaHD.TabIndex = 2;
             // 
             // groupBox9
@@ -277,10 +277,10 @@
             groupBox9.Dock = DockStyle.Fill;
             groupBox9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox9.ForeColor = Color.White;
-            groupBox9.Location = new Point(0, 448);
+            groupBox9.Location = new Point(0, 456);
             groupBox9.Margin = new Padding(0);
             groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(373, 112);
+            groupBox9.Size = new Size(373, 114);
             groupBox9.TabIndex = 8;
             groupBox9.TabStop = false;
             groupBox9.Text = "Tổng tiền";
@@ -290,9 +290,9 @@
             txtTongTien.Dock = DockStyle.Fill;
             txtTongTien.Enabled = false;
             txtTongTien.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTongTien.Location = new Point(3, 35);
+            txtTongTien.Location = new Point(3, 29);
             txtTongTien.Name = "txtTongTien";
-            txtTongTien.Size = new Size(367, 47);
+            txtTongTien.Size = new Size(367, 39);
             txtTongTien.TabIndex = 2;
             // 
             // groupBox6
@@ -301,10 +301,10 @@
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(0, 336);
+            groupBox6.Location = new Point(0, 342);
             groupBox6.Margin = new Padding(0);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(373, 112);
+            groupBox6.Size = new Size(373, 114);
             groupBox6.TabIndex = 5;
             groupBox6.TabStop = false;
             groupBox6.Text = "Ngày lập";
@@ -313,10 +313,10 @@
             // 
             dtpkNgayLap.Dock = DockStyle.Fill;
             dtpkNgayLap.Format = DateTimePickerFormat.Short;
-            dtpkNgayLap.Location = new Point(3, 35);
+            dtpkNgayLap.Location = new Point(3, 29);
             dtpkNgayLap.Margin = new Padding(6, 4, 6, 4);
             dtpkNgayLap.Name = "dtpkNgayLap";
-            dtpkNgayLap.Size = new Size(367, 39);
+            dtpkNgayLap.Size = new Size(367, 33);
             dtpkNgayLap.TabIndex = 14;
             // 
             // groupBox5
@@ -325,10 +325,10 @@
             groupBox5.Dock = DockStyle.Fill;
             groupBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.ForeColor = Color.White;
-            groupBox5.Location = new Point(0, 112);
+            groupBox5.Location = new Point(0, 114);
             groupBox5.Margin = new Padding(0);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(373, 112);
+            groupBox5.Size = new Size(373, 114);
             groupBox5.TabIndex = 4;
             groupBox5.TabStop = false;
             groupBox5.Text = "Khách hàng";
@@ -337,10 +337,10 @@
             // 
             cbbMaKH.Dock = DockStyle.Fill;
             cbbMaKH.FormattingEnabled = true;
-            cbbMaKH.Location = new Point(3, 35);
+            cbbMaKH.Location = new Point(3, 29);
             cbbMaKH.Margin = new Padding(6, 4, 6, 4);
             cbbMaKH.Name = "cbbMaKH";
-            cbbMaKH.Size = new Size(367, 40);
+            cbbMaKH.Size = new Size(367, 33);
             cbbMaKH.TabIndex = 8;
             // 
             // groupBox2
@@ -349,9 +349,9 @@
             groupBox2.Dock = DockStyle.Fill;
             groupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(3, 227);
+            groupBox2.Location = new Point(3, 231);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(367, 106);
+            groupBox2.Size = new Size(367, 108);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Nhân viên";
@@ -360,15 +360,15 @@
             // 
             cbbMaNV.Dock = DockStyle.Fill;
             cbbMaNV.FormattingEnabled = true;
-            cbbMaNV.Location = new Point(3, 35);
+            cbbMaNV.Location = new Point(3, 29);
             cbbMaNV.Margin = new Padding(6, 4, 6, 4);
             cbbMaNV.Name = "cbbMaNV";
-            cbbMaNV.Size = new Size(361, 40);
+            cbbMaNV.Size = new Size(361, 33);
             cbbMaNV.TabIndex = 9;
             // 
             // FormHoaDon
             // 
-            AutoScaleDimensions = new SizeF(16F, 41F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
             ClientSize = new Size(1284, 729);
@@ -378,7 +378,7 @@
             Margin = new Padding(6, 4, 6, 4);
             Name = "FormHoaDon";
             Text = "Danh sách hóa đơn";
-            Load += FormHoaDon_Load_1;
+            Load += FormHoaDon_Load;
             tableLayoutPanel4.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);

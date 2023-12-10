@@ -28,24 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             groupBox6 = new GroupBox();
-            textBox2 = new TextBox();
+            txtDiaChi = new TextBox();
             groupBox5 = new GroupBox();
-            textBox1 = new TextBox();
+            txtSDTNCC = new TextBox();
             groupBox4 = new GroupBox();
-            textBox3 = new TextBox();
+            txtTenNhaCC = new TextBox();
             tableLayoutPanel4 = new TableLayoutPanel();
             groupBox2 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            button1 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btnDelete = new Button();
+            btnRefresh = new Button();
+            btnEdit = new Button();
             btnThem = new Button();
             groupBox3 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dgvNhaCungCap = new DataGridView();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            tsmNhaCCOld = new ToolStripMenuItem();
+            tsmNCCNew = new ToolStripMenuItem();
+            tsmNCCALL = new ToolStripMenuItem();
+            tsmExportPDF = new ToolStripMenuItem();
+            tsmExportExcel = new ToolStripMenuItem();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -56,7 +63,8 @@
             groupBox2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -113,7 +121,7 @@
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(textBox2);
+            groupBox6.Controls.Add(txtDiaChi);
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.ForeColor = Color.White;
@@ -125,18 +133,18 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "Địa chỉ";
             // 
-            // textBox2
+            // txtDiaChi
             // 
-            textBox2.Dock = DockStyle.Fill;
-            textBox2.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(3, 29);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(367, 39);
-            textBox2.TabIndex = 2;
+            txtDiaChi.Dock = DockStyle.Fill;
+            txtDiaChi.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDiaChi.Location = new Point(3, 29);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(367, 39);
+            txtDiaChi.TabIndex = 2;
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(textBox1);
+            groupBox5.Controls.Add(txtSDTNCC);
             groupBox5.Dock = DockStyle.Fill;
             groupBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.ForeColor = Color.White;
@@ -148,18 +156,18 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Số điện thoại";
             // 
-            // textBox1
+            // txtSDTNCC
             // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(3, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(367, 39);
-            textBox1.TabIndex = 2;
+            txtSDTNCC.Dock = DockStyle.Fill;
+            txtSDTNCC.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSDTNCC.Location = new Point(3, 29);
+            txtSDTNCC.Name = "txtSDTNCC";
+            txtSDTNCC.Size = new Size(367, 39);
+            txtSDTNCC.TabIndex = 2;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(textBox3);
+            groupBox4.Controls.Add(txtTenNhaCC);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox4.ForeColor = Color.White;
@@ -170,139 +178,143 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Tên nhà cung cấp";
             // 
-            // textBox3
+            // txtTenNhaCC
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(3, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(361, 47);
-            this.textBox3.TabIndex = 2;
+            txtTenNhaCC.Dock = DockStyle.Fill;
+            txtTenNhaCC.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenNhaCC.Location = new Point(3, 29);
+            txtTenNhaCC.Name = "txtTenNhaCC";
+            txtTenNhaCC.Size = new Size(361, 39);
+            txtTenNhaCC.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.groupBox3, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(388, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(893, 723);
-            this.tableLayoutPanel4.TabIndex = 6;
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Controls.Add(groupBox2, 0, 1);
+            tableLayoutPanel4.Controls.Add(groupBox3, 0, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(388, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 2;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel4.Size = new Size(893, 723);
+            tableLayoutPanel4.TabIndex = 6;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(3, 581);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(887, 139);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thao tác dữ liệu";
+            groupBox2.Controls.Add(tableLayoutPanel1);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(3, 581);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(887, 139);
+            groupBox2.TabIndex = 8;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Thao tác dữ liệu";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnThem, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 43);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 162F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(881, 93);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.Controls.Add(btnDelete, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnRefresh, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnEdit, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnThem, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            tableLayoutPanel1.Location = new Point(3, 35);
+            tableLayoutPanel1.Margin = new Padding(0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(881, 101);
+            tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.SeaShell;
-            this.button1.Location = new System.Drawing.Point(297, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 83);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Xóa";
-            this.button1.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = Color.Transparent;
+            btnDelete.Dock = DockStyle.Fill;
+            btnDelete.FlatAppearance.BorderSize = 3;
+            btnDelete.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.ForeColor = Color.SeaShell;
+            btnDelete.Location = new Point(297, 5);
+            btnDelete.Margin = new Padding(5);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(136, 91);
+            btnDelete.TabIndex = 4;
+            btnDelete.Text = "Xóa";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // button3
+            // btnRefresh
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.SeaShell;
-            this.button3.Location = new System.Drawing.Point(151, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 83);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = false;
+            btnRefresh.BackColor = Color.Transparent;
+            btnRefresh.Dock = DockStyle.Fill;
+            btnRefresh.FlatAppearance.BorderSize = 3;
+            btnRefresh.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnRefresh.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.ForeColor = Color.SeaShell;
+            btnRefresh.Location = new Point(443, 5);
+            btnRefresh.Margin = new Padding(5);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(136, 91);
+            btnRefresh.TabIndex = 3;
+            btnRefresh.Text = "Làm mới";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // button2
+            // btnEdit
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.SeaShell;
-            this.button2.Location = new System.Drawing.Point(443, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 83);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "xem chi tiết";
-            this.button2.UseVisualStyleBackColor = false;
+            btnEdit.BackColor = Color.Transparent;
+            btnEdit.Dock = DockStyle.Fill;
+            btnEdit.FlatAppearance.BorderSize = 3;
+            btnEdit.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnEdit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.ForeColor = Color.SeaShell;
+            btnEdit.Location = new Point(5, 5);
+            btnEdit.Margin = new Padding(5);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(136, 91);
+            btnEdit.TabIndex = 2;
+            btnEdit.Text = "Sửa";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Transparent;
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnThem.FlatAppearance.BorderSize = 3;
-            this.btnThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnThem.Location = new System.Drawing.Point(5, 5);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(5);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(136, 83);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
+            btnThem.BackColor = Color.Transparent;
+            btnThem.Dock = DockStyle.Fill;
+            btnThem.FlatAppearance.BorderSize = 3;
+            btnThem.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnThem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnThem.FlatStyle = FlatStyle.Flat;
+            btnThem.ForeColor = Color.SeaShell;
+            btnThem.Location = new Point(151, 5);
+            btnThem.Margin = new Padding(5);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(136, 91);
+            btnThem.TabIndex = 0;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dataGridView1);
+            groupBox3.Controls.Add(dgvNhaCungCap);
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.ForeColor = Color.White;
             groupBox3.Location = new Point(3, 3);
@@ -312,16 +324,58 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách";
             // 
-            // dataGridView1
+            // dgvNhaCungCap
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 40);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(884, 532);
-            dataGridView1.TabIndex = 0;
+            dgvNhaCungCap.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNhaCungCap.Dock = DockStyle.Fill;
+            dgvNhaCungCap.Location = new Point(3, 35);
+            dgvNhaCungCap.Name = "dgvNhaCungCap";
+            dgvNhaCungCap.RowTemplate.Height = 28;
+            dgvNhaCungCap.Size = new Size(881, 534);
+            dgvNhaCungCap.TabIndex = 0;
+            dgvNhaCungCap.Click += dgvNhaCungCap_Click;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.BackColor = Color.FromArgb(255, 192, 192);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { tsmNhaCCOld, tsmNCCNew, tsmNCCALL, tsmExportPDF, tsmExportExcel });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(201, 124);
+            // 
+            // tsmNhaCCOld
+            // 
+            tsmNhaCCOld.Name = "tsmNhaCCOld";
+            tsmNhaCCOld.Size = new Size(200, 24);
+            tsmNhaCCOld.Text = "Nhà cung cấp cũ";
+            tsmNhaCCOld.Click += tsmNhaCCOld_Click;
+            // 
+            // tsmNCCNew
+            // 
+            tsmNCCNew.Name = "tsmNCCNew";
+            tsmNCCNew.Size = new Size(200, 24);
+            tsmNCCNew.Text = "Nhà cung cấp mới";
+            tsmNCCNew.Click += tsmNCCNew_Click;
+            // 
+            // tsmNCCALL
+            // 
+            tsmNCCALL.Name = "tsmNCCALL";
+            tsmNCCALL.Size = new Size(200, 24);
+            tsmNCCALL.Text = "Tất cả nhà cung cấp";
+            tsmNCCALL.Click += tsmNCCALL_Click;
+            // 
+            // tsmExportPDF
+            // 
+            tsmExportPDF.Name = "tsmExportPDF";
+            tsmExportPDF.Size = new Size(200, 24);
+            tsmExportPDF.Text = "Xuất file pdf";
+            tsmExportPDF.Click += tsmExportPDF_Click;
+            // 
+            // tsmExportExcel
+            // 
+            tsmExportExcel.Name = "tsmExportExcel";
+            tsmExportExcel.Size = new Size(200, 24);
+            tsmExportExcel.Text = "Xuất file exel";
+            tsmExportExcel.Click += tsmExportExcel_Click;
             // 
             // FormNhaCungCap
             // 
@@ -329,6 +383,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
             ClientSize = new Size(1284, 729);
+            ContextMenuStrip = contextMenuStrip1;
             Controls.Add(tableLayoutPanel3);
             Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(5);
@@ -348,7 +403,8 @@
             groupBox2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -357,19 +413,25 @@
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel2;
         private GroupBox groupBox6;
-        private TextBox textBox2;
+        private TextBox txtDiaChi;
         private GroupBox groupBox5;
-        private TextBox textBox1;
+        private TextBox txtSDTNCC;
         private GroupBox groupBox4;
-        private TextBox textBox3;
+        private TextBox txtTenNhaCC;
         private TableLayoutPanel tableLayoutPanel4;
         private GroupBox groupBox3;
         private GroupBox groupBox2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button button3;
-        private Button button2;
+        private Button btnEdit;
         private Button btnThem;
-        private Button button1;
-        private DataGridView dataGridView1;
+        private Button btnRefresh;
+        private DataGridView dgvNhaCungCap;
+        private Button btnDelete;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem tsmNhaCCOld;
+        private ToolStripMenuItem tsmNCCNew;
+        private ToolStripMenuItem tsmNCCALL;
+        private ToolStripMenuItem tsmExportPDF;
+        private ToolStripMenuItem tsmExportExcel;
     }
 }

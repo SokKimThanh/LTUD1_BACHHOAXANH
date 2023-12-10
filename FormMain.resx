@@ -244,6 +244,54 @@
   <data name="tlpNavigationBar.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="btnChiTietHD.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnChiTietHD.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnChiTietHD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semilight, 18pt</value>
+  </data>
+  <data name="btnChiTietHD.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnChiTietHD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnChiTietHD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 560</value>
+  </data>
+  <data name="btnChiTietHD.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="btnChiTietHD.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="btnChiTietHD.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>80, 0</value>
+  </data>
+  <data name="btnChiTietHD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 80</value>
+  </data>
+  <data name="btnChiTietHD.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnChiTietHD.Text" xml:space="preserve">
+    <value>CHI TIẾT HĐ</value>
+  </data>
+  <data name="&gt;&gt;btnChiTietHD.Name" xml:space="preserve">
+    <value>btnChiTietHD</value>
+  </data>
+  <data name="&gt;&gt;btnChiTietHD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnChiTietHD.Parent" xml:space="preserve">
+    <value>tlpNavigationBar</value>
+  </data>
+  <data name="&gt;&gt;btnChiTietHD.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnDiaDiem.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -290,7 +338,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnDiaDiem.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnKhachHang.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -338,7 +386,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnKhachHang.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnNhaCungCap.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -386,7 +434,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnNhaCungCap.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnKhuyenMai.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -434,7 +482,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnKhuyenMai.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnHoaDon.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -482,7 +530,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnHoaDon.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnSanPham.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -530,7 +578,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnSanPham.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnNhanVien.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -579,7 +627,7 @@
     <value>tlpNavigationBar</value>
   </data>
   <data name="&gt;&gt;btnNhanVien.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="tlpNavigationBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -591,7 +639,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tlpNavigationBar.RowCount" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="tlpNavigationBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 582</value>
@@ -612,7 +660,7 @@
     <value>2</value>
   </data>
   <data name="tlpNavigationBar.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnDiaDiem" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhachHang" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhaCungCap" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhuyenMai" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnHoaDon" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSanPham" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhanVien" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,320" /&gt;&lt;Rows Styles="Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnChiTietHD" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDiaDiem" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhachHang" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhaCungCap" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnKhuyenMai" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnHoaDon" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSanPham" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnNhanVien" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,320" /&gt;&lt;Rows Styles="Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80,Absolute,80" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tlpHeader.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1324,7 +1372,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAGtEAAAJNU0Z0AUkBTAIBAQ4B
-        AAGIAQgBiAEIAUABAAFAAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoBAABAQMAAQECAAEBAQABIAcAAQR9
+        AAG4AQgBuAEIAUABAAFAAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoBAABAQMAAQECAAEBAQABIAcAAQR9
         AAMqAUAg/wMhATB4AAMeASoDWAG4AV8CZgHlAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAV8CZgHlAV8C
         ZgHlAV8CZgHlAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAV8C
         ZgHlAVsCYwHkAVsCYwHkAV8CZgHlAVsCYwHkAVsCYwHkAV8CZgHlAV8CZgHlAVsCYwHkAVsCYwHkAVsC
@@ -2226,7 +2274,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA8BMAAAJNU0Z0AUkBTAIBAQ0B
-        AAFgAQgBYAEIARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAAUADAAEBAQABIAYAAUAu
+        AAGQAQgBkAEIARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAAUADAAEBAQABIAYAAUAu
         AAMJAQsDDAEPAwYBCOwAAxMBGQMTARkDCwEOAwcBCQMPARQDEwEZAxMBGdwAAwIBAwMTARkYAAMFAQYD
         EwEZ2AADEwEZIAAEAQMTARnQAAMTARkDBQEGJAADEwEZAwIBA8wAAxMBGSwAAxMBGcwAAxMBGSwAAxMB
         GcwAAxMBGRQAAxMBGRQAAxMBGcwAAxMBGRQAAxMBGRQAAxMBGcwAAxEBFgMJAQwQAAMTARkQAAMTARnU

@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="CustomControl\CustomButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="CustomControl\CustomDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -22,19 +16,7 @@
     <Compile Update="ScreenMenu\HeThong\TaiKhoan\FormTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\In\FormBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScreenMenu\In\FormThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\ChiTietHoaDonThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\Nhap\ChiTietHoaDon\FormChiTietHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScreenMenu\Nhap\DanhMuc\FormLoaiSP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\DiaDiem\FormDiaDiem.cs">
@@ -46,19 +28,13 @@
     <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\HoaDon\FormHoaDonThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ScreenMenu\Nhap\KhuyenMai\FormKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\NhaCungCap\FormNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\Nhap\NhanVien\FormNhanVienAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScreenMenu\Nhap\NhanVien\FormNhanVienThongKe.cs">
+    <Compile Update="ScreenMenu\Nhap\NhanVien\FormNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\PhongBan\FormPhongBan.cs">
@@ -68,9 +44,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ScreenMenu\Nhap\KhachHang\FormKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScreenMenu\TraCuu\FormTraCuuSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

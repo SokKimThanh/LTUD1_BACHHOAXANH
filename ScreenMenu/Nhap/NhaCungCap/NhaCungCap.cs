@@ -1,52 +1,22 @@
-﻿ 
+﻿
 
-namespace LTUD1_MF_BHX 
+namespace LTUD1_MF_BHX
 {
     internal class NhaCungCap
     {
-        private string ma, ten, ghichu;
-
-        public NhaCungCap(string ma = "", string ten = "", string ghichu = "")
+        private string ma, ten, diachi;
+        int sdt;
+        public NhaCungCap(string ma = "", string ten = "", string diachi = "", int sdt = 3254234)
         {
-            if (ma.Length == 0)
-            {
-                throw new Exception("mancc khong hop le");
-            }
-            if (ten.Length > 256 || ten.Length == 0)
-            {
-                throw new Exception("tennhacc khong hop le");
-            }
-            if (ghichu.Length > 256 || ghichu.Length == 0)
-            {
-                throw new Exception("ghichunhacc khong hop le");
-            }
             this.ma = ma;
             this.ten = ten;
-            this.ghichu = ghichu;
+            this.diachi = diachi;
+            this.sdt = sdt;
         }
 
-        public string Ma
-        {
-            get => ma; set
-            {
-                //if (value.Length != 10)
-                //{
-                //    throw new Exception("mancc khong hop le");
-                //}
-                ma = value;
-            }
-        }
-        public string Ten
-        {
-            get => ten; set
-            {
-                if (value.Length > 256)
-                {
-                    throw new Exception("tennhacc khong hop le");
-                }
-                ten = value;
-            }
-        }
-        public string Ghichu { get => ghichu; set => ghichu = value; }
+        public int Sdt { get => sdt; set => sdt = value; }
+        public string Ma { get => ma; set => ma = value; }
+        public string Ten { get => ten; set => ten = value; }
+        public string Diachi { get => diachi; set => diachi = value; }
     }
 }

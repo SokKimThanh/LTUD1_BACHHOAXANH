@@ -24,13 +24,20 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
         }
         private void FormKhuyenMai_Load(object sender, EventArgs e)
         {
-            kmConn.SelectAll();
-            dgvDSKM.DataSource = kmConn.DataSource;
+            try
+            {
+                kmConn.SelectAll();
+                dgvDSKM.DataSource = kmConn.DataSource;
 
-            htkmConn.SelectAll();
-            cboMaHT.DataSource = htkmConn.DataSource;
-            cboMaHT.DisplayMember = "TENHINHTHUC";
-            cboMaHT.ValueMember = "MAHT";
+                htkmConn.SelectAll();
+                cboMaHT.DataSource = htkmConn.DataSource;
+                cboMaHT.DisplayMember = "TENHINHTHUC";
+                cboMaHT.ValueMember = "MAHT";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

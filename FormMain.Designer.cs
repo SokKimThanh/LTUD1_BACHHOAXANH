@@ -36,6 +36,7 @@
             btnSetting = new Button();
             panelDesktop = new Panel();
             tlpNavigationBar = new TableLayoutPanel();
+            btnChiTietHD = new Button();
             btnDiaDiem = new Button();
             btnKhachHang = new Button();
             btnNhaCungCap = new Button();
@@ -135,6 +136,7 @@
             // 
             resources.ApplyResources(tlpNavigationBar, "tlpNavigationBar");
             tlpNavigationBar.BackColor = Color.Transparent;
+            tlpNavigationBar.Controls.Add(btnChiTietHD, 0, 7);
             tlpNavigationBar.Controls.Add(btnDiaDiem, 0, 1);
             tlpNavigationBar.Controls.Add(btnKhachHang, 0, 6);
             tlpNavigationBar.Controls.Add(btnNhaCungCap, 0, 5);
@@ -143,6 +145,17 @@
             tlpNavigationBar.Controls.Add(btnSanPham, 0, 2);
             tlpNavigationBar.Controls.Add(btnNhanVien, 0, 0);
             tlpNavigationBar.Name = "tlpNavigationBar";
+            // 
+            // btnChiTietHD
+            // 
+            resources.ApplyResources(btnChiTietHD, "btnChiTietHD");
+            btnChiTietHD.FlatAppearance.BorderSize = 0;
+            btnChiTietHD.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 149, 149);
+            btnChiTietHD.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 169, 169);
+            btnChiTietHD.ForeColor = Color.White;
+            btnChiTietHD.Name = "btnChiTietHD";
+            btnChiTietHD.UseVisualStyleBackColor = true;
+            btnChiTietHD.Click += btnChiTietHD_Click;
             // 
             // btnDiaDiem
             // 
@@ -513,5 +526,6 @@
         private TableLayoutPanel tlpExit;
         private Button btnExit;
         private Label lblExit;
+        private Button btnChiTietHD;
     }
 }

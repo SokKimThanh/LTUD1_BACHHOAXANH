@@ -15,10 +15,7 @@ drop procedure if exists sp_khachhang_select_one
 go
 CREATE PROCEDURE sp_khachhang_select_one
 	-- Add the parameters for the stored procedure here
-	@maKH char(11) = '', 
-	@tenKH nvarchar(30) = N'',
-	@sdtKH int = 0,
-	@diemTL int = 0
+	@maKH char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
