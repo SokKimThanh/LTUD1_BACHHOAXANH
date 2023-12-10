@@ -14,7 +14,7 @@ namespace LTUD1_MF_BHX
             InitializeComponent();
             nccController = new NhaCungCapController(Utils.ConnectionString);
             buttonStateManager = new ButtonStateManager();
-            buttonStateManager.btnAdd = this.btnThem;
+            buttonStateManager.btnAdd = this.btnAdd;
             buttonStateManager.btnDelete = this.btnDelete;
             buttonStateManager.btnEdit = this.btnEdit;
             buttonStateManager.btnRefresh = this.btnRefresh;
@@ -32,6 +32,8 @@ namespace LTUD1_MF_BHX
 
                 nccController.SelectAll();
                 dgvNhaCungCap.DataSource = nccController.DataSource;
+                // crud button setting state
+                buttonStateManager.UpdateButtonStates("form_loaded");
             }
             catch (Exception ex)
             {
@@ -79,7 +81,7 @@ namespace LTUD1_MF_BHX
                 // id tự động tăng
                 //string id_cuoi = (string)dongcuoicung["NhanVienID"];
                 string id_dau = (string)dongdautien["MANCC"];
-                string ma = GenerateID.generateID("ncc", id_dau);
+                string ma = GenerateID.generateID("ncc", id_dau.Trim(), 3);
 
                 string ten = txtTenNhaCC.Text;
                 int sdt = int.Parse(txtSDTNCC.Text);

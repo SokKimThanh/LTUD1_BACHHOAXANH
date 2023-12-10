@@ -44,7 +44,7 @@
             btnDelete = new Button();
             btnRefresh = new Button();
             btnEdit = new Button();
-            btnThem = new Button();
+            btnAdd = new Button();
             groupBox3 = new GroupBox();
             dgvNhaCungCap = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
@@ -226,7 +226,7 @@
             tableLayoutPanel1.Controls.Add(btnDelete, 0, 0);
             tableLayoutPanel1.Controls.Add(btnRefresh, 0, 0);
             tableLayoutPanel1.Controls.Add(btnEdit, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnThem, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnAdd, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tableLayoutPanel1.Location = new Point(3, 35);
@@ -294,23 +294,23 @@
             btnEdit.UseVisualStyleBackColor = false;
             btnEdit.Click += btnEdit_Click;
             // 
-            // btnThem
+            // btnAdd
             // 
-            btnThem.BackColor = Color.Transparent;
-            btnThem.Dock = DockStyle.Fill;
-            btnThem.FlatAppearance.BorderSize = 3;
-            btnThem.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            btnThem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.ForeColor = Color.SeaShell;
-            btnThem.Location = new Point(151, 5);
-            btnThem.Margin = new Padding(5);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(136, 91);
-            btnThem.TabIndex = 0;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = false;
-            btnThem.Click += btnThem_Click;
+            btnAdd.BackColor = Color.Transparent;
+            btnAdd.Dock = DockStyle.Fill;
+            btnAdd.FlatAppearance.BorderSize = 3;
+            btnAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.ForeColor = Color.SeaShell;
+            btnAdd.Location = new Point(151, 5);
+            btnAdd.Margin = new Padding(5);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(136, 91);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "Thêm";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnThem_Click;
             // 
             // groupBox3
             // 
@@ -423,7 +423,7 @@
         private GroupBox groupBox2;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnEdit;
-        private Button btnThem;
+        private Button btnAdd;
         private Button btnRefresh;
         private DataGridView dgvNhaCungCap;
         private Button btnDelete;

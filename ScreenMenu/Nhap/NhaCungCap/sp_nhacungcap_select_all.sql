@@ -17,7 +17,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	select * from nhacungcap
+	select * from nhacungcap order by created_date_ncc desc
 END
 GO
 -- ================================================
@@ -65,6 +65,6 @@ BEGIN
 	order by created_date_ncc desc
 END
 GO
-exec sp_nhacungcap_moi_select_all
-exec sp_nhacungcap_cu_select_all
-exec sp_nhacungcap_select_all
+--exec sp_nhacungcap_moi_select_all
+--exec sp_nhacungcap_cu_select_all
+--exec sp_nhacungcap_select_all
