@@ -1,5 +1,5 @@
 ﻿using LTUD1_MF_BHX.BatLoiControl;
-using LTUD1_MF_BHX.ScreenMenu.Nhap.NhanVien;
+using LTUD1_MF_BHX.ScreenMenu.In;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
@@ -15,40 +15,34 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioBu
 
 namespace LTUD1_MF_BHX.Screen
 {
-    public partial class FormNhanVienAddEdit : Form
+    public partial class FormNhanVien : Form
     {
         NhanVienController nvController = new NhanVienController(Utils.ConnectionString);
-        public FormNhanVienAddEdit()
+        InFilePDF infile;
+        public FormNhanVien()
         {
             InitializeComponent();
 
             // combobox phong ban setting
             cboPhongBan.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            // data grid view nhanvien setting
+            // data grid view setting
             dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNhanVien.ForeColor = Color.Black;
             dgvNhanVien.ReadOnly = true;
             dgvNhanVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvNhanVien.MultiSelect = false;
 
-            // data grid view nhan vien event
+            // data grid view event
             dgvNhanVien.Click += dgvNhanVien_Click!;
 
-            // radio group button event
-            // Gán sự kiện CheckedChanged cho các RadioButton
-            rbNam.CheckedChanged += new EventHandler(radioButtons_CheckedChanged!);
-            rbNu.CheckedChanged += new EventHandler(radioButtons_CheckedChanged!);
-
             rbNam.Checked = true;
-
-           
         }
 
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
             try
-            {   
+            {
 
                 nvController.SelectAll();
                 dgvNhanVien.DataSource = nvController.DataSource;
@@ -59,6 +53,8 @@ namespace LTUD1_MF_BHX.Screen
                 cboPhongBan.DataSource = dt;
                 cboPhongBan.ValueMember = "MAPB";
                 cboPhongBan.DisplayMember = "TENPHG";
+
+                infile = new InFilePDF(dgvNhanVien, saveFileDialog1);
 
                 // crud button setting state
                 UpdateButtonStates("form_loaded");
@@ -243,19 +239,7 @@ namespace LTUD1_MF_BHX.Screen
         {
             UpdateButtonStates("adding_textChanged");
         }
-        private void radioButtons_CheckedChanged(object sender, EventArgs e)
-        {
-            //System.Windows.Forms.RadioButton radioButton = (System.Windows.Forms.RadioButton)sender;
 
-            //if (rbNam.Checked)
-            //{
-            //    rtbDiaChi.Text = "nam";
-            //}
-            //else if (rbNu.Checked)
-            //{
-            //    rtbDiaChi.Text = "nu";
-            //}
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -321,7 +305,7 @@ namespace LTUD1_MF_BHX.Screen
                 string gioitinh = rbNam.Checked ? "nam" : rbNu.Checked ? "nu" : string.Empty;
                 NhanVien o = new NhanVien(maNV, hotennv, diachinv, luong, sdtnv, ngaysinh, mapb, gioitinh);
                 nvController.Update(o);
-               
+
                 UpdateButtonStates("refresh_clicked");
             }
             catch (Exception ex)
@@ -330,5 +314,48 @@ namespace LTUD1_MF_BHX.Screen
                 rtbDiaChi.Text = ex.Message;
             }
         }
+        private void tsmThongKe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvNhanVien.DataSource = nvController.ThongKeNhanVien();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thong ke: " + ex.Message);
+            }
+        }
+
+        private void tsmInFilePDF_Click(object sender, EventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                // Mã hiển thị hộp thoại của bạn ở đây 
+                infile.ExportToPDF();
+            });
+        }
+        private void tsmInFileExcel_Click(object sender, EventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                // Mã hiển thị hộp thoại của bạn ở đây 
+                infile.ExportToExcel();
+            });
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvNhanVien.DataSource = nvController.Search(txtHoTen.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Tim kiem: " + ex.Message);
+            }
+        }
+
+
     }
 }

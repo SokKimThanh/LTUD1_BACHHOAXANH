@@ -279,6 +279,42 @@ namespace LTUD1_MF_BHX
                 CloseConnection();
             }
             return dt;
-        } 
+        }
+
+        public DataTable Search(string keyword)
+        {
+            DataTable dt;
+
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhanvien_search", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+                Sql.Parameters.AddWithValue("@keyword", keyword);
+                // Tạo một đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+                dt = new DataTable();
+
+                // Đổ dữ liệu vào DataTable
+                Adapter.Fill(dt);
+
+                // Đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("GetDanhSachPhongBan" + ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return dt;
+        }
     }
 }
