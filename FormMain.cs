@@ -18,7 +18,7 @@ namespace LTUD1_MF_BHX
         private bool sidebarExpand;
         private int speed = 80;//chia het tang toc do dong mmở navigation
         private int maxWidthMenu = 320;
-        private int minWidthMenu = 80;
+        private int minWidthMenu = 86;
         private Button currentButton = new Button();
         private Form currentChildForm = new Form();
         public SettingImageList navigationBar;
@@ -261,13 +261,13 @@ namespace LTUD1_MF_BHX
                 //if (panelSidebar.Width == panelSidebar.MaximumSize.Width)
                 {
                     // xóa chữ đi
-                    this.btnDiaDiem.Text = "";
-                    this.btnNhanVien.Text = "";
-                    this.btnNhaCungCap.Text = "";
-                    this.btnSanPham.Text = "";
-                    this.btnHoaDon.Text = "";
-                    this.btnKhuyenMai.Text = "";
-                    this.btnKhachHang.Text = "";
+                    //this.btnDiaDiem.Text = "";
+                    //this.btnNhanVien.Text = "";
+                    //this.btnNhaCungCap.Text = "";
+                    //this.btnSanPham.Text = "";
+                    //this.btnHoaDon.Text = "";
+                    //this.btnKhuyenMai.Text = "";
+                    //this.btnKhachHang.Text = "";
                     // khong thu hep nua
                     sidebarExpand = false;
                     sidebarTimer.Stop();
