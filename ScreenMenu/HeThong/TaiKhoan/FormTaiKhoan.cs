@@ -6,16 +6,19 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
     public partial class FormTaiKhoan : Form
     {
         AccountController controller;
-        CustomDataGridView dgv;
+        DataGridView dgv;
 
         public FormTaiKhoan()
         {
             InitializeComponent();
             controller = new AccountController(Utils.ConnectionString);
-            dgv = new CustomDataGridView();
-            this.Controls.Add(dgv);
-            dgv.CellContentClick += customDataGridView1_CellContentClick!;
-            dgv.Dock = DockStyle.Right;
+            // data grid view setting
+            dgvTaiKhoan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTaiKhoan.ForeColor = Color.Black;
+            dgvTaiKhoan.ReadOnly = true;
+            dgvTaiKhoan.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTaiKhoan.MultiSelect = false;
+            dgvTaiKhoan.Click += new EventHandler(dgvTaiKhoan_Click!);
         }
 
 
@@ -89,7 +92,19 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
         }
 
-        private void customDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+
+        private void txtTenTK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaoMa_Click(object sender, EventArgs e)
+        {
+            txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
+        }
+
+        private void dgvTaiKhoan_Click(object sender, EventArgs e)
         {
             int dong = e.RowIndex;
 
@@ -106,17 +121,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
                 txtEmail.Text = o.Email;
                 txtCCCD.Text = o.Cccd;
                 txtMK.Text = o.MatKhau;
-            } 
-        }
-
-        private void txtTenTK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTaoMa_Click(object sender, EventArgs e)
-        {
-            txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
+            }
         }
     }
 }
