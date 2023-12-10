@@ -19,7 +19,8 @@ Date(dd/MM/yyyy)		Author				Comments
 22/11/2023	09:37SA		Sok Kim Thanh		Thêm BẢNG TAIKHOAN, QUYENTRUYCAP
 09/12/2023	00:27SA		Sok Kim Thanh		Xóa quan hệ đệ quy quản lý nhân viên, xóa trường quản lý khỏi bảng nhân viên
 09/12/2023	10:03SA		Sok Kim Thanh		Thêm trường giới tính nvarchar(10) vào bảng nhân viên
-09/12/2023	10:03SA		Sok Kim Thanh		Thêm trường created_date datetime vào bảng nhân viên, giá trị mặc định là ngày hiện tại
+09/12/2023	10:03SA		Sok Kim Thanh		Thêm trường created_date_nv datetime vào bảng nhân viên, giá trị mặc định là ngày hiện tại
+10/12/2023	7:44CH		Sok Kim Thanh		Thêm trường created_date_ncc datetime vào bảng nha cung cap, giá trị mặc định là ngày hiện tại
 ***************************************************************************************************/
 ------------------------------------------------------------
 --Tạo database mới										   -
@@ -50,7 +51,7 @@ CREATE TABLE PHONGBAN (MAPB CHAR(4) NOT NULL ,TENPHG NVARCHAR(30) NOT NULL,	MACN
 ------------------------------------------------------------
 ---------------------Tạo bảng NHANVIEN----------------------
 ------------------------------------------------------------
-CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL, HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4), GIOITINH nvarchar(10) NOT NULL, CREATED_DATE datetime);
+CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL, HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4), GIOITINH nvarchar(10) NOT NULL, CREATED_DATE_NV datetime);
 ------------------------------------------------------------
 ---------------------Tạo bảng KHACHHANG---------------------
 ------------------------------------------------------------
@@ -58,7 +59,7 @@ CREATE TABLE KHACHHANG (MAKH CHAR(11) NOT NULL ,HOTENKH NVARCHAR(30) NOT NULL,SD
 ------------------------------------------------------------
 ---------------------Tạo bảng NHACUNGCAP--------------------
 ------------------------------------------------------------
-CREATE TABLE NHACUNGCAP (MANCC CHAR(11)NOT NULL  ,TENNCC NVARCHAR(30) NOT NULL,DIACHINCC NVARCHAR(100),SDTNCC INT   NULL);
+CREATE TABLE NHACUNGCAP (MANCC CHAR(11)NOT NULL  ,TENNCC NVARCHAR(30) NOT NULL,DIACHINCC NVARCHAR(100),SDTNCC INT   NULL, created_date_ncc datetime);
 ------------------------------------------------------------
 ---------------------Tạo bảng SANPHAM-----------------------
 ------------------------------------------------------------
@@ -147,7 +148,7 @@ add constraint d_luong default 0 for LUONG
 -- default ngày tạo nhân viên
 go
 alter table NHANVIEN
-add constraint d_created_date default getdate() for created_date
+add constraint d_created_date_nv default getdate() for created_date_nv
 -- default  số lượng tồn kho sản phẩm
 go
 alter table SANPHAM
@@ -165,7 +166,10 @@ go
 alter table HOADON
 add constraint d_ngayhoadon default GETDATE() for NGAYHOADON
 
-
+-- default ngày tạo nhà cung cấp
+go
+alter table NHACUNGCAP
+add constraint d_created_date_ncc default getdate() for created_date_ncc
 
 /***********************************************************
 ------------------------------------------------------------
