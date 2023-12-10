@@ -14,5 +14,10 @@
         {
             dataGridView1.DataSource = controller.DataSource;
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
