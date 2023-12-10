@@ -6,6 +6,8 @@ using LTUD1_MF_BHX.ScreenDetail;
 using LTUD1_MF_BHX.ScreenMenu.HeThong;
 using LTUD1_MF_BHX.ScreenMenu.Nhap;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.DanhMuc;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan;
 using System.Runtime.InteropServices;
 
 
@@ -188,8 +190,32 @@ namespace LTUD1_MF_BHX
             ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
             OpenChildForm(new FormChiTietHoaDon());
         }
+        //9
+        private void btnDanhMucSP_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
+            OpenChildForm(new FormLoaiSP());
+        }
+        //10
+        private void btnHinhThucKM_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
+            OpenChildForm(new FormHinhThucKhuyenMai());
+        }
+        //11
+        private void btnPhongBan_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
+            OpenChildForm(new FormPhongBan());
+        }
+        //12
+        private void btnNhaCCCT_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGB_COLORS.PrimaryGreen, RGB_COLORS.PrimaryPink);
+            OpenChildForm(new FormChiTietNhaCungCap());
+        }
         /**
-       * reset click 7 button
+       * reset click all button
        */
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -327,11 +353,6 @@ namespace LTUD1_MF_BHX
             OpenChildForm(new FormDangNhap());
         }
 
-        private void lblAccountName_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        
     }
 }

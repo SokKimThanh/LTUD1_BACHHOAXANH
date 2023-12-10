@@ -73,6 +73,26 @@ namespace LTUD1_MF_BHX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chitiethoadon {
+            get {
+                object obj = ResourceManager.GetObject("chitiethoadon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap danhmucsanpham {
+            get {
+                object obj = ResourceManager.GetObject("danhmucsanpham", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_password {
             get {
                 object obj = ResourceManager.GetObject("green_password", resourceCulture);
@@ -96,6 +116,16 @@ namespace LTUD1_MF_BHX.Properties {
         internal static System.Drawing.Bitmap hidepassword {
             get {
                 object obj = ResourceManager.GetObject("hidepassword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hinhthuckhuyenmai {
+            get {
+                object obj = ResourceManager.GetObject("hinhthuckhuyenmai", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +273,29 @@ namespace LTUD1_MF_BHX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nhacungcapct {
+            get {
+                object obj = ResourceManager.GetObject("nhacungcapct", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phongban {
+            get {
+                object obj = ResourceManager.GetObject("phongban", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap showpassword {
             get {
-                object obj = ResourceManager.GetObject("hidepassword", resourceCulture);
+                object obj = ResourceManager.GetObject("showpassword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
