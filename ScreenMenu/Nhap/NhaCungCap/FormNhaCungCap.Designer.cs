@@ -45,7 +45,7 @@
             button2 = new Button();
             btnThem = new Button();
             groupBox3 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dgvNhaCungCap = new DataGridView();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -56,7 +56,7 @@
             groupBox2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -303,7 +303,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dataGridView1);
+            groupBox3.Controls.Add(dgvNhaCungCap);
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.ForeColor = Color.White;
             groupBox3.Location = new Point(3, 3);
@@ -313,16 +313,16 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách";
             // 
-            // dataGridView1
+            // dgvNhaCungCap
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 40);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(884, 532);
-            dataGridView1.TabIndex = 0;
+            dgvNhaCungCap.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNhaCungCap.Dock = DockStyle.Fill;
+            dgvNhaCungCap.Location = new Point(3, 35);
+            dgvNhaCungCap.Name = "dgvNhaCungCap";
+            dgvNhaCungCap.RowTemplate.Height = 28;
+            dgvNhaCungCap.Size = new Size(881, 534);
+            dgvNhaCungCap.TabIndex = 0;
+            dgvNhaCungCap.Click += dgvNhaCungCap_Click;
             // 
             // FormNhaCungCap
             // 
@@ -349,7 +349,7 @@
             groupBox2.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvNhaCungCap).EndInit();
             ResumeLayout(false);
         }
 
@@ -371,6 +371,6 @@
         private Button button2;
         private Button btnThem;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvNhaCungCap;
     }
 }

@@ -46,9 +46,6 @@
     <Compile Update="ScreenMenu\Nhap\KhachHang\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScreenMenu\TraCuu\FormTraCuuSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="FormMain.resx">

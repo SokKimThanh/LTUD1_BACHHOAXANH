@@ -92,7 +92,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
         }
 
-      
+
 
         private void txtTenTK_TextChanged(object sender, EventArgs e)
         {
@@ -106,9 +106,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
         private void dgvTaiKhoan_Click(object sender, EventArgs e)
         {
-            int dong = e.RowIndex;
-
-
+            int dong = dgvTaiKhoan.CurrentCell.RowIndex;
             txtMaTaiKhoan.Text = dgv.Rows[dong].Cells[0].Value.ToString();
             DataRow row = controller.SelectByID(txtMaTaiKhoan.Text!).Rows[0];
 
