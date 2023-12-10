@@ -1,16 +1,10 @@
 ﻿using iTextSharp.text.pdf;
 using iTextSharp.text;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using OfficeOpenXml;
-using System.IO;
 using Font = iTextSharp.text.Font;
 
-namespace LTUD1_MF_BHX.ScreenMenu.In
+namespace LTUD1_MF_BHX.Model
 {
     public class ITextEvents : PdfPageEventHelper
     {
@@ -28,14 +22,14 @@ namespace LTUD1_MF_BHX.ScreenMenu.In
     public class InFilePDFExcel
     {
         DataGridView dgv;
-        
+
         public InFilePDFExcel(DataGridView dgv)
         {
-            this.dgv = dgv;        
+            this.dgv = dgv;
         }
 
         public DataGridView Dgv { get => dgv; set => dgv = value; }
- 
+
         public void ExportToPDF()
         {
             Thread thread = new Thread(() => Clipboard.SetText("Test!"));
@@ -138,7 +132,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.In
                     {
                         ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Sheet 1");
                         ws.Cells["A1"].LoadFromDataTable((DataTable)dgv.DataSource, true);
-                        Byte[] bin = pck.GetAsByteArray();
+                        byte[] bin = pck.GetAsByteArray();
                         File.WriteAllBytes(sfd.FileName, bin);
                     }
                     MessageBox.Show("Dữ liệu đã được xuất thành công!", "Thông báo");
