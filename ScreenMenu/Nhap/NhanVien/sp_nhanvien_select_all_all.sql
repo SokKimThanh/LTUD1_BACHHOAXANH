@@ -16,7 +16,7 @@ BEGIN
         NHANVIEN NV,
 		PHONGBAN PB
     where NV.MAPB = PB.MAPB
-	order by nv.created_date desc;
+	order by nv.created_date_nv desc;
 END;
 go
 

@@ -8,7 +8,7 @@ namespace LTUD1_MF_BHX.Screen
     public partial class FormNhanVien : Form
     {
         NhanVienController nvController = new NhanVienController(Utils.ConnectionString);
-        InFilePDF infile;
+        InFilePDFExcel infile;
         ButtonStateManager buttonStateManager = new ButtonStateManager();
         public FormNhanVien()
         {
@@ -41,15 +41,12 @@ namespace LTUD1_MF_BHX.Screen
 
                 nvController.SelectAll();
                 dgvNhanVien.DataSource = nvController.DataSource;
-                //dgvNhanVien.Columns["NhanVienID"].Width = 0;
-                //dgvNhanVien.Columns["PhongBanID"].Width = 0;
-
                 DataTable dt = nvController.GetDanhSachPhongBan();
                 cboPhongBan.DataSource = dt;
                 cboPhongBan.ValueMember = "MAPB";
                 cboPhongBan.DisplayMember = "TENPHG";
 
-                infile = new InFilePDF(dgvNhanVien, saveFileDialog1);
+                infile = new InFilePDFExcel(dgvNhanVien);
 
                 // crud button setting state
                 buttonStateManager.UpdateButtonStates("form_loaded");
