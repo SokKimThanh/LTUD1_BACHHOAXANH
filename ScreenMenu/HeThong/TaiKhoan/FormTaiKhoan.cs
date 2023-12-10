@@ -7,7 +7,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
     public partial class FormTaiKhoan : Form
     {
         AccountController controller;
-        
+
 
         public FormTaiKhoan()
         {
@@ -26,7 +26,6 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
             {
                 controller.SelectAll();
                 dgvTaiKhoan.DataSource = controller.DataSource;
-                txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
             }
             catch (Exception ex)
             {
@@ -38,7 +37,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
             try
             {
-                controller.Insert(new Account(txtTenTaiKhoan.Text, txtMK.Text, txtMaTaiKhoan.Text, DateTime.Parse(dtpCreatedDate.Value.ToShortDateString()), txtSDT.Text, txtCCCD.Text, txtEmail.Text));
+                controller.Insert(new Account(txtTenTaiKhoan.Text, txtMK.Text, Utils.GenerateRandomAlphanumericString(11), DateTime.Parse(dtpCreatedDate.Value.ToShortDateString()), txtSDT.Text, txtCCCD.Text, txtEmail.Text));
                 Reset();
             }
             catch (Exception ex)
@@ -64,7 +63,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
             try
             {
-                controller.Delete(txtMaTaiKhoan.Text);
+                controller.Delete(txtTenTaiKhoan.Text);
                 Reset();
             }
             catch (Exception ex)
@@ -79,7 +78,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
             try
             {
-                controller.Update(new Account(txtTenTaiKhoan.Text, txtMK.Text, txtMaTaiKhoan.Text, txtSDT.Text, txtCCCD.Text, txtEmail.Text));
+                controller.Update(new Account(txtTenTaiKhoan.Text, txtMK.Text, Utils.GenerateRandomAlphanumericString(11), txtSDT.Text, txtCCCD.Text, txtEmail.Text));
                 Reset();
             }
             catch (Exception ex)
@@ -96,21 +95,17 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
 
         }
 
-        private void btnTaoMa_Click(object sender, EventArgs e)
-        {
-            txtMaTaiKhoan.Text = Utils.GenerateRandomAlphanumericString(11);
-        }
+         
 
         private void dgvTaiKhoan_Click(object sender, EventArgs e)
         {
             int dong = dgvTaiKhoan.CurrentCell.RowIndex;
-            txtMaTaiKhoan.Text = dgvTaiKhoan.Rows[dong].Cells[0].Value.ToString();
-            DataRow row = controller.SelectByID(txtMaTaiKhoan.Text!).Rows[0];
+            txtTenTaiKhoan.Text = dgvTaiKhoan.Rows[dong].Cells[0].Value.ToString();
+            DataRow row = controller.SelectByID(txtTenTaiKhoan.Text!).Rows[0];
 
             Account o = (Account)controller.FromDataRow(row);
             if (o != null)
             {
-                txtMaTaiKhoan.Text = o.MaTaiKhoan;
                 txtTenTaiKhoan.Text = o.TenTaiKhoan;
                 txtSDT.Text = o.Phone;
                 txtEmail.Text = o.Email;

@@ -22,7 +22,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         }
 
         // update
-        public Account(string? tentk = null, string? matkhau = null, string? matk = null, string? phone = null, string? cccd = null, string? email = null)
+        public Account(string tentk = null, string? matkhau = null, string? matk = null, string? phone = null, string? cccd = null, string? email = null)
         {
             if (matk == null || matk.Length <= 0)
             {

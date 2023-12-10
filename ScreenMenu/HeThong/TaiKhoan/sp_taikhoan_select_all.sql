@@ -29,6 +29,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT matk, tentk FROM TAIKHOAN
+	SELECT tk.TENTK as ID, tk.TENTK, qtc.TENQTC FROM TAIKHOAN tk, QUYENTRUYCAP qtc where tk.MAQTC = qtc.MAQTC
 END
 GO
+ 
