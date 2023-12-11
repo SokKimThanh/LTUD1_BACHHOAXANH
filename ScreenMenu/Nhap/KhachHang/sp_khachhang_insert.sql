@@ -1,16 +1,9 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_insert.sql
--- Nhà cung cấp insert
--- ================================================
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
 -- Author:		Vo Tu
 -- Create date: <13/11/2023>
--- Description:	<Mô tả>
--- =============================================
+-- Create Procedure sp_khachhang_insert.sql
+-- Nhà cung cấp insert
+-- ================================================
 drop procedure if exists sp_khachhang_insert
 go
 CREATE PROCEDURE sp_khachhang_insert

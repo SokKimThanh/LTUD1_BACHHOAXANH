@@ -1,16 +1,10 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_select_all.sql
--- Nhà cung cấp select all
--- ================================================
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
 -- Author:		Vo Tu
 -- Create date: <13/11/2023>
+-- Create Procedure sp_nhacungcap_select_all.sql
 -- Description:	<Nhà cung cấp select all>
--- =============================================
+-- ================================================
+
 drop procedure if exists sp_khachhang_select_all
 go
 CREATE PROCEDURE sp_khachhang_select_all

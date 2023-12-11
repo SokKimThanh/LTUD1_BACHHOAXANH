@@ -1,16 +1,10 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_select_one.sql
--- Nhà cung cấp select one
--- ================================================
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
 -- Author:		Vo Tu
 -- Create date: <13/11/2023>
--- Description:	<Mô tả>
--- =============================================
+-- Create Procedure sp_khachhang_select_one.sql
+-- Nhà cung cấp select one
+-- ================================================
+
 drop procedure if exists sp_khachhang_select_one
 go
 CREATE PROCEDURE sp_khachhang_select_one
