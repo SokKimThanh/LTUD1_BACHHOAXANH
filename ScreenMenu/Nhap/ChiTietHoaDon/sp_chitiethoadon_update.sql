@@ -32,3 +32,4 @@ BEGIN
 	Update SANPHAM set SLTONKHO = SLTONKHO - @sl where MASP = @masp;
 END
 GO
+exec sp_hinhthuckm_update

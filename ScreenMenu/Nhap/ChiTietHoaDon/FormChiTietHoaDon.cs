@@ -59,7 +59,13 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
         private void btnKTTonKho_Click(object sender, EventArgs e)
         {
-            ctConn.KTTonKho(cboSanPham.SelectedValue.ToString(), int.Parse(txtSoLuong.Text));
+            try {
+                ctConn.KTTonKho(cboSanPham.SelectedValue.ToString(), int.Parse(txtSoLuong.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)

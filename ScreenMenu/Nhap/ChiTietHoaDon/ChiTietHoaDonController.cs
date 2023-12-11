@@ -68,7 +68,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                     if (reader.Read())
                     {
                         // Assuming YourColumnName is a string column; adjust accordingly
-                        Decimal value = reader.GetDecimal(0);
+                        int value = reader.GetInt32(0);
                        //MessageBox.Show(value.ToString());
                         TT= value.ToString() + "\tVND";
                        // MessageBox.Show(TT);
@@ -262,9 +262,9 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                 SqlConnection conn = OpenConnection();
 
                 // thực hiện các thao tác trên cơ sở dữ liệu
-                Sql = new SqlCommand("sp_chitiethoadon_SPDangCo", conn);
+                Sql = new SqlCommand("sp_chitiethoadon_TimMaSP", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
-                Sql.Parameters.AddWithValue("@makm", id);
+                Sql.Parameters.AddWithValue("@masp", id);
                 using (SqlDataReader reader = Sql.ExecuteReader())
                 {
                     if (reader.Read())
@@ -307,13 +307,13 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                 SqlConnection conn = OpenConnection();
 
                 // Tạo một đối tượng SqlCommand
-                Sql = new SqlCommand("sp_chitiethoadon_update", conn);
+                Sql = new SqlCommand("sp_hinhthuckm_update", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
                 Sql.Parameters.AddWithValue("@maHD", user.MaHD);
                 Sql.Parameters.AddWithValue("masp", user.MaSP);
-                Sql.Parameters.AddWithValue("@SLmua", user.SoLuong);
+                Sql.Parameters.AddWithValue("@SL", user.SoLuong);
                 // Thực thi SqlCommand
                 Sql.ExecuteNonQuery();
 
