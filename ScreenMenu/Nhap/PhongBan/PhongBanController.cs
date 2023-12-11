@@ -30,7 +30,10 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
                 Sql.Parameters.AddWithValue("@maPB", id);
 
                 // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
+                if (Sql.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("xóa Thành thành công");
+                }
 
                 // Đóng kết nối
                 CloseConnection();
@@ -66,7 +69,10 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
                 Sql.Parameters.AddWithValue("@tenPB", user.TenPB);
                 Sql.Parameters.AddWithValue("@maCN", user.MaCN);
                 // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
+                if (Sql.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
 
                 // Đóng kết nối
                 CloseConnection();
@@ -165,8 +171,10 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
                 Sql.Parameters.AddWithValue("@tenPB", user.TenPB);
                 Sql.Parameters.AddWithValue("@maCN", user.MaCN);
                 // Thực thi SqlCommand
-                Sql.ExecuteNonQuery();
-
+                if (Sql.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("cập nhật thành công");
+                }
                 // Đóng kết nối
                 CloseConnection();
             }
