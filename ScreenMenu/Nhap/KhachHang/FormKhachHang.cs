@@ -13,7 +13,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             InitializeComponent();
 
             khachHangController = new KhachHangController(Utils.ConnectionString);
-            dgvKH.DefaultCellStyle.ForeColor= Color.Black;
+            dgvKH.DefaultCellStyle.ForeColor = Color.Black;
         }
 
         private void groupBox7_Enter(object sender, EventArgs e)
@@ -48,9 +48,29 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-             
+
             try
             {
+                if (ErrTxt.CheckControlValue(txtMa))
+                {
+                    MessageBox.Show("txtMaKH", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                } 
+                if (ErrTxt.CheckControlValue(txtxHoTen))
+                {
+                    MessageBox.Show("txtHoTen", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(txtSDT))
+                {
+                    MessageBox.Show("txtSDT", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                } 
+                if (ErrTxt.CheckControlValue(txtDTL))
+                {
+                    MessageBox.Show("txtDRL", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 KhachHang kh = new KhachHang();
                 kh.Ma = txtMa.Text;
                 kh.Ten = txtxHoTen.Text;
@@ -69,7 +89,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
         private void button2_Click(object sender, EventArgs e)
         {
             KhachHang kh = new KhachHang();
-            kh.Ma = txtMa.Text;       
+            kh.Ma = txtMa.Text;
             khachHangController.Delete(kh.Ma);
             khachHangController.SelectAll();
             dgvKH.DataSource = khachHangController.DataSource;
@@ -82,6 +102,42 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             txtxHoTen.Text = dgvKH.Rows[dong].Cells[1].Value.ToString();
             txtSDT.Text = dgvKH.Rows[dong].Cells[2].Value.ToString();
             txtDTL.Text = dgvKH.Rows[dong].Cells[3].Value.ToString();
+        }
+
+        private void txtMa_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtHoMaKH", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void txtxHoTen_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtHoTenKH", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender) || ErrTxt.NoText_TextChange(sender))
+            {
+                MessageBox.Show("txtSDT", "chỉ được nhập số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void txtDTL_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender) || ErrTxt.NoText_TextChange(sender))
+            {
+                MessageBox.Show("txtDRL", "chỉ được nhập số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }

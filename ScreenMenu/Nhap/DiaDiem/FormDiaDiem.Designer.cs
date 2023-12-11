@@ -131,6 +131,7 @@ namespace LTUD1_MF_BHX.Screen
             txtDC.Name = "txtDC";
             txtDC.Size = new Size(361, 47);
             txtDC.TabIndex = 2;
+            txtDC.TextChanged += txtDC_TextChanged;
             // 
             // groupBox5
             // 
@@ -153,6 +154,7 @@ namespace LTUD1_MF_BHX.Screen
             txtTenCN.Name = "txtTenCN";
             txtTenCN.Size = new Size(361, 47);
             txtTenCN.TabIndex = 2;
+            txtTenCN.TextChanged += txtTenCN_TextChanged;
             // 
             // groupBox4
             // 
@@ -175,6 +177,7 @@ namespace LTUD1_MF_BHX.Screen
             txtMaCN.Name = "txtMaCN";
             txtMaCN.Size = new Size(361, 47);
             txtMaCN.TabIndex = 2;
+            txtMaCN.TextChanged += txtMaCN_TextChanged;
             // 
             // label4
             // 

@@ -50,13 +50,30 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            PhongBan phongBan = new PhongBan();
-            phongBan.MaPB = txtMaPB.Text;
-            phongBan.TenPB = txtTenPB.Text;
-            phongBan.MaCN = cbbMaCN.SelectedValue.ToString();
-            controller.Insert(phongBan);
-            controller.SelectAll();
-            dgvPB.DataSource = controller.DataSource;
+            try
+            {
+                if (ErrTxt.CheckControlValue(txtMaPB))
+                {
+                    MessageBox.Show("txtMaPB", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(txtTenPB))
+                {
+                    MessageBox.Show("txtTenPB", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                PhongBan phongBan = new PhongBan();
+                phongBan.MaPB = txtMaPB.Text;
+                phongBan.TenPB = txtTenPB.Text;
+                phongBan.MaCN = cbbMaCN.SelectedValue.ToString();
+                controller.Insert(phongBan);
+                controller.SelectAll();
+                dgvPB.DataSource = controller.DataSource;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }  
         }
 
         private void btnXoa(object sender, EventArgs e)
@@ -77,6 +94,24 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.PhongBan
             controller.Update(phongBan);
             controller.SelectAll();
             dgvPB.DataSource = controller.DataSource;
+        }
+
+        private void txtMaPB_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtMaPB", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void txtTenPB_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtTenPB", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }

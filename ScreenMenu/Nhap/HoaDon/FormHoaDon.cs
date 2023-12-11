@@ -1,4 +1,5 @@
-﻿using LTUD1_MF_BHX.Connection;
+﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.Connection;
 using LTUD1_MF_BHX.Model;
 using LTUD1_MF_BHX.ScreenMenu.Nhap.HoaDon;
 using System;
@@ -55,15 +56,27 @@ namespace LTUD1_MF_BHX.Screen
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            HoaDon hoaDon = new HoaDon();
-            hoaDon.MaHD = txtMaHD.Text;
-            hoaDon.NgayHD = DateTime.Parse(dtpkNgayLap.Text);
-            hoaDon.TongTien = float.Parse(txtTongTien.Text);
-            hoaDon.MaNV = cbbMaNV.SelectedValue.ToString();
-            hoaDon.MaKH = cbbMaKH.SelectedValue.ToString();
-            HoaDonController.Insert(hoaDon);
-            HoaDonController.SelectAll();
-            dgvHD.DataSource = HoaDonController.DataSource;
+            try
+            {
+                if (ErrTxt.CheckControlValue(txtMaHD))
+                {
+                    MessageBox.Show("txtMaHD", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                HoaDon hoaDon = new HoaDon();
+                hoaDon.MaHD = txtMaHD.Text;
+                hoaDon.NgayHD = DateTime.Parse(dtpkNgayLap.Text);
+                hoaDon.TongTien = float.Parse(txtTongTien.Text);
+                hoaDon.MaNV = cbbMaNV.SelectedValue.ToString();
+                hoaDon.MaKH = cbbMaKH.SelectedValue.ToString();
+                HoaDonController.Insert(hoaDon);
+                HoaDonController.SelectAll();
+                dgvHD.DataSource = HoaDonController.DataSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgvHD_Click(object sender, EventArgs e)
@@ -96,6 +109,16 @@ namespace LTUD1_MF_BHX.Screen
             HoaDonController.Update(hoaDon);
             HoaDonController.SelectAll();
             dgvHD.DataSource = HoaDonController.DataSource;
+        }
+
+        private void txtMaHD_TextChanged(object sender, EventArgs e)
+        {
+
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtHoMaHD", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }

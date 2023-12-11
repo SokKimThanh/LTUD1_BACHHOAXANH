@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -143,6 +143,7 @@
             txtDTL.Name = "txtDTL";
             txtDTL.Size = new Size(422, 47);
             txtDTL.TabIndex = 3;
+            txtDTL.TextChanged += txtDTL_TextChanged;
             // 
             // groupBox7
             // 
@@ -168,6 +169,7 @@
             txtSDT.Name = "txtSDT";
             txtSDT.Size = new Size(422, 47);
             txtSDT.TabIndex = 3;
+            txtSDT.TextChanged += txtSDT_TextChanged;
             // 
             // groupBox5
             // 
@@ -193,6 +195,7 @@
             txtMa.Name = "txtMa";
             txtMa.Size = new Size(422, 47);
             txtMa.TabIndex = 2;
+            txtMa.TextChanged += txtMa_TextChanged;
             // 
             // groupBox4
             // 
@@ -218,6 +221,7 @@
             txtxHoTen.Name = "txtxHoTen";
             txtxHoTen.Size = new Size(416, 47);
             txtxHoTen.TabIndex = 2;
+            txtxHoTen.TextChanged += txtxHoTen_TextChanged;
             // 
             // tableLayoutPanel4
             // 
@@ -340,14 +344,14 @@
             dgvKH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvKH.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvKH.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dgvKH.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvKH.DefaultCellStyle = dataGridViewCellStyle4;
             dgvKH.Dock = DockStyle.Fill;
             dgvKH.Location = new Point(3, 43);
             dgvKH.Name = "dgvKH";

@@ -1,4 +1,6 @@
-﻿using LTUD1_MF_BHX.ScreenMenu.Nhap.DiaDiem;
+﻿using LTUD1_MF_BHX.BatLoiControl;
+using LTUD1_MF_BHX.Model;
+using LTUD1_MF_BHX.ScreenMenu.Nhap.DiaDiem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +20,7 @@ namespace LTUD1_MF_BHX.Screen
         {
             InitializeComponent();
             DiaDiemController = new DiaDiemController(Utils.ConnectionString);
-            dgvDD.DefaultCellStyle.ForeColor = Color.Black;
+            DataGridViewHelper.ConfigureDataGridView(dgvDD);
         }
 
         private void FormDiaDiem_Load(object sender, EventArgs e)
@@ -27,7 +29,8 @@ namespace LTUD1_MF_BHX.Screen
             {
                 DiaDiemController.SelectAll();
                 dgvDD.DataSource = DiaDiemController.DataSource;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -39,13 +42,39 @@ namespace LTUD1_MF_BHX.Screen
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            DiaDiem diaDiem = new DiaDiem();
-            diaDiem.MaCN = txtMaCN.Text;
-            diaDiem.TenCN = txtTenCN.Text;
-            diaDiem.DiaChi = txtDC.Text;
-            DiaDiemController.Insert(diaDiem);
-            DiaDiemController.SelectAll();
-            dgvDD.DataSource = DiaDiemController.DataSource;
+            try
+            {
+                if (ErrTxt.CheckControlValue(txtMaCN))
+                {
+                    MessageBox.Show("txtHoMaCN", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (ErrTxt.CheckControlValue(txtTenCN))
+                {
+                    MessageBox.Show("txtTenCN", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+                if (ErrTxt.CheckControlValue(txtDC))
+                {
+                    MessageBox.Show("txtDC", "Bắt buộc nhập!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
+                DiaDiem diaDiem = new DiaDiem();
+                diaDiem.MaCN = txtMaCN.Text;
+                diaDiem.TenCN = txtTenCN.Text;
+                diaDiem.DiaChi = txtDC.Text;
+                DiaDiemController.Insert(diaDiem);
+                DiaDiemController.SelectAll();
+                dgvDD.DataSource = DiaDiemController.DataSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void dgvDD_Click(object sender, EventArgs e)
         {
@@ -73,6 +102,33 @@ namespace LTUD1_MF_BHX.Screen
             DiaDiemController.Delete(diaDiem.MaCN);
             DiaDiemController.SelectAll();
             dgvDD.DataSource = DiaDiemController.DataSource;
+        }
+
+        private void txtTenCN_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtTenCN", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void txtMaCN_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtMaCN", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private void txtDC_TextChanged(object sender, EventArgs e)
+        {
+            if (ErrTxt.NoSymbol_TextChanged(sender))
+            {
+                MessageBox.Show("txtDC", "chỉ được nhập chữ hoặc số!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }
