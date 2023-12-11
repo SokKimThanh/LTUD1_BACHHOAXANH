@@ -51,7 +51,7 @@ CREATE TABLE PHONGBAN (MAPB CHAR(4) NOT NULL ,TENPHG NVARCHAR(30) NOT NULL,	MACN
 ------------------------------------------------------------
 ---------------------Tạo bảng NHANVIEN----------------------
 ------------------------------------------------------------
-CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL, HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4), GIOITINH nvarchar(10) NOT NULL, CREATED_DATE_NV datetime);
+CREATE TABLE NHANVIEN (	MANV CHAR(11)NOT NULL, HOTENNV NVARCHAR(30) NOT NULL,DIACHINV NVARCHAR(100),LUONG int NOT NULL,SDTNV INT NULL,NGAYSINH DATE NOT NULL,MAPB CHAR(4), GIOITINH nvarchar(10) NOT NULL, CREATED_DATE_NV datetime not null);
 ------------------------------------------------------------
 ---------------------Tạo bảng KHACHHANG---------------------
 ------------------------------------------------------------
@@ -59,7 +59,7 @@ CREATE TABLE KHACHHANG (MAKH CHAR(11) NOT NULL ,HOTENKH NVARCHAR(30) NOT NULL,SD
 ------------------------------------------------------------
 ---------------------Tạo bảng NHACUNGCAP--------------------
 ------------------------------------------------------------
-CREATE TABLE NHACUNGCAP (MANCC CHAR(11)NOT NULL  ,TENNCC NVARCHAR(30) NOT NULL,DIACHINCC NVARCHAR(100),SDTNCC INT   NULL, created_date_ncc datetime);
+CREATE TABLE NHACUNGCAP (MANCC CHAR(11)NOT NULL  ,TENNCC NVARCHAR(30) NOT NULL,DIACHINCC NVARCHAR(100),SDTNCC INT   NULL, CREATED_DATE_NCC datetime not null);
 ------------------------------------------------------------
 ---------------------Tạo bảng SANPHAM-----------------------
 ------------------------------------------------------------
