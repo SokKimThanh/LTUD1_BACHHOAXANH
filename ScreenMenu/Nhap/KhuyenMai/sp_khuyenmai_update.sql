@@ -18,7 +18,7 @@ CREATE PROCEDURE sp_khuyenmai_update
 	@makm char(11) = '', 
 	@ngaybd date,
 	@ngaykt date,
-	@masp char(11) = N''
+	@maht char(11)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -26,6 +26,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update khuyenmai set ngaybd = @ngaybd, ngaykt = @ngaykt, masp = @masp  where makm = @makm -- chuẩn sql
+	update khuyenmai set ngaybd = @ngaybd, ngaykt = @ngaykt, maht=@maht where makm = @makm -- chuẩn sql
 END
 GO

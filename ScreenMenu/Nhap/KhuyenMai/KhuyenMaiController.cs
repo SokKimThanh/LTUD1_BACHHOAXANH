@@ -37,14 +37,13 @@ namespace LTUD1_MF_BHX
             {
                 Makm = row.Field<string>("makm")!,
                 Ngaybd = row.Field<DateTime>("ngaybd")!,
-                Ngaykt = row.Field<DateTime>("ngaykt")!,
-                Maht = row.Field<string>("masp")!
+                Ngaykt = row.Field<DateTime>("ngaykt")!
             };
         }
 
         public override void Insert(object sender)
         {
-            KhuyenMai user = (KhuyenMai)sender;
+            KhuyenMai o = (KhuyenMai)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
@@ -53,11 +52,10 @@ namespace LTUD1_MF_BHX
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@makm", user.Makm);
-            Sql.Parameters.AddWithValue("@ngaybd", user.Ngaybd);
-            Sql.Parameters.AddWithValue("@ngaykt", user.Ngaykt);
-            Sql.Parameters.AddWithValue("@masp", user.Maht);
-
+            Sql.Parameters.AddWithValue("@makm", o.Makm);
+            Sql.Parameters.AddWithValue("@ngaybd", o.Ngaybd);
+            Sql.Parameters.AddWithValue("@ngaykt", o.Ngaykt);
+            Sql.Parameters.AddWithValue("@maht", o.Maht);
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();
 
@@ -138,7 +136,7 @@ namespace LTUD1_MF_BHX
 
         public override void Update(object sender)
         {
-            KhuyenMai user = (KhuyenMai)sender;
+            KhuyenMai o = (KhuyenMai)sender;
             // Mở kết nối
             SqlConnection conn = OpenConnection();
 
@@ -147,10 +145,10 @@ namespace LTUD1_MF_BHX
             Sql.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số vào SqlCommand
-            Sql.Parameters.AddWithValue("@makm", user.Makm);
-            Sql.Parameters.AddWithValue("@ngaybd", user.Ngaybd);
-            Sql.Parameters.AddWithValue("@ngaykt", user.Ngaykt);
-            Sql.Parameters.AddWithValue("@masp", user.Maht);
+            Sql.Parameters.AddWithValue("@makm", o.Makm);
+            Sql.Parameters.AddWithValue("@ngaybd", o.Ngaybd);
+            Sql.Parameters.AddWithValue("@ngaykt", o.Ngaykt);
+            Sql.Parameters.AddWithValue("@maht", o.Maht);
 
             // Thực thi SqlCommand
             Sql.ExecuteNonQuery();

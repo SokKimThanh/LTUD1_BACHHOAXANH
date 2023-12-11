@@ -18,7 +18,7 @@ CREATE PROCEDURE sp_khuyenmai_insert
 	@makm char(11) = '', 
 	@ngaybd date,
 	@ngaykt date,
-	@masp char(11) = N''
+	@maht char(11) = N''
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -26,6 +26,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO khuyenmai VALUES (@makm, @ngaybd, @ngaykt,@masp)
+	INSERT INTO khuyenmai VALUES (@makm, @ngaybd, @ngaykt,@maht)
 END
 GO

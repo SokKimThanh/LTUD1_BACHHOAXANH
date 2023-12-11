@@ -25,6 +25,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT MAKM from hinhthuckm-- chuẩn sql
+	SELECT MAHT from hinhthuckm-- chuẩn sql
 END
 GO
