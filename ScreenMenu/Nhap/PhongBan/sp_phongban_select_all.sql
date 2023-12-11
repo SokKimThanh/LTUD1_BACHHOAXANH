@@ -22,6 +22,8 @@ BEGIN
 
     -- Insert statements for procedure here
 	SELECT pb.MAPB, pb.TENPHG, cn.TENCN from PHONGBAN pb, CHINHANH cn
+	where pb.MACN = cn.MACN
+	group by pb.MAPB, pb.TENPHG,cn.TENCN
 END
 GO
 exec sp_phongban_select_all
