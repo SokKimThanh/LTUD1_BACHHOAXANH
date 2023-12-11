@@ -343,7 +343,7 @@
             btnKTTonKho.Location = new Point(298, 5);
             btnKTTonKho.Margin = new Padding(5);
             btnKTTonKho.Name = "btnKTTonKho";
-            btnKTTonKho.Size = new Size(283, 54);
+            btnKTTonKho.Size = new Size(283, 62);
             btnKTTonKho.TabIndex = 4;
             btnKTTonKho.Text = "Kiểm tra tồn kho";
             btnKTTonKho.UseVisualStyleBackColor = false;
