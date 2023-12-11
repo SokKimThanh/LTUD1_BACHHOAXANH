@@ -40,9 +40,9 @@ namespace LTUD1_MF_BHX.ScreenDetail
                 cboHoaDon.ValueMember = "MAHD";
 
                 spConn.SelectAll();
-                cboSanPham.DataSource = spConn.DataSource;
-                cboSanPham.DisplayMember = "TENSP";
-                cboSanPham.ValueMember = "MASP";
+                cboLoaiSanPham.DataSource = spConn.DataSource;
+                cboLoaiSanPham.DisplayMember = "TENSP";
+                cboLoaiSanPham.ValueMember = "MASP";
 
                 ctConn.SelectByID(cboHoaDon.SelectedValue.ToString()!);
                 dgvCTHoaDon.DataSource = ctConn.DataSource;
@@ -61,7 +61,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
         {
             try
             {
-                ctConn.KTTonKho(cboSanPham.SelectedValue.ToString()!, int.Parse(txtSoLuong.Text));
+                ctConn.KTTonKho(cboLoaiSanPham.SelectedValue.ToString()!, int.Parse(txtSoLuong.Text));
             }
             catch (Exception ex)
             {
@@ -77,7 +77,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
                 ChiTietHoaDon cthd = new ChiTietHoaDon();
                 cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
-                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
+                cthd.MaSP = cboLoaiSanPham.SelectedValue.ToString()!;
                 cthd.SoLuong = int.Parse(txtSoLuong.Text);
 
                 ctConn.Insert(cthd);
@@ -105,9 +105,9 @@ namespace LTUD1_MF_BHX.ScreenDetail
             {
                 ChiTietHoaDon cthd = new ChiTietHoaDon();
                 cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
-                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
+                cthd.MaSP = cboLoaiSanPham.SelectedValue.ToString()!;
                 cthd.SoLuong = int.Parse(txtSoLuong.Text);
-                if(ctConn.KTTonKho(cboSanPham.SelectedValue.ToString()!, int.Parse(txtSoLuong.Text)) >= 0) {
+                if(ctConn.KTTonKho(cboLoaiSanPham.SelectedValue.ToString()!, int.Parse(txtSoLuong.Text)) >= 0) {
                     ctConn.Update(cthd);
                     FormChiTietHoaDon_Load(sender, e);
 
@@ -132,7 +132,7 @@ namespace LTUD1_MF_BHX.ScreenDetail
             {
                 ChiTietHoaDon cthd = new ChiTietHoaDon();
                 cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
-                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
+                cthd.MaSP = cboLoaiSanPham.SelectedValue.ToString()!;
                 ctConn.Delete(cthd);
                 FormChiTietHoaDon_Load(sender, e);
 
