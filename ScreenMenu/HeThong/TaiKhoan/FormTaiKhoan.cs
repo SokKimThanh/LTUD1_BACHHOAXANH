@@ -94,9 +94,6 @@ namespace LTUD1_MF_BHX.ScreenMenu.HeThong.TaiKhoan
         {
 
         }
-
-         
-
         private void dgvTaiKhoan_Click(object sender, EventArgs e)
         {
             int dong = dgvTaiKhoan.CurrentCell.RowIndex;

@@ -36,7 +36,7 @@
             button3 = new Button();
             button2 = new Button();
             groupBox4 = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dgvChiTietNCC = new DataGridView();
             groupBox1 = new GroupBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox7 = new GroupBox();
@@ -52,7 +52,7 @@
             groupBox3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvChiTietNCC).BeginInit();
             groupBox1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -119,13 +119,13 @@
             tableLayoutPanel1.Controls.Add(button2, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            tableLayoutPanel1.Location = new Point(3, 35);
+            tableLayoutPanel1.Location = new Point(3, 43);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
-            tableLayoutPanel1.Size = new Size(881, 101);
+            tableLayoutPanel1.Size = new Size(881, 93);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // button1
@@ -140,7 +140,7 @@
             button1.Location = new Point(297, 5);
             button1.Margin = new Padding(5);
             button1.Name = "button1";
-            button1.Size = new Size(136, 91);
+            button1.Size = new Size(136, 83);
             button1.TabIndex = 3;
             button1.Text = "Quay lại";
             button1.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
             button3.Location = new Point(151, 5);
             button3.Margin = new Padding(5);
             button3.Name = "button3";
-            button3.Size = new Size(136, 91);
+            button3.Size = new Size(136, 83);
             button3.TabIndex = 2;
             button3.Text = "Sửa";
             button3.UseVisualStyleBackColor = false;
@@ -174,14 +174,15 @@
             button2.Location = new Point(5, 5);
             button2.Margin = new Padding(5);
             button2.Name = "button2";
-            button2.Size = new Size(136, 91);
+            button2.Size = new Size(136, 83);
             button2.TabIndex = 1;
             button2.Text = "Xóa";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(dataGridView1);
+            groupBox4.Controls.Add(dgvChiTietNCC);
             groupBox4.Dock = DockStyle.Fill;
             groupBox4.ForeColor = Color.White;
             groupBox4.Location = new Point(3, 3);
@@ -191,15 +192,17 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Danh sách";
             // 
-            // dataGridView1
+            // dgvChiTietNCC
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 40);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(875, 526);
-            dataGridView1.TabIndex = 0;
+            dgvChiTietNCC.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvChiTietNCC.Dock = DockStyle.Fill;
+            dgvChiTietNCC.Location = new Point(3, 43);
+            dgvChiTietNCC.Name = "dgvChiTietNCC";
+            dgvChiTietNCC.RowHeadersWidth = 51;
+            dgvChiTietNCC.RowTemplate.Height = 29;
+            dgvChiTietNCC.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvChiTietNCC.Size = new Size(881, 526);
+            dgvChiTietNCC.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -222,7 +225,7 @@
             tableLayoutPanel3.Controls.Add(groupBox5, 0, 1);
             tableLayoutPanel3.Controls.Add(groupBox2, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 35);
+            tableLayoutPanel3.Location = new Point(3, 43);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 6;
@@ -232,7 +235,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel3.Size = new Size(367, 685);
+            tableLayoutPanel3.Size = new Size(367, 677);
             tableLayoutPanel3.TabIndex = 19;
             // 
             // groupBox7
@@ -241,10 +244,10 @@
             groupBox7.Dock = DockStyle.Fill;
             groupBox7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox7.ForeColor = Color.White;
-            groupBox7.Location = new Point(0, 342);
+            groupBox7.Location = new Point(0, 336);
             groupBox7.Margin = new Padding(0);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(367, 114);
+            groupBox7.Size = new Size(367, 112);
             groupBox7.TabIndex = 6;
             groupBox7.TabStop = false;
             groupBox7.Text = "Số Lượng cung cấp";
@@ -253,9 +256,9 @@
             // 
             textBox1.Dock = DockStyle.Fill;
             textBox1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(3, 29);
+            textBox1.Location = new Point(3, 35);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(361, 39);
+            textBox1.Size = new Size(361, 47);
             textBox1.TabIndex = 3;
             // 
             // groupBox6
@@ -264,10 +267,10 @@
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(0, 228);
+            groupBox6.Location = new Point(0, 224);
             groupBox6.Margin = new Padding(0);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(367, 114);
+            groupBox6.Size = new Size(367, 112);
             groupBox6.TabIndex = 5;
             groupBox6.TabStop = false;
             groupBox6.Text = "Ngày nhập";
@@ -276,10 +279,10 @@
             // 
             dateTimePicker1.Dock = DockStyle.Fill;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(3, 29);
+            dateTimePicker1.Location = new Point(3, 35);
             dateTimePicker1.Margin = new Padding(6, 4, 6, 4);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(361, 33);
+            dateTimePicker1.Size = new Size(361, 39);
             dateTimePicker1.TabIndex = 14;
             // 
             // groupBox5
@@ -288,10 +291,10 @@
             groupBox5.Dock = DockStyle.Fill;
             groupBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.ForeColor = Color.White;
-            groupBox5.Location = new Point(0, 114);
+            groupBox5.Location = new Point(0, 112);
             groupBox5.Margin = new Padding(0);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(367, 114);
+            groupBox5.Size = new Size(367, 112);
             groupBox5.TabIndex = 4;
             groupBox5.TabStop = false;
             groupBox5.Text = "Sản phẩm";
@@ -300,10 +303,10 @@
             // 
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(3, 29);
+            comboBox1.Location = new Point(3, 35);
             comboBox1.Margin = new Padding(6, 4, 6, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(361, 33);
+            comboBox1.Size = new Size(361, 40);
             comboBox1.TabIndex = 8;
             // 
             // groupBox2
@@ -314,7 +317,7 @@
             groupBox2.ForeColor = Color.White;
             groupBox2.Location = new Point(3, 3);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(361, 108);
+            groupBox2.Size = new Size(361, 106);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Nhà cung cấp";
@@ -323,15 +326,15 @@
             // 
             comboBox2.Dock = DockStyle.Fill;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(3, 29);
+            comboBox2.Location = new Point(3, 35);
             comboBox2.Margin = new Padding(6, 4, 6, 4);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(355, 33);
+            comboBox2.Size = new Size(355, 40);
             comboBox2.TabIndex = 9;
             // 
             // FormChiTietNhaCungCap
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(16F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
             ClientSize = new Size(1284, 729);
@@ -347,7 +350,7 @@
             groupBox3.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvChiTietNCC).EndInit();
             groupBox1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             groupBox7.ResumeLayout(false);
@@ -378,6 +381,6 @@
         private GroupBox groupBox2;
         private ComboBox comboBox2;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvChiTietNCC;
     }
 }
