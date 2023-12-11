@@ -25,6 +25,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from hinhthuckm where makm = @makm --like chính xác mã 100%
+	SELECT * from hinhthuckm where MAHT = @makm --like chính xác mã 100%
 END
 GO
