@@ -91,9 +91,9 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
             }
             return TT;
         }
-        public void KTTonKho(object id,int sl)
+        public int  KTTonKho(object id,int sl)
         {
-            
+            int SL = 0;
             try
             {
                 // Mở kết nối
@@ -114,16 +114,18 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                     {
                         // Assuming YourColumnName is a string column; adjust accordingly
                         int value = reader.GetInt32(0);
-                        MessageBox.Show(value.ToString());
+                        //MessageBox.Show(value.ToString());
                         if(value > 0)
                         {
                             MessageBox.Show("Sản phẩm tồn kho còn lại: " + value.ToString());
+                            
                         }
                         else
                         {
                             MessageBox.Show("Hết hàng");
                         }
                         // MessageBox.Show(TT);
+                        SL = value;
                     }
                     else
                     {
@@ -141,6 +143,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
             {
                 CloseConnection();
             }
+            return SL;
             
         }
         public override object FromDataRow(DataRow row)

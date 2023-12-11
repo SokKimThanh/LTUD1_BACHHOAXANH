@@ -39,8 +39,9 @@
             tableLayoutPanel4 = new TableLayoutPanel();
             groupBox2 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            txtCapNhat = new Button();
-            btnXoa = new Button();
+            btnEditSanPham = new Button();
+            btnAddSP = new Button();
+            btnDeleteSP = new Button();
             tableLayoutPanel5 = new TableLayoutPanel();
             groupBox5 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
@@ -194,63 +195,76 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 6;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Controls.Add(txtCapNhat, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnXoa, 0, 0);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(btnEditSanPham, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnAddSP, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnDeleteSP, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tableLayoutPanel1.Location = new Point(3, 35);
-            tableLayoutPanel1.Margin = new Padding(5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(881, 101);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // txtCapNhat
+            // btnEditSanPham
             // 
-            txtCapNhat.BackColor = Color.Transparent;
-            tableLayoutPanel1.SetColumnSpan(txtCapNhat, 2);
-            txtCapNhat.Dock = DockStyle.Fill;
-            txtCapNhat.FlatAppearance.BorderSize = 3;
-            txtCapNhat.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            txtCapNhat.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            txtCapNhat.FlatStyle = FlatStyle.Flat;
-            txtCapNhat.ForeColor = Color.SeaShell;
-            txtCapNhat.Location = new Point(297, 5);
-            txtCapNhat.Margin = new Padding(5);
-            txtCapNhat.Name = "txtCapNhat";
-            txtCapNhat.Size = new Size(282, 91);
-            txtCapNhat.TabIndex = 2;
-            txtCapNhat.Text = "Cập nhật đơn hàng";
-            txtCapNhat.UseVisualStyleBackColor = false;
-            txtCapNhat.Click += txtCapNhat_Click;
+            btnEditSanPham.BackColor = Color.Transparent;
+            btnEditSanPham.Dock = DockStyle.Fill;
+            btnEditSanPham.FlatAppearance.BorderSize = 3;
+            btnEditSanPham.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnEditSanPham.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnEditSanPham.FlatStyle = FlatStyle.Flat;
+            btnEditSanPham.ForeColor = Color.SeaShell;
+            btnEditSanPham.Location = new Point(591, 5);
+            btnEditSanPham.Margin = new Padding(5);
+            btnEditSanPham.Name = "btnEditSanPham";
+            btnEditSanPham.Size = new Size(285, 91);
+            btnEditSanPham.TabIndex = 5;
+            btnEditSanPham.Text = "Cập nhật sản phẩm";
+            btnEditSanPham.UseVisualStyleBackColor = false;
+            btnEditSanPham.Click += txtCapNhat_Click;
             // 
-            // btnXoa
+            // btnAddSP
             // 
-            btnXoa.BackColor = Color.Transparent;
-            tableLayoutPanel1.SetColumnSpan(btnXoa, 2);
-            btnXoa.Dock = DockStyle.Fill;
-            btnXoa.FlatAppearance.BorderSize = 3;
-            btnXoa.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            btnXoa.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.ForeColor = Color.SeaShell;
-            btnXoa.Location = new Point(5, 5);
-            btnXoa.Margin = new Padding(5);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(282, 91);
-            btnXoa.TabIndex = 1;
-            btnXoa.Text = "Xóa sản phẩm";
-            btnXoa.UseVisualStyleBackColor = false;
-            btnXoa.Click += btnXoa_Click;
+            btnAddSP.BackColor = Color.Transparent;
+            btnAddSP.Dock = DockStyle.Fill;
+            btnAddSP.FlatAppearance.BorderSize = 3;
+            btnAddSP.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnAddSP.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnAddSP.FlatStyle = FlatStyle.Flat;
+            btnAddSP.ForeColor = Color.SeaShell;
+            btnAddSP.Location = new Point(298, 5);
+            btnAddSP.Margin = new Padding(5);
+            btnAddSP.Name = "btnAddSP";
+            btnAddSP.Size = new Size(283, 91);
+            btnAddSP.TabIndex = 3;
+            btnAddSP.Text = "Thêm Sản phẩm";
+            btnAddSP.UseVisualStyleBackColor = false;
+            btnAddSP.Click += btnThem_Click;
+            // 
+            // btnDeleteSP
+            // 
+            btnDeleteSP.BackColor = Color.Transparent;
+            btnDeleteSP.Dock = DockStyle.Fill;
+            btnDeleteSP.FlatAppearance.BorderSize = 3;
+            btnDeleteSP.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
+            btnDeleteSP.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnDeleteSP.FlatStyle = FlatStyle.Flat;
+            btnDeleteSP.ForeColor = Color.SeaShell;
+            btnDeleteSP.Location = new Point(5, 5);
+            btnDeleteSP.Margin = new Padding(5);
+            btnDeleteSP.Name = "btnDeleteSP";
+            btnDeleteSP.Size = new Size(283, 91);
+            btnDeleteSP.TabIndex = 2;
+            btnDeleteSP.Text = "Xóa sản phẩm";
+            btnDeleteSP.UseVisualStyleBackColor = false;
+            btnDeleteSP.Click += btnXoa_Click;
             // 
             // tableLayoutPanel5
             // 
@@ -401,8 +415,6 @@
         private Label label4;
         private TableLayoutPanel tableLayoutPanel4;
         private GroupBox groupBox2;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Button btnXoa;
         private Button btnThem;
         private TableLayoutPanel tableLayoutPanel5;
         private GroupBox groupBox3;
@@ -414,8 +426,11 @@
         private TextBox txtThanhTien;
         private GroupBox groupBox13;
         private ComboBox cboSanPham;
-        private Button txtCapNhat;
         private DataGridView dgvCTHoaDon;
         private ComboBox cboHoaDon;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button btnEditSanPham;
+        private Button btnAddSP;
+        private Button btnDeleteSP;
     }
 }
