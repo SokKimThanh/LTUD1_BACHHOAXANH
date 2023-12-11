@@ -69,11 +69,9 @@
             groupBox1.Controls.Add(tableLayoutPanel5);
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(3, 2);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(3, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(445, 568);
+            groupBox1.Size = new Size(511, 718);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Nhập thông tin";
@@ -99,7 +97,8 @@
             tableLayoutPanel5.Controls.Add(label6, 0, 6);
             tableLayoutPanel5.Controls.Add(txtCCCD, 1, 4);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(3, 24);
+            tableLayoutPanel5.Location = new Point(3, 25);
+            tableLayoutPanel5.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 10;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -112,31 +111,29 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel5.Size = new Size(439, 542);
+            tableLayoutPanel5.Size = new Size(505, 690);
             tableLayoutPanel5.TabIndex = 28;
             // 
             // txtEmail
             // 
             txtEmail.Dock = DockStyle.Fill;
-            txtEmail.Location = new Point(158, 326);
-            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Location = new Point(181, 417);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(278, 29);
+            txtEmail.Size = new Size(321, 29);
             txtEmail.TabIndex = 39;
             // 
             // txtSDT
             // 
             txtSDT.Dock = DockStyle.Fill;
-            txtSDT.Location = new Point(158, 272);
-            txtSDT.Margin = new Padding(3, 2, 3, 2);
+            txtSDT.Location = new Point(181, 348);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(278, 29);
+            txtSDT.Size = new Size(321, 29);
             txtSDT.TabIndex = 38;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(3, 216);
+            label4.Location = new Point(3, 276);
             label4.Name = "label4";
             label4.Size = new Size(51, 21);
             label4.TabIndex = 34;
@@ -145,17 +142,16 @@
             // txtNhapLaiMK
             // 
             txtNhapLaiMK.Dock = DockStyle.Fill;
-            txtNhapLaiMK.Location = new Point(158, 164);
-            txtNhapLaiMK.Margin = new Padding(3, 2, 3, 2);
+            txtNhapLaiMK.Location = new Point(181, 210);
             txtNhapLaiMK.Name = "txtNhapLaiMK";
-            txtNhapLaiMK.Size = new Size(278, 29);
+            txtNhapLaiMK.Size = new Size(321, 29);
             txtNhapLaiMK.TabIndex = 33;
             txtNhapLaiMK.UseSystemPasswordChar = true;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(3, 162);
+            label8.Location = new Point(3, 207);
             label8.Name = "label8";
             label8.Size = new Size(137, 21);
             label8.TabIndex = 32;
@@ -164,17 +160,16 @@
             // txtMK
             // 
             txtMK.Dock = DockStyle.Fill;
-            txtMK.Location = new Point(158, 110);
-            txtMK.Margin = new Padding(3, 2, 3, 2);
+            txtMK.Location = new Point(181, 141);
             txtMK.Name = "txtMK";
-            txtMK.Size = new Size(278, 29);
+            txtMK.Size = new Size(321, 29);
             txtMK.TabIndex = 31;
             txtMK.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 108);
+            label3.Location = new Point(3, 138);
             label3.Name = "label3";
             label3.Size = new Size(75, 21);
             label3.TabIndex = 30;
@@ -194,17 +189,16 @@
             // 
             dtpCreatedDate.Dock = DockStyle.Fill;
             dtpCreatedDate.Format = DateTimePickerFormat.Short;
-            dtpCreatedDate.Location = new Point(158, 2);
-            dtpCreatedDate.Margin = new Padding(3, 2, 3, 2);
+            dtpCreatedDate.Location = new Point(181, 3);
             dtpCreatedDate.Name = "dtpCreatedDate";
-            dtpCreatedDate.Size = new Size(278, 29);
+            dtpCreatedDate.Size = new Size(321, 29);
             dtpCreatedDate.TabIndex = 28;
             dtpCreatedDate.Value = new DateTime(2023, 11, 16, 23, 58, 21, 0);
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 54);
+            label2.Location = new Point(3, 69);
             label2.Name = "label2";
             label2.Size = new Size(101, 21);
             label2.TabIndex = 29;
@@ -213,17 +207,16 @@
             // txtTenTaiKhoan
             // 
             txtTenTaiKhoan.Dock = DockStyle.Fill;
-            txtTenTaiKhoan.Location = new Point(158, 56);
-            txtTenTaiKhoan.Margin = new Padding(3, 2, 3, 2);
+            txtTenTaiKhoan.Location = new Point(181, 72);
             txtTenTaiKhoan.Name = "txtTenTaiKhoan";
-            txtTenTaiKhoan.Size = new Size(278, 29);
+            txtTenTaiKhoan.Size = new Size(321, 29);
             txtTenTaiKhoan.TabIndex = 21;
             txtTenTaiKhoan.TextChanged += txtTenTK_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 270);
+            label5.Location = new Point(3, 345);
             label5.Name = "label5";
             label5.Size = new Size(103, 21);
             label5.TabIndex = 35;
@@ -232,7 +225,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 324);
+            label6.Location = new Point(3, 414);
             label6.Name = "label6";
             label6.Size = new Size(48, 21);
             label6.TabIndex = 36;
@@ -242,10 +235,9 @@
             // txtCCCD
             // 
             txtCCCD.Dock = DockStyle.Fill;
-            txtCCCD.Location = new Point(158, 218);
-            txtCCCD.Margin = new Padding(3, 2, 3, 2);
+            txtCCCD.Location = new Point(181, 279);
             txtCCCD.Name = "txtCCCD";
-            txtCCCD.Size = new Size(278, 29);
+            txtCCCD.Size = new Size(321, 29);
             txtCCCD.TabIndex = 37;
             // 
             // tableLayoutPanel2
@@ -257,11 +249,10 @@
             tableLayoutPanel2.Controls.Add(tableLayoutPanel4, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
-            tableLayoutPanel2.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1124, 576);
+            tableLayoutPanel2.Size = new Size(1285, 730);
             tableLayoutPanel2.TabIndex = 15;
             // 
             // tableLayoutPanel3
@@ -270,13 +261,12 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Controls.Add(groupBox1, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 2);
-            tableLayoutPanel3.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel3.Location = new Point(3, 3);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 571F));
-            tableLayoutPanel3.Size = new Size(451, 572);
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 725F));
+            tableLayoutPanel3.Size = new Size(517, 724);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -286,24 +276,21 @@
             tableLayoutPanel4.Controls.Add(groupBox2, 0, 1);
             tableLayoutPanel4.Controls.Add(dgvTaiKhoan, 0, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(460, 2);
-            tableLayoutPanel4.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel4.Location = new Point(526, 3);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 107F));
-            tableLayoutPanel4.Size = new Size(661, 572);
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 136F));
+            tableLayoutPanel4.Size = new Size(756, 724);
             tableLayoutPanel4.TabIndex = 1;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(tableLayoutPanel1);
             groupBox2.Dock = DockStyle.Fill;
-            groupBox2.Location = new Point(3, 467);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.Location = new Point(3, 591);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(655, 103);
+            groupBox2.Size = new Size(750, 130);
             groupBox2.TabIndex = 15;
             groupBox2.TabStop = false;
             groupBox2.Text = "Thao tác dữ liệu";
@@ -318,13 +305,12 @@
             tableLayoutPanel1.Controls.Add(btnAdd, 0, 0);
             tableLayoutPanel1.Controls.Add(btnXoa, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(3, 18);
-            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            tableLayoutPanel1.Location = new Point(3, 22);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 85F));
-            tableLayoutPanel1.Size = new Size(649, 83);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 101F));
+            tableLayoutPanel1.Size = new Size(744, 105);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // btnSua
@@ -339,10 +325,9 @@
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(435, 2);
-            btnSua.Margin = new Padding(3, 2, 3, 2);
+            btnSua.Location = new Point(499, 3);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(211, 79);
+            btnSua.Size = new Size(242, 99);
             btnSua.TabIndex = 36;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
@@ -359,10 +344,9 @@
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(3, 2);
-            btnAdd.Margin = new Padding(3, 2, 3, 2);
+            btnAdd.Location = new Point(3, 3);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(210, 79);
+            btnAdd.Size = new Size(242, 99);
             btnAdd.TabIndex = 34;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = false;
@@ -379,10 +363,9 @@
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(219, 2);
-            btnXoa.Margin = new Padding(3, 2, 3, 2);
+            btnXoa.Location = new Point(251, 3);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(210, 79);
+            btnXoa.Size = new Size(242, 99);
             btnXoa.TabIndex = 35;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = false;
@@ -391,22 +374,20 @@
             // 
             dgvTaiKhoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTaiKhoan.Dock = DockStyle.Fill;
-            dgvTaiKhoan.Location = new Point(3, 2);
-            dgvTaiKhoan.Margin = new Padding(3, 2, 3, 2);
+            dgvTaiKhoan.Location = new Point(3, 3);
             dgvTaiKhoan.Name = "dgvTaiKhoan";
             dgvTaiKhoan.RowTemplate.Height = 28;
-            dgvTaiKhoan.Size = new Size(655, 461);
+            dgvTaiKhoan.Size = new Size(750, 582);
             dgvTaiKhoan.TabIndex = 0;
             // 
             // FormTaiKhoan
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 88, 52);
-            ClientSize = new Size(1124, 576);
+            ClientSize = new Size(1285, 730);
             Controls.Add(tableLayoutPanel2);
             ForeColor = Color.White;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormTaiKhoan";
             Text = "Danh sách tài khoản";
             Load += FormTaiKhoan_Load;
