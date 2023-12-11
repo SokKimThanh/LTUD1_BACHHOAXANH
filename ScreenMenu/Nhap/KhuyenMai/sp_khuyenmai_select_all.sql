@@ -7,7 +7,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		Sok Kim Thanh
+-- Author:		NgoQuy
 -- Create date: <07/11/2023>
 -- Description:	<Mô tả>
 -- =============================================

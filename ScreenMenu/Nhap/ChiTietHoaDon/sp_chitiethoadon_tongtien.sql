@@ -32,9 +32,9 @@ BEGIN
 	Update HOADON
 	set TONGTHANHTIEN = @TT
 	where MAHD = @makm;
+
+	select @TT as 'Thanh tien'
 END
 GO
 exec sp_chitiethoadon_TongTien 'HD01'
-select * 
-from HOADON
-where MAHD='HD01'
+

@@ -1,5 +1,5 @@
 ﻿-- ================================================
--- Create Procedure sp_nhacungcap_update.sql
+-- Create Procedure sp_khachhang_update.sql
 -- Nhà cung cấp update
 -- ================================================
 SET ANSI_NULLS ON
