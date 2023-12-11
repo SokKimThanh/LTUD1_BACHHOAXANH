@@ -17,7 +17,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	select * from nhacungcap order by created_date_ncc desc
+	select * from nhacungcap ncc order by ncc.created_date_ncc desc
 END
 GO
 -- ================================================
@@ -62,7 +62,7 @@ BEGIN
 	select * from NHACUNGCAP ncc where MANCC not in(
 	SELECT ncc.MANCC from nhacungcap ncc, sanpham sp, CHITIETCC ccct 
 	where ncc.MANCC = ccct.MANCC and sp.MASP = ccct.MASP group by ncc.MANCC)
-	order by created_date_ncc desc
+	order by ncc.created_date_ncc desc
 END
 GO
 --exec sp_nhacungcap_moi_select_all
