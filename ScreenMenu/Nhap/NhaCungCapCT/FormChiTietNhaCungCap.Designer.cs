@@ -40,13 +40,13 @@
             groupBox1 = new GroupBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox7 = new GroupBox();
-            textBox1 = new TextBox();
+            txtSL = new TextBox();
             groupBox6 = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtpkNgsyNhap = new DateTimePicker();
             groupBox5 = new GroupBox();
-            comboBox1 = new ComboBox();
+            cboSanPham = new ComboBox();
             groupBox2 = new GroupBox();
-            comboBox2 = new ComboBox();
+            cboNCC = new ComboBox();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -203,6 +203,7 @@
             dgvChiTietNCC.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvChiTietNCC.Size = new Size(881, 526);
             dgvChiTietNCC.TabIndex = 0;
+            dgvChiTietNCC.CellContentClick += dgvChiTietNCC_CellContentClick;
             // 
             // groupBox1
             // 
@@ -240,7 +241,7 @@
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(textBox1);
+            groupBox7.Controls.Add(txtSL);
             groupBox7.Dock = DockStyle.Fill;
             groupBox7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox7.ForeColor = Color.White;
@@ -252,18 +253,18 @@
             groupBox7.TabStop = false;
             groupBox7.Text = "Số Lượng cung cấp";
             // 
-            // textBox1
+            // txtSL
             // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(3, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(361, 47);
-            textBox1.TabIndex = 3;
+            txtSL.Dock = DockStyle.Fill;
+            txtSL.Font = new Font("Segoe UI Light", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSL.Location = new Point(3, 35);
+            txtSL.Name = "txtSL";
+            txtSL.Size = new Size(361, 47);
+            txtSL.TabIndex = 3;
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(dateTimePicker1);
+            groupBox6.Controls.Add(dtpkNgsyNhap);
             groupBox6.Dock = DockStyle.Fill;
             groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox6.ForeColor = Color.White;
@@ -275,19 +276,19 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "Ngày nhập";
             // 
-            // dateTimePicker1
+            // dtpkNgsyNhap
             // 
-            dateTimePicker1.Dock = DockStyle.Fill;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(3, 35);
-            dateTimePicker1.Margin = new Padding(6, 4, 6, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(361, 39);
-            dateTimePicker1.TabIndex = 14;
+            dtpkNgsyNhap.Dock = DockStyle.Fill;
+            dtpkNgsyNhap.Format = DateTimePickerFormat.Short;
+            dtpkNgsyNhap.Location = new Point(3, 35);
+            dtpkNgsyNhap.Margin = new Padding(6, 4, 6, 4);
+            dtpkNgsyNhap.Name = "dtpkNgsyNhap";
+            dtpkNgsyNhap.Size = new Size(361, 39);
+            dtpkNgsyNhap.TabIndex = 14;
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(comboBox1);
+            groupBox5.Controls.Add(cboSanPham);
             groupBox5.Dock = DockStyle.Fill;
             groupBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox5.ForeColor = Color.White;
@@ -299,19 +300,19 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Sản phẩm";
             // 
-            // comboBox1
+            // cboSanPham
             // 
-            comboBox1.Dock = DockStyle.Fill;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(3, 35);
-            comboBox1.Margin = new Padding(6, 4, 6, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(361, 40);
-            comboBox1.TabIndex = 8;
+            cboSanPham.Dock = DockStyle.Fill;
+            cboSanPham.FormattingEnabled = true;
+            cboSanPham.Location = new Point(3, 35);
+            cboSanPham.Margin = new Padding(6, 4, 6, 4);
+            cboSanPham.Name = "cboSanPham";
+            cboSanPham.Size = new Size(361, 40);
+            cboSanPham.TabIndex = 8;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboBox2);
+            groupBox2.Controls.Add(cboNCC);
             groupBox2.Dock = DockStyle.Fill;
             groupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.ForeColor = Color.White;
@@ -322,15 +323,15 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Nhà cung cấp";
             // 
-            // comboBox2
+            // cboNCC
             // 
-            comboBox2.Dock = DockStyle.Fill;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(3, 35);
-            comboBox2.Margin = new Padding(6, 4, 6, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(355, 40);
-            comboBox2.TabIndex = 9;
+            cboNCC.Dock = DockStyle.Fill;
+            cboNCC.FormattingEnabled = true;
+            cboNCC.Location = new Point(3, 35);
+            cboNCC.Margin = new Padding(6, 4, 6, 4);
+            cboNCC.Name = "cboNCC";
+            cboNCC.Size = new Size(355, 40);
+            cboNCC.TabIndex = 9;
             // 
             // FormChiTietNhaCungCap
             // 
@@ -373,13 +374,13 @@
         private GroupBox groupBox1;
         private TableLayoutPanel tableLayoutPanel3;
         private GroupBox groupBox7;
-        private TextBox textBox1;
+        private TextBox txtSL;
         private GroupBox groupBox6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpkNgsyNhap;
         private GroupBox groupBox5;
-        private ComboBox comboBox1;
+        private ComboBox cboSanPham;
         private GroupBox groupBox2;
-        private ComboBox comboBox2;
+        private ComboBox cboNCC;
         private Button button1;
         private DataGridView dgvChiTietNCC;
     }

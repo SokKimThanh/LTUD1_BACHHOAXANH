@@ -22,9 +22,9 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT ct.MANCC, sp.MASP, ct.SLCUNGCCAP from CHITIETCC ct, SANPHAM sp
+	SELECT ct.MANCC, sp.TENSP, ct.SLCUNGCCAP from CHITIETCC ct, SANPHAM sp
 	where ct.MASP = sp.MASP
-	group by ct.MANCC, sp.MASP, ct.SLCUNGCCAP
+	group by ct.MANCC, sp.TENSP, ct.SLCUNGCCAP
 END
 GO
 exec sp_chitietnhacungcap_select_all

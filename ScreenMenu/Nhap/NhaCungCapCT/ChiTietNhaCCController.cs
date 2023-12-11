@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LTUD1_MF_BHX.ScreenMenu.Nhap.NhaCungCapCT
 {
-    internal class ChiTietNhaCCController : MyController
+    public class ChiTietNhaCCController : MyController
     {
         public ChiTietNhaCCController(string connectionString) : base(connectionString)
         {
@@ -17,7 +17,28 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.NhaCungCapCT
 
         public override void Delete(object id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_chitietnhacungcap_delete", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+                Sql.Parameters.AddWithValue("@MANCC", id);
+                // Thêm tham số vào SqlCommand
+
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public override object FromDataRow(DataRow row)
@@ -50,6 +71,70 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.NhaCungCapCT
                 Adapter.Fill(DataSource);
 
                 //đóng kết nối
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public void selectSanPhamCBO()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // thực hiện các thao tác trên cơ sở dữ liệu
+                Sql = new SqlCommand("sp_sanpham_select_all", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng Database để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+
+                //đóng kết nối
+                //CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public void SelectAllNhaCunCapCBO()
+        {
+            try
+            {
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
+
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_nhacungcap_select_all", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
+
+                // Tạo một đối tượng SqlDataAdapter
+                Adapter = new SqlDataAdapter(Sql);
+
+                // Tạo một đối tượng DataTable để lưu trữ dữ liệu
+                DataSource = new DataTable();
+
+                // Đổ dữ liệu vào DataTable
+                Adapter.Fill(DataSource);
+
+                // Đóng kết nối
                 CloseConnection();
             }
             catch (Exception ex)
