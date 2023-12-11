@@ -59,7 +59,8 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
         private void btnKTTonKho_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 ctConn.KTTonKho(cboSanPham.SelectedValue.ToString(), int.Parse(txtSoLuong.Text));
             }
             catch (Exception ex)
@@ -100,8 +101,8 @@ namespace LTUD1_MF_BHX.ScreenDetail
             try
             {
                 ChiTietHoaDon cthd = new ChiTietHoaDon();
-                cthd.MaHD = cboHoaDon.SelectedValue.ToString();
-                cthd.MaSP = cboSanPham.SelectedValue.ToString();
+                cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
+                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
                 cthd.SoLuong = int.Parse(txtSoLuong.Text);
                 ctConn.Update(cthd);
                 FormChiTietHoaDon_Load(sender, e);
@@ -127,6 +128,21 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
                 MessageBox.Show("Xoa sản phẩm thành công!");
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cboHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = ctConn.SelectByID(cboHoaDon.SelectedValue.ToString());
+                dgvCTHoaDon.DataSource = dt;
+
+                txtThanhTien.Text = ctConn.TongTien(cboHoaDon.SelectedValue.ToString()!);
             }
             catch (Exception ex)
             {

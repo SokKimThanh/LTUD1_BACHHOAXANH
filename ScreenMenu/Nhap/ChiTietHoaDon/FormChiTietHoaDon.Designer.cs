@@ -41,7 +41,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             txtCapNhat = new Button();
             btnXoa = new Button();
-            btnThem = new Button();
             tableLayoutPanel5 = new TableLayoutPanel();
             groupBox5 = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
@@ -153,6 +152,7 @@
             cboHoaDon.Name = "cboHoaDon";
             cboHoaDon.Size = new Size(361, 33);
             cboHoaDon.TabIndex = 1;
+            cboHoaDon.SelectedIndexChanged += cboHoaDon_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -195,15 +195,15 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 6;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(txtCapNhat, 0, 0);
             tableLayoutPanel1.Controls.Add(btnXoa, 0, 0);
-            tableLayoutPanel1.Controls.Add(btnThem, 4, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             tableLayoutPanel1.Location = new Point(3, 35);
@@ -211,7 +211,6 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
             tableLayoutPanel1.Size = new Size(881, 101);
             tableLayoutPanel1.TabIndex = 0;
             // 
@@ -252,25 +251,6 @@
             btnXoa.Text = "Xóa sản phẩm";
             btnXoa.UseVisualStyleBackColor = false;
             btnXoa.Click += btnXoa_Click;
-            // 
-            // btnThem
-            // 
-            btnThem.BackColor = Color.Transparent;
-            tableLayoutPanel1.SetColumnSpan(btnThem, 2);
-            btnThem.Dock = DockStyle.Fill;
-            btnThem.FlatAppearance.BorderSize = 3;
-            btnThem.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 192);
-            btnThem.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.ForeColor = Color.SeaShell;
-            btnThem.Location = new Point(589, 5);
-            btnThem.Margin = new Padding(5);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(287, 91);
-            btnThem.TabIndex = 0;
-            btnThem.Text = "Thêm sản phẩm ";
-            btnThem.UseVisualStyleBackColor = false;
-            btnThem.Click += btnThem_Click;
             // 
             // tableLayoutPanel5
             // 

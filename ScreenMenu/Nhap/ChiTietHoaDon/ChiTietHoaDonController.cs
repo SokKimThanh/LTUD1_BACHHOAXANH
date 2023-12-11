@@ -60,7 +60,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                 Sql.CommandType = CommandType.StoredProcedure;
 
                 // Thêm tham số vào SqlCommand
-                Sql.Parameters.AddWithValue("@makm", id);
+                Sql.Parameters.AddWithValue("@mahd", id);
 
 
                 using (SqlDataReader reader = Sql.ExecuteReader())
