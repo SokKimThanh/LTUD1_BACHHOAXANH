@@ -26,3 +26,4 @@ BEGIN
 	SELECT * from LOAISP
 END
 GO
+exec sp_danhmuc_select_all

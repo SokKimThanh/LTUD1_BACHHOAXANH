@@ -28,3 +28,6 @@ BEGIN
 	INSERT INTO hinhthuckm VALUES (@makm, @hinhthuc, @ghichu)
 END
 GO
+select count(*) from hinhthuckm
+exec sp_hinhthuckm_insert 'KM15','Mua 2 tặng 1',''
+select count(*) from hinhthuckm

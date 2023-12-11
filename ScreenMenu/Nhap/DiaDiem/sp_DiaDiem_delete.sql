@@ -18,3 +18,7 @@ BEGIN
 	DELETE FROM CHINHANH WHERE MACN = @maCN
 END
 GO
+select count(*) from CHINHANH
+exec sp_diadiem_delete 'CN05'
+
+select count(*) from CHINHANH

@@ -28,7 +28,8 @@ BEGIN
 	INSERT INTO CHINHANH VALUES (@maCN,@tenCN,@diaChi)
 END
 GO
+select count(*) from CHINHANH
 exec sp_diadiem_insert 'CN05', N'Chi nhánh Đà Nẵng', N'Số 3 Nguyễn Văn Linh, Hải Châu, Đà Nẵng';
 
-select * from CHINHANH
+select count(*) from CHINHANH
 

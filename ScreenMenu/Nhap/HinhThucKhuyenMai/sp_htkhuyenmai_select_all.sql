@@ -26,3 +26,4 @@ BEGIN
 	SELECT * from hinhthuckm
 END
 GO
+exec sp_hinhthuckm_select_all

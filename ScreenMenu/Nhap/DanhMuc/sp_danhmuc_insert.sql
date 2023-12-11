@@ -28,3 +28,6 @@ BEGIN
 	INSERT INTO LOAISP VALUES (@MALOAI, @TENLOAI, @GHICHU)
 END
 GO
+select count(*) from LOAISP
+exec sp_danhmuc_insert 'SP04','Rau',''
+select count(*) from LOAISP

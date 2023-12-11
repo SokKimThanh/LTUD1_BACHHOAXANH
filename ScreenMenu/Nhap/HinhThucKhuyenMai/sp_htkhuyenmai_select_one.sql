@@ -15,9 +15,7 @@ drop procedure if exists sp_hinhthuckm_select_one
 go
 CREATE PROCEDURE sp_hinhthuckm_select_one
 	-- Add the parameters for the stored procedure here
-	@makm char(11) = '', 
-	@hinhthuc nvarchar(50) = N'',
-	@ghichu nvarchar(100) = N''
+	@makm char(11) = ''
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -25,6 +23,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * from hinhthuckm where makm = @makm --like chính xác mã 100%
+	SELECT * from hinhthuckm where MAHT = @makm --like chính xác mã 100%
 END
 GO
+exec sp_hinhthuckm_select_one 'KM10'

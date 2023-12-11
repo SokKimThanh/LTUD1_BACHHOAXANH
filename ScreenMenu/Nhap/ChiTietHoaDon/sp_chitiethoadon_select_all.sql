@@ -15,7 +15,7 @@ drop procedure if exists sp_chitiethoadon_select_all
 go
 CREATE PROCEDURE sp_chitiethoadon_select_all
 	-- Add the parameters for the stored procedure here
-	@makm char(11) 
+	@mahd char(11) 
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

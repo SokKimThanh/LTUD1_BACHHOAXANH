@@ -230,7 +230,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                 // thực hiện các thao tác trên cơ sở dữ liệu
                 Sql = new SqlCommand("sp_chitiethoadon_select_all", conn);
                 Sql.CommandType = CommandType.StoredProcedure;
-                Sql.Parameters.AddWithValue("@makm", id);
+                Sql.Parameters.AddWithValue("@@mahd", id);
                 // Tạo đối tượng SqlDataAdapter
                 Adapter = new SqlDataAdapter(Sql);
 
@@ -245,7 +245,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {

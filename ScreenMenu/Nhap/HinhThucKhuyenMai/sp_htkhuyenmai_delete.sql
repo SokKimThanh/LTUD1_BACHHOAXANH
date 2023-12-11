@@ -26,3 +26,6 @@ BEGIN
 	DELETE FROM hinhthuckm WHERE MAHT = @makm
 END
 GO
+select count(*) from hinhthuckm
+exec sp_hinhthuckm_delete 'KM15'
+select count(*) from hinhthuckm

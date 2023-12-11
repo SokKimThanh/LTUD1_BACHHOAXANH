@@ -17,3 +17,7 @@ BEGIN
 	DELETE FROM HOADON WHERE MAHD = @maHD
 	DELETE FROM CHITIETHD WHERE MAHD = @maHD
 end
+go
+select Count(*) from HOADON 
+exec sp_hoadon_delete 'HD02'
+select Count(*) from HOADON 

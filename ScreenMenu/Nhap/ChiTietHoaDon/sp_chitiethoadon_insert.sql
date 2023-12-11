@@ -30,3 +30,6 @@ BEGIN
 	Update SANPHAM set SLTONKHO = SLTONKHO - @sl where MASP = @masp;
 END
 GO
+Select count (*) from CHITIETHD
+EXEC sp_chitiethoadon_insert 'HD01','SP30',90
+Select count (*) from CHITIETHD
