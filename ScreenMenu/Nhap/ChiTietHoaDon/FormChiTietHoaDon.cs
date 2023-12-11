@@ -59,8 +59,9 @@ namespace LTUD1_MF_BHX.ScreenDetail
 
         private void btnKTTonKho_Click(object sender, EventArgs e)
         {
-            try {
-                ctConn.KTTonKho(cboSanPham.SelectedValue.ToString(), int.Parse(txtSoLuong.Text));
+            try
+            {
+                ctConn.KTTonKho(cboSanPham.SelectedValue.ToString()!, int.Parse(txtSoLuong.Text));
             }
             catch (Exception ex)
             {
@@ -71,8 +72,8 @@ namespace LTUD1_MF_BHX.ScreenDetail
         private void btnThem_Click(object sender, EventArgs e)
         {
             ChiTietHoaDon cthd = new ChiTietHoaDon();
-            cthd.MaHD = cboHoaDon.SelectedValue.ToString();
-            cthd.MaSP = cboSanPham.SelectedValue.ToString();
+            cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
+            cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
             cthd.SoLuong = int.Parse(txtSoLuong.Text);
 
             try
@@ -100,13 +101,20 @@ namespace LTUD1_MF_BHX.ScreenDetail
             try
             {
                 ChiTietHoaDon cthd = new ChiTietHoaDon();
-                cthd.MaHD = cboHoaDon.SelectedValue.ToString();
-                cthd.MaSP = cboSanPham.SelectedValue.ToString();
+                cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
+                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
                 cthd.SoLuong = int.Parse(txtSoLuong.Text);
-                ctConn.Update(cthd);
-                FormChiTietHoaDon_Load(sender, e);
+                if(ctConn.KTTonKho(cboSanPham.SelectedValue.ToString()!, int.Parse(txtSoLuong.Text)) >= 0) {
+                    ctConn.Update(cthd);
+                    FormChiTietHoaDon_Load(sender, e);
 
-                MessageBox.Show("Sửa sản phẩm thành công!");
+                    MessageBox.Show("Sửa sản phẩm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Sửa sản phẩm không thành công!");
+                }
+                
 
             }
             catch (Exception ex)
@@ -120,13 +128,28 @@ namespace LTUD1_MF_BHX.ScreenDetail
             try
             {
                 ChiTietHoaDon cthd = new ChiTietHoaDon();
-                cthd.MaHD = cboHoaDon.SelectedValue.ToString();
-                cthd.MaSP = cboSanPham.SelectedValue.ToString();
+                cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
+                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
                 ctConn.Delete(cthd);
                 FormChiTietHoaDon_Load(sender, e);
 
                 MessageBox.Show("Xoa sản phẩm thành công!");
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cboHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = ctConn.SelectByID(cboHoaDon.SelectedValue.ToString()!);
+                dgvCTHoaDon.DataSource = dt;
+
+                txtThanhTien.Text = ctConn.TongTien(cboHoaDon.SelectedValue.ToString()!);
             }
             catch (Exception ex)
             {
