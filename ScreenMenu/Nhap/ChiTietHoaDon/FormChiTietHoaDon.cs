@@ -70,16 +70,19 @@ namespace LTUD1_MF_BHX.ScreenDetail
         }
 
         private void btnThem_Click(object sender, EventArgs e)
-        {
-            ChiTietHoaDon cthd = new ChiTietHoaDon();
-            cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
-            cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
-            cthd.SoLuong = int.Parse(txtSoLuong.Text);
+        {;
 
             try
             {
+
+                ChiTietHoaDon cthd = new ChiTietHoaDon();
+                cthd.MaHD = cboHoaDon.SelectedValue.ToString()!;
+                cthd.MaSP = cboSanPham.SelectedValue.ToString()!;
+                cthd.SoLuong = int.Parse(txtSoLuong.Text);
+
                 ctConn.Insert(cthd);
-                FormChiTietHoaDon_Load(sender, e);
+                DataTable dt = ctConn.SelectByID(cboHoaDon.SelectedValue.ToString());
+                dgvCTHoaDon.DataSource = dt;
                 if (ctConn.KTMASP(cthd.MaSP) == false)
                 {
                     MessageBox.Show("Thêm sản phẩm thành công!");

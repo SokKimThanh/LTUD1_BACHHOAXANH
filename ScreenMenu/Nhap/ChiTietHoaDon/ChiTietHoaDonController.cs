@@ -69,9 +69,9 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                     {
                         // Assuming YourColumnName is a string column; adjust accordingly
                         int value = reader.GetInt32(0);
-                       //MessageBox.Show(value.ToString());
-                        TT= value.ToString() + "\tVND";
-                       // MessageBox.Show(TT);
+                        //MessageBox.Show(value.ToString());
+                        TT = value.ToString() + "\tVND";
+                        // MessageBox.Show(TT);
                     }
                     else
                     {
@@ -91,7 +91,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
             }
             return TT;
         }
-        public int  KTTonKho(object id,int sl)
+        public int KTTonKho(object id, int sl)
         {
             int SL = 0;
             try
@@ -115,10 +115,10 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                         // Assuming YourColumnName is a string column; adjust accordingly
                         int value = reader.GetInt32(0);
                         //MessageBox.Show(value.ToString());
-                        if(value > 0)
+                        if (value > 0)
                         {
                             MessageBox.Show("Sản phẩm tồn kho còn lại: " + value.ToString());
-                            
+
                         }
                         else
                         {
@@ -144,7 +144,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                 CloseConnection();
             }
             return SL;
-            
+
         }
         public override object FromDataRow(DataRow row)
         {
@@ -154,39 +154,39 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
         public override void Insert(object sender)
         {
             ChiTietHoaDon user = (ChiTietHoaDon)sender;
-            if (KTMASP(user.MaSP) == true)
+            // if (KTMASP(user.MaSP) == true)
+            //  {
+
+            try
             {
 
-                try
-                {
-                    
-                    // Mở kết nối
-                    SqlConnection conn = OpenConnection();
+                // Mở kết nối
+                SqlConnection conn = OpenConnection();
 
-                    // Tạo một đối tượng SqlCommand
-                    Sql = new SqlCommand("sp_chitiethoadon_insert", conn);
-                    Sql.CommandType = CommandType.StoredProcedure;
+                // Tạo một đối tượng SqlCommand
+                Sql = new SqlCommand("sp_chitiethoadon_insert", conn);
+                Sql.CommandType = CommandType.StoredProcedure;
 
-                    // Thêm tham số vào SqlCommand
-                    Sql.Parameters.AddWithValue("@mahd", user.MaHD);
-                    Sql.Parameters.AddWithValue("masp", user.MaSP);
-                    Sql.Parameters.AddWithValue("@sl", user.SoLuong);
-                    // Thực thi SqlCommand
-                    Sql.ExecuteNonQuery();
+                // Thêm tham số vào SqlCommand
+                Sql.Parameters.AddWithValue("@mahd", user.MaHD);
+                Sql.Parameters.AddWithValue("masp", user.MaSP);
+                Sql.Parameters.AddWithValue("@sl", user.SoLuong);
+                // Thực thi SqlCommand
+                Sql.ExecuteNonQuery();
 
-                    // Đóng kết nối
-                    CloseConnection();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    CloseConnection();
-                }
+                // Đóng kết nối
+                CloseConnection();
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            // }
+
         }
 
         public override void SelectAll()
@@ -258,7 +258,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
         }
         public bool KTMASP(object id)
         {
-           
+
             try
             {
                 // Mở kết nối
@@ -273,18 +273,18 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap.ChiTietHoaDon
                     if (reader.Read())
                     {
                         // Assuming YourColumnName is a string column; adjust accordingly
-                        string  value = reader.GetString(0);
+                        string value = reader.GetString(0);
                         MessageBox.Show(value.ToString());
                         if (value.ToString() == id.ToString())
                         {
                             return false;
                         }
-                        
+
                     }
                     else
                     {
                         return true;
-                        
+
                     }
                 }
 

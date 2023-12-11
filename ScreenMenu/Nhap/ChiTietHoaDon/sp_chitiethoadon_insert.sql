@@ -25,8 +25,12 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	INSERT INTO CHITIETHD VALUES (@mahd, @masp, @sl)
+	INSERT INTO CHITIETHD(mahd, masp, slmua) VALUES (@mahd, @masp, @sl)
 
 	Update SANPHAM set SLTONKHO = SLTONKHO - @sl where MASP = @masp;
 END
 GO
+select count (*) from chitiethd;
+exec sp_chitiethoadon_insert 'hd03', 'sp02', 40
+exec sp_chitiethoadon_select_one 'hd03'
+select count (*) from chitiethd;
