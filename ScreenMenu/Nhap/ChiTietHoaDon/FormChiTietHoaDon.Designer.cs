@@ -32,6 +32,10 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
+            groupBox6 = new GroupBox();
+            dataGridView1 = new DataGridView();
+            groupBox4 = new GroupBox();
+            cboSanPham = new ComboBox();
             groupBox13 = new GroupBox();
             cboLoaiSanPham = new ComboBox();
             groupBox9 = new GroupBox();
@@ -52,13 +56,12 @@
             groupBox3 = new GroupBox();
             dgvCTHoaDon = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            groupBox4 = new GroupBox();
-            cboSanPham = new ComboBox();
-            groupBox6 = new GroupBox();
-            dataGridView1 = new DataGridView();
             tableLayoutPanel3.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox4.SuspendLayout();
             groupBox13.SuspendLayout();
             groupBox9.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
@@ -69,9 +72,6 @@
             tableLayoutPanel6.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCTHoaDon).BeginInit();
-            groupBox4.SuspendLayout();
-            groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -124,6 +124,51 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 62.40639F));
             tableLayoutPanel2.Size = new Size(373, 685);
             tableLayoutPanel2.TabIndex = 10;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(dataGridView1);
+            groupBox6.Dock = DockStyle.Fill;
+            groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox6.ForeColor = Color.White;
+            groupBox6.Location = new Point(3, 258);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(367, 424);
+            groupBox6.TabIndex = 22;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Thông tin chi tiết sản phẩm";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ActiveBorder;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(3, 29);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(361, 392);
+            dataGridView1.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(cboSanPham);
+            groupBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox4.ForeColor = Color.White;
+            groupBox4.Location = new Point(3, 173);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(367, 79);
+            groupBox4.TabIndex = 21;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Sản phẩm";
+            // 
+            // cboSanPham
+            // 
+            cboSanPham.Dock = DockStyle.Fill;
+            cboSanPham.FormattingEnabled = true;
+            cboSanPham.Location = new Point(3, 29);
+            cboSanPham.Name = "cboSanPham";
+            cboSanPham.Size = new Size(361, 33);
+            cboSanPham.TabIndex = 0;
             // 
             // groupBox13
             // 
@@ -396,51 +441,6 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(cboSanPham);
-            groupBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox4.ForeColor = Color.White;
-            groupBox4.Location = new Point(3, 173);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(367, 79);
-            groupBox4.TabIndex = 21;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Sản phẩm";
-            // 
-            // cboSanPham
-            // 
-            cboSanPham.Dock = DockStyle.Fill;
-            cboSanPham.FormattingEnabled = true;
-            cboSanPham.Location = new Point(3, 29);
-            cboSanPham.Name = "cboSanPham";
-            cboSanPham.Size = new Size(361, 33);
-            cboSanPham.TabIndex = 0;
-            // 
-            // groupBox6
-            // 
-            groupBox6.Controls.Add(dataGridView1);
-            groupBox6.Dock = DockStyle.Fill;
-            groupBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox6.ForeColor = Color.White;
-            groupBox6.Location = new Point(3, 258);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(367, 424);
-            groupBox6.TabIndex = 22;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Thông tin chi tiết sản phẩm";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = SystemColors.ActiveBorder;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 29);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(361, 392);
-            dataGridView1.TabIndex = 0;
-            // 
             // FormChiTietHoaDon
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -457,6 +457,9 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox4.ResumeLayout(false);
             groupBox13.ResumeLayout(false);
             groupBox9.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
@@ -468,9 +471,6 @@
             tableLayoutPanel6.PerformLayout();
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvCTHoaDon).EndInit();
-            groupBox4.ResumeLayout(false);
-            groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
