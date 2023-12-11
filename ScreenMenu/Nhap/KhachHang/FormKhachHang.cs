@@ -13,7 +13,7 @@ namespace LTUD1_MF_BHX.ScreenMenu.Nhap
             InitializeComponent();
 
             khachHangController = new KhachHangController(Utils.ConnectionString);
-            dgvKH.DefaultCellStyle.ForeColor= Color.Black;
+            DataGridViewHelper.ConfigureDataGridView(dgvKH);
         }
 
         private void groupBox7_Enter(object sender, EventArgs e)
