@@ -30,7 +30,8 @@ BEGIN
 	INSERT INTO HOADON VALUES (@maHD, @ngayHD, @tongTien,@maNV,@maKH)
 END
 GO
-exec sp_hoadon_insert 'HD03','15/01/2022', 90000,'NV02', 'KH02'
-
-select * from NHANVIEN
+set dateformat dmy
+select Count(*) from HOADON 
+exec sp_hoadon_insert 'HD02','15-01-2022', 0,'NV02', 'KH02'
+select Count(*) from HOADON 
 

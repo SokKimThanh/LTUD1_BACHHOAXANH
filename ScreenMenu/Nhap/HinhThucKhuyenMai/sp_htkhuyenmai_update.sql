@@ -28,3 +28,6 @@ BEGIN
 	update hinhthuckm set TENHINHTHUC = @hinhthuc, ghichu = @ghichu  where MAHT = @makm -- chuẩn sql
 END
 GO
+select * from hinhthuckm where MAHT ='KM15'
+exec sp_hinhthuckm_update 'KM15','Mua 3 giảm 25%',''
+select * from hinhthuckm where MAHT ='KM15'

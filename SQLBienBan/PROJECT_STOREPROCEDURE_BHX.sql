@@ -56,6 +56,7 @@ BEGIN
 	INSERT INTO CHITIETHD VALUES (@mahd, @masp, @sl)
 END
 GO
+
 ﻿-- ================================================
 -- Create Procedure sp_chitiethoadon_select_all.sql
 -- Danh mục select all

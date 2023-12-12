@@ -28,3 +28,7 @@ BEGIN
 	update LOAISP set TENLOAI = @TENLOAI, GHICHU = @GHICHU where MALOAI = @MALOAI -- chuẩn sql
 END
 GO
+exec sp_danhmuc_update 'L01','Rau',''
+select *
+from LOAISP
+where MALoai = 'L01'

@@ -20,5 +20,6 @@ BEGIN
 	update CHINHANH set TENCN = @tenCN, DIACHICN = @diaChi  where MACN = @maCN -- chuẩn sql
 END
 GO
---exec sp_diadiem_update 'CN05', N'Chi nhánh Bình Phước', N'Số 3 Nguyễn Văn Linh, Hải Châu, Đà Nẵng';
-select * from CHINHANH
+select * from CHINHANH where MACN = 'CN03'
+exec sp_diadiem_update 'CN03', N'Chi nhánh Bình Phước', N'Số 3 Nguyễn Văn Linh, Hải Châu, Đà Nẵng';
+select * from CHINHANH where MACN = 'CN03'

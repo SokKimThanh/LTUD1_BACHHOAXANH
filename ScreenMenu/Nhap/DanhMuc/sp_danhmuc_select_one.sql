@@ -26,3 +26,4 @@ BEGIN
 	SELECT * from LOAISP where MALOAI like @MALOAI --like chính xác mã 100%
 END
 GO
+exec sp_danhmuc_select_one 'L01'

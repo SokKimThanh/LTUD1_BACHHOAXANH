@@ -26,3 +26,6 @@ BEGIN
 	DELETE FROM LOAISP WHERE MALOAI = @MALOAI
 END
 GO
+select count(*) from LOAISP
+exec sp_danhmuc_delete 'SP04'
+select count(*) from LOAISP
